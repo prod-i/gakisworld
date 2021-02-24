@@ -1,0 +1,15 @@
+@font-face{
+    font-family: BerlinSansFB;
+    src: url(./fonts/BerlinSansFB.ttf);
+  }
+@font-face{
+    font-family: CenturyGothic;
+    src: url(./fonts/CenturyGothic.ttf);
+}
+
+.fBS{
+    font-family: BerlinSansFB;
+}
+.fCG{
+    font-family: CenturyGothic;
+}

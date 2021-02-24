@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+*{
+  text-decoration: none;
+}
+
+body{
+  background: #111111;
+  color:#fff;
+}
+.container{
+  width: 80%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+.app__loading_content{
+  margin: 150px auto 50px auto;
+  width:100%;
+}
