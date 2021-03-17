@@ -1,9 +1,30 @@
 .bcg{
-    background-color: rgb(82,80,112,0.3);
+    background-color: #111;
+}
+.bcgE{
+    background-color: rgba(51, 50, 77, 0.349);
 }
 .tW{
     color:#fff;
 }
-.menu_active{
+.tB{
+    color:#000;
+}
+.tG{
+    color: rgba(179, 179, 179, 0.3);
+}
+.tRP{
     color: #FF7070;
+}
+.tR{
+    color: rgb(175, 70, 70);
+}
+.bRP{
+    background-color: #FF7070;
+}
+.bR{
+    background-color: rgb(175, 70, 70);
+}
+.bRh:hover{
+    background-color: #f86363;
 }

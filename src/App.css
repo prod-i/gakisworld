@@ -38,6 +38,7 @@
 }
 *{
   text-decoration: none;
+  -webkit-user-select: none;
 }
 
 body{

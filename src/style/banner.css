@@ -1,0 +1,41 @@
+.marketing{
+    display: flex;
+    width: 80%;
+    height: 300px;
+    margin: 210px auto;
+    overflow: visible;
+}
+.marketing__content{
+    width: 68%;
+    padding: 25px;
+    padding-left: 55px;
+}
+.marketing__title{
+    font-weight: 600;
+    font-size: 41px;
+    margin-bottom: 50px;
+}
+.marketing__button{
+    display: flex;
+}
+.marketing_btn{
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 1px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+}
+.marketing__logo{
+    width: 120px;
+    margin-left: 20px;
+}
+.marketing__image{
+    position: relative;
+    width: 38%;
+}
+.marketing__img{
+    position: absolute;
+    bottom: 0;
+    width: 55%;
+}
