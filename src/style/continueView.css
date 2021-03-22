@@ -1,0 +1,54 @@
+.continue__view{
+    width: 80%;
+    margin: 0 auto;
+}
+.block_title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title_name{
+    font-weight: 500;
+    font-size: 28px;
+    color: #fff;
+}
+.title_more{
+    height: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+}
+.title_more:hover{
+    color: #f86363;
+    border-bottom: 1px solid #f86363;
+}
+.continue__view_card{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+.continue_card{
+    position: relative;
+    width: 23%;
+    height: 200px;
+    background-color: rgb(31, 31, 31);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.card_img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    left: 0;
+    top: 0;
+}
+.progress{
+    display: flex;
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+    height: 20px;
+}
+.progress_total{
+    height: 30px;
+}

@@ -22,7 +22,6 @@ const Header = (props)=> {
                 </div>
                 <div className="profile">
                     <img className="profile_img" src={profileAvatarMini} alt="profileHeader" />
-                    <div className='blockk'>Поиск</div>
                 </div>
             </div>
         );

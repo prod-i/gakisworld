@@ -51,6 +51,6 @@ body{
   padding: 40px 0;
 }
 .app__loading_content{
-  margin: 150px auto 50px auto;
+  margin: 0 auto 50px auto;
   width:100%;
 }

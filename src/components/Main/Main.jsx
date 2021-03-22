@@ -3,15 +3,18 @@ import '../../style/main.css'
 import '../../style/color.css'
 import '../../style/fonts.css'
 import Slider from '../../common/Slider/Slider';
-import { SliderData } from '../../common/Slider/SliderData';
 import Banner from '../../common/Banner/Banner';
+import ContinueView from './ContinueView/ContinueView';
 
 const Main = (props)=> {
+    debugger
         return(
             <div className='main'>
-                <Slider slides={SliderData}/>
+                <Slider slides={props.sliderData.slides}/>
 
                 <Banner />
+
+                <ContinueView />
             </div>
         );
 };

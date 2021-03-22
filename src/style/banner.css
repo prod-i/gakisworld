@@ -2,7 +2,7 @@
     display: flex;
     width: 80%;
     height: 300px;
-    margin: 210px auto;
+    margin: 200px auto;
     overflow: visible;
 }
 .marketing__content{
@@ -33,6 +33,10 @@
 .marketing__image{
     position: relative;
     width: 38%;
+    transition: .3s;
+}
+.marketing__image:hover{
+    width: 39%;
 }
 .marketing__img{
     position: absolute;
