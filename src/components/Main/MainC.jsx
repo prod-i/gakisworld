@@ -8,10 +8,12 @@ import { setMain } from '../../redux/Main/mainReducer';
 class MainC extends React.Component {
     render() {
         return <Main {...this.props}
-        sliderData = {this.props.sliderData}
+               sliderData = {this.props.sliderData}
         />
     }
 };
+
+
 
 let mapStateToProps = (state) => ({
     main: state.main,
@@ -22,4 +24,4 @@ export default compose
 (
     connect(mapStateToProps, {}),
     withRouter,
-)(MainC);
+)   (MainC);

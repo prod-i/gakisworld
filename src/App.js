@@ -5,12 +5,13 @@ import { HashRouter, Redirect, Route, Switch } from 'react-router-dom';
 import { withSuspense }                        from './common/HOC/withSuspense';
 import './App.css';
 
+const HeaderC    = React.lazy(() => import('./common/Header/HeaderC'          ));
 const MainC      = React.lazy(() => import('./components/Main/MainC'          ));
-const HeaderC    = React.lazy(() => import('./components/Header/HeaderC'      ));
 const CatalogC   = React.lazy(() => import('./components/Catalog/CatalogC'    ));
 const NewsC      = React.lazy(() => import('./components/News/NewsC'          ));
 const CalendarC  = React.lazy(() => import('./components/Calendar/CalendarC'  ));
 const SubscribeC = React.lazy(() => import('./components/Subscribe/SubscribeC'));
+const Footer     = React.lazy(() => import('./common/Footer/Footer'           ));
 
 
 
@@ -29,6 +30,7 @@ class App extends React.Component {
                 <Route path='/subscribe' render={withSuspense(SubscribeC) }/>
               </Switch>
             </div>
+            <Route path='/' render={withSuspense(Footer)} />
           </div>
     );
   }

@@ -5,6 +5,9 @@ import '../../style/fonts.css'
 import Slider from '../../common/Slider/Slider';
 import Banner from '../../common/Banner/Banner';
 import ContinueView from './ContinueView/ContinueView';
+import PrevNews from './PrevNews/PrevNews';
+import Popular from './Popular/Popular';
+import Footer from '../../common/Footer/Footer';
 
 const Main = (props)=> {
     debugger
@@ -15,6 +18,10 @@ const Main = (props)=> {
                 <Banner />
 
                 <ContinueView />
+
+                <PrevNews />
+
+                <Popular />
             </div>
         );
 };

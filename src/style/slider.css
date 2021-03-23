@@ -142,7 +142,6 @@
     z-index: 10;
     cursor: pointer;
     user-select: none;
-    color: #FF7070;
     opacity: 0.2;
     box-shadow: 0 0 30px #000;
     border-radius: 50%;
@@ -161,7 +160,6 @@
     z-index: 10;
     cursor: pointer;
     user-select: none;
-    color: #FF7070;
     opacity: 0.2;
     box-shadow: 0 0 30px #000;
     border-radius: 50%;

@@ -1,14 +1,29 @@
+.bB{
+    background-color: #000;
+}
 .bcg{
-    background-color: #111;
+    background-color: rgb(33, 37, 41, 0.2);
+}
+.bcgB{
+    background-color: rgb(52, 58, 64, 0.2);
 }
 .bcgE{
-    background-color: rgba(51, 50, 77, 0.349);
-}
-.tW{
-    color:#fff;
+    background-color: rgba(55, 62, 70, 0.2)
 }
 .bW{
     background-color:#fff;
+}
+.bRP{
+    background-color: #FF7070;
+}
+.bR{
+    background-color: rgb(175, 70, 70);
+}
+.bRh:hover{
+    background-color: #f86363;
+}
+.tW{
+    color:#fff;
 }
 .tB{
     color:#000;
@@ -22,12 +37,6 @@
 .tR{
     color: rgb(175, 70, 70);
 }
-.bRP{
-    background-color: #FF7070;
-}
-.bR{
-    background-color: rgb(175, 70, 70);
-}
-.bRh:hover{
-    background-color: #f86363;
+.tD{
+    color: #999;
 }

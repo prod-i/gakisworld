@@ -21,7 +21,7 @@ const Slider = ({ slides }) => {
 
     return (
         <div className='slider'>
-            <FaArrowAltCircleLeft className='left-arrow' onClick={prevSlide} />
+            <FaArrowAltCircleLeft className='left-arrow tRP' onClick={prevSlide} />
             {slides.map((slide, index) => {
                 return (
                     <div className={index === current ? 'slide active' : 'slide'} key={index}>
@@ -30,7 +30,7 @@ const Slider = ({ slides }) => {
                                 <div className="slide__preview">
                                     <img className="slide__preview_img" src={slide.image} alt="" />
                                 </div>
-                                <div className="slide_content bcgE">
+                                <div className="slide_content bcgB">
                                     <div className="slide_title">
                                         <a href='#' className="slide__name fCG">{slide.title}</a>
                                         <div className="slide_rating">
@@ -62,7 +62,7 @@ const Slider = ({ slides }) => {
                     </div>
                 )
             })}
-            <FaArrowAltCircleRight className='right-arrow' onClick={nextSlide} />
+            <FaArrowAltCircleRight className='right-arrow tRP' onClick={nextSlide} />
         </div >
     );
 };

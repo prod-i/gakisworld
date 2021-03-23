@@ -10,17 +10,12 @@
 .title_name{
     font-weight: 500;
     font-size: 28px;
-    color: #fff;
 }
 .title_more{
     height: 20px;
     font-weight: 500;
     font-size: 18px;
     cursor: pointer;
-}
-.title_more:hover{
-    color: #f86363;
-    border-bottom: 1px solid #f86363;
 }
 .continue__view_card{
     display: flex;
@@ -31,7 +26,6 @@
     position: relative;
     width: 23%;
     height: 200px;
-    background-color: rgb(31, 31, 31);
     border-radius: 5px;
     overflow: hidden;
 }

@@ -9,7 +9,7 @@ const ContinueView = () => {
                 <div className="title_more fCG tRP">Посмотреть список полностью</div>
             </div>
             <div className="continue__view_card">
-                <div className="continue_card">
+                <div className="continue_card bcgB">
                     <img src="./assets/img/deathNoteCard.jpg" alt="" className="card_img" />
                     <div className="progress bW">
                         <div claclassNamess="progress_total"></div>
