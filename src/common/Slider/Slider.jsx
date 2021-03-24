@@ -4,8 +4,9 @@ import '../../style/color.css'
 import '../../style/fonts.css'
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
-const Slider = ({ slides }) => {
+const Slider = (props) => {
     const [current, setCurrent] = useState(0);
+    const slides = props.slides;
 
     if (!Array.isArray(slides) || slides.length <= 0) {
         return null
@@ -20,7 +21,7 @@ const Slider = ({ slides }) => {
 
 
     return (
-        <div className='slider'>
+        <div className={props.sliderVis ? 'slider' : 'slider vis'}>
             <FaArrowAltCircleLeft className='left-arrow tRP' onClick={prevSlide} />
             {slides.map((slide, index) => {
                 return (

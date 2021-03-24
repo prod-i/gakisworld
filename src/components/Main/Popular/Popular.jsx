@@ -4,18 +4,29 @@ import '../../../style/color.css'
 import '../../../style/fonts.css'
 
 
-const Popular = () => {
+const Popular = (props) => {
+    const list = props.list;
+
+    if (!Array.isArray(list) || list.length <= 0) {
+        return null
+    }
+
     return (
-        <div class="popular">
+        <div class={props.popularVis ? "popular" : "popular vis"}>
             <div class="container">
                 <div class="block_title fCG">
                     <div class="title_name">Популярное Аниме</div>
                     <div class="title_more tRP">Перейти к каталогу</div>
                 </div>
                 <div class="popular__cards">
-                    <div class="popular_card bcgB">
-                        <img src="./assets/img/gul.jpg" alt="" class="popular__card_img" />
-                    </div>
+                    {list.map((list, index) => {
+                        return (
+                                <div class="popular_card bcgB" key={index}>
+                                    <img src={list.image} alt="" class="popular__card_img" />
+                                </div>
+                            )
+                        }
+                    )}
                 </div>
             </div>
         </div>

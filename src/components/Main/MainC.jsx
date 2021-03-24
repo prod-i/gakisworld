@@ -1,23 +1,30 @@
-import React from 'react';
-import Main from './Main';
-import { compose } from 'redux';
-import { connect } from 'react-redux';
+import   React        from 'react';
+import   Main         from './Main';
+import { compose }    from 'redux';
+import { connect }    from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { setMain } from '../../redux/Main/mainReducer';
 
 class MainC extends React.Component {
     render() {
         return <Main {...this.props}
-               sliderData = {this.props.sliderData}
-        />
+                     slider       ={this.props.slider      }
+                     banner       ={this.props.banner      }
+                     continueView ={this.props.continueView}
+                     prevNews     ={this.props.prevNews    }
+                     popular      ={this.props.popular     }
+                />
     }
 };
 
 
 
 let mapStateToProps = (state) => ({
-    main: state.main,
-    sliderData: state.main.sliderData,
+    main         :state.main,
+    slider       :state.slider,
+    banner       :state.banner,
+    continueView :state.continueView,
+    prevNews     :state.prevNews,
+    popular      :state.popular,
 });
 
 export default compose

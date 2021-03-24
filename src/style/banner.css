@@ -5,6 +5,9 @@
     margin: 200px auto;
     overflow: visible;
 }
+.vis{
+    display: none;
+}
 .marketing__content{
     width: 68%;
     padding: 25px;

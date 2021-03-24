@@ -1,27 +1,40 @@
-import React from 'react';
+import React        from 'react';
+import Slider       from '../../common/Slider/Slider';
+import Banner       from '../../common/Banner/Banner';
+import ContinueView from './ContinueView/ContinueView';
+import PrevNews     from './PrevNews/PrevNews';
+import Popular      from './Popular/Popular';
 import '../../style/main.css'
 import '../../style/color.css'
 import '../../style/fonts.css'
-import Slider from '../../common/Slider/Slider';
-import Banner from '../../common/Banner/Banner';
-import ContinueView from './ContinueView/ContinueView';
-import PrevNews from './PrevNews/PrevNews';
-import Popular from './Popular/Popular';
-import Footer from '../../common/Footer/Footer';
 
 const Main = (props)=> {
     debugger
         return(
             <div className='main'>
-                <Slider slides={props.sliderData.slides}/>
+                <Slider 
+                    slides          ={props.slider.sliderData.slides}
+                    sliderVis       ={props.slider.sliderVis}
+                />
 
-                <Banner />
+                <Banner 
+                    bannerVis       ={props.banner.bannerVis}
+                />
 
-                <ContinueView />
+                <ContinueView 
+                    list            ={props.continueView.viewList.list}
+                    continueViewVis ={props.continueView.continueViewVis}
+                />
 
-                <PrevNews />
+                <PrevNews 
+                    posts           ={props.prevNews.postsList.posts}
+                    prevNewsVis     ={props.prevNews.prevNewsVis}
+                />
 
-                <Popular />
+                <Popular 
+                    list            ={props.popular.popularList.list}
+                    popularVis      ={props.popular.popularVis}
+                />
             </div>
         );
 };

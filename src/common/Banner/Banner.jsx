@@ -5,9 +5,9 @@ import '../../style/fonts.css'
 import logo from '../../assets/icon/logo.png'
 import chanFollow from '../../assets/icon/chanFollow.png'
 
-const Banner = () => {
+const Banner = (props) => {
     return (
-        <div className="marketing bR fCG">
+        <div className={props.bannerVis ? "marketing bR fCG" : "marketing bR fCG vis"}>
             <div className="marketing__content">
                 <div className="marketing__title tB">Получи доступ к лучшему<br /> Аниме с подпиской на GAKI`s World.</div>
                 <div className="marketing__button">

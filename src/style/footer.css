@@ -1,9 +1,11 @@
 .footer{
     width: 100%;
     padding-top: 40px;
+    margin-top: 50px;
 }
 .footer__top{
     display: flex;
+    flex-wrap: wrap;
     width: 85%;
     margin: 0 auto 50px auto;
     justify-content: space-between;

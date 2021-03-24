@@ -1,6 +1,7 @@
 .prevNews{
     width: 100%;
     margin-top: 180px;
+    padding: 20px 0;
 }
 .prevNews__title{
     display: flex;
@@ -11,12 +12,12 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-top: 80px;
+    margin-top: 60px;
 }
 .prevNews__card{
     position: relative;
     padding: 15px;
-    width: 19%;
+    width: 17.5%;
     height: 580px;
     font-weight: 500;
     color: #fff;

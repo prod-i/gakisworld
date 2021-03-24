@@ -1,5 +1,4 @@
 import SliderImg from '../../assets/img/naruto.jpg'
-const GET_SLIDES = 'main/GET_SLIDES';
 
 let initialState = {
     sliderData: {
@@ -34,14 +33,14 @@ let initialState = {
             },
         ],
     },
-    main: null,
+    sliderVis: true,
 };
 
-const mainReducer = (state = initialState, action) => {
+const sliderR = (state = initialState, action) => {
     switch (action.type) {
         default:
             return state;
     }
 }
 
-export default mainReducer;
+export default sliderR;
