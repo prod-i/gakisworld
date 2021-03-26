@@ -21,7 +21,7 @@ class App extends React.Component {
     return (
           <div className='gakis'>
             <Route path='/' render={withSuspense(HeaderC)} />
-            <div class="app__loading_content">
+            <div className="app__loading_content">
               <Switch>
                 <Route exact path='/'    render={withSuspense(MainC)      }/>
                 <Route path='/catalog'   render={withSuspense(CatalogC)   }/>

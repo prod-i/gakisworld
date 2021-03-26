@@ -1,12 +1,17 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import '../../style/header.css'
+import '../../style/catalog.css'
 import '../../style/color.css'
 import '../../style/fonts.css'
+import Recommend from './Recommend/Recommend';
+import Search from './Search/Search';
 
 const Catalog = (props)=> {
         return(
-            <>Catalog</>
+            <div className="catalog">
+                <Recommend />
+
+                <Search />
+            </div>
         );
 };
 

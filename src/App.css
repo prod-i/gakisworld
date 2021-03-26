@@ -57,6 +57,9 @@ body{
 .vis{
   display: none;
 }
+.none{
+  display: none;
+}
 .app__loading_content{
   margin: 0 auto 0 auto;
   width:100%;
