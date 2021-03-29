@@ -6,6 +6,7 @@ import '../../../style/color.css'
 import '../../../style/fonts.css'
 
 const Search = (props) => {
+    debugger
     const [extendSearch, setExtendSearch] = useState(false); //toggle advanced search
     return (
         <div className="search">
@@ -13,10 +14,12 @@ const Search = (props) => {
             <StartSearch 
                 extendSearch={extendSearch} 
                 setExtendSearch={setExtendSearch}
+                search={props.search}
             />
 
             <AdvancedSearch 
                 extendSearch={extendSearch}
+                search={props.search}
             />
 
         </div>

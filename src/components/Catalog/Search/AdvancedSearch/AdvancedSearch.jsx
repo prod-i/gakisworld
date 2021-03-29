@@ -11,25 +11,25 @@ const AdvancedSearch = (props) => {
                     <div className="selector__options_advanced">
                         <select defaultValue='def' className='bB tW fCG'>
                             <option value='def' disabled className='none'>Автор</option>
-                            <option value='films'>Фильмы</option>
-                            <option value='films'>Сериалы</option>
-                            <option value='films'>Анонсы</option>
+                            {Object.keys(props.search.filters.author).map((value, key) => {
+                                return <option value='films' key={key}>{props.search.filters.author[value]}</option>
+                            })}
                         </select>
                     </div>
                     <div className="selector__options_advanced">
                         <select defaultValue='def' className='bB tW fCG'>
                             <option value='def' disabled className='none'>Студия</option>
-                            <option value='films'>1</option>
-                            <option value='films'>2</option>
-                            <option value='films'>3</option>
+                            {Object.keys(props.search.filters.studio).map((value, key) => {
+                                return <option value='films' key={key}>{props.search.filters.studio[value]}</option>
+                            })}
                         </select>
                     </div>
                     <div className="selector__options_advanced">
                         <select defaultValue='def' className='bB tW fCG'>
                             <option value='def' disabled className='none'>Возрастной рейтинг</option>
-                            <option value='films'>1</option>
-                            <option value='films'>2</option>
-                            <option value='films'>3</option>
+                            {Object.keys(props.search.filters.AgeRating).map((value, key) => {
+                                return <option value='films' key={key}>{props.search.filters.AgeRating[value]}</option>
+                            })}
                         </select>
                     </div>
                     <div className="selector_rating">Рейтинг</div>

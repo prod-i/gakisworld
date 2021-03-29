@@ -6,6 +6,8 @@ import bannerR from "./Main/bannerR";
 import continueViewR from "./Main/continueViewR";
 import prevNewsR from "./Main/prevNewsR";
 import popularR from "./Main/popularR";
+import noveltyR from "./Catalog/noveltyR";
+import searchR from "./Catalog/searchR";
 
 const redusers = combineReducers({
     main         : mainR, 
@@ -14,6 +16,8 @@ const redusers = combineReducers({
     continueView : continueViewR,
     prevNews     : prevNewsR, 
     popular      : popularR,
+    novelty      : noveltyR,
+    search       : searchR,
 });
 
 const store = createStore(redusers /*, composeEnhancers(applyMiddleware(thunkMiddleware))*/);

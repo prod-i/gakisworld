@@ -84,16 +84,15 @@
     border-radius: 5px;
     padding-left: 10px;
     font-size: 18px;
-    border: 2px solid #F05B5B;
+    border: 1px solid #000;
     font-family: CenturyGothic;
     font-weight: 100;
     cursor: pointer;
     transition: top 1s ease-out 0.5s;
 }
 .selector_years{
-    width: 40%;
-    height: 55px;
-    background-color: #111111;
+    width: 35%;
+    padding: 20px;
 }
 .search__selector_checked{
     margin-top: 30px;
@@ -165,7 +164,7 @@ input:checked[type='checkbox']:before{
     border-radius: 5px;
     padding-left: 10px;
     font-size: 18px;
-    border: 2px solid #F05B5B;
+    border: 2px solid #000;
     font-weight: 100;
     cursor: pointer;
 }
@@ -173,4 +172,10 @@ input:checked[type='checkbox']:before{
     width: 30%;
     height: 55px;
     background-color: #111111;
+}
+/* .colorPrimary{
+    color: #000;
+} */
+.colorSecondary{
+    color: #000;
 }

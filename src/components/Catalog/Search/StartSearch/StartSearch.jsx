@@ -1,9 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../../../../style/search.css'
 import '../../../../style/color.css'
 import '../../../../style/fonts.css'
+import { Slider } from '@material-ui/core'
 
 const StartSearch = (props) => {
+    const [yearsValue, setYearsValue] = useState([1970, 2021]);
+    const updateRange = (e, data) => {
+        setYearsValue(data);
+    }
+    const styles = {
+        root: {
+          background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+          border: 0,
+          borderRadius: 3,
+          boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+          color: 'white',
+          height: 48,
+          padding: '0 30px',
+        },
+      };
     return (
         <div className="search_standart bcg">
         <div className="search_container container">
@@ -22,26 +38,27 @@ const StartSearch = (props) => {
                     <div className="selector_options">
                         <select defaultValue='def' className='bB tW'>    
                             <option value='def' disabled className='none'>Тип</option>
-                            <option value='films'>Все</option>
-                            <option value='films'>Фильмы</option>
-                            <option value='films'>Сериалы</option>
-                            <option value='films'>Анонсы</option>
+                            {Object.keys(props.search.filters.type).map((value, key) => {
+                                return <option value='films' key={key}>{props.search.filters.type[value]}</option>
+                            })}
                         </select>
                     </div>
                     <div className="selector_options">
                         <select defaultValue='def' className='bB tW'>    
                             <option value='def' disabled className='none'>Жанр</option>
-                            <option value='films'>1</option>
-                            <option value='films'>2</option>
-                            <option value='films'>3</option>
+                            {Object.keys(props.search.filters.genre).map((value, key) => {
+                                return <option value='films' key={key}>{props.search.filters.genre[value]}</option>
+                            })}
                         </select>
                     </div>
 
-                    <div className="selector_years"> Года</div>
+                    <div className="selector_years tW">
+                        <Slider value={yearsValue} onChange={updateRange} valueLabelDisplay="auto" min={1970} max={2021}/>
+                    </div>
                 </div>
                 <div className="search__options_bottom">
                     <div className="search__selector_checked">
-                        <label className="label_checked"><input className='tW fCG' type="checkbox"  onClick={(e)=>console.log(e.target.checked)}/><div className="search_checked_text">БЕЗ ПОДПИСКИ</div></label>
+                        <label className="label_checked"><input className='tW fCG' type="checkbox"  checked={props.search.noRequiredSubscribe} onClick={(e)=>console.log(e.target.checked)}/><div className="search_checked_text">БЕЗ ПОДПИСКИ</div></label>
                     </div>
                     <div className="search__advanced_bottom tRP" onClick={props.extendSearch ? ()=>props.setExtendSearch(false) : ()=>props.setExtendSearch(true)}>
                         {props.extendSearch ? 'Скрыть' : 'Расширенный поиск'}
