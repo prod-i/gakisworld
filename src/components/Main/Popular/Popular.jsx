@@ -12,17 +12,17 @@ const Popular = (props) => {
     }
 
     return (
-        <div class={props.popularVis ? "popular" : "popular vis"}>
-            <div class="container">
-                <div class="block_title fCG">
-                    <div class="title_name">Популярное Аниме</div>
-                    <div class="title_more tRP">Перейти к каталогу</div>
+        <div className={props.popularVis ? "popular" : "popular vis"}>
+            <div className="container">
+                <div className="block_title fCG">
+                    <div className="title_name">Популярное Аниме</div>
+                    <div className="title_more tRP">Перейти к каталогу</div>
                 </div>
-                <div class="popular__cards">
+                <div className="popular__cards">
                     {list.map((list, index) => {
                         return (
-                                <div class="popular_card bcgB" key={index}>
-                                    <img src={list.image} alt="" class="popular__card_img" />
+                                <div className="popular_card bcgB" key={index}>
+                                    <img src={list.image} alt="" className="popular__card_img" />
                                 </div>
                             )
                         }

@@ -20,7 +20,7 @@ const ContinueView = (props) => {
                             <div className="continue_card bcgB" key={index}>
                                 <img src={list.image} alt="" className="card_img" />
                                 <div className="progress bW">
-                                    <div claclassNamess="progress_total"></div>
+                                    <div className="progress_total"></div>
                                 </div>
                             </div>
                         )

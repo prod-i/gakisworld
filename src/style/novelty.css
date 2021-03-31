@@ -1,7 +1,7 @@
 .best{
+    margin: 150px 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(82,80,112, 0.1);
 }
 .best_container{
     width: 80%;
@@ -18,6 +18,7 @@
     display: flex;
     width: 100%;
     height: 100%;
+    /* border: 1px solid #FF7070; */
 }
 .best_cards{
     display: flex;
@@ -30,6 +31,7 @@
     position: relative;
     width: 24%;
     height: 100%;
+    overflow: hidden;
 }
 .best_card_img{
     position: absolute;
@@ -41,11 +43,23 @@
 }
 .best_title{
     display: flex;
-    font-size: 59px;
+    font-size: 60px;
     border: 3px solid #FF7070;
     text-transform: uppercase;
     text-align: center;
     margin: auto auto;
     width: 10%;
     height: 100%;
+}
+.title{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: -10px 20px 10px 40px rgba(0, 0, 0, 0.4);
+    /* margin-top: 70%; */
+    padding: 10px;
+    font-weight: 600;
+    font-size: 22px;
+    transition: 0.3s;
+    cursor: pointer;
 }

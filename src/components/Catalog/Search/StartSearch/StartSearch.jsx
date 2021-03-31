@@ -3,23 +3,19 @@ import '../../../../style/search.css'
 import '../../../../style/color.css'
 import '../../../../style/fonts.css'
 import { Slider } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core/styles'
 
 const StartSearch = (props) => {
     const [yearsValue, setYearsValue] = useState([1970, 2021]);
     const updateRange = (e, data) => {
         setYearsValue(data);
     }
-    const styles = {
+    const useStyles = makeStyles({
         root: {
-          background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
-          border: 0,
-          borderRadius: 3,
-          boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
-          color: 'white',
-          height: 48,
-          padding: '0 30px',
+          color: "#FF7070"
         },
-      };
+      });
+      const classes = useStyles();
     return (
         <div className="search_standart bcg">
         <div className="search_container container">
@@ -53,12 +49,12 @@ const StartSearch = (props) => {
                     </div>
 
                     <div className="selector_years tW">
-                        <Slider value={yearsValue} onChange={updateRange} valueLabelDisplay="auto" min={1970} max={2021}/>
+                        <Slider value={yearsValue} onChange={updateRange} valueLabelDisplay="auto" min={1970} max={2021} className={classes.root}/>
                     </div>
                 </div>
                 <div className="search__options_bottom">
                     <div className="search__selector_checked">
-                        <label className="label_checked"><input className='tW fCG' type="checkbox"  checked={props.search.noRequiredSubscribe} onClick={(e)=>console.log(e.target.checked)}/><div className="search_checked_text">БЕЗ ПОДПИСКИ</div></label>
+                        <label className="label_checked"><input className='tW fCG' type="checkbox"  checked={props.search.noRequiredSubscribe} onChange={(e)=>console.log(e.target.checked)} onClick={(e)=>console.log(e.target.checked)}/><div className="search_checked_text">БЕЗ ПОДПИСКИ</div></label>
                     </div>
                     <div className="search__advanced_bottom tRP" onClick={props.extendSearch ? ()=>props.setExtendSearch(false) : ()=>props.setExtendSearch(true)}>
                         {props.extendSearch ? 'Скрыть' : 'Расширенный поиск'}

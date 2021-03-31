@@ -6,7 +6,6 @@ import '../../../style/color.css'
 import '../../../style/fonts.css'
 
 const Search = (props) => {
-    debugger
     const [extendSearch, setExtendSearch] = useState(false); //toggle advanced search
     return (
         <div className="search">

@@ -1,5 +1,5 @@
 import React        from 'react';
-import Slider       from '../../common/Slider/Slider';
+import Slider       from './Slider/Slider';
 import Banner       from '../../common/Banner/Banner';
 import ContinueView from './ContinueView/ContinueView';
 import PrevNews     from './PrevNews/PrevNews';
@@ -9,7 +9,6 @@ import '../../style/color.css'
 import '../../style/fonts.css'
 
 const Main = (props)=> {
-    debugger
         return(
             <div className='main'>
                 <Slider 

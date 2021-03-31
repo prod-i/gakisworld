@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Slider } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core/styles'
 import '../../../../style/search.css'
 import '../../../../style/color.css'
 import '../../../../style/fonts.css'
 
 const AdvancedSearch = (props) => {
+    const [ratingValue, setRatingValue] = useState([0, 10]);
+    const updateRange = (e, data) => {
+        setRatingValue(data);
+    }
+    const useStyles = makeStyles({
+        root: {
+          color: "#FF7070"
+        },
+      });
+      const classes = useStyles();
     return (
         <div className={props.extendSearch ? "search__advanced bcg" : "search__advanced bcg none"}>
             <div className="search_container container">
@@ -32,7 +44,9 @@ const AdvancedSearch = (props) => {
                             })}
                         </select>
                     </div>
-                    <div className="selector_rating">Рейтинг</div>
+                    <div className="selector_rating">
+                         <Slider value={ratingValue} onChange={updateRange} valueLabelDisplay="auto" min={0} max={10} className={classes.root}/>
+                    </div>
                 </div>
             </div>
         </div>

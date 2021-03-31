@@ -11,8 +11,9 @@ class CatalogC extends React.Component {
 };
 
 let mapStateToProps = (state) => ({
-    search  :state.search,
-    novelty :state.novelty,
+    search      :state.search,
+    novelty     :state.novelty,
+    catalogList : state.catalogList,
 });
 
 export default compose

@@ -24,6 +24,7 @@
 .search_form_input_wrap input{
     width: 100%;
     height: 100%;
+    background-color: #050505;
     border-radius: 5px;
     font-weight: 900;
     font-size: 18px;
@@ -48,6 +49,7 @@
     border-radius: 5px;
     font-weight: 100;
     font-size: 22px;
+    outline: none;
 }
 .search__options{
     width: 60%;
@@ -65,15 +67,6 @@
     width: 100%;
     height: 50%;
 }
-.search__advanced_bottom{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    cursor: pointer;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    transition: .5s;
-}
 .selector_options{
     width: 25%;
     font-size: 18px;
@@ -84,15 +77,17 @@
     border-radius: 5px;
     padding-left: 10px;
     font-size: 18px;
+    background-color: rgb(8, 8, 8);
     border: 1px solid #000;
     font-family: CenturyGothic;
     font-weight: 100;
     cursor: pointer;
     transition: top 1s ease-out 0.5s;
+    outline: none;
 }
 .selector_years{
     width: 35%;
-    padding: 20px;
+    padding: 15px;
 }
 .search__selector_checked{
     margin-top: 30px;
@@ -142,11 +137,18 @@ input[type='checkbox']:before{
 input:checked[type='checkbox']:before{
     left: 25px;
 }
-
-.search__advanced{
-    /* display: none; */
-    margin-top: 10px;
+.search__advanced_bottom{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    margin-bottom: 10px;
+    text-transform: uppercase;
     transition: .5s;
+}
+.search__advanced{
+    margin-top: 10px;
+    transition: 0.1s;
 }
 .search__options_advanced{
     display: flex;
@@ -169,13 +171,6 @@ input:checked[type='checkbox']:before{
     cursor: pointer;
 }
 .selector_rating{
-    width: 30%;
-    height: 55px;
-    background-color: #111111;
-}
-/* .colorPrimary{
-    color: #000;
-} */
-.colorSecondary{
-    color: #000;
+    width: 25%;
+    padding: 15px;
 }

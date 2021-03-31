@@ -1,17 +1,18 @@
 import React                                   from 'react';
 import store                                   from './redux/redux';
 import { Provider }                            from 'react-redux';
-import { HashRouter, Redirect, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import { withSuspense }                        from './common/HOC/withSuspense';
 import './App.css';
 
-const HeaderC    = React.lazy(() => import('./common/Header/HeaderC'          ));
-const MainC      = React.lazy(() => import('./components/Main/MainC'          ));
-const CatalogC   = React.lazy(() => import('./components/Catalog/CatalogC'    ));
-const NewsC      = React.lazy(() => import('./components/News/NewsC'          ));
-const CalendarC  = React.lazy(() => import('./components/Calendar/CalendarC'  ));
-const SubscribeC = React.lazy(() => import('./components/Subscribe/SubscribeC'));
-const Footer     = React.lazy(() => import('./common/Footer/Footer'           ));
+const HeaderC       = React.lazy(() => import('./common/Header/HeaderC'          ));
+const MainC         = React.lazy(() => import('./components/Main/MainC'          ));
+const CatalogC      = React.lazy(() => import('./components/Catalog/CatalogC'    ));
+const NewsC         = React.lazy(() => import('./components/News/NewsC'          ));
+const CalendarC     = React.lazy(() => import('./components/Calendar/CalendarC'  ));
+const SubscribeC    = React.lazy(() => import('./components/Subscribe/SubscribeC'));
+const Footer        = React.lazy(() => import('./common/Footer/Footer'           ));
+const SerialsPageC  = React.lazy(() => import('./common/SerialsPage/SerialsPageC'));
 
 
 
@@ -23,14 +24,14 @@ class App extends React.Component {
             <Route path='/' render={withSuspense(HeaderC)} />
             <div className="app__loading_content">
               <Switch>
-                <Route exact path='/'    render={withSuspense(MainC)      }/>
-                <Route path='/catalog'   render={withSuspense(CatalogC)   }/>
-                <Route path='/news'      render={withSuspense(NewsC)      }/>
-                <Route path='/calendar'  render={withSuspense(CalendarC)  }/>
-                <Route path='/subscribe' render={withSuspense(SubscribeC) }/>
+                <Route exact path='/'                render={withSuspense(MainC)        }/>
+                <Route path='/catalog'               render={withSuspense(CatalogC)     }/>
+                <Route path='/news'                  render={withSuspense(NewsC)        }/>
+                <Route path='/calendar'              render={withSuspense(CalendarC)    }/>
+                <Route path='/subscribe'             render={withSuspense(SubscribeC)   }/>
+                <Route path='/serials/:serialsId?'   render={withSuspense(SerialsPageC) }/>
               </Switch>
             </div>
-            <Route path='/' render={withSuspense(Footer)} />
           </div>
     );
   }

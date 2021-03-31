@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import '../../style/slider.css'
-import '../../style/color.css'
-import '../../style/fonts.css'
+import '../../../style/slider.css'
+import '../../../style/color.css'
+import '../../../style/fonts.css'
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
 const Slider = (props) => {
@@ -33,7 +33,7 @@ const Slider = (props) => {
                                 </div>
                                 <div className="slide_content bcgB">
                                     <div className="slide_title">
-                                        <a href='#' className="slide__name fCG">{slide.title}</a>
+                                        <a href='/#' className="slide__name fCG">{slide.title}</a>
                                         <div className="slide_rating">
                                             {slide.rating}
                                         </div>

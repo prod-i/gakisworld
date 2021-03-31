@@ -37,6 +37,9 @@
   }
 }
 *{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
   text-decoration: none;
   -webkit-user-select: none;
 }
@@ -58,7 +61,12 @@ body{
   display: none;
 }
 .none{
+  transition: 0.1s;
   display: none;
+}
+.op{
+  opacity: 0;
+  transition: 1s;
 }
 .app__loading_content{
   margin: 0 auto 0 auto;

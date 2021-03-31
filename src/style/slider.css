@@ -28,7 +28,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40%;
+    width: 43%;
     height: 99%;
     z-index: 1;
     /* border: 1px solid; */
@@ -53,12 +53,11 @@
 .slide_content{
     position: absolute;
     overflow: hidden;
-    width: 55%;
-    min-height: 75%;
-    max-height: 75%;
-    left:29%;
+    width: 65%;
+    min-height: 85%;
+    max-height: 85%;
+    left:32%;
     border-radius: 20px;
-    /* box-shadow: 0 8px 6px rgba(179, 164, 164, 0.1); */
     padding: 35px 10px 40px 13%;
 }
 .slide__name{
