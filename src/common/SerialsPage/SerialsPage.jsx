@@ -8,7 +8,7 @@ import StarRatings from 'react-star-ratings';
 const SerialsPage = () => {
     return (
         <div className='serialsPage fCG'>
-            <img className='serialsPageBacgImg' src="https://wallpaperscave.ru/images/original/18/09-03/anime-tokyo-ghoul-81295.jpg" alt="" />
+            <img className='serialsPageBacgImg' src="https://image.tmdb.org/t/p/original/kJ8ugQ3zWHbVGcNz3vdF5sdcBSF.jpg" alt="" />
             <div className="titleSerialsPage">
                 <div className="nameSerialsPage">Токийский Гуль</div>
                 <div className="serialsRating">
@@ -26,13 +26,19 @@ const SerialsPage = () => {
                     <div className="details_right tW">
                         <div className="details_item">2019</div>
                         <div className="details_item">Демоны, Сверхъестественное</div>
-                        <div className="details_item">Сотодзаки Харуо</div>
+                        <div className="details_item">Date Hayato, Ямасита Хироюки</div>
                         <div className="details_item">ufotable</div>
                         <div className="details_item">NC-17</div>
                     </div>
                 </div>
                 <div className="descrSearialsPage">
-                С обычным студентом Кэном Канэки случается беда, парень попадает в больницу. Но на этом неприятности не заканчиваются: ему пересаживают органы гулей – существ, поедающих плоть людей. После злосчастной операции Канэки становится одним из чудовищ, пытается стать своим, но для людей он теперь изгой, обреченный на уничтожение.
+                События разворачиваются в выдуманной стране, где всё пропитано волшебством. 
+                              В Королевстве магия является совершенно обычной вещью, 
+                              без которой не могут обойтись местные жители. 
+                              Все, кто владеет магическими способностями, входят в состав гильдий, 
+                              которые давно стали основной составляющей обители. Люси – миловидная юная девушка, 
+                              только начинающая путь юной волшебницы. Она мечтает вступить в гильдию «Хвост Феи», 
+                              являющегося самым престижным и сильным на всей королевской территории.
                 
                 </div>
             </div>

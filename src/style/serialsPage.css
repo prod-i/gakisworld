@@ -12,7 +12,7 @@
     width: 100%;
     height: 110%;
     object-fit: cover;
-    object-position: 0 -40px;
+    object-position: center;
 }
 .titleSerialsPage{
     width: 50%;

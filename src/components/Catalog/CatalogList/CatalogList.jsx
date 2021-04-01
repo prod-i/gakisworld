@@ -39,7 +39,7 @@ const CatalogList = (props) => {
                     {props.catalogList.catalogList.list.map((card, key) => {
                         return (
                             <div className="catalog_card" key={key}>
-                                <img src={card.image} alt="" className="catalog__card_img" />
+                                <img src={card.imageMin} alt="" className="catalog__card_img" />
                                 <div className="catalog_title fCG op" onMouseOver={ShowInfo} onMouseOut={HidenInfo}>{card.title}</div>
                             </div>
                         );

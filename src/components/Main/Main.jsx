@@ -7,6 +7,7 @@ import Popular      from './Popular/Popular';
 import '../../style/main.css'
 import '../../style/color.css'
 import '../../style/fonts.css'
+import Footer from '../../common/Footer/Footer';
 
 const Main = (props)=> {
         return(
@@ -34,6 +35,8 @@ const Main = (props)=> {
                     list            ={props.popular.popularList.list}
                     popularVis      ={props.popular.popularVis}
                 />
+
+                <Footer />
             </div>
         );
 };
