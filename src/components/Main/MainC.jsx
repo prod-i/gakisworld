@@ -25,6 +25,7 @@ let mapStateToProps = (state) => ({
     continueView :state.continueView,
     prevNews     :state.prevNews,
     popular      :state.popular,
+    catalogList  :state.catalogList,
 });
 
 export default compose

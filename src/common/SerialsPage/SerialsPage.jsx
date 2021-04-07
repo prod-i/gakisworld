@@ -8,7 +8,7 @@ import StarRatings from 'react-star-ratings';
 const SerialsPage = () => {
     return (
         <div className='serialsPage fCG'>
-            <img className='serialsPageBacgImg' src="https://image.tmdb.org/t/p/original/kJ8ugQ3zWHbVGcNz3vdF5sdcBSF.jpg" alt="" />
+            <img className='serialsPageBacgImg' src="https://i.pinimg.com/originals/67/77/d2/6777d2b564aadc455c5ab61534502558.png" alt="" />
             <div className="titleSerialsPage">
                 <div className="nameSerialsPage">Токийский Гуль</div>
                 <div className="serialsRating">

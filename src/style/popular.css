@@ -12,14 +12,36 @@
     margin-right: 2%;
     width: 23%;
     height: 200px;
+    background-color: rgba(36, 36, 36, 0.33);
     border-radius: 5px;
     overflow: hidden;
-    margin-bottom: 40px;
+    margin-bottom: 2%;
+    z-index: 0;
 }
 .popular__card_img{
+    position: absolute;
     width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center;
     left: 0;
     top: 0;
+    z-index: -1;
 }
+.popular_hover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: -10px 20px 10px 40px rgba(0, 0, 0, 0.4);
+    /* margin-top: 40%; */
+    padding: 10px;
+    font-weight: 600;
+    font-size: 22px;
+    transition: 0.3s;
+    z-index: 1;
+    cursor: pointer;
+}
+/* .popular_title{
+
+} */

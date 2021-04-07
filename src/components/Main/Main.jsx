@@ -32,7 +32,7 @@ const Main = (props)=> {
                 />
 
                 <Popular 
-                    list            ={props.popular.popularList.list}
+                    list            ={props.catalogList.catalogList.list}
                     popularVis      ={props.popular.popularVis}
                 />
 

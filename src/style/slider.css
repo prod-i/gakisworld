@@ -1,41 +1,49 @@
 .slider{
     position: relative;
-    margin: 150px auto;
+    margin: 130px 0 50px 0;
     height: 680px;
+    width: 100%;
+}
+.swiper-slide-active{
+    display: flex;
+    z-index: 999;
+    transition: 0.3s;
+}
+.swiper-slide-prev .slide__wrapper{
+    opacity: 0.4;
+}
+.swiper-slide-next .slide__wrapper{
+    opacity: 0.4;
 }
 .slide{
-    width: 100%;
-    opacity: 0.6;
-    transition-duration: 1.3s;
-    display: none;
-}
-.slide.active{
     display: flex;
     align-items: center;
     height: 100%;
     opacity: 1;
     transition-duration: 1.3s;
+    /* display: none; */
 }
 .slide__wrapper{
     position: relative;
     display: flex;
     align-items: center;
-    width: 55%;
+    width: 60%;
     height: 95%;
     margin: 0 auto;
+    transition: 0.3s;
 }
 .slide__preview{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 43%;
+    width: 40%;
     height: 99%;
     z-index: 1;
     /* border: 1px solid; */
 }
 .slide__preview_img{
     width: 98%;
-    height: 98%;
+    height: 95%;
     object-fit: cover;
     object-position: center;
     overflow: hidden; 
@@ -58,7 +66,7 @@
     max-height: 85%;
     left:32%;
     border-radius: 20px;
-    padding: 35px 10px 40px 13%;
+    padding: 30px 10px 40px 13%;
 }
 .slide__name{
     letter-spacing: 1px;
@@ -102,68 +110,69 @@
     border-bottom: 1px solid  rgba(255, 255, 255, 0.1);
 }
 .slide_filters{
+    display: block;
+    margin-top: 15px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.detail_elem{
     display: flex;
     justify-content: space-between;
-    margin-top: 15px;
-    width: 55%;
-    margin-bottom: 25px;
-}
-.slide_filters_left{
+    margin-bottom: 10px;
     font-weight: 100;
-    font-size: 18px;
+    font-size: 15px;
 }
-.slide_filters_right{
+.details_left{
+    width: 30%;
+    /* border: 1px solid #fff; */
+}
+.details_right{
+    width: 70%;
     font-weight: 100;
-    font-size: 18px;
-}
-.decr_elem{
-    margin: 10px 0;
+    /* border: 1px solid #fff; */
 }
 .slide_review_title{
-    font-family: 'Roboto', sans-serif;
     font-weight: 100;
-    font-size: 26px;
-    color: rgba(179, 179, 179, 0.3);
-    margin-bottom: 15px;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 .slide_review_text{
-    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     line-height: 1.4;
     font-size: 18px;
 }
 
-.left-arrow{
+.button-prev{
     position: absolute;
     top: 40%;
-    left: 10%;
+    left: 8%;
     font-size: 60px;
     z-index: 10;
     cursor: pointer;
     user-select: none;
-    opacity: 0.2;
-    box-shadow: 0 0 30px #000;
-    border-radius: 50%;
+    opacity: 0.8;
+    /* box-shadow: 0 0 30px #000; */
+    border-radius: 100%;
 }
-.left-arrow:hover{
+.button-prev:hover{
     opacity: 0.3;
     font-size: 61px;
     transition-duration: 0.2s;
     box-shadow: 0 0 30px #000;
 }
-.right-arrow{
+.button-next{
     position: absolute;
     top: 40%;
-    right: 10%;
+    right: 8%;
     font-size: 60px;
     z-index: 10;
     cursor: pointer;
     user-select: none;
-    opacity: 0.2;
-    box-shadow: 0 0 30px #000;
-    border-radius: 50%;
+    opacity: 0.8;
+    /* box-shadow: 0 0 30px #000; */
+    border-radius: 100%;
 }
-.right-arrow:hover{
+.button-next:hover{
     opacity: 0.3;
     font-size: 61px;
     transition-duration: 0.2s;
