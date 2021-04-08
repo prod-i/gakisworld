@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom';
 import '../../../style/catalogList.css'
 import '../../../style/color.css'
 import '../../../style/fonts.css'
@@ -38,10 +39,10 @@ const CatalogList = (props) => {
                 <div className="catalog__cards">
                     {props.catalogList.catalogList.list.map((card, key) => {
                         return (
-                            <div className="catalog_card" key={key}>
-                                <img src={card.imageMin} alt="" className="catalog__card_img" />
-                                <div className="catalog_title fCG op" onMouseOver={ShowInfo} onMouseOut={HidenInfo}>{card.title}</div>
-                            </div>
+                            <NavLink exact to={'/serials/'+card.id} className='catalog_card tW'>
+                                    <img src={card.imageMin} alt="" className="catalog__card_img" />
+                                    <div className="catalog_title fCG op" onMouseOver={ShowInfo} onMouseOut={HidenInfo}>{card.title}</div>
+                            </NavLink>
                         );
                     })}
                 </div>

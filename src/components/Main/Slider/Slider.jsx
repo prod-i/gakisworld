@@ -1,12 +1,12 @@
 import React                                                  from 'react';
+import StarRatings                                            from 'react-star-ratings';
 import Swiper, { Navigation, EffectCoverflow }                from 'swiper';
 // import      { RightCircleOutlined, LeftCircleOutlined }    from '@ant-design/icons';
-import StarRatings                                            from 'react-star-ratings';
+import         { NavLink }                                    from 'react-router-dom';
 import 'swiper/swiper-bundle.css';
 import '../../../style/slider.css'
 import '../../../style/color.css'
 import '../../../style/fonts.css'
-import { NavLink } from 'react-router-dom';
 
 class Slider extends React.Component {
     componentDidMount() {
