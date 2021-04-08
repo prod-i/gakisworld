@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import '../../../style/novelty.css'
 import '../../../style/color.css'
 import '../../../style/fonts.css'
-import { Redirect } from 'react-router'
 import { NavLink } from 'react-router-dom';
 
 const Novelty = (props) => {

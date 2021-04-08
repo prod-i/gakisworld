@@ -1,11 +1,12 @@
-import React,  { useState }                                from 'react';
-import Swiper, { Navigation, EffectCoverflow }             from 'swiper';
-import         { RightCircleOutlined, LeftCircleOutlined } from '@ant-design/icons';
-import StarRatings                                         from 'react-star-ratings';
+import React                                                  from 'react';
+import Swiper, { Navigation, EffectCoverflow }                from 'swiper';
+// import      { RightCircleOutlined, LeftCircleOutlined }    from '@ant-design/icons';
+import StarRatings                                            from 'react-star-ratings';
 import 'swiper/swiper-bundle.css';
 import '../../../style/slider.css'
 import '../../../style/color.css'
 import '../../../style/fonts.css'
+import { NavLink } from 'react-router-dom';
 
 class Slider extends React.Component {
     componentDidMount() {
@@ -39,11 +40,11 @@ class Slider extends React.Component {
                             <div className={'slide swiper-slide'} key={index}>
                                 <div className="slide__wrapper">
                                     {/* PRIVIEW */}
-                                    <div className="slide__preview"><img className="slide__preview_img" src={slide.imageLarge} alt="" /></div>
+                                        <NavLink exact to={'/serials/'+slide.id} className='slide__preview tW'><img className="slide__preview_img" src={slide.imageLarge} alt="" /></NavLink>
                                     {/* CONTENT */}
                                     <div className="slide_content bcgB">
                                         <div className="slide_title">
-                                            <div className="slide__name fCG">{slide.title}</div>
+                                            <NavLink exact to={'/serials/'+slide.id} className='slide__name fCG'>{slide.title}</NavLink>
                                             <div className="slide_rating">
                                             <StarRatings rating={slide.rating} numberOfStars={10} starDimension={'18px'} starSpacing={'2px'} starRatedColor={'#FF7070'} starEmptyColor={'#fff'} />
                                             </div>

@@ -13,7 +13,7 @@ const Main = (props)=> {
         return(
             <div className='main'>
                 <Slider 
-                    slides          ={props.slider.sliderData.slides}
+                    slides          ={props.catalogList.catalogList.list}
                     sliderVis       ={props.slider.sliderVis}
                 />
 

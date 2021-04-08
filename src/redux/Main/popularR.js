@@ -1,4 +1,3 @@
-import Img from '../../assets/img/titans.jpg'
 
 let initialState = {
     popularVis: true,

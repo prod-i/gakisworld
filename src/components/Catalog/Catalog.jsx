@@ -1,5 +1,4 @@
 import React from 'react';
-import Banner from '../../common/Banner/Banner';
 import Footer from '../../common/Footer/Footer';
 import '../../style/catalog.css'
 import '../../style/color.css'
