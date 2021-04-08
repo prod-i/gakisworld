@@ -45,9 +45,12 @@ img { user-select: none; }
   outline: 0;
   border:none;
 }
+a:hover{
+  color:inherit;
+}
 
 body{
-  background: #111111;
+  background-color: #111111;
   color:#fff;
 }
 .gakis{

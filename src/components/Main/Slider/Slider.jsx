@@ -32,7 +32,7 @@ class Slider extends React.Component {
 
     render() {
         return (
-            <div className={this.props.sliderVis ? 'slider swiper-container' : 'slider'}>
+            <div className={this.props.sliderVis ? 'slider swiper-container' : 'slider none'}>
                 {/* <div class="button-prev tR"><LeftCircleOutlined /></div> */}
                 <div className="swiper-wrapper">
                     {this.props.slides.map((slide, index) => {

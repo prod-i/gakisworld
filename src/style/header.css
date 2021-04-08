@@ -41,6 +41,9 @@
 .menu_active{
     border-bottom: 1px solid;
 }
+.menu_active:hover{
+    color: #FF7070
+}
 .profile{
     display: flex;
     width: 50%;
