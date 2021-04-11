@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import StarRatings from 'react-star-ratings';
 import { NavLink } from 'react-router-dom';
-import '../../../style/popular.css'
+import '../../../style/main/popular.css'
 import '../../../style/color.css'
 import '../../../style/fonts.css'
 

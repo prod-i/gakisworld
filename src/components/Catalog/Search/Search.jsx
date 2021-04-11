@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import StartSearch         from './StartSearch/StartSearch';
 import AdvancedSearch      from './AdvancedSearch/AdvancedSearch';
-import '../../../style/search.css'
+import '../../../style/catalog/search.css'
 import '../../../style/color.css'
 import '../../../style/fonts.css'
 

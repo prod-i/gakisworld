@@ -85,6 +85,24 @@
     transition: top 1s ease-out 0.5s;
     outline: none;
 }
+.select_elem{
+    width: 100% !important;
+    height: 55px;
+    color: #fff !important;
+    border-radius: 5px;
+    padding: 7px 0;
+    font-size: 18px;
+    background-color: rgb(8, 8, 8);
+    font-family: CenturyGothic;
+    font-weight: 100;
+    cursor: pointer;
+    transition: top 1s ease-out 0.5s;
+    outline: none;
+}
+.select_elem .ant-select-selection-placeholder{
+    display: flex;
+    align-items: center;
+}
 .selector_years{
     width: 35%;
     padding: 15px;

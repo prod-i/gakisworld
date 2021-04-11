@@ -4,7 +4,7 @@ import Swiper, { Navigation, EffectCoverflow }                from 'swiper';
 // import      { RightCircleOutlined, LeftCircleOutlined }    from '@ant-design/icons';
 import         { NavLink }                                    from 'react-router-dom';
 import 'swiper/swiper-bundle.css';
-import '../../../style/slider.css'
+import '../../../style/main/slider.css'
 import '../../../style/color.css'
 import '../../../style/fonts.css'
 

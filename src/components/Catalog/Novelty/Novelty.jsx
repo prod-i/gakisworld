@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../../../style/novelty.css'
+import '../../../style/catalog/novelty.css'
 import '../../../style/color.css'
 import '../../../style/fonts.css'
 import { NavLink } from 'react-router-dom';
@@ -32,7 +32,7 @@ const Novelty = (props) => {
                             return (
                                 <div className="best_card" key={key}>
                                     <img src={card.image} alt="" className="best_card_img"/>
-                                    <NavLink exact to={'/serials/'+card.id} className='tW'><div className="title fCG op"  onMouseOver={ShowInfo} onMouseOut={HidenInfo}>{card.title}</div></NavLink>
+                                    <NavLink exact to={'/serials/'+card.id} className='tW'><div className="best_card_title fCG op"  onMouseOver={ShowInfo} onMouseOut={HidenInfo}>{card.title}</div></NavLink>
                                 </div>
                             );
                         })}

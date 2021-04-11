@@ -1,7 +1,8 @@
-import Img from '../../assets/img/naruto.jpg'
-import Img2 from '../../assets/img/titans.jpg'
-import Img3 from '../../assets/img/gul.jpg'
-import Img4 from '../../assets/img/preview.png'
+import Img from '../../assets/img/serials/12l.jpg'
+import Img3 from '../../assets/img/serials/4l.jpg'
+import Img2 from '../../assets/img/serials/19l.jpg'
+import Img4 from '../../assets/img/serials/17l.jpg'
+// import Img4 from '../../assets/img/DaemonSlayer.jpg'
 
 let initialState = {
     noveltyList: {

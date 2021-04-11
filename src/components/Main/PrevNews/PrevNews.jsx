@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../../style/prevNews.css'
+import '../../../style/main/prevNews.css'
 import '../../../style/color.css'
 import '../../../style/fonts.css'
 

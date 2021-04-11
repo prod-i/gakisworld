@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from '../../common/Footer/Footer';
-import '../../style/catalog.css'
+import '../../style/catalog/catalog.css'
 import '../../style/color.css'
 import '../../style/fonts.css'
 import CatalogList from './CatalogList/CatalogList';

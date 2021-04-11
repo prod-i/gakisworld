@@ -3,6 +3,7 @@ import store                                   from './redux/redux';
 import { Provider }                            from 'react-redux';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import { withSuspense }                        from './common/HOC/withSuspense';
+import 'antd/dist/antd.css';
 import './App.css';
 
 const HeaderC       = React.lazy(() => import('./common/Header/HeaderC'          ));

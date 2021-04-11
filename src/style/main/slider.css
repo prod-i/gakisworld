@@ -11,9 +11,11 @@
 }
 .swiper-slide-prev .slide__wrapper{
     opacity: 0.4;
+    pointer-events: none;
 }
 .swiper-slide-next .slide__wrapper{
     opacity: 0.4;
+    pointer-events: none;
 }
 .slide{
     display: flex;

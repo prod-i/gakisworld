@@ -3,9 +3,9 @@ import { NavLink } from 'react-router-dom';
 import { AppstoreOutlined, MenuOutlined, HeartOutlined,CrownOutlined, EyeOutlined } from '@ant-design/icons';
 import { Rate } from 'antd';
 import RateStyles from '../../../style/ant/Rate.css'
+import '../../../style/catalog/catalogList.css'
 import '../../../style/color.css'
 import '../../../style/fonts.css'
-import '../../../style/catalogList.css'
 
 
 const CatalogList = (props) => {
@@ -56,6 +56,7 @@ const CatalogList = (props) => {
                             return (
                                 <div className='catalog_card_line tW' key={key}>
                                     <NavLink exact to={'/serials/' + card.id} className='catalog_card_img_wrapper' key={key}>
+                                        <CrownOutlined className={'premium'} twoToneColor={'#fff'}/>
                                         <img src={card.imageLarge} alt="" className="catalog__card_line_img" />
                                     </NavLink>
                                     <div className="catalog__card_line_info">

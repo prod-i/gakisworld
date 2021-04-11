@@ -3,7 +3,6 @@ let initialState = {
     noRequiredSubscribe: false,
     filters: {
         type:{
-            all: 'Все', 
             films: 'Фильм', 
             serials: 'Сериал', 
             announcement: 'Анонсы',

@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../../style/continueView.css'
+import '../../../style/main/continueView.css'
 
 const ContinueView = (props) => {
     const list = props.list;
