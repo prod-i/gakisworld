@@ -29,7 +29,9 @@ const NewsList = (props) => {
                         <Option className={'news_select_options fCG'} bordered={false} value={3}>3</Option>
                     </Select>
                 </div>
-                <div className="news_search">123</div>
+                <div className="news_search">
+                    <input type="text" className="news_list_search fCG bBp tW" placeholder='Поиск по новостям'/>
+                </div>
             </div>
             <div className="news_list_body">
                 {newsList.list.map((card, key) => {
