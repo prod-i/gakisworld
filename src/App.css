@@ -51,7 +51,9 @@ a:hover{
 a{
   transition: 0;
 }
-
+img{
+  user-select: none;
+}
 body{
   background-color: #111111;
   color:#fff;
@@ -67,7 +69,7 @@ body{
   padding: 40px 0;
 }
 .vis{
-  display: none;
+  display: none !important;
 }
 .none{
   transition: 0.1s;

@@ -63,10 +63,10 @@
 .slide_content{
     position: absolute;
     overflow: hidden;
-    width: 65%;
+    width: 70%;
     min-height: 85%;
     max-height: 85%;
-    left:32%;
+    left:31%;
     border-radius: 20px;
     padding: 30px 10px 40px 13%;
 }

@@ -103,6 +103,10 @@
     display: flex;
     align-items: center;
 }
+.ant-select-selection-item{
+    display: flex;
+    align-items: center;
+}
 .selector_years{
     width: 35%;
     padding: 15px;

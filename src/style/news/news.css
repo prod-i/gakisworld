@@ -1,51 +1,101 @@
-.news{
+.news {
     margin: 100px auto 0 auto;
-    width:100%;
+    width: 100%;
 }
-.news_slider{
+
+.news_slider {
     display: flex;
     width: 100%;
     max-height: 350px;
-    margin-bottom: 40px;
+    margin: 120px 0 120px 0;
+    z-index: 0;
 }
-.news_slider_cards_wraper{
-    position: relative;
+.news_slider_cards_wraper {
     display: flex;
     justify-content: space-between;
-    padding: 0 40px;
-    width: inherit;
-    height: inherit;
+    margin: 0 auto;
+    width: 92%;
+    max-height: 350px;
+    z-index: 0;
 }
-.news_slider_card{
-    max-width: 20%;
-    margin: 0 10px;
+
+.news_slider_card {
+    position: relative;
+    width: 100%;
     height: 100%;
+    z-index: 0;
 }
-.news_slider_card_img{
+
+.news_slider_card_img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
+    z-index: 0;
 }
-.news_content{
+
+.news_slider_descr {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    background-color: rgba(0, 0, 0, 0.500);
+    z-index: 1;
+    padding: 10px;
+    transition: .6s;
+}
+
+.news_slider_descr:hover {
+    height: 80%;
+}
+
+.news_slider_card_title {
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration-color: transparent;
+    text-decoration-style: solid;
+    text-decoration-line: underline;
+    margin-bottom: 10px;
+    transition: .2s;
+}
+
+.news_slider_card_title:hover {
+    text-decoration-color: white;
+}
+
+.news_slider_card_descr {
+    position: absolute;
+    font-size: 14px;
+    margin-right: 10px;
+    top: 105px;
+}
+
+.news_content {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    height: 100vh;
+    width: 92%;
+    margin: 0 auto;
+    height: 100%;
 }
-.news_list{
-    width: 79%;
+
+.news_list {
+    width: 78%;
 }
-.news_list_header{
+
+.news_list_header {
     display: flex;
     justify-content: space-between;
     max-height: 60px;
     margin-bottom: 20px;
 }
-.news_filtres{
+
+.news_filtres {
     width: 20%;
+    margin-bottom: 30px;
 }
-.news_select{
+
+.news_select {
     width: 100% !important;
     height: 30px;
     border-radius: 5px;
@@ -59,14 +109,116 @@
     transition: top 1s ease-out 0.5s;
     outline: none;
 }
-.news_list_body{
-    height: 200vh;
+
+.news_list_body {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
     margin-bottom: 10px;
 }
-.news_sideBar{
-    width: 20%;
+
+.news_card_line {
+    margin-right: 1.3%;
+    width: 32%;
+    min-height: 300px;
+    margin-bottom: 1.3%;
 }
-.news_sideBar_el{
-    height: 30vh;
+
+.news_card_left {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+}
+
+.news_card_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: .3s;
+}
+.news_card_img_page {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    transition: .3s;
+    margin-bottom: 30px;
+}
+.containe{
+    margin: 0 auto;
+    width: 90%;
+    font-weight: 900;
+}
+.news_card_titles{
+    width: 100%;
+    border-bottom: 1px solid rgb(82, 82, 82);
+    padding-bottom: 20px;
     margin-bottom: 40px;
+    font-size: 22px;
+}
+.aa{
+    font-size: 18px;
+    margin: 60px 0;
+}
+.news_card_img:hover {
+    /* width: 101%;
+    height: 101%; */
+    opacity: .6;
+}
+
+.news_card_right {
+    position: relative;
+    
+    width: 100%;
+    padding: 20px;
+    height: 50%;
+    overflow: hidden;
+}
+
+.news_card_head {
+    width: 100%;
+}
+
+.news_card_title {
+    width: 95%;
+    margin-bottom: 20px;
+    font-weight: 900;
+    font-size: 15px;
+}
+
+.news_card_title:hover {
+    color: rgb(182, 182, 182)
+}
+
+.news_card_descr {
+    font-size: 14px;
+}
+
+.news_card_date {
+    position: absolute;
+    font-size: 12px;
+    bottom: 5px;
+    right: 5px;
+}
+
+.news_sideBar {
+    margin-top: 80px;
+    width: 21%;
+}
+
+.news_sideBar_el {
+    height: 30vh;
+    margin-bottom: 30px;
+}
+.ant-modal-close{
+    color: #ff7070 !important;
+}
+.ant-modal-close:focus,
+.ant-modal-close:hover {
+  color: rgb(175, 70, 70) !important;
+  text-decoration: none;
 }
