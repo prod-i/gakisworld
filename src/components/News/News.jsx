@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../style/news/news.css'
+import '../../style/news/newsModal.css'
 import '../../style/ant/select.css'
 import '../../style/color.css'
 import '../../style/fonts.css'
@@ -13,13 +14,13 @@ const News = (props) => {
     return (
         <div className="news">
 
-            <NewsSlider newsList={props.newsList}/>
+            <NewsSlider {...props}/>
 
             <div className="news_content">
                 
-            <NewsList newsList={props.newsList}/>
+            <NewsList {...props}/>
 
-            <NewsSidebar />
+            <NewsSidebar {...props}/>
 
 
             </div>

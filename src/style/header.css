@@ -44,23 +44,43 @@
 .menu_active:hover{
     color: #FF7070
 }
-.profile{
+.profile_menu{
+    position: relative;
     display: flex;
     width: 50%;
     height: 60px;
-    align-items: center;
     flex-direction: row-reverse;
     padding-right: 15px;
 }
-.profile_img{
-    width:45px;
-    height: 45px;
-}
-.blockk{
-    background-color: rgba(0, 0, 0, 0.952);
-    width: 400px;
-    margin: 50px;
+.profile_menu_button{
+    display: flex;
+    width: 60px;
+    height: 100%;
+    /* border: 1px solid #FF7070; */
     align-items: center;
-    padding: 10px 30px;
+}
+.profile_menu_img{
+    width:80%;
+    height:80%;
+    border-radius: 50%;
+}
+/* .exit{
     font-weight: 900;
+} */
+.ant-dropdown-menu{
+    position: absolute;
+    right: -20px;
+    margin-top: 5px;
+    background-color: #17191ad3;
+    color: #fff !important;
+}
+.ant-dropdown-menu-item{
+    width:  200px; 
+    color: #fff;
+    font-size: 15px;
+    padding: 10px;
+}
+.ant-dropdown-menu-item:hover,
+.ant-dropdown-menu-submenu-title:hover{
+    background-color: #ff70706c !important;
 }

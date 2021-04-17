@@ -12,8 +12,8 @@ const CatalogC      = React.lazy(() => import('./components/Catalog/CatalogC'   
 const NewsC         = React.lazy(() => import('./components/News/NewsC'          ));
 const CalendarC     = React.lazy(() => import('./components/Calendar/CalendarC'  ));
 const SubscribeC    = React.lazy(() => import('./components/Subscribe/SubscribeC'));
+const ProfileC    = React.lazy(() => import('./components/Profile/ProfileC'));
 const SerialsPageC  = React.lazy(() => import('./common/SerialsPage/SerialsPageC'));
-const NewsPageC     = React.lazy(() => import('./common/NewsPage/NewsPageC'      ));
 // const Footer     = React.lazy(() => import('./common/Footer/Footer'           ));
 
 
@@ -27,12 +27,13 @@ class App extends React.Component {
             <div className="app__loading_content">
               <Switch>
                 <Route exact path='/'                render={withSuspense(MainC         )}/>
+                <Route path='/profile'               render={withSuspense(ProfileC      )}/>
                 <Route path='/catalog'               render={withSuspense(CatalogC      )}/>
                 <Route path='/news'                  render={withSuspense(NewsC         )}/>
                 <Route path='/calendar'              render={withSuspense(CalendarC     )}/>
                 <Route path='/subscribe'             render={withSuspense(SubscribeC    )}/>
                 <Route path='/serials/:serialsId?'   render={withSuspense(SerialsPageC  )}/>
-                <Route path='/news/:newsId?'         render={withSuspense(NewsPageC     )}/>
+                {/* <Route path='/news/:newsId?'         render={withSuspense(NewsPageC     )}/> */}
               </Switch>
             </div>
           </div>

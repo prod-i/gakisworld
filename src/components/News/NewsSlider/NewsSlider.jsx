@@ -1,7 +1,8 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Modal  } from 'antd';
 import 'swiper/swiper-bundle.css';
-import img from './../../../assets/img/serials/19m.jpg'
+import NewsPage from '../NewsPage';
 
 const NewsSlider = (props) => {
     const newsList = props.newsList.newsList;
@@ -12,12 +13,12 @@ const NewsSlider = (props) => {
                     spaceBetween={30}
                     slidesPerView={3.5}
                     onSwiper={(swiper) => console.log(swiper)}
-                    onSlideChange={() => console.log('slide change')}
+                    // onSlideChange={() => console.log('slide change')}
                 >
                     {newsList.list.map((card, key) => {
                         return (
                             <SwiperSlide key={key}>
-                                <div className="news_slider_card">
+                                <div className="news_slider_card" onClick={() => props.showModal(card.title, card.text, card.imgM)}>
                                     <img src={card.imgM} alt="" className='news_slider_card_img' />
                                     <div className="news_slider_descr">
                                         <div className="news_slider_card_title fCG">{card.title}</div>
@@ -28,6 +29,16 @@ const NewsSlider = (props) => {
                         );
                     })}
                 </Swiper>
+                <Modal
+                    width    = '50%'
+                    title    = {false}
+                    footer   = {false}
+                    visible  = {props.ModalVisible}
+                    onCancel = {props.handleCancel}
+                    bodyStyle= {{ background: 'rgb(33, 37, 41)', margin:'-40px 0'}}
+                >
+                   <NewsPage title={props.ModalTitle} img={props.ModalPicture} text={props.ModalContent}/>
+                </Modal>
             </div>
         </div>
     )

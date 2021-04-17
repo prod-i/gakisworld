@@ -1,23 +1,11 @@
 import React      from 'react'
 import { Select } from 'antd';
 import { Modal  } from 'antd';
-import { Redirect } from 'react-router';
+import NewsPage from '../NewsPage';
 const  { Option } = Select;
 
 const NewsList = (props) => {
-    const [visible, setVisible] = React.useState(false);
-    const [title  , setTitle  ] = React.useState('title');
-    const [img    , setImg    ] = React.useState('img');
-    const [text   , setDescr  ] = React.useState('Text');
     const newsList = props.newsList.newsList;
-    const handleCancel = () => setVisible(false)
-
-    const showModal = (title, text, img) => {
-          setVisible (true );
-          setTitle   (title);
-          setDescr   (text );
-          setImg     (img  );
-    };
 
     return (
         <div className="news_list">
@@ -37,33 +25,28 @@ const NewsList = (props) => {
                 {newsList.list.map((card, key) => {
                     return (
                         <div className="news_card_line bcgB" key={key}>
-                            <div className="news_card_left">
-                                <img src={card.imgM} alt="" className="news_card_img" onClick={() => showModal(card.title, card.text, card.imgM)} />
+                            <div className="news_card_top">
+                                <img src={card.imgM} alt="" className="news_card_img" onClick={() => props.showModal(card.title, card.text, card.imgM)} />
                             </div>
-                            <div className="news_card_right">
+                            <div className="news_card_bottom">
                                 <div className="news_card_head">
-                                    <div className="news_card_title fCG" onClick={() => showModal(card.title, card.text, card.imgM)}>{card.title}</div>
+                                    <div className="news_card_title fCG" onClick={() => props.showModal(card.title, card.text, card.imgM)}>{card.title}</div>
                                 </div>
-                                <div className="news_card_descr">{card.descr}</div>
+                                <div className="news_card_descr tD">{card.descr}</div>
                                 <div className="news_card_date tD">{card.author} {card.date}</div>
                             </div>
                         </div>
                     );
                 })}
                 <Modal
-                    width    = '60%'
+                    width    = '50%'
                     title    = {false}
                     footer   = {false}
-                    visible  = {visible}
-                    onCancel = {handleCancel}
+                    visible  = {props.ModalVisible}
+                    onCancel = {props.handleCancel}
                     bodyStyle= {{ background: 'rgb(33, 37, 41)', margin:'-40px 0'}}
                 >
-                    <div className="containe">                        
-                    <div className="news_card_titles fCG tW">{title}</div>
-                    <img src={img} alt="" className="news_card_img_page" />
-                    <p className='fCG tW aa'>{text}</p>
-                    <img src={img} alt="" className="news_card_img_page" />
-                    </div>
+                   <NewsPage title={props.ModalTitle} img={props.ModalPicture} text={props.ModalContent}/>
                 </Modal>
             </div>
         </div>
