@@ -12,7 +12,6 @@ const Profile = () => {
     const handleClick = (e) => {
         console.log('click ', e.key);
         console.log(window.location.pathname);
-        <NavLink exact to="/profile" className="menu_item tW fCG" activeClassName='tR'>Профиль</NavLink>
         setCurrent(e.key);
     }
     return (
