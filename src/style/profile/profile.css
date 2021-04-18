@@ -1,0 +1,17 @@
+.profile {
+    position: relative;
+    margin: 100px auto 0 auto;
+    width: 80%;
+    height: 100vh;
+}
+.profile_menu_nav{
+    position: absolute;
+    top: 80px;
+    left: 20px;
+}
+.ant-menu-inline{
+    background-color: rgba(255, 249, 249, 0) !important;
+}
+.ant-menu-item-selected{
+    background-color: #FF7070 !important;
+}

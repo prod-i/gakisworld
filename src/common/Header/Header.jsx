@@ -26,6 +26,11 @@ const Header = (props) => {
             <div className="menu_item tW fCG">Подписка</div>
           </Menu.Item>
           <Menu.Item>
+            <div className="menu_item tW fCG search__selector_checked">
+              <label className="label_checked"><div className="search_checked_text">Тема</div><input className='tW fCG' type="checkbox" onChange={(e) => console.log(e.target.checked)} onClick={(e) => console.log(e.target.checked)} /></label>
+            </div>
+          </Menu.Item>
+          <Menu.Item>
             <div className="menu_item exit tRP fCG">Выход</div>
           </Menu.Item>
         </Menu>

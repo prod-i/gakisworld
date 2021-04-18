@@ -1,6 +1,9 @@
 .bB{
     background-color: #000 !important;
 }
+.b{
+    background-color: rgba(255, 255, 255, 0) !important;
+}
 .bBp{
     background-color: rgba(0, 0, 0, 0.726) !important;
 }
