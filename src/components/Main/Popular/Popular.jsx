@@ -1,30 +1,13 @@
-import React, { useState } from 'react'
-import StarRatings from 'react-star-ratings';
-import { NavLink } from 'react-router-dom';
+import React        from 'react'
+import StarRatings  from 'react-star-ratings';
+import { NavLink }  from 'react-router-dom';
 import '../../../style/main/popular.css'
 import '../../../style/color.css'
 import '../../../style/fonts.css'
 
 
 const Popular = (props) => {
-    const [hoverInfo, setHoverInfo] = useState(false);
     const card = props.list;
-    const ref = React.createRef();
-    const HidenInfo = (e) => {
-        setHoverInfo(false)
-        CheckHover(e)
-    }
-    const ShowInfo = (e) => {
-        setHoverInfo(true)
-        CheckHover(e)
-    }
-    const CheckHover = (e) => {
-        if(hoverInfo){
-            e.target.classList.add('op')
-        } else {
-            e.target.classList.remove('op')
-        }
-    }
 
     if (!Array.isArray(card) || card.length <= 0) {
         return null
@@ -44,7 +27,7 @@ const Popular = (props) => {
                                 <div className="popular_card bcgB" key={index}>
                                     <img src={card.imageMin} alt="" className="popular__card_img" />
                                     <NavLink exact to={'/serials/'+card.id} className='tW'>
-                                        <div className="popular_hover fCG op" ref={ref} onMouseOver={ShowInfo} onMouseOut={HidenInfo}>
+                                        <div className="popular_hover fCG" >
                                             <>{card.title}</>
                                             <br />
                                             <>

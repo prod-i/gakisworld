@@ -1,26 +1,13 @@
-import React, { useState } from 'react'
+import   React     from 'react'
+import { NavLink } from 'react-router-dom';
 import '../../../style/catalog/novelty.css'
 import '../../../style/color.css'
 import '../../../style/fonts.css'
-import { NavLink } from 'react-router-dom';
 
 const Novelty = (props) => {
-    const [hoverInfo, setHoverInfo] = useState(false);
     const novelty = props.novelty;
-    const ShowInfo = (e) => {
-        setHoverInfo(true)
-        CheckHover(e)
-    }
-    const HidenInfo = (e) => {
-        setHoverInfo(false)
-        CheckHover(e)
-    }
-    const CheckHover = (e) => {
-        if(hoverInfo){
-            e.target.classList.add('op')
-        } else {
-            e.target.classList.remove('op')
-        }
+    if (!Array.isArray(novelty.noveltyList.list) || novelty.noveltyList.list.length <= 0) {
+        return null
     }
     
     return (
@@ -32,7 +19,7 @@ const Novelty = (props) => {
                             return (
                                 <div className="best_card" key={key}>
                                     <img src={card.image} alt="" className="best_card_img"/>
-                                    <NavLink exact to={'/serials/'+card.id} className='tW'><div className="best_card_title fCG op"  onMouseOver={ShowInfo} onMouseOut={HidenInfo}>{card.title}</div></NavLink>
+                                    <NavLink exact to={'/serials/'+card.id} className='tW'><div className="best_card_hover fCG">{card.title}</div></NavLink>
                                 </div>
                             );
                         })}

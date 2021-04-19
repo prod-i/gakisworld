@@ -1,9 +1,8 @@
 import React                                                  from 'react';
 import StarRatings                                            from 'react-star-ratings';
 import Swiper, { Navigation, EffectCoverflow }                from 'swiper';
-// import      { RightCircleOutlined, LeftCircleOutlined }    from '@ant-design/icons';
-import         { NavLink }                                    from 'react-router-dom';
-import 'swiper/swiper-bundle.css';
+import         { NavLink                     }                from 'react-router-dom';
+import 'swiper/swiper-bundle.css'
 import '../../../style/main/slider.css'
 import '../../../style/color.css'
 import '../../../style/fonts.css'
@@ -13,19 +12,19 @@ class Slider extends React.Component {
         Swiper.use([Navigation, EffectCoverflow]);
         if (!Array.isArray(this.props.slides) || this.props.slides.length <= 0) return null
         this.swiper = new Swiper('.swiper-container', {
-            effect          : 'coverflow',
-            centeredSlides  : true,
-            loop            : true,
-            slidesPerView   : 1.1,
-            coverflowEffect : {
-                rotate      : 5,
-                depth       : 200,
-                stretch     : 390,
-                slideShadows: false,
+            effect           : 'coverflow',
+            centeredSlides   : true,
+            loop             : true,
+            slidesPerView    : 1.1,
+            coverflowEffect  : {
+                rotate       : 5,
+                depth        : 200,
+                stretch      : 390,
+                slideShadows : false,
             },
-            navigation      : {
-                nextEl      : '.button-next',
-                prevEl      : '.button-prev',
+            navigation       : {
+                nextEl       : '.button-next',
+                prevEl       : '.button-prev',
             },
         });
     }
@@ -33,7 +32,6 @@ class Slider extends React.Component {
     render() {
         return (
             <div className={this.props.sliderVis ? 'slider swiper-container' : 'slider none'}>
-                {/* <div class="button-prev tR"><LeftCircleOutlined /></div> */}
                 <div className="swiper-wrapper">
                     {this.props.slides.map((slide, index) => {
                         return (
@@ -71,7 +69,6 @@ class Slider extends React.Component {
                         )
                     })}
                 </div>
-                {/* <div class="button-next tR"><RightCircleOutlined /></div> */}
             </div >
         );
     }

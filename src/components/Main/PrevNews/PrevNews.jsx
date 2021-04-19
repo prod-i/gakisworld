@@ -9,6 +9,7 @@ const PrevNews = (props) => {
     if (!Array.isArray(posts) || posts.length <= 0) {
         return null
     }
+    
     return (
         <div className={props.prevNewsVis ? "prevNews bcg" : "prevNews bcg vis"}>
             <div className="container">

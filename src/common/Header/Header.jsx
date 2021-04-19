@@ -1,11 +1,11 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React             from 'react';
+import logo              from '../../assets/icon/logo.png'
+import profileAvatarMini from '../../assets/icon/avatar.png'
+import { NavLink       } from 'react-router-dom';
+import { Menu, Dropdown} from 'antd';
 import '../../style/header.css'
 import '../../style/color.css'
 import '../../style/fonts.css'
-import logo from '../../assets/icon/logo.png'
-import { Menu, Dropdown} from 'antd';
-import profileAvatarMini from '../../assets/icon/avatar.png'
 
 const Header = (props) => {
     const menu = (
@@ -42,17 +42,18 @@ const Header = (props) => {
                 <NavLink exact to="/" className='logo_text tW'>GAKISWORLD</NavLink>
             </div>
             <div className="menu fCG">
-                <NavLink exact to="/" className='menu_el tW' activeClassName='menu_active tRP'>Главная  </NavLink>
-                <NavLink to="/catalog" className='menu_el tW' activeClassName='menu_active tRP'>Каталог  </NavLink>
-                <NavLink to="/news" className='menu_el tW' activeClassName='menu_active tRP'>Новости  </NavLink>
+                <NavLink exact to="/" className='menu_el tW' activeClassName='menu_active tRP'>Главная</NavLink>
+                <NavLink to="/catalog" className='menu_el tW' activeClassName='menu_active tRP'>Каталог</NavLink>
+                <NavLink to="/news" className='menu_el tW' activeClassName='menu_active tRP'>Новости </NavLink>
                 <NavLink to="/calendar" className='menu_el tW' activeClassName='menu_active tRP'>Календарь</NavLink>
                 <NavLink to="/subscribe" className='menu_el tW' activeClassName='menu_active tRP'>Подписка </NavLink>
             </div>
             <div className="profile_menu">
-
                 <div className="profile_menu_button">
                 <Dropdown overlay={menu} placement="bottomRight">
+                  <NavLink exact to="/profile" className="menu_item tW fCG" activeClassName='tR'>
                     <img className="profile_menu_img" src={profileAvatarMini} alt="profileHeader" />
+                  </NavLink>
                 </Dropdown>
                 </div>
             </div>

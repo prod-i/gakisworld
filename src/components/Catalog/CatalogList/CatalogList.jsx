@@ -1,30 +1,24 @@
-import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom';
+import   React      from 'react'
+import   RateStyles from '../../../style/ant/Rate.css'
 import { AppstoreOutlined, MenuOutlined, HeartOutlined,CrownOutlined, EyeOutlined } from '@ant-design/icons';
-import { Rate } from 'antd';
-import RateStyles from '../../../style/ant/Rate.css'
+import { NavLink  } from 'react-router-dom';
+import { Rate     } from 'antd';
 import '../../../style/catalog/catalogList.css'
 import '../../../style/color.css'
 import '../../../style/fonts.css'
 
 
 const CatalogList = (props) => {
-    const [hoverInfo, setHoverInfo] = useState(false);
-    const [rtlLine, setRtlLine] = useState(false);
+    const [rtlLine, setRtlLine]  = React.useState(false);
+    const list = props.catalogList.catalogList.list;
     const rtlSwith = () => {
         return rtlLine ? setRtlLine(false) : setRtlLine(true)
     }
-    const ShowInfo = (e) => {
-        setHoverInfo(true)
-        CheckHover(e)
+    
+    if (!Array.isArray(list) || list.length <= 0) {
+        return null
     }
-    const HidenInfo = (e) => {
-        setHoverInfo(false)
-        CheckHover(e)
-    }
-    const CheckHover = (e) => {
-        return hoverInfo ? e.target.classList.add('op') : e.target.classList.remove('op')
-    }
+
     return (
         <div className="catalog_body">
             <div className="container">
@@ -44,15 +38,19 @@ const CatalogList = (props) => {
                 </div>
                 <div className="catalog__cards">
                     {!rtlLine
-                        ? props.catalogList.catalogList.list.map((card, key) => {
+                    
+                        // BLOCK
+                        ? list.map((card, key) => {
                             return (
                                 <NavLink exact to={'/serials/' + card.id} className='catalog_card_block tW' key={key}>
                                     <img src={card.imageMin} alt="" className="catalog__card_block_img" />
-                                    <div className="catalog_title_block fCG op" onMouseOver={ShowInfo} onMouseOut={HidenInfo}>{card.title}</div>
+                                    <div className="catalog_block_hover fCG">{card.title}</div>
                                 </NavLink>
                             );
                         })
-                        : props.catalogList.catalogList.list.map((card, key) => {
+                        
+                        // LINE
+                        : list.map((card, key) => {
                             return (
                                 <div className='catalog_card_line tW' key={key}>
                                     <NavLink exact to={'/serials/' + card.id} className='catalog_card_img_wrapper' key={key}>
@@ -68,7 +66,7 @@ const CatalogList = (props) => {
                                                 <EyeOutlined /><HeartOutlined /><CrownOutlined />
                                             </div>
                                         </div>  
-                                        <div className="rating">
+                                        <div className="catalog_rating">
                                             <Rate disabled defaultValue={2} className={RateStyles} count={10} value={card.rating}/>
                                         </div>
                                         <div className="catalog_card_info">

@@ -1,29 +1,29 @@
-import React from 'react';
-import News from './News';
-import { compose } from 'redux';
-import { connect } from 'react-redux';
+import   React        from 'react';
+import   News         from './News';
+import { compose    } from 'redux';
+import { connect    } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 class NewsC extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            ModalVisible: false,
-            ModalTitle: 'title',
-            ModalPicture: 'img',
-            ModalContent: 'text',
+            ModalVisible : false   ,
+            ModalTitle   : 'title ',
+            ModalPicture : 'img   ',
+            ModalContent : 'text  ',
         };
         this.handleCancel = this.handleCancel.bind(this);
-        this.showModal = this.showModal.bind(this);
+        this.showModal    = this.showModal.bind   (this);
     }
     handleCancel(){
-        this.setState({ModalVisible: false})
+        this.setState({ModalVisible : false })
     }
     showModal(title, text, img){
-        this.setState({ModalVisible: true})
-        this.setState({ModalTitle: title})
-        this.setState({ModalContent: text})
-        this.setState({ModalPicture: img})
+        this.setState({ModalVisible : true  })
+        this.setState({ModalTitle   : title })
+        this.setState({ModalContent : text  })
+        this.setState({ModalPicture : img   })
     }
 
     render() {

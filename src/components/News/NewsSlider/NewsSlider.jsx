@@ -1,8 +1,8 @@
-import React from 'react'
+import   React                 from 'react'
+import   NewsPage              from '../NewsPage';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Modal  } from 'antd';
+import { Modal               } from 'antd';
 import 'swiper/swiper-bundle.css';
-import NewsPage from '../NewsPage';
 
 const NewsSlider = (props) => {
     const newsList = props.newsList.newsList;

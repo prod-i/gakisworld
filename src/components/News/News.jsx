@@ -14,11 +14,11 @@ const News = (props) => {
     return (
         <div className="news">
 
-            <NewsSlider {...props}/>
+            <NewsSlider  {...props}/>
 
             <div className="news_content">
                 
-            <NewsList {...props}/>
+            <NewsList    {...props}/>
 
             <NewsSidebar {...props}/>
 

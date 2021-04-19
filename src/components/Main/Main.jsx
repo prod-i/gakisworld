@@ -4,10 +4,10 @@ import Banner       from '../../common/Banner/Banner';
 import ContinueView from './ContinueView/ContinueView';
 import PrevNews     from './PrevNews/PrevNews';
 import Popular      from './Popular/Popular';
+import Footer       from '../../common/Footer/Footer';
 import '../../style/main/main.css'
 import '../../style/color.css'
 import '../../style/fonts.css'
-import Footer from '../../common/Footer/Footer';
 
 const Main = (props)=> {
         return(

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React               from 'react';
 import StartSearch         from './StartSearch/StartSearch';
 import AdvancedSearch      from './AdvancedSearch/AdvancedSearch';
 import '../../../style/catalog/search.css'
@@ -6,7 +6,7 @@ import '../../../style/color.css'
 import '../../../style/fonts.css'
 
 const Search = (props) => {
-    const [extendSearch, setExtendSearch] = useState(false); //toggle advanced search
+    const [extendSearch, setExtendSearch] = React.useState(false); //toggle advanced search
     return (
         <div className="search">
 
