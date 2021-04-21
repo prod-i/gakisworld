@@ -1,6 +1,6 @@
 import React        from 'react'
-import StarRatings  from 'react-star-ratings';
 import { NavLink }  from 'react-router-dom';
+import { Rate } from 'antd';
 import '../../../style/main/popular.css'
 import '../../../style/color.css'
 import '../../../style/fonts.css'
@@ -24,19 +24,16 @@ const Popular = (props) => {
                     {card.map((card, index) => {
                         if (card.popular) {
                             return (
-                                <div className="popular_card bcgB" key={index}>
+                                <NavLink exact to={'/serials/'+card.id} className='popular_card bcgB tW' key={index}>
                                     <img src={card.imageMin} alt="" className="popular__card_img" />
-                                    <NavLink exact to={'/serials/'+card.id} className='tW'>
-                                        <div className="popular_hover fCG" >
-                                            <>{card.title}</>
-                                            <br />
-                                            <>
-                                            <StarRatings rating={card.rating} numberOfStars={10} starDimension={'13px'} starSpacing={'1px'} starRatedColor={'#FF7070'} starEmptyColor={'#fff'} />   
-                                            <span className='rating'>{card.rating}</span>
-                                            </>
-                                        </div>
-                                    </NavLink>
-                                </div>
+                                    <div className="popular_hover fCG">
+                                        <div className="popular_title">{card.title}</div>
+                                        <Rate disabled defaultValue={2} count={10} value={card.rating} className={'popular_rating'}/>
+                                        <div className="popular_detail_elem"><div className="popular_details_left tD">Год    </div><div className="popular_details_right tW">{card.years}</div></div>
+                                        <div className="popular_detail_elem"><div className="popular_details_left tD">Жанр    </div><div className="popular_details_right tW">{card.genre}</div></div>
+                                        <div className="popular_descr_content tW">{card.descr}</div>
+                                    </div>
+                                </NavLink>
                             )
                         } else {
                             return null;

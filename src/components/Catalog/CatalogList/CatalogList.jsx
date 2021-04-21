@@ -1,17 +1,17 @@
-import   React      from 'react'
-import { AppstoreOutlined, MenuOutlined, HeartOutlined,CrownOutlined, EyeOutlined } from '@ant-design/icons';
-import { NavLink  } from 'react-router-dom';
-import { Rate     } from 'antd';
+import React from 'react'
+import { AppstoreOutlined, MenuOutlined, HeartOutlined, CrownOutlined, EyeOutlined } from '@ant-design/icons';
+import { NavLink } from 'react-router-dom';
+import { Rate } from 'antd';
 import '../../../style/catalog/catalogList.css'
 
 
 const CatalogList = (props) => {
-    const [rtlLine, setRtlLine]  = React.useState(false);
+    const [rtlLine, setRtlLine] = React.useState(false);
     const list = props.catalogList.catalogList.list;
     const rtlSwith = () => {
         return rtlLine ? setRtlLine(false) : setRtlLine(true)
     }
-    
+
     if (!Array.isArray(list) || list.length <= 0) {
         return null
     }
@@ -35,36 +35,42 @@ const CatalogList = (props) => {
                 </div>
                 <div className="catalog__cards">
                     {!rtlLine
-                    
+
                         // BLOCK
                         ? list.map((card, key) => {
                             return (
                                 <NavLink exact to={'/serials/' + card.id} className='catalog_card_block tW' key={key}>
                                     <img src={card.imageMin} alt="" className="catalog__card_block_img" />
-                                    <div className="catalog_block_hover fCG">{card.title}</div>
+                                    <div className="catalog_block_hover fCG">
+                                        <div className="catalog_block_title">{card.title}</div>
+                                        <Rate disabled defaultValue={2} count={10} value={card.rating} className={'catalog_block_rating'}/>
+                                        <div className="catalog_detail_elem"><div className="catalog_block_details_left tD">Год    </div><div className="catalog_block_details_right tW">{card.years}</div></div>
+                                        <div className="catalog_detail_elem"><div className="catalog_block_details_left tD">Жанр    </div><div className="catalog_block_details_right tW">{card.genre}</div></div>
+                                        <div className="catalog_block_descr_content tW">{card.descr}</div>
+                                    </div>
                                 </NavLink>
                             );
                         })
-                        
+
                         // LINE
                         : list.map((card, key) => {
                             return (
                                 <div className='catalog_card_line tW' key={key}>
                                     <NavLink exact to={'/serials/' + card.id} className='catalog_card_img_wrapper' key={key}>
-                                        <CrownOutlined className={'premium'} twoToneColor={'#fff'}/>
+                                        <CrownOutlined className={'premium'} twoToneColor={'#fff'} />
                                         <img src={card.imageLarge} alt="" className="catalog__card_line_img" />
                                     </NavLink>
                                     <div className="catalog__card_line_info">
                                         <div className="catalog_header_line">
-                                        <NavLink exact to={'/serials/' + card.id} className='tW' key={key}>
-                                            <div className="catalog_title_line fCG">{card.title}</div>
-                                        </NavLink>
+                                            <NavLink exact to={'/serials/' + card.id} className='tW' key={key}>
+                                                <div className="catalog_title_line fCG">{card.title}</div>
+                                            </NavLink>
                                             <div className="catalog_icons_line tR">
                                                 <EyeOutlined /><HeartOutlined /><CrownOutlined />
                                             </div>
-                                        </div>  
+                                        </div>
                                         <div className="catalog_rating">
-                                            <Rate disabled defaultValue={2} count={10} value={card.rating}/>
+                                            <Rate disabled defaultValue={2} count={10} value={card.rating} />
                                         </div>
                                         <div className="catalog_card_info">
                                             <div className="catalog_detail tG fCG">

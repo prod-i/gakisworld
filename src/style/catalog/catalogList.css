@@ -53,13 +53,11 @@
     z-index: -1;
 }
 .catalog_block_hover{
-    position: absolute;
-    opacity: 0;
     width: 100%;
     height: 100%;
+    opacity: 0;
     background-color: rgba(0, 0, 0, 0.4);
     box-shadow: -10px 20px 10px 40px rgba(0, 0, 0, 0.4);
-    /* margin-top: 40%; */
     padding: 10px;
     font-weight: 600;
     font-size: 22px;
@@ -69,6 +67,27 @@
 }
 .catalog_block_hover:hover{
     opacity: 1;
+}
+.catalog_block_title{
+    font-size: 20px;
+    margin-bottom: -10px;
+}
+.catalog_block_rating{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.catalog_detail_elem{
+    font-size: 13px;
+}
+.catalog_block_details_left{
+    width: 20%;
+}
+.catalog_block_details_right{
+    width: 80%;
+}
+.catalog_block_descr_content{
+    font-size: 10px;
+    margin-top: 20px;
 }
 .catalog_card_line{
     display: flex;

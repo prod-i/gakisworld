@@ -1,5 +1,6 @@
 import   React     from 'react'
 import { NavLink } from 'react-router-dom';
+import { Rate    } from 'antd';
 import '../../../style/catalog/novelty.css'
 import '../../../style/color.css'
 import '../../../style/fonts.css'
@@ -17,10 +18,18 @@ const Novelty = (props) => {
                     <div className="best_cards">
                         {novelty.noveltyList.list.map((card, key) => {
                             return (
-                                <div className="best_card" key={key}>
+                                <NavLink exact to={'/serials/'+card.id} className="best_card tW" key={key}>
                                     <img src={card.image} alt="" className="best_card_img"/>
-                                    <NavLink exact to={'/serials/'+card.id} className='tW'><div className="best_card_hover fCG">{card.title}</div></NavLink>
-                                </div>
+                                    <div className="best_card_hover fCG">
+                                        <div className="best_card_title">{card.title}</div>
+                                        <Rate disabled defaultValue={2} count={10} value={card.rating} className={'best_card_rating'}/>
+                                        <div className="best_card_detail_elem"><div className="best_card_details_left tD">Год    </div><div className="best_card_details_right tW">{card.years}</div></div>
+                                        <div className="best_card_detail_elem"><div className="best_card_details_left tD">Жанр   </div><div className="best_card_details_right tW">{card.genre}</div></div>
+                                        <div className="best_card_detail_elem"><div className="best_card_details_left tD">Режессер    </div><div className="best_card_details_right tW">{card.director}</div></div>
+                                        <div className="best_card_detail_elem"><div className="best_card_details_left tD">Тип    </div><div className="best_card_details_right tW">{card.type}</div></div>
+                                        <div className="best_card_descr_content tW">{card.descr}</div>
+                                    </div>
+                                </NavLink>
                             );
                         })}
                     </div>

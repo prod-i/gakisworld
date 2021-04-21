@@ -9,39 +9,72 @@
     padding: 50px 0 50px 0;
     margin: 0 auto;
 }
-.best_title{
-    font-family: CenturyGothic;
-    font-size: 24px;
-    color: #fff;
-}
 .novelty{
     display: flex;
     width: 100%;
     height: 100%;
-    /* border: 1px solid #FF7070; */
 }
 .best_cards{
     display: flex;
     justify-content: space-between;
     width: 80%;
     max-height: 450px;
-    height: 350vh;
+    z-index: 0;
+    overflow: hidden;
 }
 .best_card{
     position: relative;
     width: 24%;
-    height: 100%;
-    overflow: hidden;
+    min-height: 450px;
+    max-height: 450px;
+    z-index: 0;
 }
 .best_card_img{
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
     object-fit: cover;
     object-position: center;
-    z-index: 0;
+    z-index: -1;
+}
+.best_card_hover{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    font-size: 22px;
+    font-weight: 600;
+    transition: 0.3s;
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
+}
+.best_card_hover:hover{
+    opacity: 1;
+}
+.best_card_title{
+    font-size: 22px;
+    z-index: 1;
+    height: 60px;
+}
+.best_card_rating{
+    font-size: 15px;
+}
+.best_card_detail_elem{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.best_card_details_left{
+    width: 40%;
+}
+.best_card_details_right{
+    width: 60%;
+}
+.best_card_descr_content{
+    font-size: 13px;
+    margin-top: 10px;
 }
 .best_title{
     display: flex;
@@ -52,22 +85,4 @@
     margin: auto auto;
     width: 10%;
     height: 100%;
-}
-.best_card_hover{
-    position: absolute;
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    box-shadow: -10px 20px 10px 40px rgba(0, 0, 0, 0.4);
-    /* margin-top: 70%; */
-    padding: 10px;
-    font-weight: 600;
-    font-size: 22px;
-    transition: 0.3s;
-    cursor: pointer;
-    z-index: 10;
-}
-.best_card_hover:hover{
-    opacity: 1;
 }
