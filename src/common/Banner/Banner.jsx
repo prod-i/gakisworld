@@ -19,7 +19,7 @@ const Banner = (props) => {
                 </div>
             </div>
             <div className="marketing__image">
-                <img src={chanFollow} alt="" className="marketing__img" />
+                <NavLink exact to={'/subscribe'} className=''><img src={chanFollow} alt="" className="marketing__img" /></NavLink>
             </div>
         </div>
     )

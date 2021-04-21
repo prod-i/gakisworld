@@ -2,6 +2,7 @@ import React from 'react'
 import '../../../style/main/continueView.css'
 import '../../../style/color.css'
 import '../../../style/fonts.css'
+import { NavLink } from 'react-router-dom'
 
 const ContinueView = (props) => {
     const list = props.list;
@@ -14,7 +15,7 @@ const ContinueView = (props) => {
         <div className={props.continueViewVis ? "continue__view" : "continue__view vis"}>
             <div className="block_title">
                 <div className="title_name fCG">Продолжить просмотр</div>
-                <div className="title_more fCG tRP">Посмотреть список полностью</div>
+                <NavLink exact to={'/profile/1'} className='title_more fCG tRP'>Посмотреть список полностью</NavLink>
             </div>
             <div className="continue__view_card">
                 {list.map((list, index) => {

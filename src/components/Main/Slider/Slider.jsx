@@ -1,9 +1,8 @@
 import React                           from 'react';
-import StarRatings                     from 'react-star-ratings';
 import SwiperCore, { EffectCoverflow } from 'swiper';
 import { Swiper, SwiperSlide         } from 'swiper/react';
 import { NavLink                     } from 'react-router-dom';
-import { Rate     } from 'antd';
+import { Rate                        } from 'antd';
 import 'swiper/swiper-bundle.css'
 import '../../../style/main/slider.css'
 SwiperCore.use([EffectCoverflow]);
@@ -27,9 +26,9 @@ const Slider = (props) => {
                 onSwiper         ={(swiper) => console.log(swiper)}
                 onSlideChange    ={() => console.log('slide change')}
             >
-                {props.slides.map((slide, index) => {
+                {props.slides.map((slide, key) => {
                     return (
-                        <SwiperSlide className={'slide swiper-slide'} key={index}>
+                        <SwiperSlide className={'slide swiper-slide'} key={key}>
                             <div className="slide__wrapper">
                                 {/* PRIVIEW */}
                                 <NavLink exact to={'/serials/' + slide.id} className='slide__preview tW'><img className="slide__preview_img" src={slide.imageLarge} alt="" /></NavLink>

@@ -2,6 +2,7 @@ import React from 'react'
 import '../../../style/main/prevNews.css'
 import '../../../style/color.css'
 import '../../../style/fonts.css'
+import { NavLink } from 'react-router-dom'
 
 const PrevNews = (props) => {
     const posts = props.posts;
@@ -15,7 +16,7 @@ const PrevNews = (props) => {
             <div className="container">
                 <div className="block_title fCG">
                     <div className="title_name">Новости</div>
-                    <div className="title_more tRP">Перейти к новостям</div>
+                    <NavLink exact to={'/news'} className='title_more fCG tRP'>Перейти к новостям</NavLink>
                 </div>
                 <div className="prevNews__cards">
                     {posts.map((posts, index) => {

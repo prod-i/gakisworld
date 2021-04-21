@@ -18,7 +18,7 @@ const Popular = (props) => {
             <div className="container">
                 <div className="block_title fCG">
                     <div className="title_name">Популярное Аниме</div>
-                    <div className="title_more tRP">Перейти к каталогу</div>
+                    <NavLink exact to={'/catalog'} className='title_more tRP fCG'>Перейти к каталогу</NavLink>
                 </div>
                 <div className="popular__cards">
                     {card.map((card, index) => {
