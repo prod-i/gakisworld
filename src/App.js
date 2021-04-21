@@ -4,6 +4,7 @@ import { Provider                  }           from 'react-redux';
 import { HashRouter, Route, Switch }           from 'react-router-dom';
 import { withSuspense              }           from './common/HOC/withSuspense';
 import 'antd/dist/antd.css';
+import './style/ant/Rate.css'
 import './style/color.css'
 import './style/fonts.css'
 import './App.css';

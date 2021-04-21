@@ -1,11 +1,8 @@
 import   React      from 'react'
-import   RateStyles from '../../../style/ant/Rate.css'
 import { AppstoreOutlined, MenuOutlined, HeartOutlined,CrownOutlined, EyeOutlined } from '@ant-design/icons';
 import { NavLink  } from 'react-router-dom';
 import { Rate     } from 'antd';
 import '../../../style/catalog/catalogList.css'
-import '../../../style/color.css'
-import '../../../style/fonts.css'
 
 
 const CatalogList = (props) => {
@@ -67,7 +64,7 @@ const CatalogList = (props) => {
                                             </div>
                                         </div>  
                                         <div className="catalog_rating">
-                                            <Rate disabled defaultValue={2} className={RateStyles} count={10} value={card.rating}/>
+                                            <Rate disabled defaultValue={2} count={10} value={card.rating}/>
                                         </div>
                                         <div className="catalog_card_info">
                                             <div className="catalog_detail tG fCG">
