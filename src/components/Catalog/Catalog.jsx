@@ -11,7 +11,7 @@ const Catalog = (props)=> {
         return(
             <div className="catalog">
 
-                <Novelty novelty={props.novelty}/>
+                <Novelty novelty={props.novelty} catalogList={props.catalogList}/>
 
                 <Search search={props.search}/>
 
