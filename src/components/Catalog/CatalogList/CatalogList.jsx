@@ -42,10 +42,11 @@ const CatalogList = (props) => {
                                 <NavLink exact to={'/serials/' + card.id} className='catalog_card_block tW' key={key}>
                                     <img src={card.imageMin} alt="" className="catalog__card_block_img" />
                                     <div className="catalog_block_hover fCG">
+                                        <div className={'catalog_block_premium'}>{card.AgeRating}</div>
                                         <div className="catalog_block_title">{card.title}</div>
                                         <Rate disabled defaultValue={2} count={10} value={card.rating} className={'catalog_block_rating'}/>
-                                        <div className="catalog_detail_elem"><div className="catalog_block_details_left tD">Год    </div><div className="catalog_block_details_right tW">{card.years}</div></div>
                                         <div className="catalog_detail_elem"><div className="catalog_block_details_left tD">Жанр    </div><div className="catalog_block_details_right tW">{card.genre}</div></div>
+                                        <div className="catalog_detail_elem"><div className="catalog_block_details_left tD">Режессер    </div><div className="catalog_block_details_right tW">{card.director}</div></div>
                                         <div className="catalog_block_descr_content tW">{card.descr}</div>
                                     </div>
                                 </NavLink>

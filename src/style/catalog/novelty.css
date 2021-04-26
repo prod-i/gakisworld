@@ -36,20 +36,55 @@
     object-position: center;
     z-index: -1;
 }
+.novelty_card_premium{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 15px;
+    color: #e0d100;
+    z-index: 10;
+}
 .novelty_card_hover{
     width: 100%;
     height: 100%;
     opacity: 0;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
     font-weight: 600;
-    font-size: 22px;
     transition: 0.3s;
     cursor: pointer;
     z-index: 10;
 }
 .novelty_card_hover:hover{
     opacity: 1;
+}
+.novelty_card_title{
+    min-height: 20%;
+    font-size: 21px;
+}
+.novelty_card_filtres{
+    width: 100%;
+}
+.novelty_card_filtre{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 15px;
+    margin-top: 10px;
+    font-weight: 100;
+}
+.novelty_card_descr{
+    width: 100%;
+    font-size: 12px;
+    margin-top: 30px;
+    font-weight: 100;
+}
+.novelty_card_filtre_left{
+    width: 40%;
+    font-weight: 900;
+}
+.novelty_card_filtre_right{
+    width: 60%;
 }
 .best_title{
     display: flex;
