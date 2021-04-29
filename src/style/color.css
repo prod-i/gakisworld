@@ -1,20 +1,14 @@
 .bB{
     background-color: #000 !important;
 }
-.b{
-    background-color: rgba(255, 255, 255, 0) !important;
-}
-.bBp{
-    background-color: rgba(0, 0, 0, 0.726) !important;
-}
 .bcg{
-    background-color: rgb(33, 37, 41, 0.2) !important;
+    background-color: #171717 !important;
 }
 .bcgB{
-    background-color: rgb(52, 58, 64, 0.2) !important;
+    background-color: #1e1e1e !important;
 }
 .bcgE{
-    background-color: rgb(33, 37, 41, 0.4) !important;
+    background-color: rgb(29, 29, 29, 0.6) !important;
 }
 .bW{
     background-color:#fff !important;
