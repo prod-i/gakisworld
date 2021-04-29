@@ -7,6 +7,8 @@ import 'antd/dist/antd.css';
 import 'swiper/swiper-bundle.css'
 import 'swiper/swiper-bundle.min.css'
 import './style/ant/Rate.css'
+import './style/ant/select.css'
+import './style/ant/switch.css'
 import './style/color.css'
 import './style/fonts.css'
 import './App.css';

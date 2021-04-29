@@ -21,6 +21,7 @@
   color: #fff !important;
 }
 .ant-select-selection-placeholder{
+  color: #999;
   height: inherit !important;
   line-height: inherit !important;
   vertical-align: middle !important;
