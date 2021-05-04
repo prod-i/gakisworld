@@ -19,7 +19,7 @@ const CatalogC      = React.lazy(() => import('./components/Catalog/CatalogC'   
 const NewsC         = React.lazy(() => import('./components/News/NewsC'          ));
 const CalendarC     = React.lazy(() => import('./components/Calendar/CalendarC'  ));
 const SubscribeC    = React.lazy(() => import('./components/Subscribe/SubscribeC'));
-const ProfileC      = React.lazy(() => import('./components/Profile/ProfileC'));
+const ProfileC      = React.lazy(() => import('./components/Profile/ProfileC'    ));
 const SerialsPageC  = React.lazy(() => import('./common/SerialsPage/SerialsPageC'));
 
 

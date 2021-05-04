@@ -5,6 +5,15 @@ import { connect }    from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 class MainC extends React.Component {
+    componentDidMount(){
+        console.log(1);
+    }
+    componentDidUpdate(){
+        console.log(2); 
+    }
+    componentWillUnmount(){
+        console.log(3);
+    }
     render() {
         return <Main {...this.props}
                      slider       ={this.props.slider      }

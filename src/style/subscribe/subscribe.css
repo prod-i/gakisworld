@@ -1,0 +1,127 @@
+.subscribe{
+    margin: 150px auto 0 auto;
+    width: 100%;
+}
+.subscribe_wrap{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    height: 750px;
+    margin: 0 auto;
+}
+.subscribe_type_slect{
+    position: relative;
+    width: 57%;
+    height: 100%;
+}
+.subscribe_type{
+    position: relative;
+    overflow: hidden;
+    width: 220px;
+    height: 250px;
+    /* border-radius: 15px; */
+    text-align: center;
+    padding-top: 50%;
+    font-weight: 500;
+    font-size: 42px;
+    transition: .3s;
+    z-index: 1;
+}
+.subscribe_type_img{
+    position: absolute;
+    background-color:rgb(23, 23, 23);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    /* border-radius: 15px; */
+    z-index: -1;
+    opacity: .3;
+    pointer-events: none;
+}
+.subscribe_type_img:active{
+    opacity: 1;
+}
+.subscribe_type:hover{
+    box-shadow: -10px 10px 10px 5px #000000;
+}
+.subscribe_type_info{
+    width: 100%;
+    height: 100vh;
+    margin: 20px 0;
+    padding: 10px;
+    text-transform: uppercase;
+}
+.subscribe_type_info_item{
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+.subscribe_type_info_banner{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+.subscribe_type_info_banner_left{
+    width: 15%;
+    height: 100%;
+    border-right: 1px solid rgba(255, 255, 255, 0.287);
+    text-align: center;
+    padding-top: 2%;
+    font-size: 72px;
+}
+.subscribe_type_info_banner_right{
+    padding: 5px 0;
+    width: 83%;
+    font-weight: 900;
+    font-size: 26px;
+}
+
+.subscribe_form_wrap{
+    width: 40%;
+    /* border-radius: 15px; */
+}
+
+
+
+
+
+
+
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
+    color: #af4646 !important;
+}
+.ant-tabs-tab-btn:focus,
+.ant-tabs-tab-remove:focus,
+.ant-tabs-tab-btn:active,
+.ant-tabs-tab-remove:active{
+    color: #af4646 !important;
+}
+.ant-tabs-nav-list{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px 10px 10px;
+}
+.ant-tabs-tab{
+    width: 22%;
+    padding: 0 5px 10px 5px;
+    margin: 0 !important;
+}
+.ant-tabs-nav::before{
+    display: none !important;
+}   
+.ant-tabs-ink-bar{
+    display: none !important;
+}
+.ant-tabs-tab:hover {
+    color: #ff7070;
+}
