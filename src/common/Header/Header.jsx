@@ -31,7 +31,7 @@ const Header = (props) => {
             </div>
           </Menu.Item>
           <Menu.Item>
-            <div className="menu_item exit tRP fCG">Выход</div>
+            <NavLink exact to="/login" className="menu_item tR fCG" activeClassName='tR'>Выход</NavLink>
           </Menu.Item>
         </Menu>
       );

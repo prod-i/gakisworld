@@ -21,6 +21,7 @@ const CalendarC     = React.lazy(() => import('./components/Calendar/CalendarC' 
 const SubscribeC    = React.lazy(() => import('./components/Subscribe/SubscribeC'));
 const ProfileC      = React.lazy(() => import('./components/Profile/ProfileC'    ));
 const SerialsPageC  = React.lazy(() => import('./common/SerialsPage/SerialsPageC'));
+const LoginC        = React.lazy(() => import('./components/Login/LoginC'));
 
 
 
@@ -39,6 +40,8 @@ class App extends React.Component {
                 <Route path='/calendar'              render={withSuspense(CalendarC     )}/>
                 <Route path='/subscribe'             render={withSuspense(SubscribeC    )}/>
                 <Route path='/serials/:serialsId?'   render={withSuspense(SerialsPageC  )}/>
+                <Route path='/login'                 render={withSuspense(LoginC        )}/>
+                <Route path='*'                      render={() =>        <div>404</div> }/>
               </Switch>
             </div>
           </div>
