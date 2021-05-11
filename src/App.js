@@ -3,6 +3,7 @@ import   store                                 from './redux/redux';
 import { Provider                  }           from 'react-redux';
 import { HashRouter, Route, Switch }           from 'react-router-dom';
 import { withSuspense              }           from './common/HOC/withSuspense';
+// import HeaderC from './common/Header/HeaderC';
 import 'antd/dist/antd.css';
 import 'swiper/swiper-bundle.css'
 import 'swiper/swiper-bundle.min.css'
@@ -21,7 +22,8 @@ const CalendarC     = React.lazy(() => import('./components/Calendar/CalendarC' 
 const SubscribeC    = React.lazy(() => import('./components/Subscribe/SubscribeC'));
 const ProfileC      = React.lazy(() => import('./components/Profile/ProfileC'    ));
 const SerialsPageC  = React.lazy(() => import('./common/SerialsPage/SerialsPageC'));
-const LoginC        = React.lazy(() => import('./components/Login/LoginC'));
+const LoginC        = React.lazy(() => import('./components/Login/LoginC'        ));
+const AdminC        = React.lazy(() => import('./components/ADMIN/AdminC'        ));
 
 
 
@@ -30,7 +32,7 @@ class App extends React.Component {
   render () {
     return (
           <div className='gakis'>
-            <Route path='/' render={withSuspense(HeaderC)} />
+            <Route path='/'                render={withSuspense(HeaderC         )}/>
             <div className="app__loading_content">
               <Switch>
                 <Route exact path='/'                render={withSuspense(MainC         )}/>
@@ -41,7 +43,8 @@ class App extends React.Component {
                 <Route path='/subscribe'             render={withSuspense(SubscribeC    )}/>
                 <Route path='/serials/:serialsId?'   render={withSuspense(SerialsPageC  )}/>
                 <Route path='/login'                 render={withSuspense(LoginC        )}/>
-                <Route path='*'                      render={() =>        <div>404</div> }/>
+                <Route path='/admin'                 render={withSuspense(AdminC        )}/>
+                <Route path='*'                      render={() =>      <div>404</div>   }/>
               </Switch>
             </div>
           </div>

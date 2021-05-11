@@ -86,7 +86,7 @@
 }
 
 .subscribe_form_wrap{
-    width: 25%;
+    width: 26%;
     /* border-radius: 15px; */
 }
 .subscribe_recomend{
@@ -117,7 +117,7 @@
 .ant-tabs-tab-remove:focus,
 .ant-tabs-tab-btn:active,
 .ant-tabs-tab-remove:active{
-    color: #af4646 !important;
+    color: #fff !important;
 }
 .ant-tabs-nav-list{
     display: flex;
@@ -131,5 +131,5 @@
     display: none !important;
 }
 .ant-tabs-tab:hover {
-    color: #fff;
+    color: #af4646;
 }
