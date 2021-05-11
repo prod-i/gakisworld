@@ -1,11 +1,14 @@
-.admin_login{
+.admin{
     display: flex;
     width: 100%;
     min-height: 100vh;
     align-items: center;
 }
+.admin_layout{
+    min-height: inherit;
+}
 .site-layout-background_content{
-    height: 100vh;
+    min-height: 100%;
     margin: 24px 16px !important;
     padding: 24px !important;
     min-height: 280px !important;
