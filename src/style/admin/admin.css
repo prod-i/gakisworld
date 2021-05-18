@@ -9,11 +9,17 @@
 }
 .site-layout-background_content{
     min-height: 100%;
-    margin: 24px 16px !important;
-    padding: 24px !important;
-    min-height: 280px !important;
+    padding: 30px 40px !important;
+    min-height: inherit !important;
 }
-.toggle{
+.admin_toggle{
+    display: flex;
+    height: 62px;
+    width: 100%;
+    align-items: center;
+}
+.admin_toggle_item{
+    margin: 0 auto;
     font-size: 21px;
     color: #fff;
 }

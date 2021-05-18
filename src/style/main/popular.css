@@ -10,13 +10,16 @@
 .popular_card{
     position: relative;
     margin-right: 2%;
-    width: 23%;
-    height: 200px;
+    width: 23.5%;
+    height: 220px;
     background-color: rgba(36, 36, 36, 0.33);
     border-radius: 5px;
     overflow: hidden;
     margin-bottom: 2%;
     z-index: 0;
+}
+.popular_card:nth-child(4n){
+    margin:0;
 }
 .popular__card_img{
     position: absolute;

@@ -10,6 +10,7 @@ import noveltyR from "./Catalog/noveltyR";
 import searchR from "./Catalog/searchR";
 import catalogListR from "./Catalog/catalogListR";
 import newsListR from "./News/newsListR";
+import UsersR from "./Users/UsersR";
 
 const redusers = combineReducers({
     main         : mainR, 
@@ -22,6 +23,7 @@ const redusers = combineReducers({
     search       : searchR,
     catalogList  : catalogListR,
     newsList     : newsListR,
+    usersList    : UsersR,
 });
 
 const store = createStore(redusers /*, composeEnhancers(applyMiddleware(thunkMiddleware))*/);

@@ -7,14 +7,16 @@ import Admin from './Admin';
 class AdminC extends React.Component {
 
     render() {
-        return <Admin />
+        return <Admin 
+                    usersList={this.props.usersList}
+               />
     }
 };
 
 
 
 let mapStateToProps = (state) => ({
-
+    usersList: state.usersList,
 });
 
 export default compose
