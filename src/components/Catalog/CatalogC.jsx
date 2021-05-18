@@ -5,6 +5,10 @@ import { connect }    from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 class CatalogC extends React.Component {
+    componentDidMount(){
+        document.title = "Каталог"
+    }
+
     render() {
         return <Catalog {...this.props}/>
     }

@@ -16,6 +16,9 @@ class NewsC extends React.Component {
         this.handleCancel = this.handleCancel.bind(this);
         this.showModal    = this.showModal.bind   (this);
     }
+    componentDidMount(){
+        document.title = "Новости"
+    }
     handleCancel(){
         this.setState({ModalVisible : false })
     }

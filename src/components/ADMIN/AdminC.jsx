@@ -5,7 +5,9 @@ import { withRouter } from 'react-router-dom';
 import Admin from './Admin';
 
 class AdminC extends React.Component {
-
+    componentDidMount(){
+        document.title = "Admins Panel"
+    }
     render() {
         return <Admin 
                     usersList={this.props.usersList}

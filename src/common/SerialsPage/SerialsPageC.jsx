@@ -5,6 +5,9 @@ import { connect }    from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 class SerialsPageC extends React.Component {
+    componentDidMount(){
+        document.title = "{Вставить название сериала}"
+    }
     render() {
         return <SerialsPage {...this.props}/>
     }

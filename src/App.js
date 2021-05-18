@@ -44,7 +44,7 @@ class App extends React.Component {
                 <Route path='/serials/:serialsId?'   render={withSuspense(SerialsPageC  )}/>
                 <Route path='/login'                 render={withSuspense(LoginC        )}/>
                 <Route path='/admin'                 render={withSuspense(AdminC        )}/>
-                <Route path='*'                      render={() =>      <div>404</div>   }/>
+                <Route path='*'                      render={()=><div>404</div>          }/>
               </Switch>
             </div>
           </div>

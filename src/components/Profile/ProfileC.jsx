@@ -5,6 +5,9 @@ import { withRouter } from 'react-router-dom';
 import Profile from './Profile';
 
 class NewsC extends React.Component {
+    componentDidMount(){
+        document.title = "{Вставить никнейм}"
+    }
     render() {
         return <Profile />
     }
