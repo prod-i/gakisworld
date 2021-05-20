@@ -1,40 +1,6 @@
 import Img from '../../assets/img/gulNews.jpg'
 
 let initialState = {
-    postsList: {
-        posts: [
-            {
-                image: Img,
-                title: 'Name ainme serials test 1',
-                date: '01.01.2021',
-                author: 'prodi',
-            },
-            {
-                image: Img,
-                title: 'Name ainme serials test 1',
-                date: '01.01.2021',
-                author: 'prodi',
-            },
-            {
-                image: Img,
-                title: 'Name ainme serials test 1',
-                date: '01.01.2021',
-                author: 'prodi',
-            },
-            {
-                image: Img,
-                title: 'Name ainme serials test 1',
-                date: '01.01.2021',
-                author: 'prodi',
-            },
-            {
-                image: Img,
-                title: 'Name ainme serials test 1',
-                date: '01.01.2021',
-                author: 'prodi',
-            },
-        ],
-    },
     prevNewsVis: true,
 };
 

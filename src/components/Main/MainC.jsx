@@ -29,6 +29,7 @@ let mapStateToProps = (state) => ({
     prevNews     :state.prevNews,
     popular      :state.popular,
     catalogList  :state.catalogList,
+    newsList     :state.newsList,
 });
 
 export default compose

@@ -6,7 +6,7 @@ import Admin from './Admin';
 
 class AdminC extends React.Component {
     componentDidMount(){
-        document.title = "Admins Panel"
+        document.title = "Admin Panel"
     }
     render() {
         return <Admin 

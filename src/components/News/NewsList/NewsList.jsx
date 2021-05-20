@@ -1,8 +1,8 @@
-import React      from 'react'
+import React from 'react'
 import { Select } from 'antd';
-import { Modal  } from 'antd';
+import { Modal } from 'antd';
 import NewsPage from '../NewsPage';
-const  { Option } = Select;
+const { Option } = Select;
 
 const NewsList = (props) => {
     const newsList = props.newsList.newsList;
@@ -18,7 +18,7 @@ const NewsList = (props) => {
                     </Select>
                 </div>
                 <div className="news_search">
-                    <input type="text" className="news_list_search fCG bB tW" placeholder='Поиск по новостям'/>
+                    <input type="text" className="news_list_search fCG bB tW" placeholder='Поиск по новостям' />
                 </div>
             </div>
             <div className="news_list_body">
@@ -39,14 +39,14 @@ const NewsList = (props) => {
                     );
                 })}
                 <Modal
-                    width    = '50%'
-                    title    = {false}
-                    footer   = {false}
-                    visible  = {props.ModalVisible}
-                    onCancel = {props.handleCancel}
-                    bodyStyle= {{ background: 'rgb(33, 37, 41)', margin:'-40px 0'}}
+                    width='50%'
+                    title={false}
+                    footer={false}
+                    visible={props.ModalVisible}
+                    onCancel={props.handleCancel}
+                    bodyStyle={{ background: 'rgb(33, 37, 41)', margin: '-40px 0' }}
                 >
-                   <NewsPage title={props.ModalTitle} img={props.ModalPicture} text={props.ModalContent}/>
+                    <NewsPage title={props.ModalTitle} img={props.ModalPicture} text={props.ModalContent} />
                 </Modal>
             </div>
         </div>

@@ -5,9 +5,9 @@ import '../../../style/fonts.css'
 import { NavLink } from 'react-router-dom'
 
 const PrevNews = (props) => {
-    const posts = props.posts;
+    const list = props.list;
 
-    if (!Array.isArray(posts) || posts.length <= 0) {
+    if (!Array.isArray(list) || list.length <= 0) {
         return null
     }
     
@@ -19,11 +19,12 @@ const PrevNews = (props) => {
                     <NavLink exact to={'/news'} className='title_more fCG tRP'>Перейти к новостям</NavLink>
                 </div>
                 <div className="prevNews__cards">
-                    {posts.map((posts, index) => {
-                        return (
-                                <div className="prevNews__card bcgB" key={index}>
+                    {list.map((posts, key) => {
+                        if(key < 4){
+                            return (
+                                <div className="prevNews__card bcgB" key={key}>
                                     <div className="prevNews__card_image">
-                                        <img src={posts.image} alt="" className="prevNews__card_img" />
+                                        <img src={posts.imgM} alt="" className="prevNews__card_img" />
                                     </div>
                                     <div className="prevNews__card_title">{posts.title}</div>
                                     <div className="prevNews__card_decr tD fCG">
@@ -32,6 +33,10 @@ const PrevNews = (props) => {
                                     </div>
                                 </div>
                             )
+                        }else if(key >=3){
+                            return null
+                        }
+                        
                         }
                     )}
                 </div>
