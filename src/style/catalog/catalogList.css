@@ -32,7 +32,7 @@
     position: relative;
     margin-right: 2.6%;
     width: 23%;
-    height: 360px;
+    height: 300px;
     background-color: rgba(36, 36, 36, 0.33);
     border-radius: 5px;
     overflow: hidden;
@@ -53,10 +53,11 @@
     z-index: -1;
 }
 .catalog_block_hover{
+    position: relative;
     width: 100%;
     height: 100%;
     opacity: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgb(10, 10, 10, .8);
     padding: 10px;
     font-weight: 600;
     font-size: 22px;
@@ -75,6 +76,13 @@
 .catalog_block_rating{
     font-size: 15px;
     margin-bottom: 10px;
+}
+.catalog_block_detail{
+    display: flex;
+    position: absolute;
+    bottom: 15px;
+    flex-direction: column;
+    width: 100%;
 }
 .catalog_detail_elem{
     font-size: 13px;

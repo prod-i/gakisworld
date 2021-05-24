@@ -6,7 +6,7 @@ import { withRouter } from 'react-router-dom';
 
 class SerialsPageC extends React.Component {
     componentDidMount(){
-        document.title = "{Вставить название сериала}"
+        document.title = "Токийский гуль"
     }
     render() {
         return <SerialsPage {...this.props}/>
