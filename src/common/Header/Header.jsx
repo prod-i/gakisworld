@@ -1,9 +1,13 @@
 import React              from 'react';
-import logo               from '../../assets/icon/logo.png'
-import profileAvatarMini  from '../../assets/icon/avatar.png'
 import { NavLink }        from 'react-router-dom';
 import { Menu, Dropdown } from 'antd';
 import '../../style/header.css'
+
+// картинки
+import logo               from '../../assets/icon/logo.png'
+import profileAvatarMini  from '../../assets/icon/avatar.png'
+
+
 
 const Header = (props) => {
   const menu = (
@@ -21,9 +25,11 @@ const Header = (props) => {
         <NavLink exact to="/profile/favorites" className="menu_item tW fCG" activeClassName='tW'>Подписка</NavLink>
       </Menu.Item>
       <Menu.Item>
+        {/* НАПИСАТЬ  НОРМАЛЬНЫЙ ЧЕКБОКС */}
         <div className="menu_item tW fCG search__selector_checked">
           <label className="label_checked"><div className="search_checked_text">Тема</div><input className='tW fCG' type="checkbox" onChange={(e) => console.log(e.target.checked)} onClick={(e) => console.log(e.target.checked)} /></label>
         </div>
+        {/* НАПИСАТЬ  НОРМАЛЬНЫЙ ЧЕКБОКС */}
       </Menu.Item>
       <Menu.Item>
         <NavLink exact to="/admin" className="menu_item tY fCG" activeClassName='tY'>Admin panel</NavLink>
@@ -33,12 +39,17 @@ const Header = (props) => {
       </Menu.Item>
     </Menu>
   );
+
+
   return (
+
     <div className="header bcgE">
       <div className="logo fBS">
         <img src={logo} className="logo_img" alt="logoHeader" />
         <NavLink exact to="/" className='logo_text tW'>GAKISWORLD</NavLink>
       </div>
+
+
       <div className="menu fCG">
         {window.location.hash === '#/login'
           ? null
@@ -51,6 +62,8 @@ const Header = (props) => {
           </>
         }
       </div>
+
+
       <div className="profile_menu">
         {window.location.hash === '#/login'
           ? null
@@ -64,6 +77,7 @@ const Header = (props) => {
         }
       </div>
     </div>
+
   );
 };
 

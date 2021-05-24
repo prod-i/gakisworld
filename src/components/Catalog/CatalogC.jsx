@@ -1,5 +1,5 @@
-import React from 'react';
-import Catalog from './Catalog';
+import   React        from 'react';
+import   Catalog      from './Catalog';
 import { compose }    from 'redux';
 import { connect }    from 'react-redux';
 import { withRouter } from 'react-router-dom';
@@ -17,7 +17,7 @@ class CatalogC extends React.Component {
 let mapStateToProps = (state) => ({
     search      :state.search,
     novelty     :state.novelty,
-    catalogList : state.catalogList,
+    catalogList :state.catalogList,
 });
 
 export default compose

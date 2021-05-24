@@ -1,9 +1,8 @@
-/* eslint-disable array-callback-return */
-import React from 'react'
-import '../../../style/main/prevNews.css'
-import '../../../style/color.css'
-import '../../../style/fonts.css'
-import { NavLink } from 'react-router-dom'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import '../../../style/main/prevNews.css';
+
+
 
 const PrevNews = (props) => {
     const list = props.list;
@@ -14,11 +13,13 @@ const PrevNews = (props) => {
 
     return (
         <div className={props.prevNewsVis ? "prevNews bcg" : "prevNews bcg vis"}>
+
             <div className="container">
                 <div className="block_title fCG">
                     <div className="title_name">Новости</div>
                     <NavLink exact to={'/news'} className='title_more fCG tRP'>Перейти к новостям</NavLink>
                 </div>
+
                 <div className="prevNews__cards">
                     {list.map((posts, key) => {
                         if (key < 4) {
@@ -34,10 +35,11 @@ const PrevNews = (props) => {
                                     </div>
                                 </div>
                             )
-                        } else {return null}
+                        } else { return null }
                     }
                     )}
                 </div>
+                
             </div>
         </div>
     )

@@ -1,16 +1,18 @@
-import React                           from 'react';
-import SwiperCore, { EffectCoverflow } from 'swiper';
-import { Swiper, SwiperSlide         } from 'swiper/react';
-import { NavLink                     } from 'react-router-dom';
-import { Rate                        } from 'antd';
-import 'swiper/swiper-bundle.css'
-import '../../../style/main/slider.css'
-SwiperCore.use([EffectCoverflow]);
+import React                           from 'react'            ;
+import SwiperCore, { EffectCoverflow } from 'swiper'           ;
+import { Swiper, SwiperSlide         } from 'swiper/react'     ;
+import { NavLink                     } from 'react-router-dom' ;
+import { Rate                        } from 'antd'             ;
+import 'swiper/swiper-bundle.css'                              ;
+import '../../../style/main/slider.css'                        ;
 
 
 const Slider = (props) => {
+    SwiperCore.use([EffectCoverflow]);
+    
     return (
         <div className={props.sliderVis ? 'slider swiper-container' : 'slider none'}>
+
             <Swiper
                 className        ={'swiper-wrapper'}
                 slidesPerView    ={1.1}
@@ -26,6 +28,7 @@ const Slider = (props) => {
                 onSwiper         ={(swiper) => console.log(swiper)}
                 onSlideChange    ={() => console.log('slide change')}
             >
+                
                 {props.slides.map((slide, key) => {
                     return (
                         <SwiperSlide className={'slide swiper-slide'} key={key}>

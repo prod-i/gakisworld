@@ -1,27 +1,28 @@
-import React        from 'react'
+import   React      from 'react'
 import { NavLink }  from 'react-router-dom';
-import { Rate } from 'antd';
+import { Rate    }  from 'antd';
 import '../../../style/main/popular.css'
-import '../../../style/color.css'
-import '../../../style/fonts.css'
 
 
 const Popular = (props) => {
-    const card = props.list;
+    const list = props.list;
 
-    if (!Array.isArray(card) || card.length <= 0) {
+    if (!Array.isArray(list) || list.length <= 0) {
         return null
     }
 
     return (
         <div className={props.popularVis ? "popular" : "popular vis"}>
             <div className="container">
+
+
                 <div className="block_title fCG">
                     <div className="title_name">Популярное Аниме</div>
                     <NavLink exact to={'/catalog'} className='title_more tRP fCG'>Перейти к каталогу</NavLink>
                 </div>
+
                 <div className="popular__cards">
-                    {card.map((card, index) => {
+                    {list.map((card, index) => {
                         if (card.popular) {
                             return (
                                 <NavLink exact to={'/serials/'+card.id} className='popular_card bcgB tW' key={index}>
@@ -41,6 +42,8 @@ const Popular = (props) => {
                     }
                     )}
                 </div>
+
+                
             </div>
         </div>
     )

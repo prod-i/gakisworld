@@ -6,7 +6,7 @@ import Profile from './Profile';
 
 class NewsC extends React.Component {
     componentDidMount(){
-        document.title = "{Вставить никнейм}"
+        document.title = "Kaneki Ken"
     }
     render() {
         return <Profile />

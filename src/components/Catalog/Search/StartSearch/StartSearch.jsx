@@ -1,10 +1,8 @@
-import   React          from 'react'
-import { Select     }   from 'antd';
-import { Slider     }   from '@material-ui/core'
-import '../../../../style/catalog/search.css'
-import '../../../../style/ant/select.css'
-import '../../../../style/color.css'
-import '../../../../style/fonts.css'
+import   React          from 'react'             ;
+import { Select     }   from 'antd'              ;
+import { Slider     }   from '@material-ui/core' ;
+import '../../../../style/catalog/search.css'    ;
+import '../../../../style/ant/select.css'        ;
 
 
 const StartSearch = (props) => {
@@ -18,6 +16,7 @@ const StartSearch = (props) => {
     return (
         <div className="search_standart bcg">
             <div className="search_container container">
+
                 <div className="search__form">
                     <div className="search_form_input_wrap">
                         <input className='fCG bB tW' type="text" placeholder="Название" />
@@ -30,8 +29,8 @@ const StartSearch = (props) => {
 
                 <div className="search__options">
                     <div className="search__options_top">
-                        <div className="selector_options">
 
+                        <div className="selector_options">
                         {/* ФИЛЬТР: ТИП */}
                             <Select placeholder='Тип' style={{ width: 120 }} size='large' bordered={false} className={'select_elem'} allowClear>
                                 {Object.keys(props.search.filters.type).map((value, key) => {
@@ -39,10 +38,9 @@ const StartSearch = (props) => {
                                 })}
                             </Select>
                         {/* ФИЛЬТР: ТИП */}
-
                         </div>
+
                         <div className="selector_options">
-                            
                         {/* ФИЛЬТР: ЖАНР */}
                             <Select placeholder='Жанр' style={{ width: 120 }} size='large' bordered={false} className={'select_elem'} allowClear>
                                 {Object.keys(props.search.filters.genre).map((value, key) => {
@@ -50,17 +48,16 @@ const StartSearch = (props) => {
                                 })}
                             </Select>
                         {/* ФИЛЬТР: ЖАНР */}
-
                         </div>
 
                         <div className="selector_years tW">
-                        
                         {/* ФИЛЬТР: ГОД */}
                             <Slider value={yearsValue} onChange={updateRange} valueLabelDisplay="auto" min={1970} max={2021} style={{color: "#FF7070"}} />
                         {/* ФИЛЬТР: ГОД */}
-
                         </div>
+                        
                     </div>
+
                     <div className="search__options_bottom">
 
                         {/* ФИЛЬТР: ПОДПИСКА */}
@@ -77,6 +74,7 @@ const StartSearch = (props) => {
 
                     </div>
                 </div>
+                
             </div>
         </div>
     )

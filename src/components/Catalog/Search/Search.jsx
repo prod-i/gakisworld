@@ -1,9 +1,7 @@
-import React               from 'react';
-import StartSearch         from './StartSearch/StartSearch';
-import AdvancedSearch      from './AdvancedSearch/AdvancedSearch';
-import '../../../style/catalog/search.css'
-import '../../../style/color.css'
-import '../../../style/fonts.css'
+import React               from 'react'                           ;
+import StartSearch         from './StartSearch/StartSearch'       ;
+import AdvancedSearch      from './AdvancedSearch/AdvancedSearch' ;
+import '../../../style/catalog/search.css'                        ;
 
 const Search = (props) => {
     const [extendSearch, setExtendSearch] = React.useState(false); //toggle advanced search

@@ -10,11 +10,11 @@ class MainC extends React.Component {
     }
     render() {
         return <Main {...this.props}
-                     slider       ={this.props.slider      }
-                     banner       ={this.props.banner      }
-                     continueView ={this.props.continueView}
-                     prevNews     ={this.props.prevNews    }
-                     popular      ={this.props.popular     }
+                     slider       ={this.props.slider       }
+                     banner       ={this.props.banner       }
+                     continueView ={this.props.continueView }
+                     prevNews     ={this.props.prevNews     }
+                     popular      ={this.props.popular      }
                 />
     }
 };
@@ -22,14 +22,16 @@ class MainC extends React.Component {
 
 
 let mapStateToProps = (state) => ({
-    main         :state.main,
-    slider       :state.slider,
-    banner       :state.banner,
-    continueView :state.continueView,
-    prevNews     :state.prevNews,
-    popular      :state.popular,
-    catalogList  :state.catalogList,
-    newsList     :state.newsList,
+    main         :state.main         ,
+    slider       :state.slider       ,
+    banner       :state.banner       ,
+    continueView :state.continueView ,
+    prevNews     :state.prevNews     ,
+    popular      :state.popular      ,
+
+    //Листы
+    catalogList  :state.catalogList  ,
+    newsList     :state.newsList     ,
 });
 
 export default compose
