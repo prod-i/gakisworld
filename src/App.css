@@ -50,6 +50,7 @@ a:hover{
 }
 a{
   transition: 0;
+  color: #fff;
 }
 img{
   user-select: none;

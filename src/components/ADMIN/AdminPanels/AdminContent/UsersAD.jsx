@@ -43,7 +43,7 @@ class UsersAD extends React.Component {
                                 <img src={item.photos.large} alt="" className="dataAD_avarat" onClick={() => this.showDrawer(item)} />
                             </div>
                             <div className="dataAD_descr fCG">
-                                <div className="dataAD_nick" onClick={this.showDrawer}>{item.nickname}</div>
+                                <div className="dataAD_nick" onClick={() => this.showDrawer(item)}>{item.nickname}</div>
                                 <div className="dataAD_name tG">{item.fullName}</div>
                             </div>
                             <div className="dataAD_options tR">

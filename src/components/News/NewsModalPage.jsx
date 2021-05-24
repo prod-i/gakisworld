@@ -1,6 +1,6 @@
 import React from 'react'
 
-const NewsPage = (props) => {
+const NewsModalPage = (props) => {
     return (
         <div className="news_modal tW fCG">
             <div className="news_modal_title">{props.title}</div>
@@ -14,4 +14,4 @@ const NewsPage = (props) => {
     )
 }
 
-export default NewsPage
+export default NewsModalPage

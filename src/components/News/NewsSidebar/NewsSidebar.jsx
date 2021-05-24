@@ -1,6 +1,6 @@
 import React from 'react'
 import { Modal  } from 'antd';
-import NewsPage from '../NewsPage';
+import NewsModalPage from '../NewsModalPage';
 
 const NewsSidebar = (props) => {
     const newsList = props.newsList.newsList;
@@ -65,7 +65,7 @@ const NewsSidebar = (props) => {
                     onCancel = {props.handleCancel}
                     bodyStyle= {{ background: 'rgb(33, 37, 41)', margin:'-40px 0'}}
                 >
-                   <NewsPage title={props.ModalTitle} img={props.ModalPicture} text={props.ModalContent}/>
+                   <NewsModalPage title={props.ModalTitle} img={props.ModalPicture} text={props.ModalContent}/>
                 </Modal>
         </div>
     )

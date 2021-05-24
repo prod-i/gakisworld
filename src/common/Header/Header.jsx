@@ -1,11 +1,9 @@
-import React from 'react';
-import logo from '../../assets/icon/logo.png'
-import profileAvatarMini from '../../assets/icon/avatar.png'
-import { NavLink } from 'react-router-dom';
+import React              from 'react';
+import logo               from '../../assets/icon/logo.png'
+import profileAvatarMini  from '../../assets/icon/avatar.png'
+import { NavLink }        from 'react-router-dom';
 import { Menu, Dropdown } from 'antd';
 import '../../style/header.css'
-import '../../style/color.css'
-import '../../style/fonts.css'
 
 const Header = (props) => {
   const menu = (
@@ -14,16 +12,13 @@ const Header = (props) => {
         <NavLink exact to="/profile" className="menu_item tW fCG" activeClassName='tR'>Профиль</NavLink>
       </Menu.Item>
       <Menu.Item>
-        <div className="menu_item tW fCG">Настройки</div>
+      <NavLink exact to="/profile/settings" className="menu_item tW fCG" activeClassName='tW'>Настройки</NavLink>
       </Menu.Item>
       <Menu.Item>
-        <div className="menu_item tW fCG">Просмотренные</div>
+        <NavLink exact to="/profile/favorites" className="menu_item tW fCG" activeClassName='tW'>Избранное</NavLink>
       </Menu.Item>
       <Menu.Item>
-        <div className="menu_item tW fCG">Избранное</div>
-      </Menu.Item>
-      <Menu.Item>
-        <div className="menu_item tW fCG">Подписка</div>
+        <NavLink exact to="/profile/favorites" className="menu_item tW fCG" activeClassName='tW'>Подписка</NavLink>
       </Menu.Item>
       <Menu.Item>
         <div className="menu_item tW fCG search__selector_checked">
@@ -31,7 +26,10 @@ const Header = (props) => {
         </div>
       </Menu.Item>
       <Menu.Item>
-        <NavLink exact to="/login" className="menu_item tR fCG" activeClassName='tR'>Выход</NavLink>
+        <NavLink exact to="/admin" className="menu_item tY fCG" activeClassName='tY'>Admin panel</NavLink>
+      </Menu.Item>
+      <Menu.Item>
+        <NavLink exact to="/login" className="menu_item tRP fCG" activeClassName='tR'>Выход</NavLink>
       </Menu.Item>
     </Menu>
   );

@@ -1,7 +1,8 @@
 import React from 'react'
 import { Select } from 'antd';
 import { Modal } from 'antd';
-import NewsPage from '../NewsPage';
+import NewsModalPage from '../NewsModalPage';
+import { NavLink } from 'react-router-dom';
 const { Option } = Select;
 
 const NewsList = (props) => {
@@ -24,7 +25,7 @@ const NewsList = (props) => {
             <div className="news_list_body">
                 {newsList.list.map((card, key) => {
                     return (
-                        <div className="news_card_line bcgB" key={key}>
+                        <NavLink to={'/news/'+ card.id} className="news_card_line bcgB" key={key}>
                             <div className="news_card_top">
                                 <img src={card.imgM} alt="" className="news_card_img" onClick={() => props.showModal(card.title, card.text, card.imgM)} />
                             </div>
@@ -35,7 +36,7 @@ const NewsList = (props) => {
                                 <div className="news_card_descr tD">{card.descr}</div>
                                 <div className="news_card_date tD">{card.author} {card.date}</div>
                             </div>
-                        </div>
+                        </NavLink>
                     );
                 })}
                 <Modal
@@ -46,7 +47,7 @@ const NewsList = (props) => {
                     onCancel={props.handleCancel}
                     bodyStyle={{ background: 'rgb(33, 37, 41)', margin: '-40px 0' }}
                 >
-                    <NewsPage title={props.ModalTitle} img={props.ModalPicture} text={props.ModalContent} />
+                    <NewsModalPage title={props.ModalTitle} img={props.ModalPicture} text={props.ModalContent} />
                 </Modal>
             </div>
         </div>

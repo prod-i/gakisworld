@@ -1,5 +1,4 @@
 import React from 'react';
-import { Redirect } from 'react-router';
 import Header from './Header';
 
 class HeaderC extends React.Component {

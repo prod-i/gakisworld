@@ -1,5 +1,5 @@
 import   React                 from 'react'
-import   NewsPage              from '../NewsPage';
+import   NewsModalPage              from '../NewsModalPage';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Modal               } from 'antd';
 import 'swiper/swiper-bundle.css';
@@ -37,7 +37,7 @@ const NewsSlider = (props) => {
                     onCancel = {props.handleCancel}
                     bodyStyle= {{ background: 'rgb(33, 37, 41)', margin:'-40px 0'}}
                 >
-                   <NewsPage title={props.ModalTitle} img={props.ModalPicture} text={props.ModalContent}/>
+                   <NewsModalPage title={props.ModalTitle} img={props.ModalPicture} text={props.ModalContent}/>
                 </Modal>
             </div>
         </div>

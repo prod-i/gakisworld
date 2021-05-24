@@ -3,7 +3,6 @@ import   store                                 from './redux/redux';
 import { Provider                  }           from 'react-redux';
 import { HashRouter, Route, Switch }           from 'react-router-dom';
 import { withSuspense              }           from './common/HOC/withSuspense';
-// import HeaderC from './common/Header/HeaderC';
 import 'antd/dist/antd.css';
 import 'swiper/swiper-bundle.css'
 import 'swiper/swiper-bundle.min.css'
@@ -38,7 +37,7 @@ class App extends React.Component {
                 <Route exact path='/'                render={withSuspense(MainC         )}/>
                 <Route path='/profile'               render={withSuspense(ProfileC      )}/>
                 <Route path='/catalog'               render={withSuspense(CatalogC      )}/>
-                <Route path='/news'                  render={withSuspense(NewsC         )}/>
+                <Route path='/news/:postId?'         render={withSuspense(NewsC         )}/>
                 <Route path='/calendar'              render={withSuspense(CalendarC     )}/>
                 <Route path='/subscribe'             render={withSuspense(SubscribeC    )}/>
                 <Route path='/serials/:serialsId?'   render={withSuspense(SerialsPageC  )}/>
