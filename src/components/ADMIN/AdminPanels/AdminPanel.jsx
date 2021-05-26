@@ -33,6 +33,10 @@ const AdminPanel = (props) => {
                         return (
                             <>addNews</>
                         )
+                    case 'control':
+                        return (
+                            <>Management Сontrol</>
+                        )
                     case 'servers':
                         return (
                             <>servers</>
