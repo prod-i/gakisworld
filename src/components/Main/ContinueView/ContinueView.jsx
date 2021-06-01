@@ -20,9 +20,9 @@ const ContinueView = (props) => {
             <div className="continue__view_card">
                 {list.map((list, index) => {
                         return (
-                            <div className="continue_card bcgB" key={index}>
+                            <div className="continue_card bE" key={index}>
                                 <img src={list.image} alt="" className="card_img" />
-                                <div className="progress bW">
+                                <div className="progress b_">
                                     <div className="progress_total"></div>
                                 </div>
                             </div>

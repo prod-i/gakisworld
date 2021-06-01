@@ -9,7 +9,7 @@ class SerialsPageC extends React.Component {
         document.title = "Токийский гуль"
     }
     render() {
-        return <SerialsPage {...this.props} SerialsId={this.props.match.params.serialsId}/>
+        return <SerialsPage {...this.props} serialsId={this.props.match.params.serialsId} seriesId={this.props.match.params.seriesId}/>
     }
 };
 

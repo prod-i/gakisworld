@@ -14,7 +14,7 @@ const Banner = (props) => {
                 <div className="marketing__title tB">Получи доступ к лучшему<br />Аниме с подпиской на GAKI`s World.</div>
                 <div className="marketing__button">
                     <NavLink exact to={'/subscribe'} className=''>
-                        <button className="marketing_btn bRP bRh tW fCG">Выбрать план подписки</button>
+                        <button className="marketing_btn bRP bRh tA fCG">Выбрать план подписки</button>
                     </NavLink>
                     <img src={logo} alt="marketing logo" className="marketing__logo" />
                 </div>

@@ -12,7 +12,7 @@ const Novelty = (props) => {
     }
 
     return (
-        <div className={props.novelty.noveltyVis ? "best" : "best bcg none"}>
+        <div className={props.novelty.noveltyVis ? "best" : "best none"}>
             <div className="best_container container">
                 <div className="novelty">
 
@@ -27,7 +27,7 @@ const Novelty = (props) => {
                         {list.map((card, key) => {
                             return (
                                 <SwiperSlide className="novelty_card" key={key}>
-                                    <NavLink exact to={'/serials/' + card.id} className='tW'>
+                                    <NavLink exact to={'/serials/' + card.id} className='t'>
                                         {/* Фон */}
                                         <img src={card.imageLarge} alt="" className="novelty_img" />
 
@@ -46,10 +46,10 @@ const Novelty = (props) => {
 
                                                 {/* Фильтры */}
                                                 <div className="novelty_card_filtre">
-                                                    <div className="novelty_card_filtre_left tD">Жанр</div><div className="novelty_card_filtre_right">{card.genre}</div>
+                                                    <div className="novelty_card_filtre_left tA">Жанр</div><div className="novelty_card_filtre_right">{card.genre}</div>
                                                 </div>
                                                 <div className="novelty_card_filtre">
-                                                    <div className="novelty_card_filtre_left tD">Режессер</div><div className="novelty_card_filtre_right">{card.director}</div>
+                                                    <div className="novelty_card_filtre_left tA">Режессер</div><div className="novelty_card_filtre_right">{card.director}</div>
                                                 </div>
 
                                                 {/* Описание */}
@@ -67,7 +67,7 @@ const Novelty = (props) => {
                     </Swiper>
 
                     <div className="best_title fCG">
-                        <div className="best_title_wrap">Новинки</div>
+                        <div className="best_title_wrap t">Новинки</div>
                     </div>
 
                 </div>

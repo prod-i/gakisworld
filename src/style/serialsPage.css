@@ -1,14 +1,16 @@
 .serialsPage{
-    position: relative;
-    margin: 0 auto;
+    position: absolute;
+    padding-bottom: 50px;
     width:100%;
-    /* height: 100%; */
+    top: 0;
+    height: 100vh;
+    background-color: #111;
 }
 .serialsPageBacgImg{
     position: fixed;
     top: 0;
     right: 0;
-    opacity: 0.4;
+    opacity: .4;
     width: 100%;
     height: 110%;
     object-fit: cover;
@@ -50,6 +52,8 @@
 }
 .details_item{
     margin-bottom: 20px;
+    z-index: 100000;
+    cursor: pointer;
 }
 .descrSearialsPage{
     width: 80%;
@@ -67,8 +71,9 @@
     border-radius: 5px;
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.479);
-    transition: .3s;
+    transition: .2s;
     z-index: 1;
+    opacity: .8;
 }
 .cardSerisImage{
     width: 100%;
@@ -76,6 +81,7 @@
     object-fit: cover;
     object-position: center;
     z-index: 0;
+    opacity: .7;
 }
 .cardSeries_title{
     position: absolute;
@@ -87,10 +93,13 @@
     transition: .3s;
     z-index: 3;
 }
-.cardSeries_title:hover{
-    opacity: .3;
+.cardSeries:hover{
+    opacity: 1;
 }
 .cardsSeries.swiper-container{
     margin: 0 !important;
     padding: 0 !important;
+}
+.ant-modal-content{
+    background-color: rgb(180, 180, 180, 0);
 }

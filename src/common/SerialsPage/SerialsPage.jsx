@@ -8,22 +8,21 @@ import img from './../../assets/img/serials/1b.jpg'
 
 
 const SerialsPage = (props) => {
-
     const list = props.catalogList.catalogList.list;
-    console.log(list);
-
     return (
         <div className='serialsPage fCG'>
             {list.map((item, key) => {
-                if(item.id.toString() === props.SerialsId){
+                if(item.id.toString() === props.serialsId){
                     return (
                         <div className='serialsPage' key={key}>
-                            {/* <img className='serialsPageBacgImg' src={item.imageBcg} alt="" /> */}
-                            <video src={item.videoBcg} alt="" className="serialsPageBacgImg" autoplay='true' loop='true'/>
-    
+                            {item.videoBcg
+                            ? <video src={item.videoBcg} alt="" className="serialsPageBacgImg" autoPlay loop={true}></video>
+                            : <img className='serialsPageBacgImg' src={item.imageBcg} alt="" />
+                            }
+                            
                             <SerialsDescription item={item}/>
     
-                            <SeriesCards item={item.series}/>
+                            <SeriesCards title={item.title} item={item.series} serialsId={props.serialsId} seriesId={props.seriesId}/>
                         </div>
                     )
                 } else {return null}

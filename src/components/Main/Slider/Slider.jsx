@@ -34,11 +34,11 @@ const Slider = (props) => {
                         <SwiperSlide className={'slide swiper-slide'} key={key}>
                             <div className="slide__wrapper">
                                 {/* PRIVIEW */}
-                                <NavLink exact to={'/serials/' + slide.id} className='slide__preview tW'><img className="slide__preview_img" src={slide.imageLarge} alt="" /></NavLink>
+                                <NavLink exact to={'/serials/' + slide.id} className='slide__preview t'><img className="slide__preview_img" src={slide.imageLarge} alt="" /></NavLink>
                                 {/* CONTENT */}
-                                <div className="slide_content bcgB">
+                                <div className="slide_content bE">
                                     <div className="slide_title">
-                                        <NavLink exact to={'/serials/' + slide.id} className='slide__name fCG'>{slide.title}</NavLink>
+                                        <NavLink exact to={'/serials/' + slide.id} className='slide__name fCG t'>{slide.title}</NavLink>
                                         <div className="slide_rating">
                                             <Rate disabled defaultValue={2} count={10} value={slide.rating}/>
                                         </div>
@@ -46,16 +46,16 @@ const Slider = (props) => {
                                     </div>
                                     <div className="slide__description">
                                         <div className="slide_filters tG fCG">
-                                            <div className="detail_elem"><div className="details_left tD">Год      </div><div className="details_right tW">{slide.years}</div></div>
-                                            <div className="detail_elem"><div className="details_left tD">Жанр     </div><div className="details_right tW">{slide.genre}</div></div>
-                                            <div className="detail_elem"><div className="details_left tD">Режиссер </div><div className="details_right tW">{slide.director}</div></div>
-                                            <div className="detail_elem"><div className="details_left tD">Студия   </div><div className="details_right tW">{slide.studio}</div></div>
-                                            <div className="detail_elem"><div className="details_left tD">Тип      </div><div className="details_right tW">{slide.type}</div></div>
-                                            <div className="detail_elem"><div className="details_left tD">{slide.seasons ? 'Сезонов' : 'Эпизодов'}   </div><div className="details_right tW">{slide.seasons ? slide.seasons : slide.episodes}</div></div>
+                                            <div className="detail_elem"><div className="details_left tA">Год      </div><div className="details_right t">{slide.years}</div></div>
+                                            <div className="detail_elem"><div className="details_left tA">Жанр     </div><div className="details_right t">{slide.genre}</div></div>
+                                            <div className="detail_elem"><div className="details_left tA">Режиссер </div><div className="details_right t">{slide.director}</div></div>
+                                            <div className="detail_elem"><div className="details_left tA">Студия   </div><div className="details_right t">{slide.studio}</div></div>
+                                            <div className="detail_elem"><div className="details_left tA">Тип      </div><div className="details_right t">{slide.type}</div></div>
+                                            <div className="detail_elem"><div className="details_left tA">{slide.seasons ? 'Сезонов' : 'Эпизодов'}   </div><div className="details_right t">{slide.seasons ? slide.seasons : slide.episodes}</div></div>
                                         </div>
                                         <div className="slide_review">
                                             <div className="slide_review_title tG">Обзор        </div>
-                                            <div className="slide_review_text  tW">{slide.descr}</div>
+                                            <div className="slide_review_text  t">{slide.descr}</div>
                                         </div>
                                     </div>
                                 </div>

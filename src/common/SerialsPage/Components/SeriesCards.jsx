@@ -1,23 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PlayerModal from '../PlayerModal';
 import { Modal } from 'antd';
+import { NavLink, Redirect }        from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// картинки
-import img from '../../../assets/img/serials/15b.jpg';
-import img1 from '../../../assets/img/serials/16b.jpg';
-import img2 from '../../../assets/img/serials/17b.jpg';
-import img3 from '../../../assets/img/serials/18b.jpg';
-import img4 from '../../../assets/img/serials/19b.jpg';
-import img5 from '../../../assets/img/serials/20b.jpg';
 
 
 const SeriesCards = (props) => {
-    const [visible, setVisible] = React.useState(false);
     const item = props.item;
-    const hadleVisible = () => {
-        setVisible(!visible)
-    }
+
 
     return (
         <div className="cardsSeries">
@@ -30,27 +21,32 @@ const SeriesCards = (props) => {
             >
                 {item.map((item, key) => {
                     return (
-                        <SwiperSlide className="cardSeries" onClick={hadleVisible} key={key}>
-                            <div className="cardSeries_title bcgE">{item.title}</div>
-                            <img src={item.imgPrev} alt="" className="cardSerisImage" />
+                        <SwiperSlide className="cardSeries" key={key}>
+                            <NavLink to={"/serials/" + props.serialsId + '/' + item.id}>
+                                <div className="cardSeries_title">{item.title}</div>
+                                <img src={item.imgPrev} alt="" className="cardSerisImage" />
+                            </NavLink>
                         </SwiperSlide>
                     )
                 })}
             </Swiper>
 
 
-
-
             <Modal
                 width='60%'
                 title={false}
                 footer={false}
-                visible={visible}
-                onCancel={hadleVisible}
-                bodyStyle={{ background: 'rgb(29, 29, 29)', margin: '-10px 0' }}
+                visible={props.seriesId}
+                onCancel={()=>window.location.hash = '#/serials/' + props.serialsId}
+                bodyStyle={{ background: 'rgb(50, 50, 50, 0.4)', margin: '-10px 0' }}
             >
-
-                <PlayerModal />
+                {item.map((item, key)=>{
+                    if(item.id.toString() === props.seriesId){
+                        return(
+                            <PlayerModal item={item} seriesId={props.seriesId} title={props.title}/>
+                        )
+                    }else{return null}
+                })}
 
             </Modal>
         </div>

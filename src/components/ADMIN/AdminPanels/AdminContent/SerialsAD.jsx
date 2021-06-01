@@ -17,20 +17,20 @@ const SerialsAD = () => {
     };
     
     return (
-        <div className='dataAD bcgB tD'>
+        <div className='dataAD bE tA'>
 
             <div className="dataAD_header">
-                <div className="dataAD_title tD">
+                <div className="dataAD_title tA">
                     Все видеоматериалы
                 </div>
                 <div className="dataAD_search">
-                    <input type="text" className="dataAD_search_input fCG bB tW" placeholder='Поиск видеоматериалов' />
+                    <input type="text" className="dataAD_search_input fCG bE tW" placeholder='Поиск видеоматериалов' />
                 </div>
             </div>
 
 
 
-            <div className="dataAD_item bcgE">
+            <div className="dataAD_item bE">
                 <div className="dataAD_avatar_wrapper">
                     <img src={avatar1} alt="" className="dataAD_avarat" onClick={showDrawer}/>
                 </div>
@@ -46,7 +46,7 @@ const SerialsAD = () => {
 
 
 
-            <div className="dataAD_item bcgE">
+            <div className="dataAD_item bE">
                 <div className="dataAD_avatar_wrapper">
                     <img src={avatar2} alt="" className="dataAD_avarat" onClick={showDrawer}/>
                 </div>

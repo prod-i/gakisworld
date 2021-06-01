@@ -14,7 +14,7 @@ const AdvancedSearch = (props) => {
     }
 
     return (
-        <div className={props.extendSearch ? "search__advanced bcg" : "search__advanced bcg none"}>
+        <div className={props.extendSearch ? "search__advanced bB" : "search__advanced bB none"}>
             <div className="search_container container">
                 <div className="search__options_advanced">
                     
@@ -22,7 +22,7 @@ const AdvancedSearch = (props) => {
                     {/* ФИЛЬТР: АВТОР */}
                         <Select placeholder='Автор' style={{ width: 120 }} size='large' bordered={false} className={'select_elem'} allowClear>
                             {Object.keys(props.search.filters.author).map((value, key) => {
-                                return <Option className={'select_elem_options fCG tD'} bordered={false} value={value} key={key}>{props.search.filters.author[value]}</Option>
+                                return <Option className={'select_elem_options fCG tA'} bordered={false} value={value} key={key}>{props.search.filters.author[value]}</Option>
                             })}
                         </Select>
                     {/* ФИЛЬТР: АВТОР */}
@@ -32,7 +32,7 @@ const AdvancedSearch = (props) => {
                     {/* ФИЛЬТР: СТУДИЯ */}
                         <Select placeholder='Студия' style={{ width: 120 }} size='large' bordered={false} className={'select_elem'} allowClear>
                             {Object.keys(props.search.filters.studio).map((value, key) => {
-                                return <Option className={'select_elem_options fCG tD'} bordered={false} value={value} key={key}>{props.search.filters.studio[value]}</Option>
+                                return <Option className={'select_elem_options fCG tA'} bordered={false} value={value} key={key}>{props.search.filters.studio[value]}</Option>
                             })}
                         </Select>
                     {/* ФИЛЬТР: СТУДИЯ */}
@@ -42,7 +42,7 @@ const AdvancedSearch = (props) => {
                     {/* ФИЛЬТР: ВОЗРАСТНОЙ РЕЙТИНГ */}
                         <Select placeholder='Возрастной рейтинг' style={{ width: 120 }} size='large' bordered={false} className={'select_elem'} allowClear>
                             {Object.keys(props.search.filters.AgeRating).map((value, key) => {
-                                return <Option className={'select_elem_options fCG tD'} bordered={false} value={value} key={key}>{props.search.filters.AgeRating[value]}</Option>
+                                return <Option className={'select_elem_options fCG tA'} bordered={false} value={value} key={key}>{props.search.filters.AgeRating[value]}</Option>
                             })}
                         </Select>
                     {/* ФИЛЬТР: ВОЗРАСТНОЙ РЕЙТИНГ */}

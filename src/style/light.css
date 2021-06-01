@@ -1,20 +1,20 @@
 body{
-    background-color: #111 !important;
+    background-color: rgb(238, 238, 238) !important;
 }
 .b{
-    background-color: #000 !important;
+    background-color: rgb(180, 180, 180) !important;
 }
 .bTr{
-    background-color: rgb(29, 29, 29, 0.6) !important;
+    background-color: rgb(200, 200, 200, 0.6) !important;
 }
 .bB{
-    background-color: rgb(23, 23, 23) !important;
+    background-color: rgb(220, 220, 220) !important;
 }
 .bE{
-    background-color: rgb(26, 26, 26) !important;
+    background-color: rgb(190, 190, 190) !important;
 }
 .b_{
-    background-color:#fff !important;
+    background-color:#111 !important;
 }
 .bRP{
     background-color: rgb(255, 112, 112) !important;
@@ -29,13 +29,13 @@ body{
     background-color: #000 !important;
 }
 .t{
-    color:#fff !important;
-}
-.t_{
     color:#000 !important;
 }
+.t_{
+    color:#fff !important;
+}
 .tA{
-    color: rgb(180, 180, 180) !important;
+    color: rgb(35, 35, 35) !important;
 }
 .tY{
     color:rgba(219, 201, 38, 0.733) !important;

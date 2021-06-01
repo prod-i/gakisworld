@@ -26,19 +26,19 @@ class UsersAD extends React.Component {
     render() {
         const usersList = this.props.usersList.usersList.list;
         return (
-            <div className='dataAD bcgB tD'>
+            <div className='dataAD bE tA'>
                 <div className="dataAD_header">
-                    <div className="dataAD_title tD">
+                    <div className="dataAD_title tA">
                         Все пользователи
                     </div>
                     <div className="dataAD_search">
-                        <input type="text" className="dataAD_search_input fCG bB tW" placeholder='Поиск пользователей' />
+                        <input type="text" className="dataAD_search_input fCG bE tW" placeholder='Поиск пользователей' />
                     </div>
                 </div>
 
                 {usersList.map((item, key) => {
                     return (
-                        <div className="dataAD_item bcgE" key={key}>
+                        <div className="dataAD_item bE" key={key}>
                             <div className="dataAD_avatar_wrapper">
                                 <img src={item.photos.large} alt="" className="dataAD_avarat" onClick={() => this.showDrawer(item)} />
                             </div>

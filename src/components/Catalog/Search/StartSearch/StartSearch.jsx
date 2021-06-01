@@ -13,16 +13,16 @@ const StartSearch = (props) => {
     }
     
     return (
-        <div className="search_standart bcg">
+        <div className="search_standart bB">
             <div className="search_container container">
 
                 <div className="search__form">
                     <div className="search_form_input_wrap">
-                        <input className='fCG bB tW' type="text" placeholder="Название" />
+                        <input className='fCG bD t' type="text" placeholder="Название" />
                     </div>
                     <div className="search_form_button_wrap">
-                        <button className='bRh tW fCG' id="search_btn">Поиск</button>
-                        <button className='bRh tW fCG' id="сlear_btn">Очистить</button>
+                        <button className='bRh t fCG' id="search_btn">Поиск</button>
+                        <button className='bRh t fCG' id="сlear_btn">Очистить</button>
                     </div>
                 </div>
 
@@ -33,7 +33,7 @@ const StartSearch = (props) => {
                         {/* ФИЛЬТР: ТИП */}
                             <Select placeholder='Тип' style={{ width: 120 }} size='large' bordered={false} className={'select_elem'} allowClear>
                                 {Object.keys(props.search.filters.type).map((value, key) => {
-                                    return <Option className={'select_elem_options fCG tD'} bordered={false} value={value} key={key}>{props.search.filters.type[value]}</Option>
+                                    return <Option className={'select_elem_options fCG tA'} bordered={false} value={value} key={key}>{props.search.filters.type[value]}</Option>
                                 })}
                             </Select>
                         {/* ФИЛЬТР: ТИП */}
@@ -43,13 +43,13 @@ const StartSearch = (props) => {
                         {/* ФИЛЬТР: ЖАНР */}
                             <Select placeholder='Жанр' style={{ width: 120 }} size='large' bordered={false} className={'select_elem'} allowClear>
                                 {Object.keys(props.search.filters.genre).map((value, key) => {
-                                    return <Option className={'select_elem_options fCG tD'} bordered={false} value={value} key={key}>{props.search.filters.genre[value]}</Option>
+                                    return <Option className={'select_elem_options fCG tA'} bordered={false} value={value} key={key}>{props.search.filters.genre[value]}</Option>
                                 })}
                             </Select>
                         {/* ФИЛЬТР: ЖАНР */}
                         </div>
 
-                        <div className="selector_years tW">
+                        <div className="selector_years t">
                         {/* ФИЛЬТР: ГОД */}
                             <Slider value={yearsValue} onChange={updateRange} valueLabelDisplay="auto" min={1970} max={2021} style={{color: "#FF7070"}} />
                         {/* ФИЛЬТР: ГОД */}
@@ -61,7 +61,7 @@ const StartSearch = (props) => {
 
                         {/* ФИЛЬТР: ПОДПИСКА */}
                             <div className="search__selector_checked">
-                                <label className="label_checked"><input className='tW fCG' type="checkbox" checked={props.search.noRequiredSubscribe} onChange={(e) => console.log(e.target.checked)} onClick={(e) => console.log(e.target.checked)} /><div className="search_checked_text">БЕЗ ПОДПИСКИ</div></label>
+                                <label className="label_checked"><input className='t fCG' type="checkbox" checked={props.search.noRequiredSubscribe} onChange={(e) => console.log(e.target.checked)} onClick={(e) => console.log(e.target.checked)} /><div className="search_checked_text t">БЕЗ ПОДПИСКИ</div></label>
                             </div>
                         {/* ФИЛЬТР: ПОДПИСКА */}
                         
