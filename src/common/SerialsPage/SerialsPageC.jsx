@@ -9,13 +9,13 @@ class SerialsPageC extends React.Component {
         document.title = "Токийский гуль"
     }
     render() {
-        return <SerialsPage {...this.props}/>
+        return <SerialsPage {...this.props} SerialsId={this.props.match.params.serialsId}/>
     }
 };
 
 
 let mapStateToProps = (state) => ({
-    
+    catalogList : state.catalogList,
 });
 
 export default compose

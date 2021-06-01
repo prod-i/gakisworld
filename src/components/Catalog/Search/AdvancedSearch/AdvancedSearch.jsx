@@ -1,7 +1,6 @@
 import   React        from 'react'             ;
 import { Select     } from 'antd'              ;
 import { Slider     } from '@material-ui/core' ;
-import '../../../../style/ant/select.css'      ;
 import '../../../../style/catalog/search.css'  ;
 
 

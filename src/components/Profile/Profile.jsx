@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 import '../../style/profile/profile.css'
-import '../../style/color.css'
-import '../../style/fonts.css'
 import { Route } from 'react-router-dom';
 import bcg from '../../assets/img/serials/12b.jpg'
 import img from '../../assets/img/serials/13l.jpg'

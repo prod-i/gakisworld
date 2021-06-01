@@ -1,7 +1,5 @@
 import React from 'react'
 import '../../style/profile/profile.css'
-import '../../style/color.css'
-import '../../style/fonts.css'
 import { Menu } from 'antd';
 import { ProfileOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons';
 const { SubMenu } = Menu;

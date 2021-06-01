@@ -17,7 +17,7 @@
 }
 .titleSerialsPage{
     width: 50%;
-    margin: 6% 0 0 90px;
+    margin: 5% 0 0 90px;
     z-index: 1;
 }
 .nameSerialsPage{
@@ -30,7 +30,7 @@
 .serialsRating{
     display: flex;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 .rating{
     font-size: 22px;
@@ -57,6 +57,7 @@
 .cardsSeries{
     display: flex;
     margin: 30px 90px;
+    width: 95%;
 }
 .cardSeries{
     position: relative;
@@ -89,7 +90,7 @@
 .cardSeries_title:hover{
     opacity: .3;
 }
-.swiper-container{
+.cardsSeries.swiper-container{
     margin: 0 !important;
     padding: 0 !important;
 }

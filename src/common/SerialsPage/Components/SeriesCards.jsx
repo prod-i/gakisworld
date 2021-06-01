@@ -12,9 +12,9 @@ import img4 from '../../../assets/img/serials/19b.jpg';
 import img5 from '../../../assets/img/serials/20b.jpg';
 
 
-const SeriesCards = () => {
+const SeriesCards = (props) => {
     const [visible, setVisible] = React.useState(false);
-
+    const item = props.item;
     const hadleVisible = () => {
         setVisible(!visible)
     }
@@ -28,30 +28,14 @@ const SeriesCards = () => {
                 onSwiper={(swiper) => console.log(swiper)}
                 onSlideChange={() => console.log('slide change')}
             >
-                <SwiperSlide className="cardSeries" onClick={hadleVisible}>
-                    <div className="cardSeries_title bcgE">1 серия</div>
-                    <img src={img} alt="" className="cardSerisImage" />
-                </SwiperSlide>
-                <SwiperSlide className="cardSeries" onClick={hadleVisible}>
-                    <div className="cardSeries_title bcgE">2 серия</div>
-                    <img src={img1} alt="" className="cardSerisImage" />
-                </SwiperSlide>
-                <SwiperSlide className="cardSeries" onClick={hadleVisible}>
-                    <div className="cardSeries_title bcgE">3 серия</div>
-                    <img src={img2} alt="" className="cardSerisImage" />
-                </SwiperSlide>
-                <SwiperSlide className="cardSeries" onClick={hadleVisible}>
-                    <div className="cardSeries_title bcgE">4 серия</div>
-                    <img src={img3} alt="" className="cardSerisImage" />
-                </SwiperSlide>
-                <SwiperSlide className="cardSeries" onClick={hadleVisible}>
-                    <div className="cardSeries_title bcgE">5 серия</div>
-                    <img src={img4} alt="" className="cardSerisImage" />
-                </SwiperSlide>
-                <SwiperSlide className="cardSeries" onClick={hadleVisible}>
-                    <div className="cardSeries_title bcgE">6 серия</div>
-                    <img src={img5} alt="" className="cardSerisImage" />
-                </SwiperSlide>
+                {item.map((item, key) => {
+                    return (
+                        <SwiperSlide className="cardSeries" onClick={hadleVisible} key={key}>
+                            <div className="cardSeries_title bcgE">{item.title}</div>
+                            <img src={item.imgPrev} alt="" className="cardSerisImage" />
+                        </SwiperSlide>
+                    )
+                })}
             </Swiper>
 
 
