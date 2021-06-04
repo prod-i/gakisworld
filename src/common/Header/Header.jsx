@@ -11,23 +11,23 @@ import profileAvatarMini  from '../../assets/icon/avatar.png'
 
 const Header = (props) => {
   const menu = (
-    <Menu>
+    <Menu className='bTr'>
       <Menu.Item>
-        <NavLink exact to="/profile" className="menu_item tR fCG" activeClassName='tw'>Профиль</NavLink>
+        <NavLink exact to="/profile" className="menu_item tR fCG" activeClassName='t'>Профиль</NavLink>
       </Menu.Item>
       <Menu.Item>
-      <NavLink exact to="/profile/settings" className="menu_item t fCG" activeClassName='tW'>Настройки</NavLink>
+      <NavLink exact to="/profile/settings" className="menu_item t fCG" activeClassName='t'>Настройки</NavLink>
       </Menu.Item>
       <Menu.Item>
-        <NavLink exact to="/profile/favorites" className="menu_item t fCG" activeClassName='tW'>Избранное</NavLink>
+        <NavLink exact to="/profile/favorites" className="menu_item t fCG" activeClassName='t'>Избранное</NavLink>
       </Menu.Item>
       <Menu.Item>
-        <NavLink exact to="/profile/favorites" className="menu_item t fCG" activeClassName='tW'>Подписка</NavLink>
+        <NavLink exact to="/profile/favorites" className="menu_item t fCG" activeClassName='t'>Подписка</NavLink>
       </Menu.Item>
       <Menu.Item>
         {/* НАПИСАТЬ  НОРМАЛЬНЫЙ ЧЕКБОКС */}
         <div className="menu_item tW fCG search__selector_checked">
-          <label className="label_checked"><div className="search_checked_text">Тема</div><input className='t fCG' type="checkbox" onChange={(e) => console.log(e.target.checked)} onClick={(e) => console.log(e.target.checked)} /></label>
+          <label className="label_checked"><div className="search_checked_text t">Тема</div><input className='t fCG' type="checkbox" onChange={(e) => console.log(e.target.checked)} onClick={(e) => console.log(e.target.checked)} /></label>
         </div>
         {/* НАПИСАТЬ  НОРМАЛЬНЫЙ ЧЕКБОКС */}
       </Menu.Item>
@@ -35,7 +35,7 @@ const Header = (props) => {
         <NavLink exact to="/admin" className="menu_item tY fCG" activeClassName='tY'>Admin panel</NavLink>
       </Menu.Item>
       <Menu.Item>
-        <NavLink exact to="/login" className="menu_item tRP fCG" activeClassName='tR'>Выход</NavLink>
+        <NavLink exact to="/login" className="menu_item tR fCG" activeClassName='tR'>Выход</NavLink>
       </Menu.Item>
     </Menu>
   );
@@ -45,8 +45,7 @@ const Header = (props) => {
 
     <div className="header bTr">
       <div className="logo fCG">
-        <img src={logo} className="logo_img" alt="logoHeader" />
-        <NavLink exact to="/" className='logo_text t'>GAKISWORLD</NavLink>
+        <NavLink exact to="/"  className='logo_text t'><img src={logo} className="logo_img" alt="logoHeader" />GAKISWORLD</NavLink>
       </div>
 
 

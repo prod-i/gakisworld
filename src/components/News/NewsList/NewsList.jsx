@@ -1,7 +1,5 @@
 import React from 'react'
 import { Select } from 'antd';
-import { Modal } from 'antd';
-import NewsModalPage from '../NewsModalPage';
 import { NavLink } from 'react-router-dom';
 const { Option } = Select;
 
@@ -23,32 +21,22 @@ const NewsList = (props) => {
                 </div>
             </div>
             <div className="news_list_body">
-                {newsList.list.map((card, key) => {
+                {newsList.list.map((item, key) => {
                     return (
-                        <NavLink to={'/news/'+ card.id} className="news_card_line bcgB" key={key}>
+                        <NavLink to={'/news/'+ item.id} className="news_card_line bB" key={key}>
                             <div className="news_card_top">
-                                <img src={card.imgM} alt="" className="news_card_img" onClick={() => props.showModal(card.title, card.text, card.imgM)} />
+                                <img src={item.imgM} alt="" className="news_card_img" />
                             </div>
                             <div className="news_card_bottom">
                                 <div className="news_card_head">
-                                    <div className="news_card_title fCG" onClick={() => props.showModal(card.title, card.text, card.imgM)}>{card.title}</div>
+                                    <div className="news_card_title fCG t">{item.title}</div>
                                 </div>
-                                <div className="news_card_descr tD">{card.descr}</div>
-                                <div className="news_card_date tD">{card.author} {card.date}</div>
+                                <div className="news_card_descr tA">{item.descr}</div>
+                                <div className="news_card_date tA">{item.author} {item.date}</div>
                             </div>
                         </NavLink>
                     );
                 })}
-                <Modal
-                    width='50%'
-                    title={false}
-                    footer={false}
-                    visible={props.ModalVisible}
-                    onCancel={props.handleCancel}
-                    bodyStyle={{ background: 'rgb(33, 37, 41)', margin: '-40px 0' }}
-                >
-                    <NewsModalPage title={props.ModalTitle} img={props.ModalPicture} text={props.ModalContent} />
-                </Modal>
             </div>
         </div>
     )

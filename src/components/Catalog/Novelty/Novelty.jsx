@@ -34,22 +34,22 @@ const Novelty = (props) => {
                                         <div className="novelty_card_hover fCG">
 
                                             {/* Название и Рейтинг */}
-                                            <div className="novelty_card_title">
+                                            <div className="novelty_card_title tW">
                                                 {card.title}
                                                 <Rate disabled defaultValue={2} count={10} value={card.rating} className={'catalog_block_rating'} />
                                             </div>
 
-                                            <div className="novelty_card_filtres">
+                                            <div className="novelty_card_filtres tW">
 
                                                 {/* Возрастной рейтинг */}
                                                 <div className={'novelty_card_premium'}>{card.AgeRating}</div>
 
                                                 {/* Фильтры */}
                                                 <div className="novelty_card_filtre">
-                                                    <div className="novelty_card_filtre_left tA">Жанр</div><div className="novelty_card_filtre_right">{card.genre}</div>
+                                                    <div className="novelty_card_filtre_left tG">Жанр</div><div className="novelty_card_filtre_right">{card.genre}</div>
                                                 </div>
                                                 <div className="novelty_card_filtre">
-                                                    <div className="novelty_card_filtre_left tA">Режессер</div><div className="novelty_card_filtre_right">{card.director}</div>
+                                                    <div className="novelty_card_filtre_left tG">Режессер</div><div className="novelty_card_filtre_right">{card.director}</div>
                                                 </div>
 
                                                 {/* Описание */}

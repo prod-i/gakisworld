@@ -30,8 +30,8 @@ const Popular = (props) => {
                                     <div className="popular_hover fCG">
                                         <div className="popular_title">{card.title}</div>
                                         <Rate disabled defaultValue={2} count={10} value={card.rating} className={'popular_rating'}/>
-                                        <div className="popular_detail_elem"><div className="popular_details_left tW">Год    </div><div className="popular_details_right tW">{card.years}</div></div>
-                                        <div className="popular_detail_elem"><div className="popular_details_left tW">Жанр    </div><div className="popular_details_right tW">{card.genre}</div></div>
+                                        <div className="popular_detail_elem"><div className="popular_details_left tG">Год    </div><div className="popular_details_right tW">{card.years}</div></div>
+                                        <div className="popular_detail_elem"><div className="popular_details_left tG">Жанр    </div><div className="popular_details_right tW">{card.genre}</div></div>
                                         <div className="popular_descr_content tW">{card.descr}</div>
                                     </div>
                                 </NavLink>

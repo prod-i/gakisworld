@@ -86,3 +86,38 @@ body{
   height: 100%;
   overflow: hidden;
 }
+
+
+
+
+::-webkit-scrollbar-button {
+  background-image:url('');
+  background-repeat:no-repeat;
+  width:5px;
+  height:0px
+  }
+  
+  ::-webkit-scrollbar-track {
+  background-color:rgb(0, 0, 0, 0)
+  }
+  
+  ::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  background-color:#af4646;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover{
+  background-color:#ff7070;
+  }
+  
+  ::-webkit-resizer{
+  background-image:url('');
+  background-repeat:no-repeat;
+  width:4px;
+  height:0px
+  }
+  
+  ::-webkit-scrollbar{
+  width: 4px;
+  }

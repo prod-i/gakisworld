@@ -32,7 +32,7 @@ const CatalogList = (props) => {
                             </select>
                         </span>
                     </div>
-                    <div className="rtl" onClick={rtlSwith}>
+                    <div className="rtl tA" onClick={rtlSwith}>
                         {rtlLine ? <AppstoreOutlined /> : <MenuOutlined />}
                     </div>
                 </div>

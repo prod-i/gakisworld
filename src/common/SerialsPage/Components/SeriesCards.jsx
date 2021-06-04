@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import PlayerModal from '../PlayerModal';
+import React from 'react'
+import PlayerModal from './PlayerModal';
 import { Modal } from 'antd';
-import { NavLink, Redirect }        from 'react-router-dom';
+import { NavLink }        from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 
@@ -43,7 +43,7 @@ const SeriesCards = (props) => {
                 {item.map((item, key)=>{
                     if(item.id.toString() === props.seriesId){
                         return(
-                            <PlayerModal item={item} seriesId={props.seriesId} title={props.title}/>
+                            <PlayerModal item={item} seriesId={props.seriesId} title={props.title} key={key}/>
                         )
                     }else{return null}
                 })}

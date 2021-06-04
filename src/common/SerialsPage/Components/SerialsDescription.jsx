@@ -12,7 +12,7 @@ const SerialsDescription = (props) => {
                 </div>
                 <div className="detailsSearislPage">
                     <div className="details_title tG">
-                        <div className="details_item">Год</div>
+                        <div className="details_item" onClick={()=>props.handleMuted()}>Год</div>
                         <div className="details_item">Жанр</div>
                         <div className="details_item">Режиссер</div>
                         <div className="details_item">Студия</div>

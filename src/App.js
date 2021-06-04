@@ -9,10 +9,11 @@ import 'swiper/swiper-bundle.min.css'
 import './style/ant/Rate.css'
 import './style/ant/select.css'
 import './style/ant/switch.css'
-// import './style/dark.css'
-import './style/light.css'
+// import dark  from './style/dark.css'
+import light from './style/light.css'
 import './style/fonts.css'
 import './App.css';
+
 
 const HeaderC       = React.lazy(() => import('./common/Header/HeaderC'          ));
 const MainC         = React.lazy(() => import('./components/Main/MainC'          ));
@@ -25,15 +26,12 @@ const SerialsPageC  = React.lazy(() => import('./common/SerialsPage/SerialsPageC
 const LoginC        = React.lazy(() => import('./components/Login/LoginC'        ));
 const AdminC        = React.lazy(() => import('./components/ADMIN/AdminC'        ));
 
-
-
-
 class App extends React.Component {
   render () {
     return (
           <div className='gakis'>
             <Route path='/'                render={withSuspense(HeaderC         )}/>
-            <div className="app__loading_content">
+            <div className={"app__loading_content"}>
               <Switch>
                 <Route exact path='/'                          render={withSuspense(MainC         )}/>
                 <Route path='/profile'                         render={withSuspense(ProfileC      )}/>
@@ -41,7 +39,7 @@ class App extends React.Component {
                 <Route path='/news/:postId?'                   render={withSuspense(NewsC         )}/>
                 <Route path='/calendar'                        render={withSuspense(CalendarC     )}/>
                 <Route path='/subscribe'                       render={withSuspense(SubscribeC    )}/>
-                <Route path='/serials/:serialsId?/:seriesId?'  render={withSuspense(SerialsPageC  )}/>
+                <Route path='/serials/:serialsId/:seriesId?'  render={withSuspense(SerialsPageC  )}/>
                 <Route path='/login'                           render={withSuspense(LoginC        )}/>
                 <Route path='/admin'                           render={withSuspense(AdminC        )}/>
                 <Route path='*'                                render={()=><div>404</div>          }/>

@@ -36,7 +36,7 @@ const Slider = (props) => {
                                 {/* PRIVIEW */}
                                 <NavLink exact to={'/serials/' + slide.id} className='slide__preview t'><img className="slide__preview_img" src={slide.imageLarge} alt="" /></NavLink>
                                 {/* CONTENT */}
-                                <div className="slide_content bE">
+                                <div className="slide_content bTr">
                                     <div className="slide_title">
                                         <NavLink exact to={'/serials/' + slide.id} className='slide__name fCG t'>{slide.title}</NavLink>
                                         <div className="slide_rating">

@@ -33,7 +33,7 @@ const StartSearch = (props) => {
                         {/* ФИЛЬТР: ТИП */}
                             <Select placeholder='Тип' style={{ width: 120 }} size='large' bordered={false} className={'select_elem'} allowClear>
                                 {Object.keys(props.search.filters.type).map((value, key) => {
-                                    return <Option className={'select_elem_options fCG tA'} bordered={false} value={value} key={key}>{props.search.filters.type[value]}</Option>
+                                    return <Option className={'select_elem_options fCG tW'} bordered={false} value={value} key={key}>{props.search.filters.type[value]}</Option>
                                 })}
                             </Select>
                         {/* ФИЛЬТР: ТИП */}
@@ -43,7 +43,7 @@ const StartSearch = (props) => {
                         {/* ФИЛЬТР: ЖАНР */}
                             <Select placeholder='Жанр' style={{ width: 120 }} size='large' bordered={false} className={'select_elem'} allowClear>
                                 {Object.keys(props.search.filters.genre).map((value, key) => {
-                                    return <Option className={'select_elem_options fCG tA'} bordered={false} value={value} key={key}>{props.search.filters.genre[value]}</Option>
+                                    return <Option className={'select_elem_options fCG tW'} bordered={false} value={value} key={key}>{props.search.filters.genre[value]}</Option>
                                 })}
                             </Select>
                         {/* ФИЛЬТР: ЖАНР */}

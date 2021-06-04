@@ -13,7 +13,7 @@ const Profile = () => {
         setCurrent(e.key);
     }
     return (
-        <div className='profile tW bcgE'>
+        <div className='profile tW bB'>
             
             <NavigationProfile  current={current} handleClick={handleClick}/>
 
@@ -28,15 +28,15 @@ const Profile = () => {
                             <div className="profile_name">Kaneki Ken</div>
                         </div>
                         <div className="profile_info_item">
-                            <div className="profile_info_left tD">Тип аккаунта</div>
+                            <div className="profile_info_left tA">Тип аккаунта</div>
                             <div className="profile_info_right">Стандартный</div>
                         </div>
                         <div className="profile_info_item">
-                            <div className="profile_info_left tD">Дата регистрации</div>
+                            <div className="profile_info_left tA">Дата регистрации</div>
                             <div className="profile_info_right">16.02.2001</div>
                         </div>
                         <div className="profile_info_item">
-                        <div className="profile_info_left tD">Отслеживаемые сериалы</div>
+                        <div className="profile_info_left tA">Отслеживаемые сериалы</div>
                         <div className="profile_info_right">29</div>
                         </div>
                     </div>

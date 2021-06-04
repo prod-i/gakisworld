@@ -2,12 +2,16 @@
     margin: 0 auto;
     width: 85%;
 }
+.ant-modal-body{
+    margin: 0 !important;
+}
 .news_modal_title{
     width: 98%;
     font-size: 21px;
     padding-bottom: 10px;
     border-bottom: 1px solid #ff707050;
     font-weight: 900;
+    margin-top: 40px;
 }
 .news_modal_img{
     width: 100%;

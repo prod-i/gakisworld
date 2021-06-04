@@ -277,3 +277,6 @@
     color: rgb(175, 70, 70) !important;
     text-decoration: none;
 }
+.ant-modal-content{
+    background-color: rgb(180, 180, 180, 0);
+}

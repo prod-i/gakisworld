@@ -71,7 +71,7 @@
     position: absolute;
     right: -20px;
     margin-top: 5px;
-    background-color: #17191ad3;
+    /* background-color: #17191ad3; */
     color: #fff !important;
 }
 .ant-dropdown-menu-item{
