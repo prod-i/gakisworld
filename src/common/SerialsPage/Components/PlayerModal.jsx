@@ -12,7 +12,7 @@ const PlayerModal = (props) => {
                     <VideoPlayer />
                 </div>
                 <div className="player_modal_options tR">
-                <CrownFilled className='tY'/><HeartOutlined/><EyeOutlined />
+                <div className="player_modal_space"></div><EyeOutlined />
                 </div>
             </div>
     )

@@ -18,16 +18,47 @@
     pointer-events: none;
 }
 .titleSerialsPage{
-    width: 50%;
+    width: 90%;
     margin: 5% 0 0 90px;
     z-index: 1;
 }
 .nameSerialsPage{
+    display: flex;
+    justify-content: space-between;
+    min-width: 100%;
     min-height: 180px;
     font-size: 72px;
     text-transform: uppercase;
     font-weight: 900;
     opacity: 0.8;
+}
+.serial_options{
+    width: 10%;
+    height: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+.serial_options-item{
+    position: relative;
+    font-size: 28px;
+    transition: .2s;
+}
+.serial_options-item-hover{
+    position: absolute;
+    text-align: center;
+    width: 150px;
+    bottom: -60px;
+    right: 0;
+    padding: 10px;
+    font-size: 15px;
+    background-color: rgba(46, 46, 46, 0.404);
+    opacity: 0;
+    transition: .2s;
+}
+.serial_options-item:hover .serial_options-item-hover{
+    opacity: 1;
 }
 .serialsRating{
     display: flex;
@@ -40,7 +71,7 @@
 }
 .detailsSearislPage{
     display: flex;
-    width: 70%;
+    width: 50%;
     justify-content: space-between;
     margin-top: 30px;
 }
@@ -56,7 +87,7 @@
     cursor: pointer;
 }
 .descrSearialsPage{
-    width: 80%;
+    width: 40%;
 }
 .cardsSeries{
     display: flex;
@@ -73,7 +104,7 @@
     background-color: rgba(0, 0, 0, 0.479);
     transition: .2s;
     z-index: 1;
-    opacity: .8;
+    opacity: 1;
 }
 .cardSerisImage{
     width: 100%;
@@ -81,7 +112,6 @@
     object-fit: cover;
     object-position: center;
     z-index: 0;
-    opacity: .7;
 }
 .cardSeries_title{
     position: absolute;
@@ -94,7 +124,7 @@
     z-index: 3;
 }
 .cardSeries:hover{
-    opacity: 1;
+    opacity: 0.8;
 }
 .cardsSeries.swiper-container{
     margin: 0 !important;

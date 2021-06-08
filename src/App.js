@@ -9,8 +9,8 @@ import 'swiper/swiper-bundle.min.css'
 import './style/ant/Rate.css'
 import './style/ant/select.css'
 import './style/ant/switch.css'
-// import dark  from './style/dark.css'
-import light from './style/light.css'
+import dark  from './style/dark.css'
+// import light from './style/light.css'
 import './style/fonts.css'
 import './App.css';
 

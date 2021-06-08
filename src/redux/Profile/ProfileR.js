@@ -1,6 +1,5 @@
 import { profileAPI } from '../../API/api'
 
-
 let initialState = {
     profile: {
         userId: 1,
@@ -37,5 +36,5 @@ const ProfileR = (state = initialState, action) => {
             return state;
     }
 }
-
+profileAPI(); //не работает
 export default ProfileR;
