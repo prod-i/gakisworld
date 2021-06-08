@@ -101,3 +101,7 @@
     text-transform: uppercase;
     border: 3px solid #FF7070;
 }
+.swiper-scrollbar{
+    /* padding-top: 100px !important; */
+    /* background-color: #323423 !important; */
+}

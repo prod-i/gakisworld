@@ -2,7 +2,10 @@ import   React                 from 'react'            ;
 import { Rate }                from 'antd'             ;
 import { NavLink }             from 'react-router-dom' ;
 import { Swiper, SwiperSlide } from 'swiper/react'     ;
+import SwiperCore, { Scrollbar } from 'swiper/core'    ;
 import '../../../style/catalog/novelty.css'            ;
+SwiperCore.use([Scrollbar]);
+
 
 const Novelty = (props) => {
     const list = props.catalogList.catalogList.list;
@@ -19,6 +22,7 @@ const Novelty = (props) => {
                     <Swiper
                         slidesPerView ={4}
                         spaceBetween  ={10}
+                        scrollbar={true}
                         className     ={"novelty_cards"}
                         onSwiper      ={(swiper) => console.log(swiper)}
                         onSlideChange ={() => console.log('slide change')}

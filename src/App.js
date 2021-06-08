@@ -39,7 +39,7 @@ class App extends React.Component {
                 <Route path='/news/:postId?'                   render={withSuspense(NewsC         )}/>
                 <Route path='/calendar'                        render={withSuspense(CalendarC     )}/>
                 <Route path='/subscribe'                       render={withSuspense(SubscribeC    )}/>
-                <Route path='/serials/:serialsId/:seriesId?'  render={withSuspense(SerialsPageC  )}/>
+                <Route path='/serials/:serialsId/:seriesId?'   render={withSuspense(SerialsPageC  )}/>
                 <Route path='/login'                           render={withSuspense(LoginC        )}/>
                 <Route path='/admin'                           render={withSuspense(AdminC        )}/>
                 <Route path='*'                                render={()=><div>404</div>          }/>

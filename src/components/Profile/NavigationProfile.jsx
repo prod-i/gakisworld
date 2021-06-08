@@ -7,7 +7,7 @@ const { SubMenu } = Menu;
 const NavigationProfile = (props) => {
     return (
         <div className='profile_nav'>
-           <Menu
+          <Menu
           theme={'dark'}
           onClick={props.handleClick}
           style={{ width: 256 }}

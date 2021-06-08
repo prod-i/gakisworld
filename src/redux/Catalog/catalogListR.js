@@ -94,27 +94,27 @@ let initialState = {
                     },
                     {
                         id: 2,
-                        title: 'Серия 1',
+                        title: 'Серия 2',
                         imgPrev: img1p,
                     },
                     {
                         id: 3,
-                        title: 'Серия 1',
+                        title: 'Серия 3',
                         imgPrev: img1p,
                     },
                     {
                         id: 4,
-                        title: 'Серия 1',
+                        title: 'Серия 4',
                         imgPrev: img1p,
                     },
                     {
                         id: 5,
-                        title: 'Серия 1',
+                        title: 'Серия 5',
                         imgPrev: img1p,
                     },
                     {
                         id: 6,
-                        title: 'Серия 1',
+                        title: 'Серия 6',
                         imgPrev: img1p,
                     },
                 ],

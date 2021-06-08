@@ -24,24 +24,24 @@ const Profile = () => {
                         <img src={img} alt="" className="profile_avatar_img"/>
                     </div>
                     <div className="profile_descr fCG">
-                        <div className="profile_info_item">
+                        <div className="profile_info_item t">
                             <div className="profile_name">Kaneki Ken</div>
                         </div>
                         <div className="profile_info_item">
                             <div className="profile_info_left tA">Тип аккаунта</div>
-                            <div className="profile_info_right">Стандартный</div>
+                            <div className="profile_info_right tA">Стандартный</div>
                         </div>
                         <div className="profile_info_item">
                             <div className="profile_info_left tA">Дата регистрации</div>
-                            <div className="profile_info_right">16.02.2001</div>
+                            <div className="profile_info_right tA">16.02.2001</div>
                         </div>
                         <div className="profile_info_item">
                         <div className="profile_info_left tA">Отслеживаемые сериалы</div>
-                        <div className="profile_info_right">29</div>
+                        <div className="profile_info_right tA">29</div>
                         </div>
                     </div>
                 </div>
-                <div className="profile_content">
+                <div className="profile_content t">
                     <div className="profile_content_title">{current}</div>
                     <div className="profile_content_body">
                         <Route exact path={'/profile/'+current }  render={()=><>{current}</>}/>
