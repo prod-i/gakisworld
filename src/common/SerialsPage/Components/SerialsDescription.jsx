@@ -11,11 +11,11 @@ const SerialsDescription = (props) => {
                     <div className="serial_options">
                         <div className="serial_options-item tR">
                             <ClockCircleOutlined />
-                            <div className="serial_options-item-hover tRP">Отслеживать</div>
+                            <div className="serial_options-item-hover tRP">В планах</div>
                         </div>
                         <div className="serial_options-item tR">
                             <HeartOutlined />
-                            <div className="serial_options-item-hover tRP">В планах</div>
+                            <div className="serial_options-item-hover tRP">Отслеживать</div>
                         </div>
                         <div className="serial_options-item">
                             <CrownOutlined className='tY'/>

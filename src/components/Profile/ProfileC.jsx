@@ -1,7 +1,7 @@
 import React from 'react';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
+import { Redirect, withRouter } from 'react-router-dom';
 import Profile from './Profile';
 
 class NewsC extends React.Component {
@@ -9,7 +9,16 @@ class NewsC extends React.Component {
         document.title = "Kaneki Ken"
     }
     render() {
-        return <Profile />
+        const userId = this.props.match.params.userId;
+        const options = this.props.match.params.options;
+
+        if(!userId){
+            return <Redirect to='/login'/>
+        }else if(!options){
+            return <Redirect to={'/profile/' + userId + '/continue-view'}/>
+        }
+        
+        return <Profile userId={userId} options={options}/>
     }
 };
 

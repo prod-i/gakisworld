@@ -13,16 +13,16 @@ const Header = (props) => {
   const menu = (
     <Menu className='bTr'>
       <Menu.Item>
-        <NavLink exact to="/profile" className="menu_item tR fCG" activeClassName='t'>Профиль</NavLink>
+        <NavLink exact to="/profile/1" className="menu_item tR fCG" activeClassName='t'>Профиль</NavLink>
       </Menu.Item>
       <Menu.Item>
-      <NavLink exact to="/profile/settings" className="menu_item t fCG" activeClassName='t'>Настройки</NavLink>
+      <NavLink exact to="/profile/1/edit" className="menu_item t fCG" activeClassName='t'>Настройки</NavLink>
       </Menu.Item>
       <Menu.Item>
-        <NavLink exact to="/profile/favorites" className="menu_item t fCG" activeClassName='t'>Избранное</NavLink>
+        <NavLink exact to="/profile/1/favorites" className="menu_item t fCG" activeClassName='t'>Избранное</NavLink>
       </Menu.Item>
       <Menu.Item>
-        <NavLink exact to="/profile/favorites" className="menu_item t fCG" activeClassName='t'>Подписка</NavLink>
+        <NavLink exact to="/profile/1/subscribe-info" className="menu_item t fCG" activeClassName='t'>Подписка</NavLink>
       </Menu.Item>
       <Menu.Item>
         {/* НАПИСАТЬ  НОРМАЛЬНЫЙ ЧЕКБОКС */}
@@ -68,7 +68,7 @@ const Header = (props) => {
           ? null
           : <div className="profile_menu_button">
             <Dropdown overlay={menu} placement="bottomRight">
-              <NavLink exact to="/profile" className="menu_item t fCG" activeClassName='tR'>
+              <NavLink exact to="/profile/1" className="menu_item t fCG" activeClassName='tR'>
                 <img className="profile_menu_img" src={profileAvatarMini} alt="profileHeader" />
               </NavLink>
             </Dropdown>

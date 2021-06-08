@@ -74,12 +74,11 @@
     width: 95%;
     margin: 40px auto;
 }
-.profile_content_title{
-    font-size: 28px;
-}
+
 .ant-menu-inline{
     background-color: rgba(255, 249, 249, 0) !important;
 }
 .ant-menu-item-selected{
     background-color: #FF7070 !important;
+    color: #fff !important;
 }
