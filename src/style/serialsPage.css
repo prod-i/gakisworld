@@ -43,22 +43,25 @@
 .serial_options-item{
     position: relative;
     font-size: 28px;
-    transition: .2s;
 }
 .serial_options-item-hover{
     position: absolute;
     text-align: center;
     width: 150px;
-    bottom: -60px;
+    top: 60px;
     right: 0;
     padding: 10px;
     font-size: 15px;
-    background-color: rgba(46, 46, 46, 0.404);
+    background-color: rgba(46, 46, 46, 0.4);
     opacity: 0;
     transition: .2s;
+    user-select: none;
 }
 .serial_options-item:hover .serial_options-item-hover{
     opacity: 1;
+}
+.serial_options-item-hover:hover{
+    display: none;
 }
 .serialsRating{
     display: flex;
