@@ -18,41 +18,41 @@ const NavigationProfile = (props) => {
           mode="inline"
         >
           <SubMenu key="sub1" icon={<ProfileOutlined />} title="Профиль" className='t'>
-            <Menu.Item key="continue-view" className='tA'>
-              <NavLink to={'/profile/'+ userId +'/continue-view' }> Продолжить просмотр </NavLink>
-            </Menu.Item>
-            <Menu.Item key="favorites" className='tA'>
-              <NavLink to={'/profile/'+ userId +'/favorites'     }> Избранное      </NavLink>
+            <Menu.Item key="continue-view">
+              <NavLink to={'/profile/'+ userId +'/continue-view' }className='tA'>  Продолжить просмотр </NavLink>
+            </Menu.Item>                                                           
+            <Menu.Item key="favorites" className='tA'>                             
+              <NavLink to={'/profile/'+ userId +'/favorites'     }className='tA'>  Избранное      </NavLink>
             </Menu.Item>
             <Menu.Item key="plans" className='tA'>
-              <NavLink to={'/profile/'+ userId +'/plans'         }> В планах       </NavLink>
+              <NavLink to={'/profile/'+ userId +'/plans'         }className='tA'>  В планах       </NavLink>
             </Menu.Item>
-            <Menu.Item key="view" className='tA'>
-              <NavLink to={'/profile/'+ userId +'/view'          }> Просмотренные  </NavLink>
+            <Menu.Item key="archive" className='tA'>
+              <NavLink to={'/profile/'+ userId +'/archive'       }className='tA'>  Архив  </NavLink>
             </Menu.Item>
           </SubMenu>
 
           <SubMenu key="sub2" icon={<AppstoreOutlined />} title="Управление подпиской" className='t'>
             <Menu.Item key="subscribe-control" className='tA'>
-              <NavLink to={'/profile/'+ userId +'/subscribe-control' }> Сменить тип подписки   </NavLink>
+              <NavLink to={'/profile/'+ userId +'/subscribe-control' }className='tA'> Сменить тип подписки   </NavLink>
             </Menu.Item>
             <Menu.Item key="subscribe-info" className='tA'>
-              <NavLink to={'/profile/'+ userId +'/subscribe-info'    }> Информация о подписке  </NavLink>
+              <NavLink to={'/profile/'+ userId +'/subscribe-info'    }className='tA'> Информация о подписке  </NavLink>
             </Menu.Item>
             <Menu.Item key="subscribe-unplug" className='tR'>
-              <NavLink to={'/profile/'+ userId +'/subscribe-unplug'  }> Отказаться от подписки </NavLink>
+              <NavLink to={'/profile/'+ userId +'/subscribe-unplug'  }className='tR'> Отказаться от подписки </NavLink>
             </Menu.Item>
           </SubMenu>
 
           <SubMenu key="sub3" icon={<SettingOutlined />} title="Настройки" className='t'> 
             <Menu.Item key="edit" className='tA'>
-              <NavLink to={'/profile/'+ userId +'/edit'   }> Редактировать профиль </NavLink>
+              <NavLink to={'/profile/'+ userId +'/edit'   }className='tA'> Редактировать профиль </NavLink>
             </Menu.Item>
             <Menu.Item key="avatar" className='tA'>
-              <NavLink to={'/profile/'+ userId +'/avatar' }> Сменить атавар        </NavLink>
+              <NavLink to={'/profile/'+ userId +'/avatar' }className='tA'> Сменить атавар        </NavLink>
             </Menu.Item>
             <Menu.Item key="bacg" className='tA'>
-              <NavLink to={'/profile/'+ userId +'/bacg'   }> Сменить фон           </NavLink>
+              <NavLink to={'/profile/'+ userId +'/bacg'   }className='tA'> Сменить фон           </NavLink>
             </Menu.Item>
           </SubMenu>
 

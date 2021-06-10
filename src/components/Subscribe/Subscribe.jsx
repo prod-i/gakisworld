@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../../common/Footer/Footer';
 import '../../style/subscribe/subscribe.css'
 import SubscribeCards from './SubscribeCards';
 
@@ -11,11 +12,13 @@ const Subscribe = (props) => {
 
                 <SubscribeCards />
                 
-                <div className="subscribe_form_wrap bcg">
+                <div className="subscribe_form_wrap bE">
                     
                 </div>
 
             </div>
+
+            <Footer />
         </div>
     );
 };

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { Redirect } from 'react-router-dom';
 import '../../style/profile/profile.css'
 import NavigationProfile from './NavigationProfile'
+import ProfileContent from './ProfileInfo/ProfileContent';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
 
 const Profile = (props) => {
@@ -15,9 +15,8 @@ const Profile = (props) => {
 
                 <ProfileInfo />
 
-                <div className="profile_content t">
-                    
-                </div>
+                <ProfileContent options={props.options}/>
+
             </div>
         </div>
     )
