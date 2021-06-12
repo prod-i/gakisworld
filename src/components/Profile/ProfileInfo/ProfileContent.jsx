@@ -14,7 +14,7 @@ const ProfileContent = (props) => {
     return (
         <div className='profile_content'>
 
-            <div className="profile_content_body">
+            <div className="profile_content_wrap">
                 {(() => {
                     switch (props.options) {
                         case 'continue-view':
