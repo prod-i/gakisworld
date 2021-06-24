@@ -1,7 +1,5 @@
 import React from 'react'
 import PArchive from './ProfileItemMenu/PArchive'
-import PAvatar from './ProfileItemMenu/PAvatar'
-import PBacg from './ProfileItemMenu/PBacg'
 import PContinue from './ProfileItemMenu/PContinue'
 import PEdit from './ProfileItemMenu/PEdit'
 import PFavorites from './ProfileItemMenu/PFavorites'
@@ -49,13 +47,13 @@ const ProfileContent = (props) => {
                             return (
                                 <PEdit />
                             )
-                        case 'avatar':
+                        case 'notifications':
                             return (
-                                <PAvatar />
+                                <>Управление уведомлениями</>
                             )
-                        case 'bacg':
+                        case 'security':
                             return (
-                                <PBacg />
+                                <>Безопасность</>
                             )
                         default:
                             return (

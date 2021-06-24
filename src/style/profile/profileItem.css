@@ -21,6 +21,9 @@
     object-position: center;
 }
 
+
+/* ИНФОРМАЦИЯ О ПОДПИСКЕ */
+
 .profile_subscribe_info_item_wrap{
     width: 100%;
 }
@@ -28,7 +31,6 @@
     display: flex;
     width: 60%;
     justify-content: space-between;
-    margin: 10px 0;
 }
 .profile_item-left{
     width: 30%;
@@ -39,7 +41,7 @@
     font-size: 21px;
 }
 .profile_subscribe_info_item_privilege{
-    margin: 60px 0;
+    margin: 30px 0;
 }
 .profile_subscribe_item-info{
     width: 100%;
@@ -54,4 +56,28 @@
 }
 .info_absent_item-btn{
     margin: 20px 0;
+}
+
+/* ОТКАЗАТЬСЯ ОТ ПОДПИСКИ */
+
+.profile_content_unplug{
+    position: relative;
+    width: fit-content;
+    font-size: 18px;
+    margin: 40px 0;
+}
+.profile_content_unplug_title{
+    font-size: 19px;
+}
+.profile_content_unplug_btn{
+    position: absolute;
+    /* right: 0; */
+    width: fit-content;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    margin: 40px 0;
+    transition: .3s;
+}
+.profile_content_unplug_btn:hover{
+    opacity: .5;
 }

@@ -34,7 +34,7 @@ const NavigationProfile = (props) => {
 
           <SubMenu key="sub2" icon={<AppstoreOutlined />} title="Управление подпиской" className='t'>
             <Menu.Item key="subscribe-control" className='tA'>
-              <NavLink to={'/profile/'+ userId +'/subscribe-control' }className='tA'> Сменить тип подписки   </NavLink>
+              <NavLink to={'/profile/'+ userId +'/subscribe-control' }className='tD'> Сменить тип подписки   </NavLink>
             </Menu.Item>
             <Menu.Item key="subscribe-info" className='tA'>
               <NavLink to={'/profile/'+ userId +'/subscribe-info'    }className='tA'> Информация о подписке  </NavLink>
@@ -46,13 +46,13 @@ const NavigationProfile = (props) => {
 
           <SubMenu key="sub3" icon={<SettingOutlined />} title="Настройки" className='t'> 
             <Menu.Item key="edit" className='tA'>
-              <NavLink to={'/profile/'+ userId +'/edit'   }className='tA'> Редактировать профиль </NavLink>
+              <NavLink to={'/profile/'+ userId +'/edit'          }className='tA'> Редактировать профиль    </NavLink>
             </Menu.Item>
-            <Menu.Item key="avatar" className='tA'>
-              <NavLink to={'/profile/'+ userId +'/avatar' }className='tA'> Сменить атавар        </NavLink>
+            <Menu.Item key="notifications" className='tA'>
+              <NavLink to={'/profile/'+ userId +'/notifications' }className='tA'> Управление уведомлениями </NavLink>
             </Menu.Item>
-            <Menu.Item key="bacg" className='tA'>
-              <NavLink to={'/profile/'+ userId +'/bacg'   }className='tA'> Сменить фон           </NavLink>
+            <Menu.Item key="security" className='tA'>
+              <NavLink to={'/profile/'+ userId +'/security'      }className='tA'> Безопасность             </NavLink>
             </Menu.Item>
           </SubMenu>
 

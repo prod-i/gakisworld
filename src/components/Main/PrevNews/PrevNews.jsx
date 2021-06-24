@@ -24,7 +24,7 @@ const PrevNews = (props) => {
                     {list.map((posts, key) => {
                         if (key < 4) {
                             return (
-                                <div className="prevNews__card bE" key={key}>
+                            <NavLink to={'/news/'+ posts.id} className=" prevNews__card bE" key={key}>
                                     <div className="prevNews__card_image">
                                         <img src={posts.imgM} alt="" className="prevNews__card_img" />
                                     </div>
@@ -33,7 +33,7 @@ const PrevNews = (props) => {
                                         <div className="prevNews__card_data">{posts.date}</div>
                                         <div className="prevNews__card_author">{posts.author}</div>
                                     </div>
-                                </div>
+                            </NavLink>
                             )
                         } else { return null }
                     }
