@@ -1,5 +1,8 @@
 import React from 'react';
 import Subscribe from './Subscribe';
+import { compose }    from 'redux';
+import { connect }    from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 class SubscribeC extends React.Component {
     componentDidMount(){
@@ -10,4 +13,12 @@ class SubscribeC extends React.Component {
     }
 };
 
-export default SubscribeC;
+let mapStateToProps = (state) => ({
+    subscribe : state.subscribe,
+});
+
+export default compose
+(
+    connect(mapStateToProps, {}),
+    withRouter,
+)   (SubscribeC);

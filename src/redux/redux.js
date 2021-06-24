@@ -11,6 +11,7 @@ import searchR from "./Catalog/searchR";
 import catalogListR from "./Catalog/catalogListR";
 import newsListR from "./News/newsListR";
 import UsersR from "./Users/UsersR";
+import subscribeR from "./Subscribe/subscribeR";
 
 const redusers = combineReducers({
     main         : mainR, 
@@ -24,6 +25,7 @@ const redusers = combineReducers({
     catalogList  : catalogListR,
     newsList     : newsListR,
     usersList    : UsersR,
+    subscribe    : subscribeR,
 });
 
 const store = createStore(redusers /*, composeEnhancers(applyMiddleware(thunkMiddleware))*/);

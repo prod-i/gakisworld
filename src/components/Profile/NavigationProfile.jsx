@@ -33,9 +33,9 @@ const NavigationProfile = (props) => {
           </SubMenu>
 
           <SubMenu key="sub2" icon={<AppstoreOutlined />} title="Управление подпиской" className='t'>
-            <Menu.Item key="subscribe-control" className='tA'>
+            {/* <Menu.Item key="subscribe-control" className='tA'>
               <NavLink to={'/profile/'+ userId +'/subscribe-control' }className='tD'> Сменить тип подписки   </NavLink>
-            </Menu.Item>
+            </Menu.Item> */}
             <Menu.Item key="subscribe-info" className='tA'>
               <NavLink to={'/profile/'+ userId +'/subscribe-info'    }className='tA'> Информация о подписке  </NavLink>
             </Menu.Item>
