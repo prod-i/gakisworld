@@ -10,7 +10,7 @@ import '../../style/main/main.css'                     ;
 
 const Main = (props)=> {
         return(
-            <div className='main'>
+            <div className={props.mainVis ? 'main' : 'main none'}>
                 <Slider 
                     slides          ={props.catalogList.catalogList.list}
                     sliderVis       ={props.slider.sliderVis}

@@ -42,8 +42,10 @@ const Admin = (props) => {
 
                     <Content className="site-layout-background_content">
                         <AdminPanel 
-                            PanelID={current} 
-                            usersList={props.usersList}
+                            PanelID         ={current} 
+                            main            ={props.main}
+                            usersList       ={props.usersList}
+                            toggleIsMainVis ={props.toggleIsMainVis}
                         />
                     </Content>
 

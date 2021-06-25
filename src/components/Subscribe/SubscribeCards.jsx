@@ -30,8 +30,13 @@ const SubscribeCards = ({ subscribeList }) => {
                     )
                 })}
             </div>
-            <div className="subscribe_item_banner">
-                banner
+            <div className="subscribe_item_banner bR fCG">
+                <div className="subscribe_item_banner_left">12</div>
+                <div className="subscribe_item_banner_right">
+                    <div className="subscribe_item_banner_right_title">Купи подписку на 12 месяцев и получи:</div>
+                    <div className="subscribe_item_banner_right_descr">● Что нибудь не понятное</div>
+                    <div className="subscribe_item_banner_right_descr">● И что нибудь ещё более не понятное</div>
+                </div>
             </div>
         </div>
     )

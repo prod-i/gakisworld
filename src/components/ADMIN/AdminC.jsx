@@ -3,6 +3,7 @@ import { compose }    from 'redux';
 import { connect }    from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import Admin from './Admin';
+import {toggleIsMainVis} from '../../redux/Main/mainR.js'
 
 class AdminC extends React.Component {
     componentDidMount(){
@@ -10,7 +11,9 @@ class AdminC extends React.Component {
     }
     render() {
         return <Admin 
-                    usersList={this.props.usersList}
+                    main            ={this.props.main}
+                    usersList       ={this.props.usersList}
+                    toggleIsMainVis = {this.props.toggleIsMainVis}
                />
     }
 };
@@ -19,10 +22,11 @@ class AdminC extends React.Component {
 
 let mapStateToProps = (state) => ({
     usersList: state.usersList,
+    main: state.main,
 });
 
 export default compose
 (
-    connect(mapStateToProps, {}),
+    connect(mapStateToProps, {toggleIsMainVis}),
     withRouter,
 )   (AdminC);

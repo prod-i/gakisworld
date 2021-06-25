@@ -1,0 +1,36 @@
+.controlAD{
+    margin-top: 20px;
+    width: 100%;
+}
+.controlAD_wrap{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+.controlAD_item{
+    width: 23.5%;
+    height: 100px;
+    margin: 0 2% 2% 0;
+    font-size: 18px;
+    padding: 10px;
+    text-transform: uppercase;
+    /* border: 2px solid #af4646; */
+}
+.controlAD_item:nth-child(4n){
+    margin: 0;
+}
+.controlAD_item_title{
+
+}
+.controlAD_item_vis{
+    margin-top: 10px;
+}
+.controlAD_check{
+    transition: .3s;
+    filter: brightness(80%) !important;
+    margin-left: 10px;
+}
+.controlAD_check:hover{
+    filter: brightness(120%) !important;
+}

@@ -10,6 +10,7 @@ class MainC extends React.Component {
     }
     render() {
         return <Main {...this.props}
+                     mainVis      ={this.props.main.mainVis}
                      slider       ={this.props.slider       }
                      banner       ={this.props.banner       }
                      continueView ={this.props.continueView }
