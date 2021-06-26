@@ -19,6 +19,7 @@ const Slider = (props) => {
                 centeredSlides   ={true}
                 loop             ={true}
                 effect           ='coverflow'
+                initialSlide     = {5}
                 coverflowEffect  ={{
                     rotate       : 15,
                     depth        : 200,

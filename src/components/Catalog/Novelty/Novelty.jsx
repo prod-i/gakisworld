@@ -22,7 +22,7 @@ const Novelty = (props) => {
                     <Swiper
                         slidesPerView ={4}
                         spaceBetween  ={10}
-                        scrollbar={true}
+                        scrollbar     ={true}
                         className     ={"novelty_cards"}
                         onSwiper      ={(swiper) => console.log(swiper)}
                         onSlideChange ={() => console.log('slide change')}

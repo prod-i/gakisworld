@@ -1,6 +1,8 @@
 import { combineReducers, createStore } from "redux";
 // import thunkMiddleware from 'redux-thunk';
 import mainR from "./Main/mainR";
+import headerR from "./Header/headerR";
+import footerR from "./Footer/footerR";
 import sliderR from "./Main/sliderR";
 import bannerR from "./Main/bannerR";
 import continueViewR from "./Main/continueViewR";
@@ -15,6 +17,8 @@ import subscribeR from "./Subscribe/subscribeR";
 
 const redusers = combineReducers({
     main         : mainR, 
+    header       : headerR, 
+    footer       : footerR, 
     slider       : sliderR,
     banner       : bannerR,
     continueView : continueViewR,

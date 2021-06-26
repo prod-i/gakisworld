@@ -17,8 +17,8 @@ const AdminPanel = (props) => {
                     case 'control':
                         return (
                             <ControlAD 
-                                mainVis={props.main.mainVis} 
-                                toggleIsMainVis={props.toggleIsMainVis}
+                                controlVis ={props.controlAD.controlVis}
+                                changeVis  ={props.changeVis}
                             />
                         )
                     case 'users':

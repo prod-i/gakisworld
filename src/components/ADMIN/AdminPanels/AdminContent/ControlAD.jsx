@@ -2,23 +2,29 @@ import React from 'react'
 import './../../../../style/admin/controlAD.css';
 
 const ControlAD = (props) => {
-    const toggleIsMainVis = props.toggleIsMainVis;
-    const mainVis = props.mainVis;
+    const controlVis = props.controlVis;
+    const changeVis = props.changeVis;
+    console.log(controlVis);
+
     return (
         <div className='controlAD'>
             <div className="controlAD_wrap fCG">
                 <div className="controlAD_item bE">
                     <div className="controlAD_item_title">Header</div>
-                    <div className="controlAD_item_vis">Visible: <span className="controlAD_check tBl">true</span></div>
+                    <div className="controlAD_item_vis">Visible:
+                        <span className={controlVis.headerVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { changeVis.CONTROLHeaderVis(!controlVis.headerVis) }}>{controlVis.headerVis.toString()}</span>
+                    </div>
                 </div>
                 <div className="controlAD_item bE">
                     <div className="controlAD_item_title">Footer</div>
-                    <div className="controlAD_item_vis">Visible: <span className="controlAD_check tBl">true</span></div>
+                    <div className="controlAD_item_vis">Visible:
+                        <span className={controlVis.footerVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { changeVis.CONTROLFooterVis(!controlVis.footerVis) }}>{controlVis.footerVis.toString()}</span>
+                    </div>
                 </div>
                 <div className="controlAD_item bE">
                     <div className="controlAD_item_title">Main</div>
                     <div className="controlAD_item_vis">Visible:
-                        <span className={mainVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { toggleIsMainVis(!mainVis) }}>{mainVis.toString()}</span>
+                        <span className={controlVis.mainVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { changeVis.CONTROLMainVis(!controlVis.mainVis) }}>{controlVis.mainVis.toString()}</span>
                     </div>
                 </div>
                 <div className="controlAD_item bE">

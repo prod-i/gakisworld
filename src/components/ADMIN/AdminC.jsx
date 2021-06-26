@@ -2,18 +2,28 @@ import   React        from 'react';
 import { compose }    from 'redux';
 import { connect }    from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import { AdminControl } from './AdminControl';
 import Admin from './Admin';
-import {toggleIsMainVis} from '../../redux/Main/mainR.js'
+
+import {CONTROLMainVis} from '../../redux/Main/mainR.js'
+import {CONTROLHeaderVis} from '../../redux/Header/headerR.js'
+import {CONTROLFooterVis} from '../../redux/Footer/footerR.js'
+
 
 class AdminC extends React.Component {
     componentDidMount(){
-        document.title = "Admin Panel"
+        // console.log(this.props.controlAD);
     }
     render() {
+        const changeVis = {
+            CONTROLMainVis   : this.props.CONTROLMainVis,
+            CONTROLHeaderVis : this.props.CONTROLHeaderVis,
+            CONTROLFooterVis : this.props.CONTROLFooterVis,
+        }
         return <Admin 
-                    main            ={this.props.main}
                     usersList       ={this.props.usersList}
-                    toggleIsMainVis = {this.props.toggleIsMainVis}
+                    controlAD       ={this.props.controlAD}
+                    changeVis       ={changeVis}
                />
     }
 };
@@ -23,10 +33,15 @@ class AdminC extends React.Component {
 let mapStateToProps = (state) => ({
     usersList: state.usersList,
     main: state.main,
+    controlAD: AdminControl(state),
 });
 
 export default compose
 (
-    connect(mapStateToProps, {toggleIsMainVis}),
+    connect(mapStateToProps, {
+        CONTROLMainVis,
+        CONTROLHeaderVis,
+        CONTROLFooterVis,
+    }),
     withRouter,
 )   (AdminC);

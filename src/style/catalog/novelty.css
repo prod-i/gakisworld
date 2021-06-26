@@ -10,6 +10,8 @@
     margin: 0 auto;
 }
 .novelty{
+    position: relative;
+    overflow: visible ;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -102,6 +104,12 @@
     border: 3px solid #FF7070;
 }
 .swiper-scrollbar{
-    /* padding-top: 100px !important; */
-    /* background-color: #323423 !important; */
+    position: absolute !important;
+    bottom: -2px !important;
+    /* margin: 0 !important; */
+    /* padding: 0 !important; */
+    background-color: rgba(0, 0, 0, 0.4) !important;
+}
+.swiper-scrollbar-drag{
+    background-color: rgba(175, 70, 70, 0.5) !important;
 }

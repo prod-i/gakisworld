@@ -1,4 +1,4 @@
-const TOGGLE_IS_MAIN_VIS = 'main/TOGGLE_IS_MAIN_VIS';
+const CONTROL_MAIN_VIS = 'main/CONTROL_MAIN_VIS';
 
 let initialState = {
     mainVis: true,
@@ -6,7 +6,7 @@ let initialState = {
 
 const mainR = (state = initialState, action) => {
     switch (action.type) {
-        case TOGGLE_IS_MAIN_VIS:
+        case CONTROL_MAIN_VIS:
             return {
                 ...state,
                 mainVis: action.mainVis,
@@ -16,6 +16,6 @@ const mainR = (state = initialState, action) => {
     }
 }
 
-export const toggleIsMainVis = (mainVis) => ({ type: TOGGLE_IS_MAIN_VIS, mainVis });
+export const CONTROLMainVis = (mainVis) => ({ type: CONTROL_MAIN_VIS, mainVis });
 
 export default mainR;
