@@ -9,15 +9,15 @@ import '../../style/news/newsModal.css'
 
 const News = (props) => {
     return (
-        <div className="news">
+        <div className={props.news.newsVis ? "news" : 'none'}>
 
-            <NewsSlider  {...props} />
+            <NewsSlider  news={props.news} postId={props.postId} />
 
             <div className="news_content">
 
-                <NewsList    {...props} />
+                <NewsList    news={props.news} />
 
-                <NewsSidebar {...props} />
+                <NewsSidebar news={props.news} />
 
             </div>
 

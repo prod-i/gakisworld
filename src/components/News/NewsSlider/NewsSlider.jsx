@@ -6,9 +6,9 @@ import { Modal } from 'antd';
 import 'swiper/swiper-bundle.css';
 
 const NewsSlider = (props) => {
-    const newsList = props.newsList.newsList;
+    const newsList = props.news.newsList;
     return (
-        <div className={newsList.newsListVis ? "news_slider" : "news_slider vis"}>
+        <div className={props.news.newsSlider.newsSliderVis ? "news_slider" : "news_slider vis"}>
             <div className="news_slider_cards_wraper">
                 <Swiper
                     spaceBetween={30}

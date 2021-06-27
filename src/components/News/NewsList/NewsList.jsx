@@ -4,10 +4,10 @@ import { NavLink } from 'react-router-dom';
 const { Option } = Select;
 
 const NewsList = (props) => {
-    const newsList = props.newsList.newsList;
+    const newsList = props.news.newsList;
 
     return (
-        <div className="news_list">
+        <div className={newsList.newsListVis ? "news_list" : 'none'}>
             <div className="news_list_header">
                 <div className="news_filtres">
                     <Select placeholder='Фильтр' size='large' bordered={false} className={'news_select'} allowClear>

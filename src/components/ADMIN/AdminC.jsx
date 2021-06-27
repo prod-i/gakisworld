@@ -5,18 +5,27 @@ import { withRouter } from 'react-router-dom';
 import { AdminControl } from './AdminControl';
 import Admin from './Admin';
 
-import {CONTROLHeaderVis}   from '../../redux/Header/headerR.js'
-import {CONTROLFooterVis}   from '../../redux/Footer/footerR.js'
-import {CONTROLMainVis}     from '../../redux/Main/mainR.js'
-import {CONTROLSliderVis}   from '../../redux/Main/mainR.js'
-import {CONTROLBannerVis}   from '../../redux/Main/mainR.js'
-import {CONTROLContinueVis} from '../../redux/Main/mainR.js'
-import {CONTROLPrevNewsVis} from '../../redux/Main/mainR.js'
-import {CONTROLPopularVis}  from '../../redux/Main/mainR.js'
-import {CONTROLCatalogVis}  from '../../redux/Catalog/catalogR.js'
-import {CONTROLNoveltyVis}  from '../../redux/Catalog/catalogR.js'
-import {CONTROLSearchVis}  from '../../redux/Catalog/searchR.js'
+import {CONTROLHeaderVis}       from '../../redux/Header/headerR.js'
+import {CONTROLFooterVis}       from '../../redux/Footer/footerR.js'
+import {CONTROLMainVis}         from '../../redux/Main/mainR.js'
+import {CONTROLSliderVis}       from '../../redux/Main/mainR.js'
+import {CONTROLBannerVis}       from '../../redux/Main/mainR.js'
+import {CONTROLContinueVis}     from '../../redux/Main/mainR.js'
+import {CONTROLPrevNewsVis}     from '../../redux/Main/mainR.js'
+import {CONTROLPopularVis}      from '../../redux/Main/mainR.js'
+import {CONTROLCatalogVis}      from '../../redux/Catalog/catalogR.js'
+import {CONTROLNoveltyVis}      from '../../redux/Catalog/catalogR.js'
+import {CONTROLSearchVis}       from '../../redux/Catalog/searchR.js'
 import {CONTROLCatalogListVis}  from '../../redux/Catalog/catalogR.js'
+import {CONTROLNewsVis}         from '../../redux/News/newsR.js'
+import {CONTROLNewsListVis}     from '../../redux/News/newsR.js'
+import {CONTROLNewsSliderVis}   from '../../redux/News/newsR.js'
+import {CONTROLNewsSidebarVis}  from '../../redux/News/newsR.js'
+import {CONTROLCalendarVis}     from '../../redux/Calendar/calendarR.js'
+import {CONTROLSubVis}          from '../../redux/Subscribe/subscribeR.js'
+import {CONTROLSubCardsVis}     from '../../redux/Subscribe/subscribeR.js'
+import {CONTROLSubBannerVis}    from '../../redux/Subscribe/subscribeR.js'
+import {CONTROLSubFormVis}      from '../../redux/Subscribe/subscribeR.js'
 
 
 class AdminC extends React.Component {
@@ -37,6 +46,15 @@ class AdminC extends React.Component {
             CONTROLNoveltyVis     : this.props.CONTROLNoveltyVis,
             CONTROLSearchVis      : this.props.CONTROLSearchVis,
             CONTROLCatalogListVis : this.props.CONTROLCatalogListVis,
+            CONTROLNewsVis        : this.props.CONTROLNewsVis,
+            CONTROLNewsListVis    : this.props.CONTROLNewsListVis,
+            CONTROLNewsSliderVis  : this.props.CONTROLNewsSliderVis,
+            CONTROLNewsSidebarVis : this.props.CONTROLNewsSidebarVis,
+            CONTROLCalendarVis    : this.props.CONTROLCalendarVis,
+            CONTROLSubVis         : this.props.CONTROLSubVis,
+            CONTROLSubCardsVis    : this.props.CONTROLSubCardsVis,
+            CONTROLSubBannerVis   : this.props.CONTROLSubBannerVis,
+            CONTROLSubFormVis     : this.props.CONTROLSubFormVis,
         }
         return <Admin 
                     usersList       ={this.props.usersList}
@@ -69,7 +87,15 @@ export default compose
         CONTROLNoveltyVis,
         CONTROLSearchVis,
         CONTROLCatalogListVis,
-        
+        CONTROLNewsVis,
+        CONTROLNewsListVis,
+        CONTROLNewsSliderVis,
+        CONTROLNewsSidebarVis,
+        CONTROLCalendarVis,
+        CONTROLSubVis,
+        CONTROLSubCardsVis,
+        CONTROLSubBannerVis,
+        CONTROLSubFormVis,
     }),
     withRouter,
 )   (AdminC);

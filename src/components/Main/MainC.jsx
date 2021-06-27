@@ -32,7 +32,7 @@ let mapStateToProps = (state) => ({
 
     //Листы
     catalog  :state.catalog  ,
-    newsList     :state.newsList     ,
+    news     :state.news     ,
 });
 
 export default compose

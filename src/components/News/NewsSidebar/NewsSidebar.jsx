@@ -2,9 +2,9 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 
 const NewsSidebar = (props) => {
-    const newsList = props.newsList.newsList;
+    const newsList = props.news.newsList;
     return (
-        <div className="news_sideBar">
+        <div className={props.news.newsSidebar.newsSidebarVis ? "news_sideBar" : 'none'}>
             <div className="news_sideBar_el news_important">
                 <div className="news_sideBar_title">Важно</div>
                 {newsList.list.map((item, key) => {

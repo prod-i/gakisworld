@@ -14,7 +14,7 @@ class NewsC extends React.Component {
 };
 
 let mapStateToProps = (state) => ({
-    newsList: state.newsList,
+    news: state.news,
 });
 
 export default compose

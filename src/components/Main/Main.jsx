@@ -26,7 +26,7 @@ const Main = (props)=> {
                 />
 
                 <PrevNews 
-                    list            ={props.newsList.newsList.list}
+                    list            ={props.news.newsList.list}
                     prevNewsVis     ={props.main.prevNews.prevNewsVis}
                 />
 

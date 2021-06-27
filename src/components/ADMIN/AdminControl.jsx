@@ -15,6 +15,18 @@ export const AdminControl = (state) => {
     const searchVis       = state.search.searchVis;
     const catalogListVis  = state.catalog.catalogList.catalogListVis;
 
+    const newsVis         = state.news.newsVis;
+    const newsListVis     = state.news.newsList.newsListVis;
+    const newsSliderVis   = state.news.newsSlider.newsSliderVis;
+    const newsSidebarVis  = state.news.newsSidebar.newsSidebarVis;
+
+    const calendarVis  = state.calendar.calendarVis;
+    
+    const subVis  = state.subscribe.subVis;
+    const subCardsVis  = state.subscribe.subList.subCardsVis;
+    const subBannerVis  = state.subscribe.subBanner.subBannerVis;
+    const subFormVis  = state.subscribe.subForm.subFormVis;
+
 
     const controlVis = {
         headerVis,
@@ -31,6 +43,18 @@ export const AdminControl = (state) => {
         noveltyVis,
         searchVis,
         catalogListVis,
+
+        newsVis,
+        newsListVis,
+        newsSliderVis,
+        newsSidebarVis,
+
+        calendarVis,
+
+        subVis,
+        subCardsVis,
+        subBannerVis,
+        subFormVis,
     }
 
 

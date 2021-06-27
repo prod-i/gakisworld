@@ -1,8 +1,12 @@
 import img1 from '../../assets/s1.jpg'
 
+const CONTROL_SUBSCRIBE_VIS        = 'news/CONTROL_SUBSCRIBE_VIS';
+const CONTROL_SUBSCRIBE_CARDS_VIS  = 'news/CONTROL_SUBSCRIBE_CARDS_VIS';
+const CONTROL_SUBSCRIBE_BANNER_VIS = 'news/CONTROL_SUBSCRIBE_BANNER_VIS';
+const CONTROL_SUBSCRIBE_FORM_VIS   = 'news/CONTROL_SUBSCRIBE_FORM_VIS';
 
 let initialState = {
-    SubscribeList: {
+    subList: {
         list: [
             {
                 id:1,
@@ -55,15 +59,47 @@ let initialState = {
                 ]
             },
         ],
+        subCardsVis: true,
     },
-    SubscribeVis: true,
+    subBanner: {
+        subBannerVis: true,
+    },
+    subForm: {
+        subFormVis: true,
+    },
+    subVis: true,
 };
 
 const SubscribeR = (state = initialState, action) => {
     switch (action.type) {
+        case CONTROL_SUBSCRIBE_VIS:
+            return {
+                ...state,
+                subVis: action.subVis,
+            }
+        case CONTROL_SUBSCRIBE_CARDS_VIS:
+            return {
+                ...state,
+                subList: {...state.subList, subCardsVis: action.subCardsVis},
+            }
+        case CONTROL_SUBSCRIBE_BANNER_VIS:
+            return {
+                ...state,
+                subBanner: {...state.subBanner, subBannerVis: action.subBannerVis},
+            }
+        case CONTROL_SUBSCRIBE_FORM_VIS:
+            return {
+                ...state,
+                subForm: {...state.subForm, subFormVis: action.subFormVis},
+            }
         default:
             return state;
     }
 }
+
+export const CONTROLSubVis       = (subVis)       => ({type: CONTROL_SUBSCRIBE_VIS, subVis});
+export const CONTROLSubCardsVis  = (subCardsVis)  => ({type: CONTROL_SUBSCRIBE_CARDS_VIS, subCardsVis});
+export const CONTROLSubBannerVis = (subBannerVis) => ({type: CONTROL_SUBSCRIBE_BANNER_VIS, subBannerVis});
+export const CONTROLSubFormVis   = (subFormVis)   => ({type: CONTROL_SUBSCRIBE_FORM_VIS, subFormVis});
 
 export default SubscribeR;

@@ -1,8 +1,8 @@
 import React from 'react'
 
-const SubscribeCards = ({ subscribeList }) => {
+const SubscribeCards = ({ subList }) => {
     const [activeId, setActiveId] = React.useState(0)
-    const list = subscribeList;
+    const list = subList;
     const handleActiveSubscribe =(id)=>{
         setActiveId(id);
     }
