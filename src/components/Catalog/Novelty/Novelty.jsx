@@ -8,7 +8,7 @@ SwiperCore.use([Scrollbar]);
 
 
 const Novelty = (props) => {
-    const list = props.catalogList.catalogList.list;
+    const list = props.catalog.catalogList.list;
 
     if (!Array.isArray(list) || list.length <= 0) {
         return null

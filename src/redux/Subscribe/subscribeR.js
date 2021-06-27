@@ -1,7 +1,5 @@
 import img1 from '../../assets/s1.jpg'
-import img2 from '../../assets/s2.jpg'
-import img3 from '../../assets/s3.jpg'
-import img4 from '../../assets/s4.jpg'
+
 
 let initialState = {
     SubscribeList: {

@@ -2,15 +2,7 @@ import React from 'react'
 import './../../../../style/admin/dataAD.css';
 import { ExclamationCircleFilled } from '@ant-design/icons';
 import avatar1 from './../../../../assets/img/serials/1l.jpg';
-import avatar2 from './../../../../assets/img/serials/2l.jpg';
-import avatar3 from './../../../../assets/img/serials/3l.jpg';
-import avatar4 from './../../../../assets/img/serials/4l.jpg';
-import avatar5 from './../../../../assets/img/serials/5l.jpg';
-import avatar6 from './../../../../assets/img/serials/6l.jpg';
-import avatar7 from './../../../../assets/img/serials/7l.jpg';
-import avatar8 from './../../../../assets/img/serials/8l.jpg';
-import avatar9 from './../../../../assets/img/serials/9l.jpg';
-import avatar10 from './../../../../assets/img/serials/10l.jpg';
+
 
 const NewsAD = () => {
     return (

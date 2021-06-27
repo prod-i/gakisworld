@@ -1,9 +1,9 @@
 import React from 'react'
 import { Layout, Menu } from 'antd';
 import './../../style/admin/admin.css';
-import { AppstoreOutlined, PartitionOutlined, BuildOutlined, DotChartOutlined, UserOutlined, ContainerOutlined, FileAddOutlined, DatabaseOutlined, VideoCameraOutlined, VideoCameraAddOutlined, MailOutlined , UploadOutlined } from '@ant-design/icons';
+import { AppstoreOutlined, PartitionOutlined, BuildOutlined, DotChartOutlined, UserOutlined, ContainerOutlined, FileAddOutlined, DatabaseOutlined, VideoCameraOutlined, VideoCameraAddOutlined, MailOutlined } from '@ant-design/icons';
 import AdminPanel from './AdminPanels/AdminPanel';
-const { Header, Sider, Content } = Layout;
+const { Sider, Content } = Layout;
 
 
 const Admin = (props) => {
@@ -35,10 +35,6 @@ const Admin = (props) => {
                     </Menu>
                 </Sider>
                 <Layout className="site-layout bB">
-
-                    {/* <Header className="site-layout-background bcgB" style={{ padding: 0 }}>
-                    {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, { className: 'toggle', onClick: toggleSidebar })}
-                    </Header> */}
 
                     <Content className="site-layout-background_content">
                         <AdminPanel 

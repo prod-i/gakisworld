@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import '../../style/profile/profile.css'
 import NavigationProfile from './NavigationProfile'
 import ProfileContent from './ProfileInfo/ProfileContent';

@@ -8,7 +8,7 @@ import '../../../style/catalog/catalogList.css';
 const CatalogList = (props) => {
     const [rtlLine, setRtlLine] = React.useState(false);
 
-    const list = props.catalogList.catalogList.list;
+    const list = props.catalog.catalogList.list;
 
     if (!Array.isArray(list) || list.length <= 0) {
         return null

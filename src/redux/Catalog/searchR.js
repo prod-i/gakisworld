@@ -1,4 +1,6 @@
 
+const CONTROL_SEARCH_VIS      = 'catalog/CONTROL_SEARCH_VIS';
+
 let initialState = {
     noRequiredSubscribe: false,
     filters: {
@@ -36,9 +38,16 @@ let initialState = {
 
 const searchR = (state = initialState, action) => {
     switch (action.type) {
+        case CONTROL_SEARCH_VIS:
+            return {
+                ...state,
+                searchVis: action.searchVis,
+            }
         default:
             return state;
     }
 }
+
+export const CONTROLSearchVis     = (searchVis)     => ({type: CONTROL_SEARCH_VIS, searchVis});
 
 export default searchR;

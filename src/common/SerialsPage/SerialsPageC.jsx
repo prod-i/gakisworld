@@ -5,9 +5,9 @@ import { connect }    from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 class SerialsPageC extends React.Component {
-    componentDidMount(){
-        document.title = "Токийский гуль"
-    }
+    // componentDidMount(){
+    //     document.title = "Токийский гуль"
+    // }
     render() {
         return <SerialsPage {...this.props} serialsId={this.props.match.params.serialsId} seriesId={this.props.match.params.seriesId}/>
     }
@@ -15,7 +15,7 @@ class SerialsPageC extends React.Component {
 
 
 let mapStateToProps = (state) => ({
-    catalogList : state.catalogList,
+    catalog: state.catalog,
 });
 
 export default compose

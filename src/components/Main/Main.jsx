@@ -12,27 +12,27 @@ const Main = (props)=> {
         return(
             <div className={props.mainVis ? 'main' : 'main none'}>
                 <Slider 
-                    slides          ={props.catalogList.catalogList.list}
-                    sliderVis       ={props.slider.sliderVis}
+                    slides          ={props.catalog.catalogList.list}
+                    sliderVis       ={props.main.slider.sliderVis}
                 />
 
                 <Banner 
-                    bannerVis       ={props.banner.bannerVis}
+                    bannerVis       ={props.main.banner.bannerVis}
                 />
 
                 <ContinueView 
-                    list            ={props.continueView.viewList.list}
-                    continueViewVis ={props.continueView.continueViewVis}
+                    list            ={props.main.continueView.list}
+                    continueViewVis ={props.main.continueView.continueViewVis}
                 />
 
                 <PrevNews 
                     list            ={props.newsList.newsList.list}
-                    prevNewsVis     ={props.prevNews.prevNewsVis}
+                    prevNewsVis     ={props.main.prevNews.prevNewsVis}
                 />
 
                 <Popular 
-                    list            ={props.catalogList.catalogList.list}
-                    popularVis      ={props.popular.popularVis}
+                    list            ={props.catalog.catalogList.list}
+                    popularVis      ={props.main.popular.popularVis}
                 />
 
                 <Footer />

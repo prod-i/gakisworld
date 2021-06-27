@@ -21,7 +21,7 @@ const ContinueView = (props) => {
                 {list.map((list, index) => {
                         return (
                             <div className="continue_card bE" key={index}>
-                                <img src={list.image} alt="" className="card_img" />
+                                <img src={''} alt="" className="card_img" />
                                 <div className="progress b_">
                                     <div className="progress_total"></div>
                                 </div>

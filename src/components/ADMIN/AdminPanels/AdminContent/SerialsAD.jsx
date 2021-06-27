@@ -1,7 +1,7 @@
 import React from 'react'
 import './../../../../style/admin/dataAD.css';
 import { ExclamationCircleFilled } from '@ant-design/icons';
-import { Drawer, Button } from 'antd';
+import { Drawer } from 'antd';
 import avatar1 from './../../../../assets/img/serials/1l.jpg';
 import avatar2 from './../../../../assets/img/serials/2l.jpg';
 

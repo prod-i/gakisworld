@@ -1,12 +1,12 @@
 import img1b from '../../assets/img/serials/1b.jpg'
 import img1l from '../../assets/img/serials/1l.jpg'
-import img1m from '../../assets/img/serials/1m.jpg'
+// import img1m from '../../assets/img/serials/1m.jpg'
 import img2b from '../../assets/img/serials/2b.jpg'
 import img2l from '../../assets/img/serials/2l.jpg'
-import img2m from '../../assets/img/serials/2m.jpg'
+// import img2m from '../../assets/img/serials/2m.jpg'
 import img3b from '../../assets/img/serials/3b.jpg'
 import img3l from '../../assets/img/serials/3l.jpg'
-import img3m from '../../assets/img/serials/3m.jpg'
+// import img3m from '../../assets/img/serials/3m.jpg'
 
 
 let initialState = {

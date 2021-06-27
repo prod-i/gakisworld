@@ -31,7 +31,7 @@ let mapStateToProps = (state) => ({
     popular      :state.popular      ,
 
     //Листы
-    catalogList  :state.catalogList  ,
+    catalog  :state.catalog  ,
     newsList     :state.newsList     ,
 });
 

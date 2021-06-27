@@ -9,7 +9,7 @@ import img from './../../assets/img/serials/1b.jpg'
 
 const SerialsPage = (props) => {
     const [muted, setMuted] = React.useState(true);
-    const list = props.catalogList.catalogList.list;
+    const list = props.catalog.catalogList.list;
     const handleMuted = () => {
         setMuted(!muted)
     }
@@ -17,6 +17,7 @@ const SerialsPage = (props) => {
         <div className='serialsPage fCG'>
             {list.map((item, key) => {
                 if(item.id.toString() === props.serialsId){
+                    document.title = item.title
                     return (
                         <div className='serialsPage' key={key}>
                             {item.videoBcg

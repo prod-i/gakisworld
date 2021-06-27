@@ -1,5 +1,5 @@
 import React from 'react'
-import { HeartOutlined, HeartFilled, CrownFilled, EyeOutlined } from '@ant-design/icons';
+import { EyeOutlined } from '@ant-design/icons';
 import '../../../style/PlayerModal.css'
 import VideoPlayer from '../../VideoPlayer/VideoPlayer';
 

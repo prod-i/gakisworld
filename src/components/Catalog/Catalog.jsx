@@ -7,13 +7,13 @@ import '../../style/catalog/catalog.css'
 
 const Catalog = (props)=> {
         return(
-            <div className="catalog">
+            <div className={props.catalog.catalogVis ? 'catalog' : 'none'}>
 
-                <Novelty novelty={props.novelty} catalogList={props.catalogList}/>
+                <Novelty novelty={props.catalog.novelty} catalog={props.catalog}/>
 
                 <Search search={props.search}/>
 
-                <CatalogList catalogList={props.catalogList}/>
+                <CatalogList catalog={props.catalog}/>
 
                 <Footer />
                 
