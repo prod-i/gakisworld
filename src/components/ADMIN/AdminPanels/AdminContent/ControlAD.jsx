@@ -147,55 +147,21 @@ const ControlAD = (props) => {
                 </div>
                 <div className="controlAD_item bE">
                     <div className="controlAD_item_title">Profile</div>
-                    <div className="controlAD_item_vis">Visible: <span className="controlAD_check tBl">true</span></div>
+                    <div className="controlAD_item_vis">Visible: 
+                        <span className={controlVis.profileVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { changeVis.CONTROLProfileVis(!controlVis.profileVis) }}>{controlVis.profileVis.toString()}</span>
+                    </div>
                 </div>
                 <div className="controlAD_item bE">
                     <div className="controlAD_item_title">Profile menu</div>
-                    <div className="controlAD_item_vis">Visible: <span className="controlAD_check tBl">true</span></div>
+                    <div className="controlAD_item_vis">Visible: 
+                        <span className={controlVis.profileMenuVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { changeVis.CONTROLProfileMenuVis(!controlVis.profileMenuVis) }}>{controlVis.profileMenuVis.toString()}</span>
+                    </div>
                 </div>
                 <div className="controlAD_item bE">
-                    <div className="controlAD_item_title">Profile info</div>
-                    <div className="controlAD_item_vis">Visible: <span className="controlAD_check tBl">true</span></div>
-                </div>
-                <div className="controlAD_item bE">
-                    <div className="controlAD_item_title">Profile content</div>
-                    <div className="controlAD_item_vis">Visible: <span className="controlAD_check tBl">true</span></div>
-                </div>
-                <div className="controlAD_item bE">
-                    <div className="controlAD_item_title">Profile continue view</div>
-                    <div className="controlAD_item_vis">Visible: <span className="controlAD_check tBl">true</span></div>
-                </div>
-                <div className="controlAD_item bE">
-                    <div className="controlAD_item_title">Profile favorites</div>
-                    <div className="controlAD_item_vis">Visible: <span className="controlAD_check tBl">true</span></div>
-                </div>
-                <div className="controlAD_item bE">
-                    <div className="controlAD_item_title">Profile plans</div>
-                    <div className="controlAD_item_vis">Visible: <span className="controlAD_check tBl">true</span></div>
-                </div>
-                <div className="controlAD_item bE">
-                    <div className="controlAD_item_title">Profile archive</div>
-                    <div className="controlAD_item_vis">Visible: <span className="controlAD_check tBl">true</span></div>
-                </div>
-                <div className="controlAD_item bE">
-                    <div className="controlAD_item_title">Profile subscribe info</div>
-                    <div className="controlAD_item_vis">Visible: <span className="controlAD_check tBl">true</span></div>
-                </div>
-                <div className="controlAD_item bE">
-                    <div className="controlAD_item_title">Profile subscribe unplug</div>
-                    <div className="controlAD_item_vis">Visible: <span className="controlAD_check tBl">true</span></div>
-                </div>
-                <div className="controlAD_item bE">
-                    <div className="controlAD_item_title">Profile edit</div>
-                    <div className="controlAD_item_vis">Visible: <span className="controlAD_check tBl">true</span></div>
-                </div>
-                <div className="controlAD_item bE">
-                    <div className="controlAD_item_title">Profile notifications</div>
-                    <div className="controlAD_item_vis">Visible: <span className="controlAD_check tBl">true</span></div>
-                </div>
-                <div className="controlAD_item bE">
-                    <div className="controlAD_item_title">Profile security</div>
-                    <div className="controlAD_item_vis">Visible: <span className="controlAD_check tBl">true</span></div>
+                    <div className="controlAD_item_title">Login</div>
+                    <div className="controlAD_item_vis">Visible: 
+                        <span className={controlVis.loginVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { changeVis.CONTROLLoginVis(!controlVis.loginVis) }}>{controlVis.loginVis.toString()}</span>
+                    </div>
                 </div>
             </div>
         </div>

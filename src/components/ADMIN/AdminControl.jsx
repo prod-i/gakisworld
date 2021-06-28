@@ -22,10 +22,15 @@ export const AdminControl = (state) => {
 
     const calendarVis  = state.calendar.calendarVis;
     
-    const subVis  = state.subscribe.subVis;
-    const subCardsVis  = state.subscribe.subList.subCardsVis;
+    const subVis        = state.subscribe.subVis;
+    const subCardsVis   = state.subscribe.subList.subCardsVis;
     const subBannerVis  = state.subscribe.subBanner.subBannerVis;
-    const subFormVis  = state.subscribe.subForm.subFormVis;
+    const subFormVis    = state.subscribe.subForm.subFormVis;
+
+    const profileVis      = state.profile.profileVis;
+    const profileMenuVis  = state.profile.profileMenu.profileMenuVis;
+
+    const loginVis  = state.login.loginVis;
 
 
     const controlVis = {
@@ -55,6 +60,11 @@ export const AdminControl = (state) => {
         subCardsVis,
         subBannerVis,
         subFormVis,
+
+        profileVis,
+        profileMenuVis,
+        
+        loginVis,
     }
 
 

@@ -9,6 +9,8 @@ import newsR from "./News/newsR";
 import calendarR from "./Calendar/calendarR";
 import UsersR from "./Users/UsersR";
 import subscribeR from "./Subscribe/subscribeR";
+import ProfileR from "./Profile/ProfileR";
+import loginR from "./Login/loginR";
 
 const redusers = combineReducers({
     main         : mainR, 
@@ -20,6 +22,8 @@ const redusers = combineReducers({
     usersList    : UsersR,
     subscribe    : subscribeR,
     calendar     : calendarR,
+    profile      : ProfileR,
+    login        : loginR,
 });
 
 const store = createStore(redusers /*, composeEnhancers(applyMiddleware(thunkMiddleware))*/);

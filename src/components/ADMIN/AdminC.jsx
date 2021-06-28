@@ -26,6 +26,9 @@ import {CONTROLSubVis}          from '../../redux/Subscribe/subscribeR.js'
 import {CONTROLSubCardsVis}     from '../../redux/Subscribe/subscribeR.js'
 import {CONTROLSubBannerVis}    from '../../redux/Subscribe/subscribeR.js'
 import {CONTROLSubFormVis}      from '../../redux/Subscribe/subscribeR.js'
+import {CONTROLProfileVis}      from '../../redux/Profile/ProfileR.js'
+import {CONTROLProfileMenuVis}  from '../../redux/Profile/ProfileR.js'
+import {CONTROLLoginVis}        from '../../redux/Login/loginR.js'
 
 
 class AdminC extends React.Component {
@@ -55,6 +58,9 @@ class AdminC extends React.Component {
             CONTROLSubCardsVis    : this.props.CONTROLSubCardsVis,
             CONTROLSubBannerVis   : this.props.CONTROLSubBannerVis,
             CONTROLSubFormVis     : this.props.CONTROLSubFormVis,
+            CONTROLProfileVis     : this.props.CONTROLProfileVis,
+            CONTROLProfileMenuVis : this.props.CONTROLProfileMenuVis,
+            CONTROLLoginVis       : this.props.CONTROLLoginVis,
         }
         return <Admin 
                     usersList       ={this.props.usersList}
@@ -96,6 +102,9 @@ export default compose
         CONTROLSubCardsVis,
         CONTROLSubBannerVis,
         CONTROLSubFormVis,
+        CONTROLProfileVis,
+        CONTROLProfileMenuVis,
+        CONTROLLoginVis,
     }),
     withRouter,
 )   (AdminC);
