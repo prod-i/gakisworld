@@ -10,24 +10,25 @@ import profileAvatarMini  from '../../assets/icon/avatar.png'
 
 
 const Header = (props) => {
+  const profileId = props.profileId;
   const menu = (
     <Menu className='bTr'>
       <Menu.Item>
-        <NavLink exact to="/profile/1" className="menu_item tR fCG" activeClassName='t'>Профиль</NavLink>
+        <NavLink exact to={"/profile/"+profileId} className="menu_item tR fCG" activeClassName='t'>Профиль</NavLink>
       </Menu.Item>
       <Menu.Item>
-      <NavLink exact to="/profile/1/edit" className="menu_item t fCG" activeClassName='t'>Настройки</NavLink>
+      <NavLink exact to={"/profile/"+profileId+"/edit"} className="menu_item t fCG" activeClassName='t'>Настройки</NavLink>
       </Menu.Item>
       <Menu.Item>
-        <NavLink exact to="/profile/1/favorites" className="menu_item t fCG" activeClassName='t'>Избранное</NavLink>
+        <NavLink exact to={"/profile/"+profileId+"/favorites"} className="menu_item t fCG" activeClassName='t'>Избранное</NavLink>
       </Menu.Item>
       <Menu.Item>
-        <NavLink exact to="/profile/1/subscribe-info" className="menu_item t fCG" activeClassName='t'>Подписка</NavLink>
+        <NavLink exact to={"/profile/"+profileId+"/subscribe-info"} className="menu_item t fCG" activeClassName='t'>Подписка</NavLink>
       </Menu.Item>
       <Menu.Item>
         {/* НАПИСАТЬ  НОРМАЛЬНЫЙ ЧЕКБОКС */}
-        <div className="menu_item tW fCG search__selector_checked">
-          <label className="label_checked"><div className="search_checked_text t">Тема</div><input className='t fCG' type="checkbox" onChange={(e) => console.log(e.target.checked)} onClick={(e) => console.log(e.target.checked)} /></label>
+        <div className="menu_item tW fCG theme__selector_checked">
+          <label className="theme_label_checked"><div className="theme_checked_text t">Тема</div><input className='t fCG' type="checkbox" onChange={(e) => console.log(e.target.checked)} onClick={(e) => console.log(e.target.checked)} /></label>
         </div>
         {/* НАПИСАТЬ  НОРМАЛЬНЫЙ ЧЕКБОКС */}
       </Menu.Item>
@@ -68,7 +69,7 @@ const Header = (props) => {
           ? null
           : <div className="profile_menu_button">
             <Dropdown overlay={menu} placement="bottomRight">
-              <NavLink exact to="/profile/1" className="menu_item t fCG" activeClassName='tR'>
+              <NavLink exact to={"/profile/"+profileId} className="menu_item t fCG" activeClassName='tR'>
                 <img className="profile_menu_img" src={profileAvatarMini} alt="profileHeader" />
               </NavLink>
             </Dropdown>

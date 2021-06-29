@@ -38,7 +38,7 @@ const SeriesCards = (props) => {
                 footer={false}
                 visible={props.seriesId}
                 onCancel={()=>window.location.hash = '#/serials/' + props.serialsId}
-                bodyStyle={{ background: 'rgb(50, 50, 50, 0.4)', margin: '-10px 0' }}
+                bodyStyle={{ background: 'rgb(23, 23, 23, 1)'}}
             >
                 {item.map((item, key)=>{
                     if(item.id.toString() === props.seriesId){

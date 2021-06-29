@@ -34,7 +34,7 @@ class App extends React.Component {
             <div className={"app__loading_content"}>
               <Switch>
                 <Route exact path='/'                          render={withSuspense(MainC         )}/>
-                <Route path='/profile/:userId?/:options?'               render={withSuspense(ProfileC      )}/>
+                <Route path='/profile/:userId?/:options?/:o?'      render={withSuspense(ProfileC      )}/>
                 <Route path='/catalog'                         render={withSuspense(CatalogC      )}/>
                 <Route path='/news/:postId?'                   render={withSuspense(NewsC         )}/>
                 <Route path='/calendar'                        render={withSuspense(CalendarC     )}/>

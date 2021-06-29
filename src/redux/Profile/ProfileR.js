@@ -5,7 +5,7 @@ const CONTROL_PROFILE_MENU_VIS   = 'profile/CONTROL_PROFILE_MENU_VIS';
 
 let initialState = {
     profile: {
-        userId: 1,
+        profileId: 1,
         fullName: "Анна Когай",
         nickName: 'Kaneki Ken',
         type: 'standart',

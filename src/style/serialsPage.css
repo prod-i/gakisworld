@@ -3,7 +3,7 @@
     padding-bottom: 50px;
     width:100%;
     top: 0;
-    height: 100vh;
+    height: 100%;
     background-color: #111;
 }
 .serialsPageBacgImg{
@@ -19,7 +19,7 @@
 }
 .titleSerialsPage{
     width: 90%;
-    margin: 5% 0 0 90px;
+    margin: 6% 0 0 90px;
     z-index: 1;
 }
 .nameSerialsPage{
@@ -33,23 +33,22 @@
     opacity: 0.8;
 }
 .serial_options{
-    width: 10%;
     height: 50px;
     align-items: center;
-    display: flex;
     justify-content: space-between;
-    padding-top: 10px;
+    padding-top: 20px;
 }
 .serial_options-item{
     position: relative;
     font-size: 28px;
+    margin-bottom: 10px;
 }
 .serial_options-item-hover{
     position: absolute;
     text-align: center;
     width: 150px;
-    top: 60px;
-    right: 0;
+    top: 3px;
+    right: 150%;
     padding: 10px;
     font-size: 15px;
     background-color: rgba(46, 46, 46, 0.4);
@@ -66,7 +65,7 @@
 .serialsRating{
     display: flex;
     align-items: center;
-    margin-top: 40px;
+    /* margin-top: 10px; */
 }
 .rating{
     font-size: 22px;
@@ -94,7 +93,7 @@
 }
 .cardsSeries{
     display: flex;
-    margin: 30px 90px;
+    margin: 40px 90px;
     width: 95%;
 }
 .cardSeries{

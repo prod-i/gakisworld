@@ -280,3 +280,7 @@
 .ant-modal-content{
     background-color: rgb(180, 180, 180, 0);
 }
+.ant-modal-body{
+    margin: 0 !important;
+    padding: 0 !important;
+}

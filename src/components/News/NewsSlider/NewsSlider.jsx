@@ -39,7 +39,7 @@ const NewsSlider = (props) => {
                     footer={false}
                     visible={props.postId}
                     onCancel={() => window.location.hash = '#/news/'}
-                    bodyStyle={{ background: 'rgb(50, 50, 50, 0.4)', margin: '-40px 0' }}
+                    bodyStyle={{ background: 'rgb(23, 23, 23, 1)' }}
                 >
                     {newsList.list.map((item, key) => {
                         if (item.id.toString() === props.postId) {
