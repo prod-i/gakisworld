@@ -114,7 +114,7 @@
     transition: top 1s ease-out 0.5s;
     outline: none;
 }
-.ant-select-selector{
+.news_select .ant-select-selector{
     height: 25px !important;
 }
 .news_search {

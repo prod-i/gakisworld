@@ -66,7 +66,7 @@ const StartSearch = (props) => {
                         {/* ФИЛЬТР: ПОДПИСКА */}
                         
                         {/* ФИЛЬТР: РАСШИРЕННЫЙ ПОИСК */}
-                            <div className="search__advanced_bottom tRP" onClick={props.extendSearch ? () => props.setExtendSearch(false) : () => props.setExtendSearch(true)}>
+                            <div className="search__advanced_bottom tRP fCG" onClick={props.extendSearch ? () => props.setExtendSearch(false) : () => props.setExtendSearch(true)}>
                                 {props.extendSearch ? 'Скрыть' : 'Расширенный поиск'}
                             </div>
                         {/* ФИЛЬТР: РАСШИРЕННЫЙ ПОИСК */}

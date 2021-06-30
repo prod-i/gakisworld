@@ -22,9 +22,10 @@
     margin-bottom: 30px;
 }
 .search_form_input_wrap input{
+    letter-spacing: 1.5px;
     width: 100%;
     height: 100%;
-    background-color: #050505;
+    background-color: rgb(15, 15, 15, 1) !important;
     border-radius: 5px;
     font-weight: 900;
     font-size: 18px;
@@ -33,6 +34,7 @@
     border:none;
 }
 .search_form_input_wrap input::placeholder{
+    letter-spacing: 1px;
     font-size: 16px;
     text-transform: uppercase;
 }
@@ -77,7 +79,7 @@
     border-radius: 5px;
     padding-left: 10px;
     font-size: 18px;
-    background-color: rgb(8, 8, 8);
+    background-color: rgb(15, 15, 15, 1) !important;
     border: 1px solid #000;
     font-family: CenturyGothic;
     font-weight: 100;
@@ -92,7 +94,7 @@
     border-radius: 5px;
     padding: 7px 0;
     font-size: 18px;
-    background-color: rgb(8, 8, 8);
+    background-color: rgb(15, 15, 15, 1) !important;
     font-family: CenturyGothic;
     font-weight: 100;
     cursor: pointer;
@@ -103,7 +105,7 @@
     display: flex;
     align-items: center;
 }
-.ant-select-selection-item{
+.select_elem .ant-select-selection-item{
     display: flex;
     align-items: center;
 }
@@ -128,6 +130,9 @@
     line-height: 27px;
     margin-left: 15px;
     font-weight: 100;
+}
+.select_elem_options{
+    letter-spacing: 2px;
 }
 .label_checked input[type='checkbox']{
     position: relative;

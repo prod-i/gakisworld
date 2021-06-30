@@ -18,6 +18,10 @@ const CatalogList = (props) => {
         return rtlLine ? setRtlLine(false) : setRtlLine(true)
     }
 
+    let search = 'к'.toUpperCase();
+    let genre = ''.toUpperCase();
+    let type = ''.toUpperCase();
+
     return (
         <div className="catalog_body">
             <div className="container">
@@ -40,10 +44,21 @@ const CatalogList = (props) => {
                 <div className="catalog__cards">
                     {!rtlLine
                     //  BLOCK
-                        ? list.map((card, key) => <CatalogBlock card={card} key={key}/>)
+                        ? list.map((card, key) => {
+                        if(card.title.toUpperCase().includes(search) & card.genre.toUpperCase().includes(genre) & card.type.toUpperCase().includes(type))
+                        return(<CatalogBlock card={card} key={key}/>)
+                        else 
+                            return null
+                    })
                     //  LINE 
-                        : list.map((card, key) => <CatalogLine  card={card} key={key}/>)
+                        : list.map((card, key) => {
+                            if(card.title.toUpperCase().includes(search) & card.genre.toUpperCase().includes(genre) & card.type.toUpperCase().includes(type))
+                            return(<CatalogLine  card={card} key={key}/>)
+                            else 
+                                return null
+                        })
                     }
+                    
                 </div>
             </div>
         </div>
