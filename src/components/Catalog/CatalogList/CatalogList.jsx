@@ -6,7 +6,7 @@ import '../../../style/catalog/catalogList.css';
 
 
 const CatalogList = (props) => {
-    const [rtlLine, setRtlLine] = React.useState(false);
+    const [rtlLine, setRtlLine] = React.useState(true);
 
     const list = props.catalog.catalogList.list;
 
@@ -18,7 +18,7 @@ const CatalogList = (props) => {
         return rtlLine ? setRtlLine(false) : setRtlLine(true)
     }
 
-    let search = 'к'.toUpperCase();
+    let search = ''.toUpperCase();
     let genre = ''.toUpperCase();
     let type = ''.toUpperCase();
 

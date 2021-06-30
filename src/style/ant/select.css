@@ -1,5 +1,10 @@
+.rc-virtual-list-scrollbar-thumb{
+  background-color: rgb(175, 70, 70, .5) !important;
+}
 .ant-select-dropdown{
   background-color: rgb(15, 15, 15, 1) !important;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: #FF7070 !important;
 }
 .ant-select-item{
   color: #fff !important;
