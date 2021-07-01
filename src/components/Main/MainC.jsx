@@ -7,6 +7,7 @@ import { withRouter } from 'react-router-dom';
 class MainC extends React.Component {
     componentDidMount(){
         document.title = "Главная"
+        window.scrollTo(0, 0);
     }
     render() {
         return <Main {...this.props}

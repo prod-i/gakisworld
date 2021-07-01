@@ -7,6 +7,7 @@ import { withRouter } from 'react-router-dom';
 class SubscribeC extends React.Component {
     componentDidMount(){
         document.title = "Подписка"
+        window.scrollTo(0, 0);
     }
     render() {
         return <Subscribe {...this.props}/>

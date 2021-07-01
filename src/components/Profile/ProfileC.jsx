@@ -30,6 +30,7 @@ class NewsC extends React.Component {
 
     componentDidMount() {
         this.refrashProfile();
+        window.scrollTo(0, 0);
     }
     componentDidUpdate(prevProps) {
         if (this.props.match.params.userId !== prevProps.match.params.userId)

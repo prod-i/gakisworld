@@ -34,6 +34,7 @@ import {CONTROLLoginVis}        from '../../redux/Login/loginR.js'
 class AdminC extends React.Component {
     componentDidMount(){
         document.title = 'Admin panel'
+        window.scrollTo(0, 0);
     }
     render() {
         const changeVis = {

@@ -10,6 +10,7 @@ import {Changefiltre} from '../../redux/Catalog/searchR'
 class CatalogC extends React.Component {
     componentDidMount(){
         document.title = "Каталог"
+        window.scrollTo(0, 0);
     }
 
     render() {

@@ -60,7 +60,7 @@ const CatalogList = (props) => {
                                 & (card.AgeRating.toUpperCase() === AgeRating || AgeRating === '')
                                 & (card.years >= yearsStart & card.years <= yearsEnd)
                                 & (card.rating >= ratingStart & card.rating <= ratingEnd)
-                                
+ 
                             )
                                 return (<CatalogBlock card={card} key={key} />)
                             else

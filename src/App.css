@@ -86,8 +86,18 @@ body{
   height: 100%;
   overflow: hidden;
 }
-
-
+.up{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 70px;
+  right: 70px;
+  height: 50px;
+  width: 50px;
+  background-color: #af4646;
+  border-radius: 100%;
+}
 
 
 ::-webkit-scrollbar-button {
