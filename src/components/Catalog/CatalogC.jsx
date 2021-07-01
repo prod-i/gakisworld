@@ -4,13 +4,16 @@ import { compose }    from 'redux';
 import { connect }    from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
+import {ChangeSearchValue} from '../../redux/Catalog/searchR'
+import {Changefiltre} from '../../redux/Catalog/searchR'
+
 class CatalogC extends React.Component {
     componentDidMount(){
         document.title = "Каталог"
     }
 
     render() {
-        return <Catalog {...this.props}/>
+        return <Catalog {...this.props} ChangeSearchValue={this.props.ChangeSearchValue} Changefiltre={this.props.Changefiltre}/>
     }
 };
 
@@ -21,6 +24,6 @@ let mapStateToProps = (state) => ({
 
 export default compose
 (
-    connect(mapStateToProps, {}),
+    connect(mapStateToProps, {ChangeSearchValue, Changefiltre}),
     withRouter,
 )   (CatalogC);

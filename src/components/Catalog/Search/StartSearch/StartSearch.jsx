@@ -1,7 +1,6 @@
 import   React          from 'react'             ;
 import { Select     }   from 'antd'              ;
 import { Slider     }   from '@material-ui/core' ;
-import '../../../../style/catalog/search.css'    ;
 
 
 const StartSearch = (props) => {

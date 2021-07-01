@@ -11,9 +11,9 @@ const Catalog = (props)=> {
 
                 <Novelty novelty={props.catalog.novelty} catalog={props.catalog}/>
 
-                <Search search={props.search}/>
+                <Search search={props.search} ChangeSearchValue={props.ChangeSearchValue} Changefiltre={props.Changefiltre}/>
 
-                <CatalogList catalog={props.catalog}/>
+                <CatalogList catalog={props.catalog} searchInput={props.search.searchInput}/>
 
                 <Footer />
                 
