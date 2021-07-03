@@ -97,6 +97,8 @@ body{
   width: 50px;
   background-color: #af4646;
   border-radius: 100%;
+  text-transform: uppercase;
+  transition: .3s;
 }
 
 
