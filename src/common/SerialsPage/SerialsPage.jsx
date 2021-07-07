@@ -10,8 +10,8 @@ import img from './../../assets/img/serials/1b.jpg'
 const SerialsPage = (props) => {
     const [muted, setMuted] = React.useState(true);
     const list = props.catalog.catalogList.list;
-    const handleMuted = () => {
-        setMuted(!muted)
+    const handleMuted = (sound) => {
+        setMuted(sound)
     }
     return (
         <div className='serialsPage fCG'>
@@ -25,7 +25,7 @@ const SerialsPage = (props) => {
                             : <img className='serialsPageBacgImg' src={item.imageBcg} alt="" />
                             }
                             
-                            <SerialsDescription item={item} handleMuted={handleMuted}/>
+                            <SerialsDescription item={item} handleMuted={handleMuted} muted={muted}/>
     
                             <SeriesCards title={item.title} item={item.series} serialsId={props.serialsId} seriesId={props.seriesId}/>
                         </div>

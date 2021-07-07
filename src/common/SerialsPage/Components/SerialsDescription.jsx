@@ -1,10 +1,11 @@
 import React from 'react'
 import StarRatings from 'react-star-ratings';
-import { HeartOutlined, HeartFilled, CrownOutlined, CrownFilled} from '@ant-design/icons';
+import { HeartOutlined, HeartFilled, CrownOutlined, CrownFilled, SoundOutlined, SoundFilled} from '@ant-design/icons';
 
 const SerialsDescription = (props) => {
     const [like, setLike] = React.useState(false);
     const [crown, setCrown] = React.useState(false);
+    const [sound, setSound] = React.useState(false);
     const item = props.item;
 
     const toggleOptions = (type) =>{
@@ -12,6 +13,9 @@ const SerialsDescription = (props) => {
             return setLike(!like)
         } else if(type === 'crown') {
             return setCrown(!crown)
+        } else if(type === 'sound') {
+            props.handleMuted(sound)
+            return setSound(!sound)
         }
     }
 
@@ -27,6 +31,10 @@ const SerialsDescription = (props) => {
                         <div className="serial_options-item" onClick={()=>toggleOptions('crown')}>
                             {crown ? <CrownFilled className='tY'/> : <CrownOutlined className='tY'/>}
                             <div className="serial_options-item-hover tRP">Избранное</div>
+                        </div>
+                        <div className="serial_options-item" onClick={()=>toggleOptions('sound')}>
+                            {sound ? <SoundFilled className='tR'/> : <SoundOutlined className='tR'/>}
+                            <div className="serial_options-item-hover tRP">Включить звук</div>
                         </div>
                     </div>
                 </div>
