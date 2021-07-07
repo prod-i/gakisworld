@@ -1,3 +1,5 @@
+import * as axios from 'axios';
+import { API } from '../../API/api'
 import img1b from '../../assets/img/serials/1b.jpg'
 import img1l from '../../assets/img/serials/1l.jpg'
 import img1m from '../../assets/img/serials/1m.jpg'
@@ -65,6 +67,7 @@ import vi1v from '../../assets/img/serials/1v.mp4'
 const CONTROL_CATALOG_VIS      = 'catalog/CONTROL_CATALOG_VIS';
 const CONTROL_NOVELTY_VIS      = 'catalog/CONTROL_NOVELTY_VIS';
 const CONTROL_CATALOG_LIST_VIS = 'catalog/CONTROL_CATALOG_LIST_VIS';
+const SET_SERIALS              = 'catalog/SET_SERIALS';
 
 let initialState = {
     catalogList: {
@@ -1011,6 +1014,7 @@ let initialState = {
                 ],
             },
         ],
+        listAPI: [],
         catalogListVis: true,
     },
     novelty: {
@@ -1021,6 +1025,11 @@ let initialState = {
 
 const catalogListR = (state = initialState, action) => {
     switch (action.type) {
+        case SET_SERIALS:
+            return {
+                ...state,
+                catalogList: {...state.catalogList, listAPI: action.serials},
+            }
         case CONTROL_CATALOG_VIS:
             return {
                 ...state,
@@ -1040,9 +1049,16 @@ const catalogListR = (state = initialState, action) => {
             return state;
     }
 }
-
+export const setSerials            = (serials)        => ({type: SET_SERIALS,            serials})
 export const CONTROLCatalogVis     = (catalogVis)     => ({type: CONTROL_CATALOG_VIS, catalogVis});
 export const CONTROLNoveltyVis     = (noveltyVis)     => ({type: CONTROL_NOVELTY_VIS, noveltyVis});
 export const CONTROLCatalogListVis = (catalogListVis) => ({type: CONTROL_CATALOG_LIST_VIS, catalogListVis});
+
+
+export const getSerialsTC = () => async (dispatch) => {
+        const url = 'http://www.omdbapi.com/?s=star&apikey=187e3a62'
+        const response = await axios.get(url)
+        dispatch(setSerials(response.data.Search))
+}
 
 export default catalogListR;

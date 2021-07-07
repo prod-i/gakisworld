@@ -1,14 +1,12 @@
 import * as axios from 'axios';
 
-// eslint-disable-next-line no-unused-vars
+
 const instans = axios.create({
     withCredentials: true,
-    baseURL: '',
-    headers: {
-        'API-KEY': '',
-    },
+    baseURL: 'http://www.omdbapi.com/',
 });
-
-export const profileAPI = {
-    
+export const API = {
+    getSerials(s, apikey) {
+        return instans.get(`?s=${s}&apikey=${apikey}`)
+    },
 };

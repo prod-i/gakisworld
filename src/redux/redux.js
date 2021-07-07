@@ -1,5 +1,5 @@
-import { combineReducers, createStore } from "redux";
-// import thunkMiddleware from 'redux-thunk';
+import { combineReducers, createStore, applyMiddleware, compose } from "redux";
+import thunkMiddleware from 'redux-thunk';
 import mainR from "./Main/mainR";
 import headerR from "./Header/headerR";
 import footerR from "./Footer/footerR";
@@ -26,7 +26,8 @@ const redusers = combineReducers({
     login        : loginR,
 });
 
-const store = createStore(redusers /*, composeEnhancers(applyMiddleware(thunkMiddleware))*/);
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(redusers, composeEnhancers(applyMiddleware(thunkMiddleware)));
 
 window._store_ = store;
 

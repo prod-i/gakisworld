@@ -3,12 +3,16 @@ import CatalogBlock from './CatalogCards/CatalogBlock';
 import CatalogLine from './CatalogCards/CatalogLine';
 import { AppstoreOutlined, MenuOutlined } from '@ant-design/icons';
 import '../../../style/catalog/catalogList.css';
+import { Rate }    from 'antd';
+import { NavLink } from 'react-router-dom';
 
 
 const CatalogList = (props) => {
     const [rtlLine, setRtlLine] = React.useState(false);
 
     const list = props.catalog.catalogList.list;
+    const listAPI = props.catalog.catalogList.listAPI;
+    console.log(listAPI);
 
     if (!Array.isArray(list) || list.length <= 0) {
         return null
@@ -47,7 +51,31 @@ const CatalogList = (props) => {
                         {rtlLine ? <AppstoreOutlined /> : <MenuOutlined />}
                     </div>
                 </div>
+                <div className="catalog__cards">
+                {
+                    listAPI.map((card, key) => {
+                        return (
+                            <NavLink exact to={'/serials/' + card.imdbID} className='catalog_card_block t' key={card.imdbID}>
 
+                                <img src={card.Poster} alt=""  className="catalog__card_block_img"/>
+                                <div className="catalog_block_hover fCG">
+                                    {/*  Возрастной рейтинг */}  <div className={'catalog_block_premium'}>{card.AgeRating}</div>
+                                    {/*  Название           */}  <div className="catalog_block_title tW">{card.Title}</div>
+                                    {/*  Рейтинг            */}  <Rate disabled defaultValue={2} count={10} value={5.5} className={'catalog_block_rating'} />
+                                    <div className="catalog_block_detail tW">
+                                        {/*  Год                */}     <div className="catalog_detail_elem"><div className="catalog_block_details_left tG">Год       </div><div className="catalog_block_details_right tW">{card.Year}</div></div>
+                                        {/*  Тип                */}     <div className="catalog_detail_elem"><div className="catalog_block_details_left tG">Тип       </div><div className="catalog_block_details_right tW">{card.Type}</div></div>
+                                        {/*  Жанр               */}     <div className="catalog_detail_elem"><div className="catalog_block_details_left tG">Жанр      </div><div className="catalog_block_details_right tW">{'card.genre'}</div></div>
+                                        {/*  Режессер           */}     <div className="catalog_detail_elem"><div className="catalog_block_details_left tG">Режессер  </div><div className="catalog_block_details_right tW">{'card.director'}</div></div>
+                                        {/*  Cезонов            */}     <div className="catalog_detail_elem"><div className="catalog_block_details_left tG">Сезонов   </div><div className="catalog_block_details_right tW">{card.seasons ? card.seasons : '1'}</div></div>
+                                    </div>
+                                </div>
+
+                            </NavLink>
+                        )
+                    })
+                }
+                </div>
                 <div className="catalog__cards">
                     {!rtlLine
                         //  BLOCK
@@ -60,7 +88,7 @@ const CatalogList = (props) => {
                                 & (card.AgeRating.toUpperCase() === AgeRating || AgeRating === '')
                                 & (card.years >= yearsStart & card.years <= yearsEnd)
                                 & (card.rating >= ratingStart & card.rating <= ratingEnd)
- 
+
                             )
                                 return (<CatalogBlock card={card} key={key} />)
                             else

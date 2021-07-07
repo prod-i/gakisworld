@@ -2,9 +2,9 @@ import React from 'react'
 import { Rate }    from 'antd';
 import { NavLink } from 'react-router-dom';
 
-const CatalogBlock = ({card, key}) => {
+const CatalogBlock = ({card}) => {
     return (
-        <NavLink exact to={'/serials/' + card.id} className='catalog_card_block t' key={key}>
+        <NavLink exact to={'/serials/' + card.id} className='catalog_card_block t' key={card.id}>
             
             <img src={card.imageMin} alt="" className="catalog__card_block_img" />
             <div className="catalog_block_hover fCG">
