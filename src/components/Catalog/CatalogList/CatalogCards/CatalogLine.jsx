@@ -12,7 +12,7 @@ const CatalogLine = ({card, key}) => {
                 <img src={card.imageLarge} alt="" className="catalog__card_line_img" />
             </NavLink>
 
-            <div className="catalog__card_line_info">
+            <div className="catalog__card_line_info bB">
 {/* Шапка (название, опции) -----------*/}
                 <div className="catalog_header_line">
                     <NavLink exact to={'/serials/' + card.id} className='t' key={key}>

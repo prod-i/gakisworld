@@ -3,18 +3,29 @@ import StarRatings from 'react-star-ratings';
 import { HeartOutlined, HeartFilled, CrownOutlined, CrownFilled} from '@ant-design/icons';
 
 const SerialsDescription = (props) => {
+    const [like, setLike] = React.useState(false);
+    const [crown, setCrown] = React.useState(false);
     const item = props.item;
+
+    const toggleOptions = (type) =>{
+        if(type === 'like'){
+            return setLike(!like)
+        } else if(type === 'crown') {
+            return setCrown(!crown)
+        }
+    }
+
     return (
         <div className="titleSerialsPage">
                 <div className="nameSerialsPage">
                     {item.title}
                     <div className="serial_options">
-                        <div className="serial_options-item tR">
-                            <HeartOutlined />
+                        <div className="serial_options-item tR"  onClick={()=>toggleOptions('like')}>
+                            {like ? <HeartFilled /> : <HeartOutlined />}
                             <div className="serial_options-item-hover tRP">Отслеживать</div>
                         </div>
-                        <div className="serial_options-item">
-                            <CrownOutlined className='tY'/>
+                        <div className="serial_options-item" onClick={()=>toggleOptions('crown')}>
+                            {crown ? <CrownFilled className='tY'/> : <CrownOutlined className='tY'/>}
                             <div className="serial_options-item-hover tRP">Избранное</div>
                         </div>
                     </div>
@@ -24,7 +35,7 @@ const SerialsDescription = (props) => {
                     <div className='rating'>{item.rating}</div>
                 </div>
                 <div className="detailsSearislPage">
-                    <div className="details_title tG">
+                    <div className="details_title tA">
                         <div className="details_item" onClick={()=>props.handleMuted()}>Год</div>
                         <div className="details_item">Жанр</div>
                         <div className="details_item">Режиссер</div>

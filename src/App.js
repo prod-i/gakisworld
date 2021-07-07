@@ -9,8 +9,8 @@ import 'swiper/swiper-bundle.min.css'
 import './style/ant/Rate.css'
 import './style/ant/select.css'
 import './style/ant/switch.css'
-import './style/dark.css'
-// import './style/light.css'  
+// import './style/dark.css'
+import './style/light.css'  
 import './style/fonts.css'
 import './App.css';
 
@@ -30,11 +30,11 @@ class App extends React.Component {
   render () {
     return (
           <div className='gakis'>
-            <Route path='/'                render={withSuspense(HeaderC         )}/>
+            <Route path='/' render={withSuspense(HeaderC)}/>
             <div className={"app__loading_content"}>
               <Switch>
                 <Route exact path='/'                          render={withSuspense(MainC         )}/>
-                <Route path='/profile/:userId?/:options?/:o?'      render={withSuspense(ProfileC      )}/>
+                <Route path='/profile/:userId?/:options?/'     render={withSuspense(ProfileC      )}/>
                 <Route path='/catalog'                         render={withSuspense(CatalogC      )}/>
                 <Route path='/news/:postId?'                   render={withSuspense(NewsC         )}/>
                 <Route path='/calendar'                        render={withSuspense(CalendarC     )}/>

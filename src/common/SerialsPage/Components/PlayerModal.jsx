@@ -15,7 +15,7 @@ const PlayerModal = (props) => {
                 <div className="player_modal_space"></div>
                 <div className="player_modal-views">
                     <EyeOutlined />
-                    <div className="player_modal-views-hover fCG tA">10002 views</div>
+                    <div className="player_modal-views-hover fCG tG">10002 views</div>
                 </div>
                 </div>
             </div>
