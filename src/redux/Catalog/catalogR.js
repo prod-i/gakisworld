@@ -1056,8 +1056,7 @@ export const CONTROLCatalogListVis = (catalogListVis) => ({type: CONTROL_CATALOG
 
 
 export const getSerialsTC = () => async (dispatch) => {
-        const url = 'http://www.omdbapi.com/?s=star&apikey=187e3a62'
-        const response = await axios.get(url)
+        const response = await API.getSerials('all')
         dispatch(setSerials(response.data.Search))
 }
 

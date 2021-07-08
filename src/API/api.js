@@ -1,12 +1,13 @@
 import * as axios from 'axios';
 
-
+const API_KEY = '187e3a62'
 const instans = axios.create({
-    withCredentials: true,
     baseURL: 'http://www.omdbapi.com/',
+    apikey: '187e3a62',
+
 });
 export const API = {
-    getSerials(s, apikey) {
-        return instans.get(`?s=${s}&apikey=${apikey}`)
+    getSerials(s) {
+        return instans.get(`?s=${s}&apikey=${API_KEY}`)
     },
 };
