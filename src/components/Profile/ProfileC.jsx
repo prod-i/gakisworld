@@ -42,7 +42,7 @@ class NewsC extends React.Component {
         const profileId = this.props.profileId ? this.props.profileId.toString() : this.props.profileId;
         const isOwner = this.checkIsOwner(userId, profileId);
         console.log('Owned - ' + isOwner);
-
+ 
 
         if (!options) {
             return <Redirect to={`/profile/${userId}/continue-view`}/>
