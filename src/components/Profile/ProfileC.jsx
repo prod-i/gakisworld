@@ -1,7 +1,7 @@
 import React from 'react';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
-import { NavLink, withRouter } from 'react-router-dom';
+import { NavLink, withRouter, Redirect } from 'react-router-dom';
 import Profile from './Profile';
 
 class NewsC extends React.Component {
@@ -12,10 +12,10 @@ class NewsC extends React.Component {
             userId = this.props.profileId;
 
             if (!userId  || userId === 'undefined' || userId === 'null') {
-                this.props.history.push('/login');
+                return <Redirect to={'/login'}/>
 
             } else if (userId) {
-                this.props.history.push(`/profile/${userId}`);
+                return <Redirect to={`/profile/${userId}`}/>
             }
             
         }
@@ -45,7 +45,7 @@ class NewsC extends React.Component {
 
 
         if (!options) {
-            this.props.history.push(`/profile/${userId}/continue-view`)
+            return <Redirect to={`/profile/${userId}/continue-view`}/>
         }
 
         return <Profile userId={userId} options={options} isOwner={isOwner} profile={this.props.profile}/>

@@ -13,29 +13,29 @@ const Header = (props) => {
   const profileId = props.profileId;
   const menu = (
     <Menu className='bTr'>
-      <Menu.Item>
+      <Menu.Item key={0}>
         <NavLink exact to={"/profile/"+profileId} className="menu_item tR fCG" activeClassName='t'>Профиль</NavLink>
       </Menu.Item>
-      <Menu.Item>
+      <Menu.Item key={1}>
       <NavLink exact to={"/profile/"+profileId+"/edit"} className="menu_item t fCG" activeClassName='t'>Настройки</NavLink>
       </Menu.Item>
-      <Menu.Item>
+      <Menu.Item key={2}>
         <NavLink exact to={"/profile/"+profileId+"/favorites"} className="menu_item t fCG" activeClassName='t'>Избранное</NavLink>
       </Menu.Item>
-      <Menu.Item>
+      <Menu.Item key={3}>
         <NavLink exact to={"/profile/"+profileId+"/subscribe-info"} className="menu_item t fCG" activeClassName='t'>Подписка</NavLink>
       </Menu.Item>
-      <Menu.Item>
+      <Menu.Item key={4}>
         {/* НАПИСАТЬ  НОРМАЛЬНЫЙ ЧЕКБОКС */}
         <div className="menu_item tW fCG theme__selector_checked">
           <label className="theme_label_checked"><div className="theme_checked_text t">Тема</div><input className='t fCG' type="checkbox" onChange={(e) => console.log(e.target.checked)} onClick={(e) => console.log(e.target.checked)} /></label>
         </div>
         {/* НАПИСАТЬ  НОРМАЛЬНЫЙ ЧЕКБОКС */}
       </Menu.Item>
-      <Menu.Item>
+      <Menu.Item key={5}>
         <NavLink exact to="/admin" className="menu_item tY fCG" activeClassName='tY'>Admin panel</NavLink>
       </Menu.Item>
-      <Menu.Item>
+      <Menu.Item key={6}>
         <NavLink exact to="/login" className="menu_item tR fCG" activeClassName='tR'>Выход</NavLink>
       </Menu.Item>
     </Menu>
