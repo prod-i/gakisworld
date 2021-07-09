@@ -25,7 +25,7 @@ const SerialsPage = (props) => {
                             : <img className='serialsPageBacgImg' src={item.imageBcg} alt="" />
                             }
                             
-                            <SerialsDescription item={item} handleMuted={handleMuted} muted={muted}/>
+                            <SerialsDescription item={item} handleMuted={handleMuted} muted={muted} SetProfileFavorites={props.SetProfileFavorites} RemoveProfileFavorites={props.RemoveProfileFavorites} favorites={props.favorites}/>
     
                             <SeriesCards title={item.title} item={item.series} serialsId={props.serialsId} seriesId={props.seriesId}/>
                         </div>

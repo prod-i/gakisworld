@@ -15,7 +15,7 @@ const Profile = (props) => {
 
                 <ProfileInfo />
 
-                <ProfileContent options={props.options}/>
+                <ProfileContent options={props.options} profile={props.profile}/>
 
             </div>
         </div>

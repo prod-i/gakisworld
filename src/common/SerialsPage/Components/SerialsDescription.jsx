@@ -4,7 +4,7 @@ import { HeartOutlined, HeartFilled, CrownOutlined, CrownFilled, SoundOutlined, 
 
 const SerialsDescription = (props) => {
     const [like, setLike] = React.useState(false);
-    const [crown, setCrown] = React.useState(false);
+    const [crown, setCrown] = React.useState(props.favorites.includes(props.item));
     const [sound, setSound] = React.useState(false);
     const item = props.item;
 
@@ -12,12 +12,21 @@ const SerialsDescription = (props) => {
         if(type === 'like'){
             return setLike(!like)
         } else if(type === 'crown') {
-            return setCrown(!crown)
+            if(props.favorites.includes(item)){
+                props.RemoveProfileFavorites(item.id)
+                return setCrown(false)
+            } else {
+                props.SetProfileFavorites(item)
+                return setCrown(true)
+            }
+
         } else if(type === 'sound') {
             props.handleMuted(sound)
             return setSound(!sound)
         }
     }
+
+    console.log(props.favorites);
 
     return (
         <div className="titleSerialsPage">

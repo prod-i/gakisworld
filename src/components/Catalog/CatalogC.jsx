@@ -14,6 +14,10 @@ class CatalogC extends React.Component {
         window.scrollTo(0, 0);
         this.props.getSerialsTC();
     }
+    componentDidUpdate(prevProps){
+        if(this.props.search.searchInput.searchValue !== prevProps.search.searchInput.searchValue)
+        this.props.getSerialsTC();
+    }
     
     render() {
         return <Catalog {...this.props} ChangeSearchValue={this.props.ChangeSearchValue} Changefiltre={this.props.Changefiltre}/>
@@ -23,6 +27,7 @@ class CatalogC extends React.Component {
 let mapStateToProps = (state) => ({
     search      :state.search,
     catalog     :state.catalog,
+    
 });
 
 export default compose

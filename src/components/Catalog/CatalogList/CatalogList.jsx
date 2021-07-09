@@ -12,7 +12,7 @@ const CatalogList = (props) => {
 
     const list = props.catalog.catalogList.list;
     const listAPI = props.catalog.catalogList.listAPI;
-    console.log(listAPI);
+
 
     if (!Array.isArray(list) || list.length <= 0) {
         return null
@@ -53,7 +53,9 @@ const CatalogList = (props) => {
                 </div>
                 <div className="catalog__cards">
                 {
+                    !Array.isArray(listAPI) || list.length <= 0 ? null : 
                     listAPI.map((card, key) => {
+                        
                         return (
                             <NavLink exact to={'/serials/' + card.imdbID} className='catalog_card_block t' key={card.imdbID}>
 

@@ -21,7 +21,7 @@ const ProfileContent = (props) => {
                             )
                         case 'favorites':
                             return (
-                                <PFavorites />
+                                <PFavorites favorites={props.profile.profile.favorites}/>
                             )
                         case 'plans':
                             return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 import Profile from './Profile';
 
 class NewsC extends React.Component {
@@ -41,14 +41,14 @@ class NewsC extends React.Component {
         const options = this.props.match.params.options;
         const profileId = this.props.profileId ? this.props.profileId.toString() : this.props.profileId;
         const isOwner = this.checkIsOwner(userId, profileId);
-        console.log(isOwner);
+        console.log('Owned - ' + isOwner);
 
 
         if (!options) {
             this.props.history.push(`/profile/${userId}/continue-view`)
         }
 
-        return <Profile userId={userId} options={options} isOwner={isOwner}/>
+        return <Profile userId={userId} options={options} isOwner={isOwner} profile={this.props.profile}/>
     }
 };
 
