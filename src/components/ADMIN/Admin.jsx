@@ -42,6 +42,8 @@ const Admin = (props) => {
                             usersList       ={props.usersList}
                             controlAD       ={props.controlAD}
                             changeVis       ={props.changeVis}
+                            catalogList     ={props.catalogList}
+                            newsList        ={props.newsList}
                         />
                     </Content>
 

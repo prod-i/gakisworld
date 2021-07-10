@@ -67,6 +67,8 @@ class AdminC extends React.Component {
                     usersList       ={this.props.usersList}
                     controlAD       ={this.props.controlAD}
                     changeVis       ={changeVis}
+                    catalogList     ={this.props.catalogList}
+                    newsList        ={this.props.newsList}
                />
     }
 };
@@ -74,9 +76,11 @@ class AdminC extends React.Component {
 
 
 let mapStateToProps = (state) => ({
-    usersList : state.usersList,
-    main      : state.main,
-    controlAD : AdminControl(state),
+    usersList   : state.usersList,
+    main        : state.main,
+    catalogList : state.catalog.catalogList.list,
+    newsList : state.news.newsList.list,
+    controlAD   : AdminControl(state),
 });
 
 export default compose

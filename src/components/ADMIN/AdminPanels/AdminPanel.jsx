@@ -27,7 +27,7 @@ const AdminPanel = (props) => {
                         )
                     case 'serials':
                         return (
-                            <SerialsAD />
+                            <SerialsAD catalogList={props.catalogList}/>
                         )
                     case 'addSerials':
                         return (
@@ -35,7 +35,7 @@ const AdminPanel = (props) => {
                         )
                     case 'news':
                         return (
-                            <NewsAD />
+                            <NewsAD newsList={props.newsList}/>
                         )
                     case 'addNews':
                         return (

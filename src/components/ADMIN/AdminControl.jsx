@@ -14,6 +14,7 @@ export const AdminControl = (state) => {
     const noveltyVis      = state.catalog.novelty.noveltyVis;
     const searchVis       = state.search.searchVis;
     const catalogListVis  = state.catalog.catalogList.catalogListVis;
+    const catalogList     = state.catalog.catalogList.list;
 
     const newsVis         = state.news.newsVis;
     const newsListVis     = state.news.newsList.newsListVis;
@@ -48,6 +49,7 @@ export const AdminControl = (state) => {
         noveltyVis,
         searchVis,
         catalogListVis,
+        catalogList,
 
         newsVis,
         newsListVis,
@@ -66,7 +68,6 @@ export const AdminControl = (state) => {
         
         loginVis,
     }
-
 
 
 
