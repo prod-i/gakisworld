@@ -3,7 +3,7 @@ import PArchive from './ProfileItemMenu/PArchive'
 import PContinue from './ProfileItemMenu/PContinue'
 import PEdit from './ProfileItemMenu/PEdit'
 import PFavorites from './ProfileItemMenu/PFavorites'
-import PPlans from './ProfileItemMenu/PPlans'
+import PTracked from './ProfileItemMenu/PTracked'
 import PSubscribeControl from './ProfileItemMenu/PSubscribeControl'
 import PSubscribeInfo  from './ProfileItemMenu/PSubscribeInfo'
 import PSubscribeUnplug from './ProfileItemMenu/PSubscribeUnplug'
@@ -23,9 +23,9 @@ const ProfileContent = (props) => {
                             return (
                                 <PFavorites favorites={props.profile.profile.favorites}/>
                             )
-                        case 'plans':
+                        case 'tracked':
                             return (
-                                <PPlans />
+                                <PTracked     tracked={props.profile.profile.tracked}/>
                             )
                         case 'archive':
                             return (

@@ -21,11 +21,11 @@ const NavigationProfile = (props) => {
             <Menu.Item key="continue-view">
               <NavLink to={'/profile/'+ userId +'/continue-view' }className='tA'>  Продолжить просмотр </NavLink>
             </Menu.Item>                                                           
+            <Menu.Item key="tracked" className='tA'>
+              <NavLink to={'/profile/'+ userId +'/tracked'       }className='tA'>  Отслеживаемые  </NavLink>
+            </Menu.Item>
             <Menu.Item key="favorites" className='tA'>                             
               <NavLink to={'/profile/'+ userId +'/favorites'     }className='tA'>  Избранное      </NavLink>
-            </Menu.Item>
-            <Menu.Item key="plans" className='tA'>
-              <NavLink to={'/profile/'+ userId +'/plans'         }className='tA'>  В планах       </NavLink>
             </Menu.Item>
             <Menu.Item key="archive" className='tA'>
               <NavLink to={'/profile/'+ userId +'/archive'       }className='tA'>  Архив  </NavLink>

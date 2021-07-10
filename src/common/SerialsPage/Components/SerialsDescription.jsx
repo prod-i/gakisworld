@@ -3,20 +3,30 @@ import StarRatings from 'react-star-ratings';
 import { HeartOutlined, HeartFilled, CrownOutlined, CrownFilled, SoundOutlined, SoundFilled} from '@ant-design/icons';
 
 const SerialsDescription = (props) => {
-    const [like, setLike] = React.useState(false);
+    const [like, setLike]   = React.useState(props.tracked.includes(props.item));
     const [crown, setCrown] = React.useState(props.favorites.includes(props.item));
     const [sound, setSound] = React.useState(false);
     const item = props.item;
 
     const toggleOptions = (type) =>{
         if(type === 'like'){
-            return setLike(!like)
+
+            if(props.tracked.includes(item)){
+                props.removeTracked(item.id)
+                return setLike(false)
+            } else {
+                props.setTracked(item)
+                return setLike(true)
+            }
+            
+
         } else if(type === 'crown') {
+
             if(props.favorites.includes(item)){
-                props.RemoveProfileFavorites(item.id)
+                props.removeFavorites(item.id)
                 return setCrown(false)
             } else {
-                props.SetProfileFavorites(item)
+                props.setFavorites(item)
                 return setCrown(true)
             }
 
@@ -26,7 +36,7 @@ const SerialsDescription = (props) => {
         }
     }
 
-    console.log(props.favorites);
+    console.log(props.tracked);
 
     return (
         <div className="titleSerialsPage">
