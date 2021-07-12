@@ -1,0 +1,242 @@
+.addVideoContent{
+    width: 80%;
+    margin: 0 auto;
+}
+.AVC_header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 0 100px 0;
+}
+.AVC_title{
+    font-size: 24px;
+    text-transform: uppercase;
+}
+.AVC_upload_content-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 15px;
+    width: 150px;
+    height: 40px;
+    transition: .3s;
+}
+.AVC_upload_content-button:hover{
+    opacity: .7;
+}
+.AVC_wrap{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid #fff; */
+    height: 100%;
+}
+.AVC_left{
+    width: 30%;
+    height: 100%;
+    /* border: 1px solid #fff; */
+}
+.AVC_addImage{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+.AVC_addImage_title{
+    height: 30px;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+.AVC_img_wrap{
+    width: 100%;
+    height: 300px;
+}
+.AVC_img_wrap-large{
+    width: 100%;
+    height: 500px;
+}
+.AVC_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.AVC_video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.AVC_right{
+    width: 65%;
+    height: 100%;
+    /* border: 1px solid #fff; */
+    margin-top: 33px;
+}
+.AVC_item{
+    display: flex;
+    align-items: center;
+    position: relative;
+    display: flex;
+    /* justify-content: space-between; */
+    width: 100%;
+    /* margin: 0 auto; */
+    height: 50px;
+    margin-bottom: 30px;
+}
+.AVC_item_title{
+    display: flex;
+    width: 20%;
+    /* border: 1px solid #fff; */
+    align-items: center;
+    height: 100%;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.AVC_item_input{
+    width: 80%;
+    height: 100%;
+    font-size: 18px;
+    padding-left: 20px;
+}
+.AVC_item_descr{
+    height: 200px;
+    margin-top: 40px;
+}
+.AVC_item_descr .AVC_item_title{
+    display: flex;
+    align-items: start;
+}
+.avc_radio{
+    width: 20px;
+    height: 20px;
+    padding: 0 0 0 0;
+    margin: 0 0 0 10px;
+}
+.AVC_item_input_descr{
+    width: 80%;
+    height: 100%;
+    font-size: 18px;
+    padding: 10px;
+}
+.maxlength_area{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+
+}
+
+
+
+
+.AVC_addVideoFile{
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+    margin: 90px auto 150px auto;
+}
+.AVF_title{
+    font-size: 21px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.AVF_videofiles_wrap{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.videofile_item{
+    display: block;
+    width: 23.5%;
+    height: 200px;
+    margin-right: 2%;
+    margin-bottom: 20px;
+}
+.videofile_item:nth-child(4n){
+    margin-right: 0;
+}
+.videofile_item_title{
+    display: flex;
+    width: 100%;
+    height: 20%;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.videofile_item_img_wrap{
+    width: 100%;
+    height: 80%;
+}
+.videofile_item_title_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.AVF_upload{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 23.5%;
+    margin-right: 2%;
+    height: 200px;
+    border: 1px dotted #fff;
+    transition: .3s;
+}
+.AVF_upload:hover{
+    opacity: .6;
+}
+.AVF_upload_title{
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.AvcPicture_upload{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-right: 2%;
+    height: 100%;
+    border: 1px dotted #fff;
+    transition: .3s;
+}
+
+
+
+
+
+
+
+
+
+.ant-modal-close {
+    color: rgb(175, 70, 70) !important;
+}
+.ant-modal-close:focus,
+.ant-modal-close:hover {
+    color: rgb(175, 70, 70) !important;
+    text-decoration: none;
+}
+.ant-modal-content{
+    background-color: rgb(180, 180, 180, 0);
+}
+.ant-modal-body{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.ant-btn{
+    background-color: rgb(175, 70, 70);
+    border: 0;
+    color: #fff;
+}
+.ant-btn:hover{
+    background-color: #ff7070;
+    color: #fff;
+}

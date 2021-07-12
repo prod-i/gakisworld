@@ -86,7 +86,8 @@ let initialState = {
             seasons: '2',
             episodes: '',
             AgeRating: 'PG-16',
-            hover: true,
+            MainSlider: true,
+            datePublic:'11/07/2021',
             popular: true,
             descr: `Эпоха Тайсё. Ещё с древних времён ходят слухи, что в лесу обитают человекоподобные демоны, 
                           которые питаются людьми и выискивают по ночам новых жертв. 
@@ -1028,7 +1029,7 @@ const catalogListR = (state = initialState, action) => {
         // console.log(...action.serials.map((item)=>'id - ' + item.imdbID));    
         return {
                 ...state,
-                catalogList: { ...state.catalogList, listAPI: action.serials },
+                catalogList: { ...state.catalogList, list: [...state.catalogList.list, action.serials] },
                 
             }
         case CONTROL_CATALOG_VIS:
@@ -1059,7 +1060,7 @@ export const CONTROLCatalogListVis = (catalogListVis) => ({ type: CONTROL_CATALO
 export const getSerialsTC = () => {
     return async (dispatch, getState) => {
         const response = await API.getSerials(getState().search.searchInput.searchValue)
-        dispatch(setSerials(response.data.Search))
+        // dispatch(setSerials(response.data.Search))
     }
 }
 

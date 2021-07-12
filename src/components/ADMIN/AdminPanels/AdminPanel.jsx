@@ -1,4 +1,5 @@
 import React from 'react'
+import AddVideoContentAD from './AdminContent/AddingVideoContent/AddVideoContentAD'
 import AnaliticAD from './AdminContent/AnaliticAD'
 import ControlAD from './AdminContent/ControlAD'
 import NewsAD from './AdminContent/NewsAD'
@@ -31,7 +32,7 @@ const AdminPanel = (props) => {
                         )
                     case 'addSerials':
                         return (
-                            <>addSerials</>
+                            <AddVideoContentAD />
                         )
                     case 'news':
                         return (

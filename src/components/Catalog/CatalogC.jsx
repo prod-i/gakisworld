@@ -15,11 +15,12 @@ class CatalogC extends React.Component {
         this.props.getSerialsTC();
     }
     componentDidUpdate(prevProps){
-        if(this.props.search.searchInput.searchValue !== prevProps.search.searchInput.searchValue)
+        if(this.props.catalog.catalogList.list !== prevProps.catalog.catalogList.list)
         this.props.getSerialsTC();
     }
     
     render() {
+        // console.log(this.props.catalog.catalogList.list);
         return <Catalog {...this.props} ChangeSearchValue={this.props.ChangeSearchValue} Changefiltre={this.props.Changefiltre}/>
     }
 };

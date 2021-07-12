@@ -27,6 +27,7 @@ const SerialsDescription = (props) => {
                 return setCrown(false)
             } else {
                 props.setFavorites(item)
+                console.log(item);
                 return setCrown(true)
             }
 
@@ -35,8 +36,6 @@ const SerialsDescription = (props) => {
             return setSound(!sound)
         }
     }
-
-    console.log(props.tracked);
 
     return (
         <div className="titleSerialsPage">
@@ -58,7 +57,7 @@ const SerialsDescription = (props) => {
                     </div>
                 </div>
                 <div className="serialsRating">
-                    <StarRatings rating={item.rating} numberOfStars={10} starDimension={'30px'} starSpacing={'5px'} starRatedColor={'#FF7070'} starEmptyColor={'#999'} />
+                    <StarRatings rating={Number(item.rating)} numberOfStars={10} starDimension={'30px'} starSpacing={'5px'} starRatedColor={'#FF7070'} starEmptyColor={'#999'} />
                     <div className='rating'>{item.rating}</div>
                 </div>
                 <div className="detailsSearislPage">
