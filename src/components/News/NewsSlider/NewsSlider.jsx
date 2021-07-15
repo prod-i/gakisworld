@@ -30,11 +30,11 @@ const NewsSlider = (props) => {
                                 </NavLink>
                             </SwiperSlide>
                         );
-                    })}
+                    }).reverse()}
                 </Swiper>
 
                 <Modal
-                    width='50%'
+                    width='60%'
                     title={false}
                     footer={false}
                     visible={props.postId}

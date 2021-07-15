@@ -21,7 +21,7 @@ const SeriesCards = (props) => {
             >
                 {item.map((item, key) => {
                     return (
-                        <SwiperSlide className="cardSeries" key={key}>
+                        <SwiperSlide className="cardSeries" key={item.id}>
                             <NavLink to={"/serials/" + props.serialsId + '/' + item.id}>
                                 <div className="cardSeries_title">{item.title}</div>
                                 <img src={item.imgPrev} alt="" className="cardSerisImage" />
@@ -43,7 +43,9 @@ const SeriesCards = (props) => {
                 {item.map((item, key)=>{
                     if(item.id.toString() === props.seriesId){
                         return(
-                            <PlayerModal item={item} seriesId={props.seriesId} title={props.title} key={key}/>
+                            <div key={item.id}>
+                                <PlayerModal item={item} seriesId={props.seriesId} title={props.title}/>
+                            </div>
                         )
                     }else{return null}
                 })}

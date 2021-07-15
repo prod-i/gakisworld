@@ -1025,8 +1025,7 @@ let initialState = {
 
 const catalogListR = (state = initialState, action) => {
     switch (action.type) {
-        case SET_SERIALS:
-        // console.log(...action.serials.map((item)=>'id - ' + item.imdbID));    
+        case SET_SERIALS: 
         return {
                 ...state,
                 catalogList: { ...state.catalogList, list: [...state.catalogList.list, action.serials] },

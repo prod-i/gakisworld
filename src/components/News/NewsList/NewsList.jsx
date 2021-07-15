@@ -32,11 +32,11 @@ const NewsList = (props) => {
                                     <div className="news_card_title fCG t">{item.title}</div>
                                 </div>
                                 <div className="news_card_descr tA">{item.descr}</div>
-                                <div className="news_card_date tA">{item.author} {item.date}</div>
+                                <div className="news_card_date tA">{item.author} {}</div>
                             </div>
                         </NavLink>
                     );
-                })}
+                }).reverse()}
             </div>
         </div>
     )

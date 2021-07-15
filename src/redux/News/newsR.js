@@ -19,6 +19,7 @@ import img18m from '../../assets/img/serials/18m.jpg'
 import img19m from '../../assets/img/serials/19m.jpg'
 import img20m from '../../assets/img/serials/20m.jpg'
 
+const SET_POST                 = 'news/SET_POST';
 const CONTROL_NEWS_VIS         = 'news/CONTROL_NEWS_VIS';
 const CONTROL_NEWS_LIST_VIS    = 'news/CONTROL_NEWS_LIST_VIS';
 const CONTROL_NEWS_SLIDER_VIS  = 'news/CONTROL_NEWS_SLIDER_VIS';
@@ -38,6 +39,12 @@ let initialState = {
                 popular: false,
                 about: false,
                 descr:`На YouTube-канале +Ultra вышел второй трейлер аниме-сериала «Цестус: 
+                Римский боец» (Cestvs: The Roman Fighter). Ролик представляет закрывающую тему CG-аниме, 
+                которую исполняет певица Сараса Кадоваки.На YouTube-канале +Ultra вышел второй трейлер аниме-сериала «Цестус: 
+                Римский боец» (Cestvs: The Roman Fighter). Ролик представляет закрывающую тему CG-аниме, 
+                которую исполняет певица Сараса Кадоваки.На YouTube-канале +Ultra вышел второй трейлер аниме-сериала «Цестус: 
+                Римский боец» (Cestvs: The Roman Fighter). Ролик представляет закрывающую тему CG-аниме, 
+                которую исполняет певица Сараса Кадоваки.На YouTube-канале +Ultra вышел второй трейлер аниме-сериала «Цестус: 
                 Римский боец» (Cestvs: The Roman Fighter). Ролик представляет закрывающую тему CG-аниме, 
                 которую исполняет певица Сараса Кадоваки.`,
                 text: `На YouTube-канале +Ultra вышел второй трейлер аниме-сериала «Цестус: 
@@ -428,6 +435,13 @@ let initialState = {
 
 const newsListR = (state = initialState, action) => {
     switch (action.type) {
+        case SET_POST:
+        // console.log(...action.serials.map((item)=>'id - ' + item.imdbID));    
+        return {
+                ...state,
+                newsList: { ...state.newsList, list: [...state.newsList.list, action.newPost] },
+                
+            }
         case CONTROL_NEWS_VIS:
             return {
                 ...state,
@@ -454,6 +468,7 @@ const newsListR = (state = initialState, action) => {
 }
 
 
+export const setPost               = (newPost)        => ({type: SET_POST, newPost});
 export const CONTROLNewsVis        = (newsVis)        => ({type: CONTROL_NEWS_VIS, newsVis});
 export const CONTROLNewsListVis    = (newsListVis)    => ({type: CONTROL_NEWS_LIST_VIS, newsListVis});
 export const CONTROLNewsSliderVis  = (newsSliderVis)  => ({type: CONTROL_NEWS_SLIDER_VIS, newsSliderVis});

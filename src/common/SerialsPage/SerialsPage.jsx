@@ -19,7 +19,7 @@ const SerialsPage = (props) => {
                 if(item.id.toString() === props.serialsId){
                     document.title = item.title
                     return (
-                        <div className='serialsPage' key={key}>
+                        <div className='serialsPage' key={item.id}>
                             {item.videoBcg
                             ? <video src={item.videoBcg} alt="" className="serialsPageBacgImg" autoPlay loop={true} muted={muted}></video>
                             : <img className='serialsPageBacgImg' src={item.imageBcg} alt="" />
@@ -43,6 +43,8 @@ const SerialsPage = (props) => {
                                 serialsId ={props.serialsId} 
                                 seriesId  ={props.seriesId}
                             />
+
+                            
                         </div>
                     )
                 } else {return null}

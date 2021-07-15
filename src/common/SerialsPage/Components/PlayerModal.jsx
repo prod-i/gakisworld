@@ -6,7 +6,7 @@ import VideoPlayer from '../../VideoPlayer/VideoPlayer';
 const PlayerModal = (props) => {
     const item = props.item;
     return (
-            <div className="player_modal" key={props.key}>
+            <div className="player_modal" key={item.id}>
                 <div className="player_modal_title tW fCG"><span className="tRP">{props.title} - </span> {item.title}</div>
                 <div className="player_modal_videoplayer bD">
                     <VideoPlayer />

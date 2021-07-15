@@ -55,16 +55,12 @@ class AddVideoContentAD extends React.Component {
         console.log(this.props.catalogList);
     }
 
-    addNewSerials(){
-
-    }
-
     render() {
         return (
             <div className='addVideoContent'>
                 <div className="AVC_header">
                     <div className="AVC_title tA">Добавить новый видеоматериал</div>
-                    <div className="AVC_upload_content-button bR" onClick={()=>{
+                    <div className="AVC_upload_content-button" onClick={()=>{
                         this.props.setSerials(this.state.newSerial)
                         console.log(this.state.newSerial);
                         }}>Upload</div>

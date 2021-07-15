@@ -23,7 +23,9 @@ img { user-select: none; }
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+h1{
+  font-size: 32px !important;
+}
 .App-link {
   color: #61dafb;
 }

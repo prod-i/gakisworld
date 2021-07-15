@@ -7,8 +7,8 @@ class VideoPlayer extends React.Component {
     render() {
         return (
             <div className='video_player_wrap t_'>
-                <video controls className='video_player'>
-                    <source src={video} type='video/mp4'/>
+                <video controls className='video_player' play={()=>console.log(123)}>
+                    <source src={video} type='video/mp4' controls />
                 </video>
             </div>
         )

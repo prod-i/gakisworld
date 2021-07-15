@@ -6,9 +6,7 @@ const NewsModalPage = (props) => {
         <div className="news_modal tW fCG" key={props.key}>
             <div className="news_modal_title">{item.title}</div>
             <div className="news_modal_body">
-                <img src={item.imgM} alt="" className="news_modal_img" />
-                <div className="news_modal_content fCG">{item.descr}</div>
-                <img src={item.imgM} alt="" className="news_modal_img" />
+                <div className="ql-editor news_modal_content fCG" dangerouslySetInnerHTML={{ __html: item.text }}></div>
             </div>
             <div className="news_modal_options"></div>
         </div>

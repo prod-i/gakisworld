@@ -22,7 +22,7 @@ const NewsSidebar = (props) => {
                     } else {
                         return null;
                     }
-                })}
+                }).reverse()}
             </div>
             <div className="news_sideBar_el news_last">
                 <div className="news_sideBar_title">Популярное</div>
@@ -41,7 +41,7 @@ const NewsSidebar = (props) => {
                     } else {
                         return null;
                     }
-                })}
+                }).reverse()}
             </div>
             <div className="news_sideBar_el news_our">
                 <div className="news_sideBar_title">Наши нововсти</div>
@@ -60,7 +60,7 @@ const NewsSidebar = (props) => {
                     } else {
                         return null;
                     }
-                })}
+                }).reverse()}
             </div>
         </div>
     )
