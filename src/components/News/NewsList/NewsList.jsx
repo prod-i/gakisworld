@@ -1,6 +1,7 @@
 import React from 'react'
 import { Select } from 'antd';
 import { NavLink } from 'react-router-dom';
+import StImg from '../../../assets/icon/StImg.jpg'
 const { Option } = Select;
 
 const NewsList = (props) => {
@@ -25,7 +26,7 @@ const NewsList = (props) => {
                     return (
                         <NavLink to={'/news/'+ item.id} className="news_card_line bB" key={key}>
                             <div className="news_card_top">
-                                <img src={item.imgM} alt="" className="news_card_img" />
+                                <img src={item.imgM ? item.imgM : StImg} alt="" className="news_card_img" />
                             </div>
                             <div className="news_card_bottom">
                                 <div className="news_card_head">

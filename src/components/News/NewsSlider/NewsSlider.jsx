@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Modal } from 'antd';
 import 'swiper/swiper-bundle.css';
+import StImg from '../../../assets/icon/StImg.jpg'
 
 const NewsSlider = (props) => {
     const newsList = props.news.newsList;
@@ -21,10 +22,12 @@ const NewsSlider = (props) => {
                             <SwiperSlide key={key}>
                                 <NavLink to={"/news/" + item.id} className='news_slider_card'>
                                     <div className="news_slider_card">
-                                        <img src={item.imgM} alt="" className='news_slider_card_img' />
+                                        <img src={item.imgM ? item.imgM : StImg} alt="" className='news_slider_card_img' />
                                         <div className="news_slider_descr">
-                                            <div className="news_slider_card_title fCG">{item.title}</div>
-                                            <div className="news_slider_card_descr fCG">{item.descr}</div>
+                                            <div className="news_slider_descr_wrap">
+                                                <div className="news_slider_card_title fCG">{item.title}</div>
+                                                <div className="news_slider_card_descr fCG">{item.descr}</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </NavLink>
@@ -44,7 +47,7 @@ const NewsSlider = (props) => {
                     {newsList.list.map((item, key) => {
                         if (item.id.toString() === props.postId) {
                             return (
-                                <NewsModalPage item={item} key={key}/>
+                                <NewsModalPage item={item} key={key} />
                             )
                         } else { return null }
                     })}

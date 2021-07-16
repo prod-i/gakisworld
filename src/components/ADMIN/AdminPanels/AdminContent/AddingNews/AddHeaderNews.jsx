@@ -20,7 +20,7 @@ const AddHeaderNews = (props) => {
     return (
         <div className="AddHeaderNews">
             <div className="AHN_title_wrap">
-                <input type='text' className="AHN_title" placeholder='Введите загаловок' value={props.title} onChange={(e)=>props.handleState('title', e.target.value)}/>
+                <input type='text' className="AHN_title" maxLength={150} placeholder='Введите загаловок' value={props.title} onChange={(e)=>props.handleState('title', e.target.value)}/>
                 <input type='text' className="AHN_author" placeholder={props.author} readOnly />
                 <input type="datetime-local" className="AHN_date" value={props.date} placeholder='14/07/2021' onChange={(e)=>props.handleState('date', new Date(e.target.value))}/>
             </div>
@@ -36,8 +36,8 @@ const AddHeaderNews = (props) => {
                     }
                 </div>
                 <div className="AHM_descr_wrap">
-                    <textarea type='text' maxLength={600} className="AHM_descr" placeholder='Превью поста' value={props.descr} onChange={(e)=>props.handleState('descr', e.target.value)}/>
-                    <div className="AHM_maxlength_area tG">max 600</div>
+                    <textarea type='text' maxLength={350} className="AHM_descr" placeholder='Превью поста' value={props.descr} onChange={(e)=>props.handleState('descr', e.target.value)}/>
+                    <div className="AHM_maxlength_area tG">max 350</div>
                 </div>
             </div>
             <div className="AHM_sidebar">

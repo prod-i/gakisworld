@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
+import StImg from '../../../assets/icon/StImg.jpg'
 
 const NewsSidebar = (props) => {
     const newsList = props.news.newsList;
@@ -12,7 +13,7 @@ const NewsSidebar = (props) => {
                         return (
                             <NavLink to={"/news/" + item.id}  key={key}>
                                 <div className="news_sideBar_item">
-                                    <img src={item.imgM} alt="" className="news_sideBar_item_img" />
+                                    <img src={item.imgM ? item.imgM : StImg} alt="" className="news_sideBar_item_img" />
                                     <div className="news_sideBar_item_content">
                                         <div className="news_sideBar_item_title t">{item.title}</div>
                                     </div>
@@ -31,7 +32,7 @@ const NewsSidebar = (props) => {
                         return (
                             <NavLink to={"/news/" + item.id}  key={key}>
                                 <div className="news_sideBar_item">
-                                    <img src={item.imgM} alt="" className="news_sideBar_item_img" />
+                                    <img src={item.imgM ? item.imgM : StImg} alt="" className="news_sideBar_item_img" />
                                     <div className="news_sideBar_item_content">
                                         <div className="news_sideBar_item_title t">{item.title}</div>
                                     </div>
@@ -50,7 +51,7 @@ const NewsSidebar = (props) => {
                         return (
                             <NavLink to={"/news/" + item.id}  key={key}>
                                 <div className="news_sideBar_item">
-                                    <img src={item.imgM} alt="" className="news_sideBar_item_img" />
+                                    <img src={item.imgM ? item.imgM : StImg} alt="" className="news_sideBar_item_img" />
                                     <div className="news_sideBar_item_content">
                                         <div className="news_sideBar_item_title t">{item.title}</div>
                                     </div>
