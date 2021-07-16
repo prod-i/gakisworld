@@ -66,7 +66,7 @@ const Novelty = (props) => {
                                     </NavLink>
                                 </SwiperSlide>
                             );
-                        })}
+                        }).reverse()}
 
                     </Swiper>
 

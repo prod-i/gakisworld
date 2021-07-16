@@ -102,6 +102,7 @@
     margin: auto auto;
     text-transform: uppercase;
     border: 3px solid #FF7070;
+    word-break: normal;
 }
 .swiper-scrollbar{
     position: absolute !important;

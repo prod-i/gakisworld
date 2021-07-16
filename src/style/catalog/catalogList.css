@@ -88,10 +88,10 @@
     font-size: 13px;
 }
 .catalog_block_details_left{
-    width: 30%;
+    width: 20%;
 }
 .catalog_block_details_right{
-    width: 70%;
+    width: 75%;
 }
 .catalog_block_descr_content{
     font-size: 12px;
@@ -188,7 +188,6 @@
 }
 .catalog_detail_elem{
     display: flex;
-    justify-content: space-between;
     margin: 10px 0;
 }
 .catalog_details_left{

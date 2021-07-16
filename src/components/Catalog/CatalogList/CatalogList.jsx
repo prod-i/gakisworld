@@ -95,7 +95,7 @@ const CatalogList = (props) => {
                                 return (<CatalogBlock card={card} key={key} />)
                             else 
                                 return null
-                        })
+                        }).reverse()
                         //  LINE 
                         : list.map((card, key) => {
                             if (card.title.toUpperCase().includes(search)
@@ -110,7 +110,7 @@ const CatalogList = (props) => {
                                 return (<CatalogLine card={card} key={key} />)
                             else
                                 return null
-                        })
+                        }).reverse()
                     }
 
                 </div>

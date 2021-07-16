@@ -15,7 +15,6 @@ const CatalogBlock = ({card, list}) => {
 {/*  Год                */}     <div className="catalog_detail_elem"><div className="catalog_block_details_left tG">Год       </div><div className="catalog_block_details_right tW">{card.years}</div></div>
 {/*  Тип                */}     <div className="catalog_detail_elem"><div className="catalog_block_details_left tG">Тип       </div><div className="catalog_block_details_right tW">{card.type}</div></div>
 {/*  Жанр               */}     <div className="catalog_detail_elem"><div className="catalog_block_details_left tG">Жанр      </div><div className="catalog_block_details_right tW">{card.genre}</div></div>
-{/*  Режессер           */}     <div className="catalog_detail_elem"><div className="catalog_block_details_left tG">Режессер  </div><div className="catalog_block_details_right tW">{card.director}</div></div>
 {/*  Cезонов            */}     <div className="catalog_detail_elem"><div className="catalog_block_details_left tG">Сезонов   </div><div className="catalog_block_details_right tW">{card.seasons ? card.seasons : '1'}</div></div>
                              </div>
             </div>
