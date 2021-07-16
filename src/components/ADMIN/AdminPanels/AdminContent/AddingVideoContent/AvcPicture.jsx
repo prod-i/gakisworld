@@ -4,6 +4,18 @@ import { UploadOutlined } from '@ant-design/icons';
 const AvcPictureAD = (props) => {
     const handleSerial = props.handleSerial;
 
+    const setPrevImg = (type, e) => {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = function() {
+            handleSerial(type, reader.result)
+        };
+        reader.onerror = function() {
+            console.log(reader.error);
+          };
+    }
+
     return (
         <div className="AVC_left fCG">
             <div className="AVC_addImage">
@@ -12,7 +24,7 @@ const AvcPictureAD = (props) => {
                     {props.imgM
                         ? <img src={props.imgM} alt="" className='AVC_img'/>
                         : <label className="AvcPicture_upload" htmlFor='imgM'>
-                            <input id='imgM' type="file" hidden onChange={(e) => handleSerial('imageMin', e.target.files[0])} />
+                            <input id='imgM' type="file" hidden onChange={(e) => setPrevImg('imageMin', e)} />
                             <div className="AVF_upload_title">Upload</div>
                             <UploadOutlined />
                         </label>
@@ -26,7 +38,7 @@ const AvcPictureAD = (props) => {
                     {props.imgL
                         ? <img src={props.imgL} alt="" className='AVC_img' />
                         : <label className="AvcPicture_upload" htmlFor='imgL'>
-                            <input id='imgL' type="file" hidden onChange={(e) => handleSerial('imageLarge', e.target.files[0])} />
+                            <input id='imgL' type="file" hidden onChange={(e) => setPrevImg('imageLarge', e)}/>
                             <div className="AVF_upload_title">Upload</div>
                             <UploadOutlined />
                         </label>
@@ -39,7 +51,7 @@ const AvcPictureAD = (props) => {
                     {props.imgB
                         ? <img src={props.imgB} alt="" className='AVC_img' />
                         : <label className="AvcPicture_upload" htmlFor='imgB'>
-                            <input id='imgB' type="file" hidden onChange={(e) => handleSerial('imageBcg', e.target.files[0])} />
+                            <input id='imgB' type="file" hidden onChange={(e)=> setPrevImg('imageBcg', e)} />
                             <div className="AVF_upload_title">Upload</div>
                             <UploadOutlined />
                         </label>

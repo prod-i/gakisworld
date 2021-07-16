@@ -2,7 +2,6 @@ import React from 'react'
 import './../../../../../style/admin/dataAD.css';
 import { UploadOutlined } from '@ant-design/icons';
 import { Checkbox } from 'antd';
-import img from '../../../../../assets/img/serials/1m.jpg'
 
 
 const AddHeaderNews = (props) => {

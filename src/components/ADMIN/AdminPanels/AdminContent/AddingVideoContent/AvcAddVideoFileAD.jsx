@@ -1,5 +1,4 @@
 import React from 'react'
-import imgM from '../../../../../assets/img/serials/1m.jpg'
 import { UploadOutlined } from '@ant-design/icons';
 import { Modal } from 'antd';
 
@@ -9,15 +8,31 @@ const AvcAddVideoFileAD = (props) => {
     const [video, setVideo] = React.useState(null);
 
     const loadedPrevImg = (e) =>{
-        setPrevImg(e.target.files[0])
+        const file = e.target.files[0];
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = function() {
+            setPrevImg(reader.result)
+        };
+        reader.onerror = function() {
+            console.log(reader.error);
+          };
     }
     const loadedVideo = (e) =>{
-        setVideo(e.target.files[0])
+        const file = e.target.files[0];
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = function() {
+            setVideo(reader.result)
+        };
+        reader.onerror = function() {
+            console.log(reader.error);
+          };
     }
 
     const addSeries = () => {
         const countSeries = props.series.length+1;
-        const seriesLoaded = { id: countSeries, title: 'серия ' + countSeries, img: prevImg, video: video};
+        const seriesLoaded = { id: countSeries, title: 'серия ' + countSeries, imgPrev: prevImg, video: video};
         props.handleSeries(seriesLoaded)
         setOpenModal(false)
     }
@@ -34,7 +49,7 @@ const AvcAddVideoFileAD = (props) => {
                     return (
                         <div className="videofile_item" key={item.id}>
                             <div className="videofile_item_img_wrap">
-                                <img src={item.img} alt="" className="videofile_item_title_img" />
+                                <img src={item.imgPrev} alt="" className="videofile_item_title_img" />
                             </div>
                             <div className="videofile_item_title bG">{item.title}</div>
                         </div>

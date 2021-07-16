@@ -9,7 +9,6 @@ import 'swiper/swiper-bundle.min.css'
 import './style/ant/Rate.css'
 import './style/ant/select.css'
 import './style/ant/switch.css'
-// import 'draft-js/dist/Draft.css';
 import 'react-quill/dist/quill.snow.css';
 import './style/dark.css'
 // import './style/light.css'  
