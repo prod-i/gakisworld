@@ -110,10 +110,16 @@
     align-items: start;
 }
 .avc_radio{
-    width: 20px;
-    height: 20px;
-    padding: 0 0 0 0;
-    margin: 0 0 0 10px;
+   height: 30px;
+   padding-left: 40px;
+}
+.avc_radio.ant-checkbox-checked .ant-checkbox-inner{
+    background-color: #af4646 !important;
+    border: 1px solid #af4646 !important;
+}
+.avc_radio .ant-checkbox-inner{
+    background-color: #af4646 !important;
+    border: #af4646;
 }
 .AVC_item_input_descr{
     width: 80%;

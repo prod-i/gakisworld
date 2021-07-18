@@ -8,6 +8,9 @@ class MainC extends React.Component {
     componentDidMount(){
         document.title = "Главная"
         window.scrollTo(0, 0);
+        return(
+            <>123</>
+        )
     }
     render() {
         return <Main {...this.props}

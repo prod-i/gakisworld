@@ -43,7 +43,7 @@ const SerialsAD = (props) => {
                         </div>
                     </div>
                 )
-            })}
+            }).reverse()}
 
             <Drawer
                 title="Клинок рассекающий демонов"

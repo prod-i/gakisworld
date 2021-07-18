@@ -145,6 +145,7 @@ let initialState = {
             seasons: '4',
             episodes: '',
             AgeRating: 'NC-17',
+            MainSlider: true,
             popular: true,
             descr: `В прошлом столетии человечество страдало из-за нашествия гигантов. 
                               Они были очень похожи внешностью на простых людей, 
@@ -200,6 +201,7 @@ let initialState = {
             seasons: '',
             episodes: '175',
             AgeRating: 'PG-13',
+            MainSlider: true,
             popular: false,
             descr: `События разворачиваются в выдуманной стране, где всё пропитано волшебством. 
                               В Королевстве магия является совершенно обычной вещью, 
@@ -256,6 +258,7 @@ let initialState = {
             seasons: '4',
             episodes: '',
             AgeRating: 'NC-17',
+            MainSlider: true,
             popular: true,
             descr: `Пройдя через страшную боль, унижение и ломку жизненных ценностей, 
                               Кэн Канэки переродился. Вместо неуклюжего гибрида человека и упыря возникло что-то новое, 

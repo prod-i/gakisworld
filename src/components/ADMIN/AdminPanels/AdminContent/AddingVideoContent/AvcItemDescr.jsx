@@ -1,4 +1,5 @@
 import React from 'react'
+import { Checkbox } from 'antd';
 
 const AvcItemDescrAD = (props) => {
     const handleSerial = props.handleSerial;
@@ -48,11 +49,11 @@ const AvcItemDescrAD = (props) => {
             </div>
             <div className="AVC_item">
                 <div className="AVC_item_title tA">Главный слайдер</div>
-                <input type="radio" className='AVC_item_input avc_radio bG t' onChange={(e)=>handleSerial('MainSlider', e.target.value)}/>
+                <Checkbox onChange={(e)=>handleSerial('MainSlider', e.target.checked)} className='AVC_item_input avc_radio' checked={props.item.MainSlider}></Checkbox>
             </div>
             <div className="AVC_item">
                 <div className="AVC_item_title tA">Популярное</div>
-                <input type="checkbox" className='AVC_item_input avc_radio bG t' onChange={(e)=>handleSerial('popular', e.target.value)}/>
+                <Checkbox onChange={(e)=>handleSerial('popular', e.target.checked)} className='AVC_item_input avc_radio' checked={props.item.popular}></Checkbox>
             </div>
         </div>
     )

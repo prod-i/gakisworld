@@ -22,7 +22,7 @@ const PrevNews = (props) => {
 
                 <div className="prevNews__cards">
                     {list.map((posts, key) => {
-                        if (key < 4) {
+                        if (list.length-4 <= key) {
                             return (
                             <NavLink to={'/news/'+ posts.id} className=" prevNews__card bE" key={key}>
                                     <div className="prevNews__card_image">
@@ -30,14 +30,14 @@ const PrevNews = (props) => {
                                     </div>
                                     <div className="prevNews__card_title fCG t">{posts.title}</div>
                                     <div className="prevNews__card_decr tA fCG">
-                                        <div className="prevNews__card_data">{posts.date}</div>
+                                        {/* <div className="prevNews__card_data">{posts.date}</div> */}
                                         <div className="prevNews__card_author">{posts.author}</div>
                                     </div>
                             </NavLink>
                             )
                         } else { return null }
                     }
-                    )}
+                    ).reverse()}
                 </div>
                 
             </div>

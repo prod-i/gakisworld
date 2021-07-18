@@ -18,10 +18,7 @@ const AdminPanel = (props) => {
                         )
                     case 'control':
                         return (
-                            <ControlAD 
-                                controlVis ={props.controlAD.controlVis}
-                                changeVis  ={props.changeVis}
-                            />
+                            <ControlAD />
                         )
                     case 'users':
                         return (

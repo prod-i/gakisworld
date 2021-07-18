@@ -43,7 +43,7 @@ class UsersAD extends React.Component {
                                 <img src={item.photos.large} alt="" className="dataAD_avarat" onClick={() => this.showDrawer(item)} />
                             </div>
                             <div className="dataAD_descr fCG">
-                                <div className="dataAD_nick" onClick={() => this.showDrawer(item)}>{item.nickname} <span className="userIdAD tG">#21313</span></div>
+                                <div className="dataAD_nick" onClick={() => this.showDrawer(item)}>{item.nickname} <span className="userIdAD tG">#{item.userId}</span></div>
                                 <div className="dataAD_name tG">{item.fullName}</div>
                             </div>
                             <div className="dataAD_options tR">
@@ -51,7 +51,7 @@ class UsersAD extends React.Component {
                             </div>
                         </div>
                     );
-                })}
+                }).reverse()}
 
                 <Drawer
                     title={false}

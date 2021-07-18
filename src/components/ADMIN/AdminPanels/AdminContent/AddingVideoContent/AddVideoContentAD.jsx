@@ -77,7 +77,7 @@ class AddVideoContentAD extends React.Component {
 
                     <div className="AVC_right fCG">
 
-                        <AvcItemDescrAD handleSerial={this.handleSerial} />
+                        <AvcItemDescrAD handleSerial={this.handleSerial} item={this.state.newSerial}/>
 
                         <AvcAddVideoFileAD handleSeries={this.handleSeries} series={this.state.newSerial.series} />
 

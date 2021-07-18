@@ -1,6 +1,8 @@
 const CONTROL_SEARCH_VIS = 'search/CONTROL_SEARCH_VIS';
 const CHANGE_SEARCH_VALUE = 'search/CHANGE_SEARCH_VALUE';
 const CHANGE_FILTRES = 'search/CHANGE_FILTRES';
+const ADD_FILTRES = 'search/ADD_FILTRES';
+const DELETE_FILTRES = 'search/DELETE_FILTRES';
 
 let initialState = {
     filters: {
@@ -114,6 +116,19 @@ const searchR = (state = initialState, action) => {
                 ...state,
                 searchVis: action.searchVis,
             }
+        case ADD_FILTRES:
+            const Addtype = action.filtreType;
+            return {
+                ...state,
+                filters: {...state.filters, [Addtype]: [...state.filters[Addtype], action.filtreValue]}
+            }
+        case DELETE_FILTRES:
+            const Deltype = action.filtreType;
+            return {
+                ...state,
+                // { ...state.profile, favorites: state.profile.favorites.filter(item => item.id !== action.favoriteId)}
+                filters: {...state.filters, [Deltype]: [...state.filters[Deltype].filter(item => item !== action.filtreValue)]}
+            }
             case CHANGE_SEARCH_VALUE:
                 return {
                     ...state,
@@ -132,6 +147,8 @@ const searchR = (state = initialState, action) => {
 }
 
 export const CONTROLSearchVis = (searchVis) => ({ type: CONTROL_SEARCH_VIS, searchVis });
+export const AddFiltres = (filtreType, filtreValue) => ({ type: ADD_FILTRES, filtreType, filtreValue});
+export const DeleteFiltres = (filtreType, filtreValue) => ({ type: DELETE_FILTRES, filtreType, filtreValue});
 export const ChangeSearchValue = (searchValue) => ({ type: CHANGE_SEARCH_VALUE, searchValue });
 export const Changefiltre = (filtreName, searchType) => ({ type: CHANGE_FILTRES, filtreName, searchType});
 

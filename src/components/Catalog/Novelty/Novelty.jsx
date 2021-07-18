@@ -24,8 +24,8 @@ const Novelty = (props) => {
                         spaceBetween  ={10}
                         scrollbar     ={true}
                         className     ={"novelty_cards"}
-                        onSwiper      ={(swiper) => console.log(swiper)}
-                        onSlideChange ={() => console.log('slide change')}
+                        onSwiper      ={(swiper) => <></>}
+                        onSlideChange ={() => <></>}
                     >
 
                         {list.map((card, key) => {

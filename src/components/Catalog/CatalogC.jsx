@@ -20,7 +20,6 @@ class CatalogC extends React.Component {
     }
     
     render() {
-        // console.log(this.props.catalog.catalogList.list);
         return <Catalog {...this.props} ChangeSearchValue={this.props.ChangeSearchValue} Changefiltre={this.props.Changefiltre}/>
     }
 };

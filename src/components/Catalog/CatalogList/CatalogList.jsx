@@ -11,7 +11,6 @@ const CatalogList = (props) => {
     const [rtlLine, setRtlLine] = React.useState(false);
 
     const list = props.catalog.catalogList.list;
-    console.log(list);
     const listAPI = props.catalog.catalogList.listAPI;
 
 
@@ -33,7 +32,6 @@ const CatalogList = (props) => {
     let yearsEnd = props.searchInput.years[1];
     let ratingStart = props.searchInput.rating[0];
     let ratingEnd = props.searchInput.rating[1];
-    console.log(0 <= '0' <= 10);
     return (
         <div className="catalog_body">
             <div className="container">

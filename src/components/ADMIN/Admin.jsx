@@ -40,8 +40,6 @@ const Admin = (props) => {
                         <AdminPanel 
                             PanelID         ={current} 
                             usersList       ={props.usersList}
-                            controlAD       ={props.controlAD}
-                            changeVis       ={props.changeVis}
                             catalogList     ={props.catalogList}
                             newsList        ={props.newsList}
                         />

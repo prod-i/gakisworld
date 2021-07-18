@@ -48,9 +48,9 @@ const NavigationProfile = (props) => {
             <Menu.Item key="edit" className='tA'>
               <NavLink to={'/profile/'+ userId +'/edit'          }className='tA'> Редактировать профиль    </NavLink>
             </Menu.Item>
-            <Menu.Item key="notifications" className='tA'>
+            {/* <Menu.Item key="notifications" className='tA'>
               <NavLink to={'/profile/'+ userId +'/notifications' }className='tA'> Управление уведомлениями </NavLink>
-            </Menu.Item>
+            </Menu.Item> */}
             <Menu.Item key="security" className='tA'>
               <NavLink to={'/profile/'+ userId +'/security'      }className='tA'> Безопасность             </NavLink>
             </Menu.Item>

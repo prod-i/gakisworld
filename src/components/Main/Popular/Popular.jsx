@@ -40,7 +40,7 @@ const Popular = (props) => {
                             return null;
                         }
                     }
-                    )}
+                    ).reverse()}
                 </div>
 
                 
