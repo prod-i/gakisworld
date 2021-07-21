@@ -996,7 +996,7 @@ let initialState = {
             rating: 9.4,
             years: '2016',
             genre: 'Драма, Сёнэн, Школа, Драма, Сёнэн, Школа',
-            director: 'Ямада Наоко Ямада Наоко',
+            director: 'Ямада Наоко',
             studio: 'Kyoto Animation',
             type: 'фильм',
             seasons: '',

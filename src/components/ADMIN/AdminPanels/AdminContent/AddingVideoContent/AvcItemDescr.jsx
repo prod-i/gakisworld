@@ -16,7 +16,7 @@ const AvcItemDescrAD = (props) => {
             </div>
             <div className="AVC_item">
                 <div className="AVC_item_title tA">Год</div>
-                <input type="number" className='AVC_item_input bG t' onChange={(e)=>handleSerial('years', e.target.value)}/>
+                <input type="number" min='1970' max='2021' step="0.1" className='AVC_item_input bG t' onChange={(e)=>handleSerial('years', e.target.value)}/>
             </div>
             <div className="AVC_item">
                 <div className="AVC_item_title tA">Жанр</div>

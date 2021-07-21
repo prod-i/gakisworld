@@ -34,7 +34,7 @@ const AdminPanel = (props) => {
                         )
                     case 'news':
                         return (
-                            <NewsAD newsList={props.newsList}/>
+                            <NewsAD newsList={props.newsList} changePost={props.changePost}/>
                         )
                     case 'addNews':
                         return (

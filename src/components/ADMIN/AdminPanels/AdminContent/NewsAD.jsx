@@ -2,17 +2,17 @@ import React from 'react'
 import './../../../../style/admin/dataAD.css';
 import { ExclamationCircleFilled } from '@ant-design/icons';
 import { Drawer } from 'antd';
-import avatar1 from './../../../../assets/img/serials/1l.jpg';
+import NewsItemPanel from './NewsItemPanel/NewsItemPanel';
 
 
 const NewsAD = (props) => {
     const [visible, setVisible] = React.useState(false);
-    console.log(props.newsList);
+    const [newsData, setnewsData] = React.useState('');
 
-    const showDrawer = () => {
+    const showDrawer = (Data) => {
         setVisible(true);
+        setnewsData(Data)
     };
-
     const onClose = () => {
         setVisible(false);
     };
@@ -32,10 +32,10 @@ const NewsAD = (props) => {
                 return (
                     <div className="dataAD_item bE" key={item.id}>
                         <div className="dataAD_avatar_wrapper">
-                            <img src={item.imgM} alt="" className="dataAD_avarat" onClick={showDrawer} />
+                            <img src={item.imgM} alt="" className="dataAD_avarat" onClick={()=>showDrawer(item)} />
                         </div>
                         <div className="dataAD_descr fCG">
-                            <div className="dataAD_nick" onClick={showDrawer}>{item.title}</div>
+                            <div className="dataAD_nick" onClick={()=>showDrawer(item)}>{item.title}</div>
                             <div className="dataAD_name tG">Редактор: {item.author}</div>
                         </div>
                         <div className="dataAD_options tR">
@@ -46,21 +46,14 @@ const NewsAD = (props) => {
             }).reverse()}
 
             <Drawer
-                title="Клинок рассекающий демонов"
+                title={false}
                 placement="right"
                 closable={false}
                 onClose={onClose}
                 visible={visible}
                 className='fCG'
             >
-                <div className="dataAD_img_wrap"><img src={avatar1} alt="" className="dataAD_img" /></div>
-                <p>Информация</p>
-                <p>Информация</p>
-                <p>Информация</p>
-                <p>Информация</p>
-                <p>Информация</p>
-                <p>Информация</p>
-
+                <NewsItemPanel item={newsData} changePost={props.changePost}/>
             </Drawer>
 
         </div>

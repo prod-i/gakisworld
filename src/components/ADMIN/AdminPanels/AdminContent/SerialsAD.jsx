@@ -3,12 +3,15 @@ import './../../../../style/admin/dataAD.css';
 import { ExclamationCircleFilled } from '@ant-design/icons';
 import { Drawer } from 'antd';
 import avatar1 from './../../../../assets/img/serials/1l.jpg';
+import SerialsItemPanel from './SerialsItemPanel/SerialsItemPanel';
 
 const SerialsAD = (props) => {
     const [visible, setVisible] = React.useState(false);
+    const [serialData, setSerialData] = React.useState('');
 
-    const showDrawer = () => {
+    const showDrawer = (Data) => {
         setVisible(true);
+        setSerialData(Data)
     };
 
     const onClose = () => {
@@ -32,10 +35,10 @@ const SerialsAD = (props) => {
                 return (
                     <div className="dataAD_item bE" key={item.id}>
                         <div className="dataAD_avatar_wrapper">
-                            <img src={item.imageMin} alt="" className="dataAD_avarat" onClick={showDrawer} />
+                            <img src={item.imageMin} alt="" className="dataAD_avarat" onClick={()=>showDrawer(item)} />
                         </div>
                         <div className="dataAD_descr fCG">
-                            <div className="dataAD_nick" onClick={showDrawer}>{item.title}</div>
+                            <div className="dataAD_nick" onClick={()=>showDrawer(item)}>{item.title}</div>
                             <div className="dataAD_name tG">Редактор: {item.director}</div>
                         </div>
                         <div className="dataAD_options tR">
@@ -46,21 +49,14 @@ const SerialsAD = (props) => {
             }).reverse()}
 
             <Drawer
-                title="Клинок рассекающий демонов"
+                title={false}
                 placement="right"
                 closable={false}
                 onClose={onClose}
                 visible={visible}
                 className='fCG'
             >
-                <div className="dataAD_img_wrap"><img src={avatar1} alt="" className="dataAD_img" /></div>
-                <p>Информация</p>
-                <p>Информация</p>
-                <p>Информация</p>
-                <p>Информация</p>
-                <p>Информация</p>
-                <p>Информация</p>
-
+                <SerialsItemPanel item={serialData}/>
             </Drawer>
 
         </div>

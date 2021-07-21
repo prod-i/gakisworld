@@ -18,8 +18,10 @@ import img17m from '../../assets/img/serials/17m.jpg'
 import img18m from '../../assets/img/serials/18m.jpg'
 import img19m from '../../assets/img/serials/19m.jpg'
 import img20m from '../../assets/img/serials/20m.jpg'
+import { updateObjectInArray } from '../../common/utils/object-helpers'
 
 const SET_POST                 = 'news/SET_POST';
+const CHANGE_POST              = 'news/CHANGE_POST';
 const CONTROL_NEWS_VIS         = 'news/CONTROL_NEWS_VIS';
 const CONTROL_NEWS_LIST_VIS    = 'news/CONTROL_NEWS_LIST_VIS';
 const CONTROL_NEWS_SLIDER_VIS  = 'news/CONTROL_NEWS_SLIDER_VIS';
@@ -433,12 +435,15 @@ let initialState = {
 
 const newsListR = (state = initialState, action) => {
     switch (action.type) {
-        case SET_POST:
-        // console.log(...action.serials.map((item)=>'id - ' + item.imdbID));    
+        case SET_POST:  
         return {
                 ...state,
                 newsList: { ...state.newsList, list: [...state.newsList.list, action.newPost] },
-                
+            }
+        case CHANGE_POST:
+            return {
+                ...state,
+                newsList:{...state.newsList, list: updateObjectInArray(state.newsList.list, action.postId, {[action.postItem]: action.postValue})}
             }
         case CONTROL_NEWS_VIS:
             return {
@@ -466,10 +471,11 @@ const newsListR = (state = initialState, action) => {
 }
 
 
-export const setPost               = (newPost)        => ({type: SET_POST, newPost});
-export const CONTROLNewsVis        = (newsVis)        => ({type: CONTROL_NEWS_VIS, newsVis});
-export const CONTROLNewsListVis    = (newsListVis)    => ({type: CONTROL_NEWS_LIST_VIS, newsListVis});
-export const CONTROLNewsSliderVis  = (newsSliderVis)  => ({type: CONTROL_NEWS_SLIDER_VIS, newsSliderVis});
-export const CONTROLNewsSidebarVis = (newsSidebarVis) => ({type: CONTROL_NEWS_SIDEBAR_VIS, newsSidebarVis});
+export const setPost               = (newPost)                      => ({type: SET_POST, newPost});
+export const changePost            = (postId, postItem, postValue)  => ({type: CHANGE_POST, postId, postItem, postValue});
+export const CONTROLNewsVis        = (newsVis)                      => ({type: CONTROL_NEWS_VIS, newsVis});
+export const CONTROLNewsListVis    = (newsListVis)                  => ({type: CONTROL_NEWS_LIST_VIS, newsListVis});
+export const CONTROLNewsSliderVis  = (newsSliderVis)                => ({type: CONTROL_NEWS_SLIDER_VIS, newsSliderVis});
+export const CONTROLNewsSidebarVis = (newsSidebarVis)               => ({type: CONTROL_NEWS_SIDEBAR_VIS, newsSidebarVis});
 
 export default newsListR;

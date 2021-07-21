@@ -1,0 +1,125 @@
+.serials_item{
+    width: 100%;
+    height: 100%;
+}
+.id{
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: normal;
+}
+.serials_item_title{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: 900;
+    width: 100%;
+    letter-spacing: 1px;
+}
+.serials_item_body{
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+.serials_item_picture{
+    width: 30%;
+}
+.serials_item_picture-item{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+.item-large{
+    height: 300px;
+}
+.serials_item_picture-item-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.serials_item_upload{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    width: 100%;
+    height: 100%;
+    border: 1px dashed;
+}
+.serials_item_description{
+    width: 70%;
+    padding: 0 20px 0 30px;
+}
+.serials_item_description_item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.serials_item_description_item_name{
+    width: 30%;
+    font-size: 18px;
+}
+.serials_item_description_item_input{
+    width: 70%;
+    height: 30px;
+    padding-left: 20px;
+    font-size: 15px;
+}
+.serials_item_description_item_textarea{
+    width: 70%;
+    height: 100px;
+    padding: 0 10px 0 20px;
+    font-size: 15px;
+    resize: none; 
+}
+.serials_item_series{
+    margin-top: 40px;
+    width: 100%;
+    margin-bottom: 60px;
+}
+.serials_item_series_title{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.serials_item_series_list{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.serials_item_series-item{
+    width: 23.5%;
+    height: 100px;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+.serials_item_series-item:nth-child(4n){
+    margin-right: 0;
+}
+.serials_item_series-item-img-wrap{
+    width: 100%;
+    height: 85%;
+}
+.serials_item_series-item-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.serials_item_series-item_title{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-transform: uppercase;
+    height: 20%;
+}
+.series-upload{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    border: dashed 1px;
+}
