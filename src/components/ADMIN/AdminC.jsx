@@ -5,6 +5,7 @@ import { withRouter } from 'react-router-dom';
 // import { AdminControl } from './AdminControl';
 import Admin from './Admin';
 import { changePost } from '../../redux/News/newsR';
+import { changeSerial } from '../../redux/Catalog/catalogR';
 
 
 class AdminC extends React.Component {
@@ -21,11 +22,10 @@ class AdminC extends React.Component {
                     catalogList     ={this.props.catalogList}
                     newsList        ={this.props.newsList}
                     changePost      ={this.props.changePost}
+                    changeSerial    ={this.props.changeSerial}
                />
     }
 };
-
-
 
 let mapStateToProps = (state) => ({
     usersList   : state.usersList,
@@ -36,6 +36,6 @@ let mapStateToProps = (state) => ({
 
 export default compose
 (
-    connect(mapStateToProps, {changePost}),
+    connect(mapStateToProps, {changePost, changeSerial}),
     withRouter,
 )   (AdminC);

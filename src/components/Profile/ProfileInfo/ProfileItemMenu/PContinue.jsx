@@ -7,30 +7,12 @@ const PContinue = () => {
         <div>
             <div className="profile_content_title">Продолжить просмотр</div>
             <div className="profile_content_body">
-                <div className="profile_content_block bR">
-                    <img src={img} alt="" className="profile_continue_block_img"/>
-                </div>
-                <div className="profile_content_block bR">
-                    <img src={img} alt="" className="profile_continue_block_img"/>
-                </div>
-                <div className="profile_content_block bR">
-                    <img src={img} alt="" className="profile_continue_block_img"/>
-                </div>
-                <div className="profile_content_block bR">
-                    <img src={img} alt="" className="profile_continue_block_img"/>
-                </div>
-                <div className="profile_content_block bR">
-                    <img src={img} alt="" className="profile_continue_block_img"/>
-                </div>
-                <div className="profile_content_block bR">
-                    <img src={img} alt="" className="profile_continue_block_img"/>
-                </div>
                 {/* <div className="profile_content_block bR">
                     <img src={img} alt="" className="profile_continue_block_img"/>
-                </div>
-                <div className="profile_content_block bR">
-                    <img src={img} alt="" className="profile_continue_block_img"/>
                 </div> */}
+                <div className="profile_no-content">
+                    Вы ещё ничего не посмотрели
+                </div>
             </div>
         </div>
     )

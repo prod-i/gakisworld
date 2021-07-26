@@ -5,6 +5,7 @@ import { Checkbox } from 'antd';
 const NewsItemPanel = (props) => {
     const [editMode, setEditMode] = React.useState(true);
     const item = props.item;
+    const date = new Date(item.date)
 
     const changePost = (id, item, value) => {
         props.changePost(id, item, value)
@@ -36,7 +37,7 @@ const NewsItemPanel = (props) => {
                         </div>
                         <div className="news_item_descr_item">
                             <div className="news_item_descr_item_title tA">Дата</div>
-                            <div className="news_item_descr_item_title_value">{item.date.getFullYear()}.{item.date.getMonth()+1}.{item.date.getDate()} {item.date.getHours()}:{item.date.getMinutes()}</div>
+                            <div className="news_item_descr_item_title_value">{date.getFullYear()}.{date.getMonth()+1}.{date.getDate()} {date.getHours()}:{date.getMinutes()}</div>
                         </div>
                         <div className="news_item_descr_item">
                             <div className="news_item_descr_item_title tA">Описание</div>

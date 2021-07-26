@@ -7,7 +7,7 @@ import NewsItemPanel from './NewsItemPanel/NewsItemPanel';
 
 const NewsAD = (props) => {
     const [visible, setVisible] = React.useState(false);
-    const [newsData, setnewsData] = React.useState('');
+    const [newsId, setnewsData] = React.useState('');
 
     const showDrawer = (Data) => {
         setVisible(true);
@@ -32,10 +32,10 @@ const NewsAD = (props) => {
                 return (
                     <div className="dataAD_item bE" key={item.id}>
                         <div className="dataAD_avatar_wrapper">
-                            <img src={item.imgM} alt="" className="dataAD_avarat" onClick={()=>showDrawer(item)} />
+                            <img src={item.imgM} alt="" className="dataAD_avarat" onClick={()=>showDrawer(item.id)} />
                         </div>
                         <div className="dataAD_descr fCG">
-                            <div className="dataAD_nick" onClick={()=>showDrawer(item)}>{item.title}</div>
+                            <div className="dataAD_nick" onClick={()=>showDrawer(item.id)}>{item.title}</div>
                             <div className="dataAD_name tG">Редактор: {item.author}</div>
                         </div>
                         <div className="dataAD_options tR">
@@ -53,7 +53,7 @@ const NewsAD = (props) => {
                 visible={visible}
                 className='fCG'
             >
-                <NewsItemPanel item={newsData} changePost={props.changePost}/>
+                <NewsItemPanel item={props.newsList[newsId-1]} changePost={props.changePost}/>
             </Drawer>
 
         </div>

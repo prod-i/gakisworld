@@ -65,7 +65,7 @@
 }
 .serials_item_description_item_input{
     width: 70%;
-    height: 30px;
+    /* height: 30px; */
     padding-left: 20px;
     font-size: 15px;
 }
@@ -122,4 +122,10 @@
     align-items: center;
     text-transform: uppercase;
     border: dashed 1px;
+}
+.serialsEditMode{
+    position: absolute;
+    right: 15px;
+    font-size: 15px;
+    padding: 5px 10px;
 }

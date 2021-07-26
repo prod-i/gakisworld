@@ -22,3 +22,9 @@
 .analiticAD_item:nth-child(4n){
     margin-right:0;
 }
+.analiticAD_item_title{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin: 35px 0 0 0;
+}

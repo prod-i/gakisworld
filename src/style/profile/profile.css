@@ -91,3 +91,14 @@
     background-color: #FF7070 !important;
     color: #fff !important;
 }
+.profile_no-content{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    text-transform: uppercase;
+    padding-top: 50px;
+    font-size: 32px;
+    color: rgb(42, 42, 42);
+}

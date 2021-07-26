@@ -62,10 +62,12 @@ import img20m from '../../assets/img/serials/20m.jpg'
 
 import img1p from '../../assets/img/serials/1p.jpg'
 import vi1v from '../../assets/img/serials/1v.mp4'
+import { updateObjectInArray } from '../../common/utils/object-helpers'
 
 const CONTROL_CATALOG_VIS = 'catalog/CONTROL_CATALOG_VIS';
 const CONTROL_NOVELTY_VIS = 'catalog/CONTROL_NOVELTY_VIS';
 const CONTROL_CATALOG_LIST_VIS = 'catalog/CONTROL_CATALOG_LIST_VIS';
+const CHANGE_SERIALS = 'catalog/CHANGE_SERIALS';
 const SET_SERIALS = 'catalog/SET_SERIALS';
 
 let initialState = {
@@ -1034,6 +1036,11 @@ const catalogListR = (state = initialState, action) => {
                 catalogList: { ...state.catalogList, list: [...state.catalogList.list, action.serials] },
                 
             }
+            case CHANGE_SERIALS:
+                return {
+                    ...state,
+                    catalogList:{...state.catalogList, list: updateObjectInArray(state.catalogList.list, action.serialId, {[action.serialItem]: action.serialValue})}
+                }
         case CONTROL_CATALOG_VIS:
             return {
                 ...state,
@@ -1053,7 +1060,8 @@ const catalogListR = (state = initialState, action) => {
             return state;
     }
 }
-export const setSerials = (serials) => ({ type: SET_SERIALS, serials })
+export const setSerials = (serials) => ({ type: SET_SERIALS, serials });
+export const changeSerial = (serialId, serialItem, serialValue)  => ({type: CHANGE_SERIALS, serialId, serialItem, serialValue});
 export const CONTROLCatalogVis = (catalogVis) => ({ type: CONTROL_CATALOG_VIS, catalogVis });
 export const CONTROLNoveltyVis = (noveltyVis) => ({ type: CONTROL_NOVELTY_VIS, noveltyVis });
 export const CONTROLCatalogListVis = (catalogListVis) => ({ type: CONTROL_CATALOG_LIST_VIS, catalogListVis });

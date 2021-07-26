@@ -7,7 +7,7 @@ import SerialsItemPanel from './SerialsItemPanel/SerialsItemPanel';
 
 const SerialsAD = (props) => {
     const [visible, setVisible] = React.useState(false);
-    const [serialData, setSerialData] = React.useState('');
+    const [serialId, setSerialData] = React.useState('');
 
     const showDrawer = (Data) => {
         setVisible(true);
@@ -35,10 +35,10 @@ const SerialsAD = (props) => {
                 return (
                     <div className="dataAD_item bE" key={item.id}>
                         <div className="dataAD_avatar_wrapper">
-                            <img src={item.imageMin} alt="" className="dataAD_avarat" onClick={()=>showDrawer(item)} />
+                            <img src={item.imageMin} alt="" className="dataAD_avarat" onClick={()=>showDrawer(item.id)} />
                         </div>
                         <div className="dataAD_descr fCG">
-                            <div className="dataAD_nick" onClick={()=>showDrawer(item)}>{item.title}</div>
+                            <div className="dataAD_nick" onClick={()=>showDrawer(item.id)}>{item.title}</div>
                             <div className="dataAD_name tG">Редактор: {item.director}</div>
                         </div>
                         <div className="dataAD_options tR">
@@ -56,7 +56,7 @@ const SerialsAD = (props) => {
                 visible={visible}
                 className='fCG'
             >
-                <SerialsItemPanel item={serialData}/>
+                <SerialsItemPanel item={props.catalogList[serialId-1]} changeSerial={props.changeSerial}/>
             </Drawer>
 
         </div>

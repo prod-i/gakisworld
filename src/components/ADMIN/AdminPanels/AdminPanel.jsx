@@ -26,7 +26,7 @@ const AdminPanel = (props) => {
                         )
                     case 'serials':
                         return (
-                            <SerialsAD catalogList={props.catalogList}/>
+                            <SerialsAD catalogList={props.catalogList} changeSerial={props.changeSerial}/>
                         )
                     case 'addSerials':
                         return (

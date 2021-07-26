@@ -43,6 +43,7 @@ const Admin = (props) => {
                             catalogList     ={props.catalogList}
                             newsList        ={props.newsList}
                             changePost      ={props.changePost}
+                            changeSerial    ={props.changeSerial}
                         />
                     </Content>
 
