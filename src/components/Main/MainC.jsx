@@ -5,13 +5,23 @@ import { connect }    from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 class MainC extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            width: window.screen.width,
+            height: window.screen.height,
+        };
+        window.addEventListener("resize", this.resize.bind(this));
+        this.resize.bind(this)
+    }
     componentDidMount(){
         document.title = "Главная"
         window.scrollTo(0, 0);
-        return(
-            <>123</>
-        )
     }
+    resize() {
+        this.setState({width: window.innerWidth, height: window.innerHeight});
+    }
+    
     render() {
         return <Main {...this.props}
                      mainVis      ={this.props.main.mainVis}
@@ -20,6 +30,7 @@ class MainC extends React.Component {
                      continueView ={this.props.continueView }
                      prevNews     ={this.props.prevNews     }
                      popular      ={this.props.popular      }
+                     width        ={this.state.width}
                 />
     }
 };

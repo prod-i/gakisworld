@@ -14,6 +14,7 @@ const Main = (props)=> {
                 <Slider 
                     slides          ={props.catalog.catalogList.list}
                     sliderVis       ={props.main.slider.sliderVis}
+                    width           ={props.width}
                 />
 
                 <Banner 
