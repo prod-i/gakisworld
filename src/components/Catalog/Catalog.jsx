@@ -20,7 +20,7 @@ const Catalog = (props)=> {
     
                     <Search search={props.search} ChangeSearchValue={props.ChangeSearchValue} Changefiltre={props.Changefiltre}/>
     
-                    <CatalogList catalog={props.catalog} searchInput={props.search.searchInput}/>
+                    <CatalogList catalog={props.catalog} searchInput={props.search.searchInput} width={props.width}/>
     
                     <Footer />
     

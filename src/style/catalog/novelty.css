@@ -122,7 +122,7 @@
         min-height: 20%;
         font-size: 18px;
     }
-    .catalog_block_rating{
+    .novelty_block_rating{
         font-size: 10px !important;
     }
     .novelty_card_filtre{
@@ -154,7 +154,7 @@
         min-height: 15%;
         font-size: 15px;
     }
-    .catalog_block_rating{
+    .novelty_block_rating{
         display: none;
     }
     .novelty_card_filtre{
@@ -185,7 +185,7 @@
         min-height: 15%;
         font-size: 14px;
     }
-    .catalog_block_rating{
+    .novelty_block_rating{
         display: none;
     }
     .novelty_card_filtre{

@@ -12,7 +12,13 @@ const CatalogList = (props) => {
 
     const list = props.catalog.catalogList.list;
     const listAPI = props.catalog.catalogList.listAPI;
-
+    const size = () => {
+        if(props.width <= 1024){
+            return 3
+        } else {
+            return 4
+        }
+    }
 
     if (!Array.isArray(list) || list.length <= 0) {
         return null

@@ -51,7 +51,7 @@ const Novelty = (props) => {
                                             {/* Название и Рейтинг */}
                                             <div className="novelty_card_title tW">
                                                 {card.title}
-                                                <Rate disabled defaultValue={2} count={10} value={card.rating} className='catalog_block_rating' />
+                                                <Rate disabled defaultValue={2} count={10} value={card.rating} className='novelty_block_rating' />
                                             </div>
 
                                             <div className="novelty_card_filtres tW">

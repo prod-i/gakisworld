@@ -19,12 +19,12 @@ const CatalogLine = ({card, key}) => {
                         <div className="catalog_title_line fCG t">{card.title}</div>
                     </NavLink>
                     <div className="catalog_icons_line tR">
-                        <EyeOutlined /><HeartOutlined /><CrownOutlined />
+                        <HeartOutlined /><CrownOutlined />
                     </div>
                 </div>
 {/* Рейтинг ---------------------------*/}
                 <div className="catalog_rating">
-                    <Rate disabled defaultValue={2} count={10} value={card.rating} />
+                    <Rate disabled defaultValue={2} count={10} value={card.rating} className="catalog_rating-star"/>
                 </div>
 
                 <div className="catalog_card_info">
