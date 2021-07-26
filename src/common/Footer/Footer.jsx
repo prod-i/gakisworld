@@ -11,7 +11,7 @@ class Footer extends React.Component {
             <div className={footerVis ? "footer b" : "none"}>
                 <div className="footer__top fCG">
 
-                    <div className="footer__сolumn">
+                    <div className="footer__сolumn footer__сolumn-main ">
                         <div className="footer__title">Gaki`s World</div>
                         <div className="footer__content tA">
                             <span className="footer_item">Главная</span>
