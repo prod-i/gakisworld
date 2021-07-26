@@ -91,6 +91,7 @@ class AddVideoContentAD extends React.Component {
 
 let mapStateToProps = (state) => ({
     catalogList : state.catalog.catalogList.list,
+    profileName: state.profile.profile.nickName,
 });
 
 export default compose

@@ -64,7 +64,7 @@ const AvcPictureAD = (props) => {
                     {props.vidB
                         ? <video src={props.vidB} alt="" className='AVC_img' />
                         : <label className="AvcPicture_upload" htmlFor='vidB'>
-                            <input id='vidB' type="file" hidden onChange={(e) => handleSerial('videoBcg', e.target.files[0])} />
+                            <input id='vidB' type="file" hidden onChange={(e) => setPrevImg('videoBcg', e)} />
                             <div className="AVF_upload_title">Upload</div>
                             <UploadOutlined />
                         </label>

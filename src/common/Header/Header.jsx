@@ -6,6 +6,7 @@ import '../../style/header.css'
 // картинки
 import logo               from '../../assets/icon/logo.png'
 import profileAvatarMini  from '../../assets/icon/avatar.png'
+import { MenuOutlined } from '@ant-design/icons';
 
 
 
@@ -46,7 +47,7 @@ const Header = (props) => {
 
     <div className="header bTr">
       <div className="logo fCG">
-        <NavLink exact to="/"  className='logo_text t'><img src={logo} className="logo_img" alt="logoHeader" />GAKISWORLD</NavLink>
+          <NavLink exact to="/"  className='logo_wrap t'><img src={logo} className="logo_img" alt="logoHeader" /><div className='logo_text'>GAKISWORLD</div></NavLink>
       </div>
 
 
@@ -68,11 +69,12 @@ const Header = (props) => {
         {window.location.hash === '#/login'
           ? null
           : <div className="profile_menu_button">
-            <Dropdown overlay={menu} placement="bottomRight">
+            <Dropdown overlay={menu} placement="bottomRight" className='dropdown-menu'>
               <NavLink exact to={"/profile/"+profileId} className="menu_item t fCG" activeClassName='tR'>
                 <img className="profile_menu_img" src={profileAvatarMini} alt="profileHeader" />
               </NavLink>
             </Dropdown>
+            <div className="menu_burger"><MenuOutlined /></div>
           </div>
         }
       </div>

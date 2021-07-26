@@ -36,7 +36,7 @@ const NewsItemPanel = (props) => {
                         </div>
                         <div className="news_item_descr_item">
                             <div className="news_item_descr_item_title tA">Дата</div>
-                            <div className="news_item_descr_item_title_value">{item.date}</div>
+                            <div className="news_item_descr_item_title_value">{item.date.getFullYear()}.{item.date.getMonth()+1}.{item.date.getDate()} {item.date.getHours()}:{item.date.getMinutes()}</div>
                         </div>
                         <div className="news_item_descr_item">
                             <div className="news_item_descr_item_title tA">Описание</div>

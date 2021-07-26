@@ -5,10 +5,10 @@ import '../../style/preloader.css'
 const Preloader = (props) => {
 
     return (
-        <div class="preloader">
-            <div class="preloader__row">
-                <div class="preloader__item"></div>
-                <div class="preloader__item"></div>
+        <div className="preloader">
+            <div className="preloader__row">
+                <div className="preloader__item"></div>
+                <div className="preloader__item"></div>
             </div>
         </div>
     );
