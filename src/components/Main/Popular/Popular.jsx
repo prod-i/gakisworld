@@ -32,7 +32,8 @@ const Popular = (props) => {
                                         <Rate disabled defaultValue={2} count={10} value={card.rating} className={'popular_rating'}/>
                                         <div className="popular_detail_elem"><div className="popular_details_left tG">Год    </div><div className="popular_details_right tW">{card.years}</div></div>
                                         <div className="popular_detail_elem"><div className="popular_details_left tG">Жанр    </div><div className="popular_details_right tW">{card.genre}</div></div>
-                                        <div className="popular_descr_content tW">{card.descr}</div>
+                                        <div className="popular_detail_elem"><div className="popular_details_left tG">Автор    </div><div className="popular_details_right tW">{card.director}</div></div>
+                                        <div className="popular_detail_elem"><div className="popular_details_left tG">Тип    </div><div className="popular_details_right tW">{card.type}</div></div>
                                     </div>
                                 </NavLink>
                             )

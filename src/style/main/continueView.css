@@ -33,7 +33,7 @@
     border-radius: 5px;
     overflow: hidden;
 }
-.continue_card:nth-child(n4){
+.continue_card:nth-child(4n){
     margin-right: 0;
 }
 .card_img{
@@ -82,7 +82,7 @@
         margin-right: 2%;
         height: 150px;
     }
-    .continue_card:nth-child(n2){
+    .continue_card:nth-child(2n){
         margin-right: 0;
     }
     .title_name{
@@ -105,8 +105,8 @@
         margin: 10px auto;
         height: 180px;
     }
-    .continue_card:nth-child(n2){
-        margin-right: 0;
+    .continue_card:nth-child(2n){
+        margin-right: auto;
     }
     .title_more{
         display: none;
@@ -121,8 +121,8 @@
         margin: 10px auto;
         height: 150px;
     }
-    .continue_card:nth-child(n2){
-        margin-right: 0;
+    .continue_card:nth-child(2n){
+        margin-right: auto;
     }
     .title_more{
         display: none;

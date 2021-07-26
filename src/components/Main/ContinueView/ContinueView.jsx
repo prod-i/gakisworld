@@ -29,7 +29,7 @@ const ContinueView = (props) => {
                     if (list.length - size() <= key) {
                         return (
                             <div className="continue_card bE" key={key}>
-                                <img src={img} alt="" className="card_img" />
+                                {/* <img src={img} alt="" className="card_img" /> */}
                                 <div className="progress b_">
                                     <div className="progress_total"></div>
                                 </div>

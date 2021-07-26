@@ -234,11 +234,16 @@
         font-size: 14px;
         margin: 0 3% 0 0;
     }
-
+    .profile_menu{
+        position: absolute;
+        right: 15px;
+        padding: 0;
+        margin: 0;
+    }
     .profile_menu_button {
         width: 40px;
         height: 40px;
-        right: 10px;
+        right: 0;
     }
 }
 @media (max-width: 768px) {
@@ -315,5 +320,11 @@
     .menu_el {
         font-size: 15px;
         margin: 0 3% 0 0;
+    }
+    .profile_menu{
+        position: absolute;
+        right: 0;
+        padding: 0;
+        margin: 0;
     }
 }
