@@ -9,7 +9,6 @@ import '../../../style/main/slider.css';
 
 const Slider = (props) => {
     SwiperCore.use([EffectCoverflow]);
-    console.log(window.screen.width, window.screen.height);
     const size = () => {
         if(props.width <= 480){
             return 50

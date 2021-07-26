@@ -23,18 +23,22 @@
 }
 .continue__view_card{
     display: flex;
-    justify-content: space-between;
     margin-top: 80px;
 }
 .continue_card{
     position: relative;
-    width: 23%;
+    width: 23.5%;
+    margin-right: 2%;
     height: 200px;
     border-radius: 5px;
     overflow: hidden;
 }
+.continue_card:nth-child(n4){
+    margin-right: 0;
+}
 .card_img{
     width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center;
     left: 0;
@@ -49,4 +53,78 @@
 }
 .progress_total{
     height: 30px;
+}
+
+
+
+/* адаптив */
+
+@media (max-width: 1280px) {
+    .continue_card{
+        width: 23.5%;
+        margin-right: 2%;
+        height: 150px;
+    }
+}
+@media (max-width: 1024px) {
+    .continue__view_card{
+        margin-top: 80px;
+    }
+    .continue_card{
+        width: 23.5%;
+        margin-right: 2%;
+        height: 130px;
+    }
+}
+@media (max-width: 768px) {
+    .continue_card{
+        width: 48%;
+        margin-right: 2%;
+        height: 150px;
+    }
+    .continue_card:nth-child(n2){
+        margin-right: 0;
+    }
+    .title_name{
+        font-size: 21px;
+    }
+    .title_more{
+        display: none;
+    }
+}
+@media (max-width: 600px) {
+    .continue__view{
+       margin-top: 40px;
+    }
+    .continue__view_card{
+        display: block;
+        margin-top: 40px;
+    }
+    .continue_card{
+        width: 80%;
+        margin: 10px auto;
+        height: 180px;
+    }
+    .continue_card:nth-child(n2){
+        margin-right: 0;
+    }
+    .title_more{
+        display: none;
+    }
+}
+@media (max-width: 480px) {
+    .continue__view_card{
+        display: block;
+    }
+    .continue_card{
+        width: 80%;
+        margin: 10px auto;
+        height: 150px;
+    }
+    .continue_card:nth-child(n2){
+        margin-right: 0;
+    }
+    .title_more{
+        display: none;
+    }
 }

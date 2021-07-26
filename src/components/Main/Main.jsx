@@ -24,11 +24,13 @@ const Main = (props)=> {
                 <ContinueView 
                     list            ={props.main.continueView.list}
                     continueViewVis ={props.main.continueView.continueViewVis}
+                    width           ={props.width}
                 />
 
                 <PrevNews 
                     list            ={props.news.newsList.list}
                     prevNewsVis     ={props.main.prevNews.prevNewsVis}
+                    width           ={props.width}
                 />
 
                 <Popular 
