@@ -36,3 +36,20 @@
   line-height: inherit !important;
   vertical-align: middle !important;
 }
+
+@media (max-width: 1500px) {
+  .ant-select-dropdown{
+    width: 200px !important;
+  }
+}
+@media (max-width: 768px) {
+  .ant-select-dropdown{
+    width: 200px !important;
+  }
+}
+@media (max-width: 480px) {
+  .ant-select-dropdown{
+    position: absolute;
+    left: 0 !important;
+  }
+}
