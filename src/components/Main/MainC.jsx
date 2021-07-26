@@ -30,7 +30,7 @@ class MainC extends React.Component {
                      continueView ={this.props.continueView }
                      prevNews     ={this.props.prevNews     }
                      popular      ={this.props.popular      }
-                     width        ={this.state.width}
+                     width        ={this.state.width        }
                 />
     }
 };

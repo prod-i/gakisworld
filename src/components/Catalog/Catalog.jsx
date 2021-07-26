@@ -16,7 +16,7 @@ const Catalog = (props)=> {
             
                 <div className={props.catalog.catalogVis ? 'catalog' : 'none'}>
     
-                    <Novelty novelty={props.catalog.novelty} catalog={props.catalog}/>
+                    <Novelty novelty={props.catalog.novelty} catalog={props.catalog} width={props.width}/>
     
                     <Search search={props.search} ChangeSearchValue={props.ChangeSearchValue} Changefiltre={props.Changefiltre}/>
     
