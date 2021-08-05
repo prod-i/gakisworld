@@ -1,3 +1,5 @@
+const DarkStyles = `
+    
 body {
     background-color: #111 !important;
 }
@@ -89,3 +91,8 @@ body {
 .tBl {
     color: rgb(100, 100, 255) !important;
 }
+
+
+`
+
+export default DarkStyles

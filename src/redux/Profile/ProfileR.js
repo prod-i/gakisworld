@@ -80,7 +80,7 @@ export const CONTROLProfileMenuVis  = (profileMenuVis)   => ({ type: CONTROL_PRO
 export const setFavorites           = (favoritesSerials) => ({ type: SET_FAVORITES, favoritesSerials });
 export const setTracked             = (trackedSerials)   => ({ type: SET_TRACKED, trackedSerials });
 export const removeFavorites        = (favoriteId)       => ({ type: REMOVE_FAVORITES, favoriteId });
-export const removeTracked          = (trackedId)        => ({ type: REMOVE_TRACKED, trackedId });
+export const removeTracked          = (trackedsId)        => ({ type: REMOVE_TRACKED, trackedsId });
 
 
 

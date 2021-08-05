@@ -8,12 +8,12 @@ class Footer extends React.Component {
     render() {
         const footerVis = this.props.footerVis;
         return (
-            <div className={footerVis ? "footer b" : "none"}>
+            <div className={footerVis ? "footer bD" : "none"}>
                 <div className="footer__top fCG">
 
                     <div className="footer__сolumn footer__сolumn-main ">
                         <div className="footer__title">Gaki`s World</div>
-                        <div className="footer__content tA">
+                        <div className="footer__content tG">
                             <span className="footer_item">Главная</span>
                             <span className="footer_item">Каталог</span>
                             <span className="footer_item">Вакансии</span>
@@ -25,7 +25,7 @@ class Footer extends React.Component {
 
                     <div className="footer__сolumn">
                         <div className="footer__title">Правовая информация</div>
-                        <div className="footer__content tA">
+                        <div className="footer__content tG">
                             <span className="footer_item">Политика конфиденциальности</span>
                             <span className="footer_item">Пользовательское соглашение</span>
                             <span className="footer_item">Правообладатели</span>
@@ -34,7 +34,7 @@ class Footer extends React.Component {
 
                     <div className="footer__сolumn">
                         <div className="footer__title">Полезная информация</div>
-                        <div className="footer__content tA">
+                        <div className="footer__content tG">
                             <span className="footer_item">Подписка</span>
                             <span className="footer_item">Использовать купон</span>
                             <span className="footer_item">Регистрация</span>
@@ -43,7 +43,7 @@ class Footer extends React.Component {
 
                     <div className="footer__сolumn">
                         <div className="footer__title">Поддержка</div>
-                        <div className="footer__content tA">
+                        <div className="footer__content tG">
                             <span className="footer_item">Часто задаваемые вопросы</span>
                             <span className="footer_item">Свяжитесь с нами</span>
                         </div>
@@ -51,7 +51,7 @@ class Footer extends React.Component {
 
                     <div className="footer__сolumn">
                         <div className="footer__title">Приложения</div>
-                        <div className="footer__content tA">
+                        <div className="footer__content tG">
                             <span className="footer_item">Android </span>
                             <span className="footer_item">Windows</span>
                             <span className="footer_item">IOS</span>
@@ -61,7 +61,7 @@ class Footer extends React.Component {
 
                     <div className="footer__сolumn">
                         <div className="footer__title">Мы в социальных сетях</div>
-                        <div className="footer__content tA">
+                        <div className="footer__content tG">
                             <span className="footer_item">Discord</span>
                             <span className="footer_item">Вконтакте </span>
                             <span className="footer_item">Facebook</span>
@@ -86,13 +86,13 @@ class Footer extends React.Component {
     }
 }
 
-let mapStateToProps = (state) => ({
-    footerVis: state.footer.footerVis
+let mapStGteToProps = (stGte) => ({
+    footerVis: stGte.footer.footerVis
 });
 
 export default compose
     (
-        connect(mapStateToProps, {
+        connect(mapStGteToProps, {
         }),
         withRouter,
     )(Footer);

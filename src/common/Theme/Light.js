@@ -1,3 +1,5 @@
+const LightStyles = `
+
 body{
     background-color: rgb(228, 228, 228) !important;
 }
@@ -64,3 +66,7 @@ body{
 .tW{
     color:#fff !important;
 }
+
+`;
+
+export default LightStyles

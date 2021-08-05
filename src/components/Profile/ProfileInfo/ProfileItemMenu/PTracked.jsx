@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 const PTracked = ({tracked}) => {
     return (
         <div>
-            <div className="profile_content_title">Отслеживаемые</div>
+            <div className="profile_content_title t">Отслеживаемые</div>
             <div className="profile_content_body">
                 {tracked.map((item) => {
                     return (
@@ -14,6 +14,12 @@ const PTracked = ({tracked}) => {
                         </NavLink>
                     )
                 })}
+                {tracked.length > 0 
+                ? <></>
+                : <div className="profile_no-content tG">
+                    Вы ничего не отслеживаете
+                  </div>
+                }
             </div>
         </div>
     )

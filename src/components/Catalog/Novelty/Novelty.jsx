@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'     ;
 import SwiperCore, { Scrollbar } from 'swiper/core'    ;
 import '../../../style/catalog/novelty.css'            ;
 import noveltiImg from '../../../assets/icon/novelty.png';
+import noveltiImgDark from '../../../assets/icon/noveltyD.png';
 SwiperCore.use([Scrollbar]);
 
 
@@ -61,19 +62,19 @@ const Novelty = (props) => {
 
                                                 {/* Фильтры */}
                                                 <div className="novelty_card_filtre">
-                                                    <div className="novelty_card_filtre_left tA">Год</div><div className="novelty_card_filtre_right">{card.years}</div>
+                                                    <div className="novelty_card_filtre_left tG">Год</div><div className="novelty_card_filtre_right">{card.years}</div>
                                                 </div>
                                                 <div className="novelty_card_filtre">
-                                                    <div className="novelty_card_filtre_left tA">Жанр</div><div className="novelty_card_filtre_right">{card.genre}</div>
+                                                    <div className="novelty_card_filtre_left tG">Жанр</div><div className="novelty_card_filtre_right">{card.genre}</div>
                                                 </div>
                                                 <div className="novelty_card_filtre">
-                                                    <div className="novelty_card_filtre_left tA">Режессер</div><div className="novelty_card_filtre_right">{card.director}</div>
+                                                    <div className="novelty_card_filtre_left tG">Режессер</div><div className="novelty_card_filtre_right">{card.director}</div>
                                                 </div>
                                                 <div className="novelty_card_filtre">
-                                                    <div className="novelty_card_filtre_left tA">Студия</div><div className="novelty_card_filtre_right">{card.studio}</div>
+                                                    <div className="novelty_card_filtre_left tG">Студия</div><div className="novelty_card_filtre_right">{card.studio}</div>
                                                 </div>
                                                 <div className="novelty_card_filtre">
-                                                    <div className="novelty_card_filtre_left tA">Тип</div><div className="novelty_card_filtre_right">{card.type}</div>
+                                                    <div className="novelty_card_filtre_left tG">Тип</div><div className="novelty_card_filtre_right">{card.type}</div>
                                                 </div>
                                             </div>
 
@@ -86,7 +87,10 @@ const Novelty = (props) => {
                     </Swiper>
 
                     <div className="best_title fCG">
-                        <img src={noveltiImg} alt="" className='best_title_img'/>
+                        {window.localStorage.getItem('theme') === 'light'
+                        ?<img src={noveltiImgDark} alt="" className='best_title_img'/>
+                        :<img src={noveltiImg} alt="" className='best_title_img'/>
+                        }
                     </div>
 
                 </div>

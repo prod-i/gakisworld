@@ -6,7 +6,7 @@ const PFavorites = ({ favorites }) => {
     console.log(favorites);
     return (
         <div>
-            <div className="profile_content_title">Избранные</div>
+            <div className="profile_content_title t">Избранные</div>
             <div className="profile_content_body">
                 {favorites.map((item) => {
                     return (
@@ -15,6 +15,12 @@ const PFavorites = ({ favorites }) => {
                         </NavLink>
                     )
                 })}
+                {favorites.length > 0 
+                ? <></>
+                : <div className="profile_no-content tG">
+                    Список пуст
+                  </div>
+                }
             </div>
         </div>
     )

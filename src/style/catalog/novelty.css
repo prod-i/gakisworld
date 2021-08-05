@@ -63,6 +63,7 @@
 .novelty_card_title{
     min-height: 20%;
     font-size: 21px;
+    word-break:normal;
 }
 .novelty_card_filtres{
     width: 100%;

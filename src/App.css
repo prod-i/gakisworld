@@ -46,9 +46,6 @@ h1{
   user-select: none;
   outline: 0;
   border:none;
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
   word-break: break-all;
 }
 a:hover{
@@ -139,3 +136,6 @@ body{
   ::-webkit-scrollbar{
   width: 4px;
   }
+
+
+  

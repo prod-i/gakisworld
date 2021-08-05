@@ -11,6 +11,23 @@ import { MenuOutlined } from '@ant-design/icons';
 
 
 const Header = (props) => {
+  const CheckTheme = () => {
+    if(window.localStorage.getItem('theme') === 'light'){
+      return true
+    } else {
+      return false
+    }
+  }
+  const ChangeTheme = () => {
+    if(window.localStorage.getItem('theme') === 'light'){
+      window.localStorage.setItem('theme', 'dark')
+      window.location.reload()
+    } else if (window.localStorage.getItem('theme') === 'dark'){
+      window.localStorage.setItem('theme', 'light')
+      window.location.reload()
+    }
+  }
+
   const profileId = props.profileId;
   const menu = (
     <Menu className='bTr'>
@@ -29,7 +46,7 @@ const Header = (props) => {
       <Menu.Item key={4}>
         {/* НАПИСАТЬ  НОРМАЛЬНЫЙ ЧЕКБОКС */}
         <div className="menu_item tW fCG theme__selector_checked">
-          <label className="theme_label_checked"><div className="theme_checked_text t">Тема</div><input className='t fCG' type="checkbox" onChange={(e) => console.log(e.target.checked)} onClick={(e) => console.log(e.target.checked)} /></label>
+          <label className="theme_label_checked"><div className="theme_checked_text t">Тема</div><input className='t fCG' checked={CheckTheme()} type="checkbox" onChange={ChangeTheme} /></label>
         </div>
         {/* НАПИСАТЬ  НОРМАЛЬНЫЙ ЧЕКБОКС */}
       </Menu.Item>

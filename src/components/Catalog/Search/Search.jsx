@@ -47,7 +47,7 @@ const Search = (props) => {
 
                     <div className="search__form">
                         <div className="search_form_input_wrap">
-                            <input className='fCG bD t' type="text" placeholder="Название" value={searchValue} onChange={searchValueChange}/>
+                            <input className='fCG bI t' type="text" placeholder="Название" value={searchValue} onChange={searchValueChange}/>
                         </div>
                     </div>
 
@@ -56,9 +56,9 @@ const Search = (props) => {
 
                             <div className="selector_options">
                                 {/* ФИЛЬТР: ТИП */}
-                                <Select placeholder='Тип' style={{ width: 120 }} size='large' bordered={false}  className={'select_elem'} allowClear onChange={(e)=>check('searchType', e)}>
+                                <Select placeholder='Тип' style={{ width: 120 }} size='large' bordered={false}  className={'select_elem bI t'} allowClear onChange={(e)=>check('searchType', e)}>
                                     {props.search.filters.type.map((value, key) => {
-                                        return <Option className={'select_elem_options fCG tW'} bordered={false} value={value} key={key}>{value}</Option>
+                                        return <Option className={'select_elem_options fCG bI t'} bordered={false} value={value} key={key}>{value}</Option>
                                     })}
                                 </Select>
                                 {/* ФИЛЬТР: ТИП */}
@@ -66,9 +66,9 @@ const Search = (props) => {
 
                             <div className="selector_options">
                                 {/* ФИЛЬТР: ЖАНР */}
-                                <Select placeholder='Жанр' style={{ width: 120 }} size='large' bordered={false} className={'select_elem'} allowClear onChange={(e)=>check('genre', e)}>
+                                <Select placeholder='Жанр' style={{ width: 120 }} size='large' bordered={false} className={'select_elem bI t'} allowClear onChange={(e)=>check('genre', e)}>
                                     {props.search.filters.genre.map((value, key) => {
-                                        return <Option className={'select_elem_options fCG tW'} bordered={false} value={value} key={key}>{value}</Option>
+                                        return <Option className={'select_elem_options fCG bI t'} bordered={false} value={value} key={key}>{value}</Option>
                                     })}
                                 </Select>
                                 {/* ФИЛЬТР: ЖАНР */}
@@ -108,9 +108,9 @@ const Search = (props) => {
                     
                     <div className="selector__options_advanced">
                     {/* ФИЛЬТР: АВТОР */}
-                        <Select placeholder='Автор' style={{ width: 120 }} size='large' bordered={false} className={'select_elem'} allowClear onChange={(e)=>check('author', e)}>
+                        <Select placeholder='Автор' style={{ width: 120 }} size='large' bordered={false} className={'select_elem bI t'} allowClear onChange={(e)=>check('author', e)}>
                             {props.search.filters.author.map((value, key) => {
-                                return <Option className={'select_elem_options fCG tW'} bordered={false} value={value} key={key}>{value}</Option>
+                                return <Option className={'select_elem_options fCG bI t'} bordered={false} value={value} key={key}>{value}</Option>
                             })}
                         </Select>
                     {/* ФИЛЬТР: АВТОР */}
@@ -118,9 +118,9 @@ const Search = (props) => {
 
                     <div className="selector__options_advanced">
                     {/* ФИЛЬТР: СТУДИЯ */}
-                        <Select placeholder='Студия' style={{ width: 120 }} size='large' bordered={false} className={'select_elem'} allowClear onChange={(e)=>check('studio', e)}>
+                        <Select placeholder='Студия' style={{ width: 120 }} size='large' bordered={false} className={'select_elem bI t'} allowClear onChange={(e)=>check('studio', e)}>
                             {props.search.filters.studio.map((value, key) => {
-                                return <Option className={'select_elem_options fCG tW'} bordered={false} value={value} key={key}>{value}</Option>
+                                return <Option className={'select_elem_options fCG bI t'} bordered={false} value={value} key={key}>{value}</Option>
                             })}
                         </Select>
                     {/* ФИЛЬТР: СТУДИЯ */}
@@ -128,9 +128,9 @@ const Search = (props) => {
 
                     <div className="selector__options_advanced">
                     {/* ФИЛЬТР: ВОЗРАСТНОЙ РЕЙТИНГ */}
-                        <Select placeholder='Возрастной рейтинг' style={{ width: 120 }} size='large' bordered={false} className={'select_elem'} allowClear onChange={(e)=>check('AgeRating', e)}>
+                        <Select placeholder='Возрастной рейтинг' style={{ width: 120 }} size='large' bordered={false} className={'select_elem bI t'} allowClear onChange={(e)=>check('AgeRating', e)}>
                             {props.search.filters.AgeRating.map((value, key) => {
-                                return <Option className={'select_elem_options fCG tW'} bordered={false} value={value} key={key}>{value}</Option>
+                                return <Option className={'select_elem_options fCG bI t'} bordered={false} value={value} key={key}>{value}</Option>
                             })}
                         </Select>
                     {/* ФИЛЬТР: ВОЗРАСТНОЙ РЕЙТИНГ */}
