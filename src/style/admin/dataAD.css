@@ -93,7 +93,7 @@
     background-color: rgb(26, 26, 26) !important;
 }
 .ant-drawer-body{
-    background-color: rgb(26, 26, 26) !important;
+    /* background-color: rgb(26, 26, 26, .2) !important; */
     padding: 0 !important;
     margin: 0 !important;
 }

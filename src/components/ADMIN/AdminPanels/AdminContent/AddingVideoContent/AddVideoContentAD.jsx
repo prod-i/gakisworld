@@ -7,8 +7,14 @@ import AvcPictureAD from './AvcPicture';
 import AvcItemDescrAD from './AvcItemDescr';
 import AvcAddVideoFileAD from './AvcAddVideoFileAD';
 import { setSerials } from '../../../../../redux/Catalog/catalogR';
+import { message, Button } from 'antd';
+
+const info = () => {
+    message.success('Новый видеоматериал загружен');
+  };
 
 class AddVideoContentAD extends React.Component {
+    
     constructor(props) {
         super(props);
         this.state = {
@@ -62,6 +68,7 @@ class AddVideoContentAD extends React.Component {
                     <div className="AVC_title tA">Добавить новый видеоматериал</div>
                     <div className="AVC_upload_content-button" onClick={()=>{
                         this.props.setSerials(this.state.newSerial)
+                        info()
                         // window.location.reload()
                         }}>Upload</div>
                 </div>

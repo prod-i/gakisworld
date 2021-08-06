@@ -7,6 +7,8 @@ import PTracked from './ProfileItemMenu/PTracked'
 import PSubscribeControl from './ProfileItemMenu/PSubscribeControl'
 import PSubscribeInfo  from './ProfileItemMenu/PSubscribeInfo'
 import PSubscribeUnplug from './ProfileItemMenu/PSubscribeUnplug'
+import PSecurity from './ProfileItemMenu/PSecurity'
+import PNotice from './ProfileItemMenu/PNotice'
 
 const ProfileContent = (props) => {
     return (
@@ -49,11 +51,11 @@ const ProfileContent = (props) => {
                             )
                         case 'notifications':
                             return (
-                                <>Управление уведомлениями</>
+                                <PNotice />
                             )
                         case 'security':
                             return (
-                                <>Безопасность</>
+                                <PSecurity />
                             )
                         default:
                             return (

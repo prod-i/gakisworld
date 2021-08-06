@@ -1,11 +1,21 @@
 import React from 'react'
 import './../../../../../style/admin/NewsItem.css';
 import { Checkbox } from 'antd';
+import { message } from 'antd';
+
+const info = () => {
+    message.success('Изменения сохранены');
+  };
 
 const NewsItemPanel = (props) => {
-    const [editMode, setEditMode] = React.useState(true);
+    const [editMode, setEditMode] = React.useState(false);
     const item = props.item;
     const date = new Date(item.date)
+
+    const newItem = {...item};
+    //Скопировать пост -> изменить скопированный пост -> заменить пост на изменённый
+
+    console.log(newItem);
 
     const changePost = (id, item, value) => {
         props.changePost(id, item, value)
@@ -15,8 +25,13 @@ const NewsItemPanel = (props) => {
         <div className='news_item bB t'>
             <div className="news_item_title bE">
                 {item.title}
-                <p className='news_id tG'>#{item.id}</p>
-                <div className="editMode bR" onClick={()=>setEditMode(!editMode)}>edit</div>
+                <div className="news_item_options">
+                    <p className='news_id tG'>#{item.id}</p>
+                    {!editMode 
+                        ? <div className="editMode bR" onClick={()=>setEditMode(true)}>edit</div>
+                        : <div className="editMode bR" onClick={()=>setEditMode(false) + info()}>save</div>
+                    } 
+                </div>
             </div>
             <div className="news_item_body">
                 <div className="news_item_picture">
@@ -24,7 +39,7 @@ const NewsItemPanel = (props) => {
                         <img src={item.imgM} alt="" className='news_item_picture-img' />
                     </div>
                 </div>
-                {editMode
+                {!editMode
 
                     ? <div className="news_item_descr">
                         <div className="news_item_descr_item">

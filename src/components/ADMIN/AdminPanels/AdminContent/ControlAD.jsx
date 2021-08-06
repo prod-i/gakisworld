@@ -31,6 +31,11 @@ import { CONTROLSubFormVis } from '../../../../redux/Subscribe/subscribeR.js'
 import { CONTROLProfileVis } from '../../../../redux/Profile/ProfileR.js'
 import { CONTROLProfileMenuVis } from '../../../../redux/Profile/ProfileR.js'
 import { CONTROLLoginVis } from '../../../../redux/Login/loginR.js'
+import { message } from 'antd';
+
+const info = (item, value) => {
+    message.warning(item + ' был изменён на ' + value);
+  };
 
 
 class ControlAD extends React.Component {
@@ -68,8 +73,7 @@ class ControlAD extends React.Component {
         const controlVis = this.props.controlAD.controlVis;
         const filtre = this.props.filtre;
         // const this.props = props.this.props;
-        console.log(filtre.genre);
-
+        console.log(controlVis);
         return (
             <div className='controlAD'>
                 <div className="controlAD_wrap t">
@@ -79,13 +83,13 @@ class ControlAD extends React.Component {
                             <div className="controlAD_item_title">Header
                             </div>
                             <div className="controlAD_item_vis">Visible:
-                                <span className={controlVis.headerVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { this.props.CONTROLHeaderVis(!controlVis.headerVis) }}>{controlVis.headerVis.toString()}</span>
+                                <span className={controlVis.headerVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { return this.props.CONTROLHeaderVis(!controlVis.headerVis) +  info('Header', !controlVis.headerVis) }}>{controlVis.headerVis.toString()}</span>
                             </div>
                         </div>
                         <div className="controlAD_item bE">
                             <div className="controlAD_item_title">Footer</div>
                             <div className="controlAD_item_vis">Visible:
-                                <span className={controlVis.footerVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { this.props.CONTROLFooterVis(!controlVis.footerVis) }}>{controlVis.footerVis.toString()}</span>
+                                <span className={controlVis.footerVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { return this.props.CONTROLFooterVis(!controlVis.footerVis) +  info('Footer', !controlVis.footerVis) }}>{controlVis.footerVis.toString()}</span>
                             </div>
                         </div>
 
@@ -94,37 +98,37 @@ class ControlAD extends React.Component {
                         <div className="controlAD_item bE">
                             <div className="controlAD_item_title">Main</div>
                             <div className="controlAD_item_vis">Visible:
-                                <span className={controlVis.mainVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { this.props.CONTROLMainVis(!controlVis.mainVis) }}>{controlVis.mainVis.toString()}</span>
+                                <span className={controlVis.mainVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { return this.props.CONTROLMainVis(!controlVis.mainVis) +  info('Main', !controlVis.mainVis) }}>{controlVis.mainVis.toString()}</span>
                             </div>
                         </div>
                         <div className="controlAD_item bE">
                             <div className="controlAD_item_title">Slider</div>
                             <div className="controlAD_item_vis">Visible:
-                                <span className={controlVis.sliderVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { this.props.CONTROLSliderVis(!controlVis.sliderVis) }}>{controlVis.sliderVis.toString()}</span>
+                                <span className={controlVis.sliderVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { return this.props.CONTROLSliderVis(!controlVis.sliderVis) +  info('Slider', !controlVis.sliderVis) }}>{controlVis.sliderVis.toString()}</span>
                             </div>
                         </div>
                         <div className="controlAD_item bE">
                             <div className="controlAD_item_title">Banner</div>
                             <div className="controlAD_item_vis">Visible:
-                                <span className={controlVis.bannerVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { this.props.CONTROLBannerVis(!controlVis.bannerVis) }}>{controlVis.bannerVis.toString()}</span>
+                                <span className={controlVis.bannerVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { return this.props.CONTROLBannerVis(!controlVis.bannerVis) +  info('Banner', !controlVis.bannerVis) }}>{controlVis.bannerVis.toString()}</span>
                             </div>
                         </div>
                         <div className="controlAD_item bE">
                             <div className="controlAD_item_title">Continue view</div>
                             <div className="controlAD_item_vis">Visible:
-                                <span className={controlVis.continueVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { this.props.CONTROLContinueVis(!controlVis.continueVis) }}>{controlVis.continueVis.toString()}</span>
+                                <span className={controlVis.continueVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { return this.props.CONTROLContinueVis(!controlVis.continueVis) +  info('Continue view', !controlVis.continueVis) }}>{controlVis.continueVis.toString()}</span>
                             </div>
                         </div>
                         <div className="controlAD_item bE">
                             <div className="controlAD_item_title">Preview news</div>
                             <div className="controlAD_item_vis">Visible:
-                                <span className={controlVis.prevNewsVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { this.props.CONTROLPrevNewsVis(!controlVis.prevNewsVis) }}>{controlVis.prevNewsVis.toString()}</span>
+                                <span className={controlVis.prevNewsVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { return this.props.CONTROLPrevNewsVis(!controlVis.prevNewsVis) +  info('Preview news', !controlVis.prevNewsVis) }}>{controlVis.prevNewsVis.toString()}</span>
                             </div>
                         </div>
                         <div className="controlAD_item bE">
                             <div className="controlAD_item_title">Popular</div>
                             <div className="controlAD_item_vis">Visible:
-                                <span className={controlVis.popularVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { this.props.CONTROLPopularVis(!controlVis.popularVis) }}>{controlVis.popularVis.toString()}</span>
+                                <span className={controlVis.popularVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { return this.props.CONTROLPopularVis(!controlVis.popularVis) +  info('Popular', !controlVis.popularVis) }}>{controlVis.popularVis.toString()}</span>
                             </div>
                         </div>
 
@@ -133,25 +137,25 @@ class ControlAD extends React.Component {
                         <div className="controlAD_item bE">
                             <div className="controlAD_item_title">Catalog</div>
                             <div className="controlAD_item_vis">Visible:
-                                <span className={controlVis.catalogVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { this.props.CONTROLCatalogVis(!controlVis.catalogVis) }}>{controlVis.catalogVis.toString()}</span>
+                                <span className={controlVis.catalogVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { return this.props.CONTROLCatalogVis(!controlVis.catalogVis) +  info('Catalog', !controlVis.catalogVis) }}>{controlVis.catalogVis.toString()}</span>
                             </div>
                         </div>
                         <div className="controlAD_item bE">
                             <div className="controlAD_item_title">Novelty</div>
                             <div className="controlAD_item_vis">Visible:
-                                <span className={controlVis.noveltyVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { this.props.CONTROLNoveltyVis(!controlVis.noveltyVis) }}>{controlVis.noveltyVis.toString()}</span>
+                                <span className={controlVis.noveltyVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { return this.props.CONTROLNoveltyVis(!controlVis.noveltyVis) +  info('Novelty', !controlVis.noveltyVis) }}>{controlVis.noveltyVis.toString()}</span>
                             </div>
                         </div>
                         <div className="controlAD_item bE">
                             <div className="controlAD_item_title">Search</div>
                             <div className="controlAD_item_vis">Visible:
-                                <span className={controlVis.searchVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { this.props.CONTROLSearchVis(!controlVis.searchVis) }}>{controlVis.searchVis.toString()}</span>
+                                <span className={controlVis.searchVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { return this.props.CONTROLSearchVis(!controlVis.searchVis) +  info('Search', !controlVis.searchVis) }}>{controlVis.searchVis.toString()}</span>
                             </div>
                         </div>
                         <div className="controlAD_item bE">
                             <div className="controlAD_item_title">Catalog List</div>
                             <div className="controlAD_item_vis">Visible:
-                                <span className={controlVis.catalogListVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { this.props.CONTROLCatalogListVis(!controlVis.catalogListVis) }}>{controlVis.catalogListVis.toString()}</span>
+                                <span className={controlVis.catalogListVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { return this.props.CONTROLCatalogListVis(!controlVis.catalogListVis) +  info('Catalog List', !controlVis.catalogListVis) }}>{controlVis.catalogListVis.toString()}</span>
                             </div>
                         </div>
 
@@ -160,73 +164,73 @@ class ControlAD extends React.Component {
                         <div className="controlAD_item bE">
                             <div className="controlAD_item_title">News</div>
                             <div className="controlAD_item_vis">Visible:
-                                <span className={controlVis.newsVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { this.props.CONTROLNewsVis(!controlVis.newsVis) }}>{controlVis.newsVis.toString()}</span>
+                                <span className={controlVis.newsVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { return this.props.CONTROLNewsVis(!controlVis.newsVis) +  info('News', !controlVis.newsVis) }}>{controlVis.newsVis.toString()}</span>
                             </div>
                         </div>
                         <div className="controlAD_item bE">
                             <div className="controlAD_item_title">News Slider</div>
                             <div className="controlAD_item_vis">Visible:
-                                <span className={controlVis.newsSliderVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { this.props.CONTROLNewsSliderVis(!controlVis.newsSliderVis) }}>{controlVis.newsSliderVis.toString()}</span>
+                                <span className={controlVis.newsSliderVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { return this.props.CONTROLNewsSliderVis(!controlVis.newsSliderVis) +  info('News Slider', !controlVis.newsSliderVis) }}>{controlVis.newsSliderVis.toString()}</span>
                             </div>
                         </div>
                         <div className="controlAD_item bE">
                             <div className="controlAD_item_title">News List</div>
                             <div className="controlAD_item_vis">Visible:
-                                <span className={controlVis.newsListVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { this.props.CONTROLNewsListVis(!controlVis.newsListVis) }}>{controlVis.newsListVis.toString()}</span>
+                                <span className={controlVis.newsListVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { return this.props.CONTROLNewsListVis(!controlVis.newsListVis) +  info('News List', !controlVis.newsListVis) }}>{controlVis.newsListVis.toString()}</span>
                             </div>
                         </div>
                         <div className="controlAD_item bE">
                             <div className="controlAD_item_title">News Sidebar</div>
                             <div className="controlAD_item_vis">Visible:
-                                <span className={controlVis.newsSidebarVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { this.props.CONTROLNewsSidebarVis(!controlVis.newsSidebarVis) }}>{controlVis.newsSidebarVis.toString()}</span>
+                                <span className={controlVis.newsSidebarVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { return this.props.CONTROLNewsSidebarVis(!controlVis.newsSidebarVis) +  info('News Sidebar', !controlVis.newsSidebarVis) }}>{controlVis.newsSidebarVis.toString()}</span>
                             </div>
                         </div>
                         <div className="controlAD_item bE">
                             <div className="controlAD_item_title">Calendar</div>
                             <div className="controlAD_item_vis">Visible:
-                                <span className={controlVis.calendarVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { this.props.CONTROLCalendarVis(!controlVis.calendarVis) }}>{controlVis.calendarVis.toString()}</span>
+                                <span className={controlVis.calendarVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { return this.props.CONTROLCalendarVis(!controlVis.calendarVis) +  info('Calendar', !controlVis.calendarVis) }}>{controlVis.calendarVis.toString()}</span>
                             </div>
                         </div>
                         <div className="controlAD_item bE">
                             <div className="controlAD_item_title">Subscribe</div>
                             <div className="controlAD_item_vis">Visible:
-                                <span className={controlVis.subVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { this.props.CONTROLSubVis(!controlVis.subVis) }}>{controlVis.subVis.toString()}</span>
+                                <span className={controlVis.subVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { return this.props.CONTROLSubVis(!controlVis.subVis) +  info('Subscribe', !controlVis.subVis) }}>{controlVis.subVis.toString()}</span>
                             </div>
                         </div>
                         <div className="controlAD_item bE">
                             <div className="controlAD_item_title">Subscribe cards</div>
                             <div className="controlAD_item_vis">Visible:
-                                <span className={controlVis.subCardsVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { this.props.CONTROLSubCardsVis(!controlVis.subCardsVis) }}>{controlVis.subCardsVis.toString()}</span>
+                                <span className={controlVis.subCardsVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { return this.props.CONTROLSubCardsVis(!controlVis.subCardsVis) +  info('Subscribe cards', !controlVis.subCardsVis) }}>{controlVis.subCardsVis.toString()}</span>
                             </div>
                         </div>
                         <div className="controlAD_item bE">
                             <div className="controlAD_item_title">Subscribe banner</div>
                             <div className="controlAD_item_vis">Visible:
-                                <span className={controlVis.subBannerVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { this.props.CONTROLSubBannerVis(!controlVis.subBannerVis) }}>{controlVis.subBannerVis.toString()}</span>
+                                <span className={controlVis.subBannerVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { return this.props.CONTROLSubBannerVis(!controlVis.subBannerVis) +  info('Subscribe banner', !controlVis.subBannerVis) }}>{controlVis.subBannerVis.toString()}</span>
                             </div>
                         </div>
                         <div className="controlAD_item bE">
                             <div className="controlAD_item_title">Subscribe form</div>
                             <div className="controlAD_item_vis">Visible:
-                                <span className={controlVis.subFormVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { this.props.CONTROLSubFormVis(!controlVis.subFormVis) }}>{controlVis.subFormVis.toString()}</span>
+                                <span className={controlVis.subFormVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { return this.props.CONTROLSubFormVis(!controlVis.subFormVis) +  info('Subscribe form', !controlVis.subFormVis) }}>{controlVis.subFormVis.toString()}</span>
                             </div>
                         </div>
                         <div className="controlAD_item bE">
                             <div className="controlAD_item_title">Profile</div>
                             <div className="controlAD_item_vis">Visible:
-                                <span className={controlVis.profileVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { this.props.CONTROLProfileVis(!controlVis.profileVis) }}>{controlVis.profileVis.toString()}</span>
+                                <span className={controlVis.profileVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { return this.props.CONTROLProfileVis(!controlVis.profileVis) +  info('Profile', !controlVis.profileVis) }}>{controlVis.profileVis.toString()}</span>
                             </div>
                         </div>
                         <div className="controlAD_item bE">
                             <div className="controlAD_item_title">Profile menu</div>
                             <div className="controlAD_item_vis">Visible:
-                                <span className={controlVis.profileMenuVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { this.props.CONTROLProfileMenuVis(!controlVis.profileMenuVis) }}>{controlVis.profileMenuVis.toString()}</span>
+                                <span className={controlVis.profileMenuVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { return this.props.CONTROLProfileMenuVis(!controlVis.profileMenuVis) +  info('Profile menu', !controlVis.profileMenuVis) }}>{controlVis.profileMenuVis.toString()}</span>
                             </div>
                         </div>
                         <div className="controlAD_item bE">
                             <div className="controlAD_item_title">Login</div>
                             <div className="controlAD_item_vis">Visible:
-                                <span className={controlVis.loginVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { this.props.CONTROLLoginVis(!controlVis.loginVis) }}>{controlVis.loginVis.toString()}</span>
+                                <span className={controlVis.loginVis ? "controlAD_check tBl" : "controlAD_check tRP"} onClick={() => { return this.props.CONTROLLoginVis(!controlVis.loginVis) +  info('Login', !controlVis.loginVis) }}>{controlVis.loginVis.toString()}</span>
                             </div>
                         </div>
                     </div>

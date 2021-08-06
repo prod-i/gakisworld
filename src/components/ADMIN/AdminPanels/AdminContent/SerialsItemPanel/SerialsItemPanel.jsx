@@ -1,6 +1,11 @@
 import React from 'react'
 import './../../../../../style/admin/SerialsItem.css';
 import { Checkbox } from 'antd';
+import { message } from 'antd';
+
+const info = () => {
+    message.success('Изменения сохранены');
+};
 
 const SerialsItemPanel = (props) => {
     const [editMode, setEditMode] = React.useState(false);
@@ -14,8 +19,13 @@ const SerialsItemPanel = (props) => {
         <div className='serials_item bB t'>
             <div className="serials_item_title tR bE fCG">
                 {item.title}
-                <div className='tG id'>#{item.id}</div>
-                <div className="serialsEditMode bR tW" onClick={()=>setEditMode(!editMode)}>edit</div>
+                <div className="serials_item_options">
+                    <p className='serials_id tG'>#{item.id}</p>
+                    {!editMode 
+                        ? <div className="editMode bR tW" onClick={()=>setEditMode(true)}>edit</div>
+                        : <div className="editMode bR tW" onClick={()=>setEditMode(false) + info()}>save</div>
+                    } 
+                </div>
             </div>
 
             {editMode

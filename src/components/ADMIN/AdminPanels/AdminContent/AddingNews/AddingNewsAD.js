@@ -8,6 +8,12 @@ import AddHeaderNews from './AddHeaderNews';
 import TextEditor from './TextEditor';
 import { setPost } from '../../../../../redux/News/newsR';
 
+import { message, Button } from 'antd';
+
+const info = () => {
+    message.success('Новый пост загружен');
+  };
+
 
 class AddingNewsAD extends React.Component {
     constructor(props) {
@@ -43,6 +49,7 @@ class AddingNewsAD extends React.Component {
                     <div className='AddingNews_upload-button t' onClick={()=>{
                         this.props.setPost(this.state.newPost)
                         // window.location.reload()
+                        info()
                         }}>Upload</div>
                 </div>
 
