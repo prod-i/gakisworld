@@ -26,6 +26,7 @@ const CONTROL_NEWS_VIS         = 'news/CONTROL_NEWS_VIS';
 const CONTROL_NEWS_LIST_VIS    = 'news/CONTROL_NEWS_LIST_VIS';
 const CONTROL_NEWS_SLIDER_VIS  = 'news/CONTROL_NEWS_SLIDER_VIS';
 const CONTROL_NEWS_SIDEBAR_VIS = 'news/CONTROL_NEWS_SIDEBAR_VIS';
+const CHANGE_SEARCH_VALUE      = 'news/CHANGE_SEARCH_VALUE';
 
 let initialState = {
     newsList: {
@@ -422,7 +423,18 @@ let initialState = {
             },
 
         ],
+        search: '',
         newsListVis: true,
+    },
+    filters: {
+        sorting: [
+            'Сначала новые',
+            'Новости сервиса',
+            'тег',
+            'тег',
+            'тег',
+            'тег',
+        ],
     },
     newsSlider: {
         newsSliderVis: true,
@@ -439,6 +451,11 @@ const newsListR = (state = initialState, action) => {
         return {
                 ...state,
                 newsList: { ...state.newsList, list: [...state.newsList.list, action.newPost] },
+            }
+        case CHANGE_SEARCH_VALUE:
+            return {
+                ...state,
+                newsList: {...state.newsList, search: action.searchValue},
             }
         case CHANGE_POST:
             return {
@@ -472,6 +489,7 @@ const newsListR = (state = initialState, action) => {
 
 
 export const setPost               = (newPost)                      => ({type: SET_POST, newPost});
+export const ChangeSearchValue     = (searchValue)                  => ({type: CHANGE_SEARCH_VALUE, searchValue });
 export const changePost            = (postId, postItem, postValue)  => ({type: CHANGE_POST, postId, postItem, postValue});
 export const CONTROLNewsVis        = (newsVis)                      => ({type: CONTROL_NEWS_VIS, newsVis});
 export const CONTROLNewsListVis    = (newsListVis)                  => ({type: CONTROL_NEWS_LIST_VIS, newsListVis});

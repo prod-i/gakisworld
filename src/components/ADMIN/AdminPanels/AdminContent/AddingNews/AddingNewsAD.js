@@ -38,10 +38,11 @@ class AddingNewsAD extends React.Component {
     render() {
         return (
             <div className='AddingNews'>
-                <div className='AddingNews_header'>
+                <div className='AddingNews_header t'>
                     <div className='AddingNews_title t'>Добавление новой статьи</div>
                     <div className='AddingNews_upload-button t' onClick={()=>{
                         this.props.setPost(this.state.newPost)
+                        // window.location.reload()
                         }}>Upload</div>
                 </div>
 

@@ -66,6 +66,9 @@ body{
 .tW{
     color:#fff !important;
 }
+.tBl {
+    color: rgb(100, 100, 255) !important;
+}
 
 `;
 

@@ -17,7 +17,7 @@ const Popular = (props) => {
 
 
                 <div className="block_title fCG">
-                    <div className="title_name t">Популярное Аниме</div>
+                    <NavLink exact to={'/catalog'} className='title_name t'>Популярное Аниме</NavLink>
                     <NavLink exact to={'/catalog'} className='title_more tRP fCG'>Перейти к каталогу</NavLink>
                 </div>
 

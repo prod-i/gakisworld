@@ -37,7 +37,7 @@ const ProfileContent = (props) => {
                             )
                         case 'subscribe-info':
                             return (
-                                <PSubscribeInfo />
+                                <PSubscribeInfo type={props.profile.profile.type}/>
                             )
                         case 'subscribe-unplug':
                             return (

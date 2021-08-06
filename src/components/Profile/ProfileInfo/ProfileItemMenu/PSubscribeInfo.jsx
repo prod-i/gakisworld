@@ -2,14 +2,14 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 
 const PSubscribeInfo = (props) => {
-    const typeAccount = 'Премиум';
+    const typeAccount = props.type;
     return (
         <div>
-            <div className="profile_content_title">Информация о подписке</div>
+            <div className="profile_content_title t">Информация о подписке</div>
             <div className="profile_content_body">
                 <div className="profile_subscribe_info_item_wrap fCG">
                     <div className="profile_subscribe_info_item">
-                        <div className="profile_item-left">Тип аккаунта:</div>
+                        <div className="profile_item-left t">Тип аккаунта:</div>
                         <div className="profile_item-right tR">{typeAccount}</div>
                     </div>
                     {(() => {

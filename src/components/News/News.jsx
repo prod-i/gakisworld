@@ -15,7 +15,7 @@ const News = (props) => {
 
             <div className="news_content">
 
-                <NewsList    news={props.news} />
+                <NewsList    news={props.news} ChangeSearchValue={props.ChangeSearchValue}/>
 
                 <NewsSidebar news={props.news} />
 

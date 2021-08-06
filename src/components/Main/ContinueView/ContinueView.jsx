@@ -20,7 +20,7 @@ const ContinueView = (props) => {
         <div className={props.continueViewVis ? "continue__view" : "continue__view vis"}>
 
             <div className="block_title">
-                <NavLink exact to={'/profile/1'} className='title_name fCG tA'>Продолжить просмотр</NavLink>
+                <NavLink exact to={'/profile/1'} className='title_name fCG t'>Продолжить просмотр</NavLink>
                 <NavLink exact to={'/profile/1'} className='title_more fCG tRP'>Посмотреть список полностью</NavLink>
             </div>
 

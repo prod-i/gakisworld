@@ -13,7 +13,7 @@ const Profile = (props) => {
 
             <div className="profile_body">
 
-                <ProfileInfo />
+                <ProfileInfo profile={props.profile}/>
 
                 <ProfileContent options={props.options} profile={props.profile}/>
 

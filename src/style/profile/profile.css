@@ -56,6 +56,7 @@
 .profile_name{
     font-size: 24px;
     font-weight: 900;
+    margin-bottom: 10px;
 }
 .profile_info_item{
     width: 100%;

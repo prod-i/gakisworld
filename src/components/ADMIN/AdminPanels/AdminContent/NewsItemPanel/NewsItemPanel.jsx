@@ -12,7 +12,7 @@ const NewsItemPanel = (props) => {
     }
 
     return (
-        <div className='news_item'>
+        <div className='news_item bB t'>
             <div className="news_item_title bE">
                 {item.title}
                 <p className='news_id tG'>#{item.id}</p>

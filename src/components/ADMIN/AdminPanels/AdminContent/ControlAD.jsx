@@ -64,7 +64,7 @@ class ControlAD extends React.Component {
     }
 
     render() {
-
+        console.log(this.props.slider);
         const controlVis = this.props.controlAD.controlVis;
         const filtre = this.props.filtre;
         // const this.props = props.this.props;
@@ -72,8 +72,8 @@ class ControlAD extends React.Component {
 
         return (
             <div className='controlAD'>
-                <div className="controlAD_wrap">
-                    <div className="controlAD_title">Управление сегментами</div>
+                <div className="controlAD_wrap t">
+                    <div className="controlAD_title t">Управление сегментами</div>
                     <div className="controlAD_segments fCG">
                         <div className="controlAD_item bE">
                             <div className="controlAD_item_title">Header
@@ -231,8 +231,8 @@ class ControlAD extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="controlAD_title">Управление фильтрами</div>
-                <div className="controlAD_filtresAll">
+                <div className="controlAD_title t">Управление фильтрами</div>
+                <div className="controlAD_filtresAll t">
                     <div className="controlAD_filtresAll_block bE">
                         <div className="controlAD_filtresAll_title fCG">Catalog - тип
                             <div className="controlAD_filtresAll_addIcon" onClick={() => this.handleState(true, 'type')}>
@@ -357,6 +357,7 @@ let mapStateToProps = (state) => ({
     filtre: state.search.filters,
     newsList: state.news.newsList.list,
     controlAD: AdminControl(state),
+    slider: state.main.slider,
 });
 
 export default compose

@@ -3,6 +3,7 @@ import   News         from './News';
 import { compose    } from 'redux';
 import { connect    } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import { ChangeSearchValue } from '../../redux/News/newsR';
 
 class NewsC extends React.Component {
     componentDidMount(){
@@ -10,7 +11,7 @@ class NewsC extends React.Component {
         window.scrollTo(0, 0);
     }
     render() {
-        return <News {...this.props} postId={this.props.match.params.postId} />
+        return <News news={this.props.news} postId={this.props.match.params.postId} ChangeSearchValue={this.props.ChangeSearchValue}/>
     }
 };
 
@@ -20,6 +21,6 @@ let mapStateToProps = (state) => ({
 
 export default compose
     (
-        connect(mapStateToProps, {}),
+        connect(mapStateToProps, {ChangeSearchValue}),
         withRouter,
     )(NewsC);

@@ -11,7 +11,7 @@ const SerialsItemPanel = (props) => {
     }
 
     return (
-        <div className='serials_item'>
+        <div className='serials_item bB t'>
             <div className="serials_item_title tR bE fCG">
                 {item.title}
                 <div className='tG id'>#{item.id}</div>

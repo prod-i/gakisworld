@@ -13,21 +13,16 @@ let initialState = {
         profileId: 1,
         fullName: "Анна Когай",
         nickName: 'Kaneki Ken',
-        type: 'standart',
+        type: 'Премиум',
+        RegData: '09.07.2021',
         photos: {
             "avatar": null,
             "bacg": null,
         },
-        continueView: [
-            { serialsId: 1, seriesId: 1, nameSerials: "Клинок рассекающий демонов", imgM: img, progress: '50%', },
-            { serialsId: 2, seriesId: 1, nameSerials: "Атака титанов", imgM: img, progress: '50%' },
-        ],
+        continueView: [],
         favorites: [],
         tracked: [],
-        archive: [
-            { serialsId: 1, nameSerials: "Клинок рассекающий демонов", imgM: img },
-            { serialsId: 2, nameSerials: "Атака титанов", imgM: img },
-        ],
+        archive: [],
     },
     profileMenu: {
         profileMenuVis: true,

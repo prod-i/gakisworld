@@ -19,7 +19,7 @@ class AddVideoContentAD extends React.Component {
                 imageLarge: null,
                 imageMin: null,
                 videoBcg: null,
-                rating: 0,
+                rating: 1,
                 years: '1970',
                 genre: '',
                 director: '',
@@ -57,12 +57,12 @@ class AddVideoContentAD extends React.Component {
 
     render() {
         return (
-            <div className='addVideoContent'>
+            <div className='addVideoContent t'>
                 <div className="AVC_header">
                     <div className="AVC_title tA">Добавить новый видеоматериал</div>
                     <div className="AVC_upload_content-button" onClick={()=>{
                         this.props.setSerials(this.state.newSerial)
-                        console.log(this.state.newSerial);
+                        // window.location.reload()
                         }}>Upload</div>
                 </div>
                 <div className="AVC_wrap">
