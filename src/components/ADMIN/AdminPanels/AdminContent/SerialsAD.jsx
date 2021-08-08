@@ -1,13 +1,24 @@
 import React from 'react'
 import './../../../../style/admin/dataAD.css';
-import { ExclamationCircleFilled } from '@ant-design/icons';
+import { ExclamationCircleFilled, DeleteOutlined, EyeInvisibleOutlined   } from '@ant-design/icons';
 import { Drawer } from 'antd';
 import avatar1 from './../../../../assets/img/serials/1l.jpg';
 import SerialsItemPanel from './SerialsItemPanel/SerialsItemPanel';
+import { Popover, Button } from 'antd';
+
+const content = (
+    <div className='bB'>
+        <div className="dataAD_options_modal bB">
+            <div className="dataAD_options_modal_item tG"><EyeInvisibleOutlined /> Скрыть</div>
+            <div className="dataAD_options_modal_item tR"><DeleteOutlined /> Удалить</div>
+        </div>
+    </div>
+);
 
 const SerialsAD = (props) => {
     const [visible, setVisible] = React.useState(false);
     const [serialId, setSerialData] = React.useState('');
+    const [vis, setVis] = React.useState("opa");
 
     const showDrawer = (Data) => {
         setVisible(true);
@@ -35,14 +46,16 @@ const SerialsAD = (props) => {
                 return (
                     <div className="dataAD_item bE" key={item.id}>
                         <div className="dataAD_avatar_wrapper">
-                            <img src={item.imageMin} alt="" className="dataAD_avarat" onClick={()=>showDrawer(item.id)} />
+                            <img src={item.imageMin} alt="" className="dataAD_avarat" onClick={() => showDrawer(item.id)} />
                         </div>
                         <div className="dataAD_descr fCG">
-                            <div className="dataAD_nick" onClick={()=>showDrawer(item.id)}>{item.title}</div>
+                            <div className="dataAD_nick" onClick={() => showDrawer(item.id)}>{item.title}</div>
                             <div className="dataAD_name tG">Редактор: {item.director}</div>
                         </div>
                         <div className="dataAD_options tR">
-                            < ExclamationCircleFilled />
+                            <Popover placement="leftTop" title={false} content={content} trigger="click">
+                                < ExclamationCircleFilled />
+                            </Popover>
                         </div>
                     </div>
                 )
@@ -56,7 +69,7 @@ const SerialsAD = (props) => {
                 visible={visible}
                 className='fCG'
             >
-                <SerialsItemPanel item={props.catalogList[serialId-1]} changeSerial={props.changeSerial}/>
+                <SerialsItemPanel item={props.catalogList[serialId - 1]} changeSerial={props.changeSerial} />
             </Drawer>
 
         </div>

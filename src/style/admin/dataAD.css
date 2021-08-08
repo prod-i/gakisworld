@@ -84,9 +84,30 @@
     font-size: 12px;
 }
 .dataAD_options{
+    position: relative;
     width: 30px;
     padding-top: 5px;
 }
+.dataAD_options_modal{
+    position: absolute;
+    right: 10px;
+    top: 0;
+    width: 150px;
+    padding: 5px 0;
+    transition: .2s;
+}
+.dataAD_options_modal_item{
+    width: 100%;
+    font-size: 15px;
+    padding-left: 10px;
+    margin-bottom: 5px;
+}
+.dataAD_options_modal_item:hover{
+    filter: brightness(130%);
+}
+
+
+
 
 .ant-drawer-content-wrapper{
     width: 40% !important;
@@ -96,4 +117,8 @@
     /* background-color: rgb(26, 26, 26, .2) !important; */
     padding: 0 !important;
     margin: 0 !important;
+}
+.ant-popover-arrow{
+    background-color: transparent !important;
+    border: 0 !important;
 }

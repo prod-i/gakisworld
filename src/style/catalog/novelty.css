@@ -179,8 +179,8 @@
         width: 100%;
     }
     .novelty{
-        min-height: 240px;
-        max-height: 240px;
+        min-height: 300px;
+        max-height: 300px;
     }
     .novelty_card_title{
         min-height: 15%;
@@ -213,8 +213,8 @@
         width: 100%;
     }
     .novelty{
-        min-height: 250px;
-        max-height: 250px;
+        min-height: 300px;
+        max-height: 300px;
     }
     .novelty_card_title{
         min-height: 15%;
@@ -278,8 +278,8 @@
         width: 70%;
     }
     .novelty{
-        min-height: 320px;
-        max-height: 320px;
+        min-height: 370px;
+        max-height: 370px;
     }
     .novelty_card_title{
         min-height: 15%;
