@@ -8,12 +8,35 @@ import StImg from '../../../assets/icon/StImg.jpg'
 
 const NewsSlider = (props) => {
     const newsList = props.news.newsList;
+    console.log(props.width);
+    const size = () => {
+        if(props.width <= 480) {
+            return 1.2
+        } else if(props.width <= 600) {
+            return 1.3
+        } else if(props.width <= 768) {
+            return 1.5
+        } else if(props.width <= 1280) {
+            return 2.15
+        } else if(props.width <= 1280) {
+            return 2.5
+        } else {
+            return 3.5
+        }
+    }
+    const space = () => {
+        if(props.width <= 480) {
+            return 10
+        } else {
+            return 30
+        }
+    }
     return (
         <div className={props.news.newsSlider.newsSliderVis ? "news_slider" : "news_slider vis"}>
             <div className="news_slider_cards_wraper">
                 <Swiper
-                    spaceBetween={30}
-                    slidesPerView={3.5}
+                    spaceBetween={space()}
+                    slidesPerView={size()}
                     onSwiper={(swiper) => console.log(swiper)}
                 // onSlideChange={() => console.log('slide change')}
                 >

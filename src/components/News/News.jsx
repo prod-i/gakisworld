@@ -11,7 +11,7 @@ const News = (props) => {
     return (
         <div className={props.news.newsVis ? "news" : 'none'}>
 
-            <NewsSlider  news={props.news} postId={props.postId} />
+            <NewsSlider  news={props.news} postId={props.postId} width={props.width}/>
 
             <div className="news_content">
 

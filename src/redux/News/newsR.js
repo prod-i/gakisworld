@@ -411,7 +411,7 @@ let initialState = {
                 author: 'prodi',
                 pictures: {},
                 date: '01.01.2020',
-                important: false,
+                important: true,
                 popular: false,
                 about: false,
                 descr:`В марте в японский прокат в 64 кинотеатрах вышел третий аниме-фильм серии «Девушки и танки» (Girls und Panzer das Finale). За первые 10 дней (с 26 марта по 4 апреля) он собрал более 285,9 млн иен (около $ 2,6 млн). А вчера YouTube-канал В марте в японский прокат в 64 кинотеатрах вышел третий аниме-фильм серии «Девушки и танки» (Girls und Panzer das`,
