@@ -1,5 +1,5 @@
 import React from 'react'
-import StarRatings from 'react-star-ratings';
+import { Rate }                from 'antd'             ;
 import { HeartOutlined, HeartFilled, CrownOutlined, CrownFilled, SoundOutlined, SoundFilled} from '@ant-design/icons';
 
 const SerialsDescription = (props) => {
@@ -57,7 +57,7 @@ const SerialsDescription = (props) => {
                     </div>
                 </div>
                 <div className="serialsRating">
-                    <StarRatings rating={Number(item.rating)} numberOfStars={10} starDimension={'30px'} starSpacing={'5px'} starRatedColor={'#FF7070'} starEmptyColor={'#999'} />
+                    <Rate disabled defaultValue={0} count={10} value={Number(item.rating)} className='serialsRating_rating' />
                     <div className='rating'>{item.rating}</div>
                 </div>
                 <div className="detailsSearislPage">

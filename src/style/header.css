@@ -292,10 +292,10 @@
         display: flex;
     }
     .logo {
-        width: 50%;
+        width: 60%;
     }
     .profile_menu {
-        width: 50%;
+        width: 40%;
     }
     .menu {
         display: none;
@@ -311,6 +311,7 @@
 
     .logo_text {
         display: block;
+        word-break: normal;
     }
 
     .menu {

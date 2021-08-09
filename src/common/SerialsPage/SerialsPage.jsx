@@ -42,6 +42,7 @@ const SerialsPage = (props) => {
                                 item      ={item.series} 
                                 serialsId ={props.serialsId} 
                                 seriesId  ={props.seriesId}
+                                width     ={props.width}
                             />
 
                             

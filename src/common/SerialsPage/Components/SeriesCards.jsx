@@ -9,11 +9,24 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 const SeriesCards = (props) => {
     const item = props.item;
 
+    const size = () => {
+        if(props.width <= 480){
+            return 1.5
+        } else if(props.width <= 768) {
+            return 2.5
+        } else if(props.width <= 1024) {
+            return 3.5
+        } else if(props.width <= 1280) {
+            return 4.5
+        } else {
+            return 5.5
+        }
+    }
 
     return (
         <div className="cardsSeries">
             <Swiper
-                slidesPerView={5.5}
+                slidesPerView={size()}
                 spaceBetween={10}
                 className={'cardsSeries'}
                 onSwiper={(swiper) => console.log(swiper)}
@@ -33,12 +46,12 @@ const SeriesCards = (props) => {
 
 
             <Modal
-                width='60%'
                 title={false}
                 footer={false}
                 visible={props.seriesId}
                 onCancel={()=>window.location.hash = '#/serials/' + props.serialsId}
                 bodyStyle={{ background: 'rgb(23, 23, 23, 1)'}}
+                className={"series_modal"}
             >
                 {item.map((item, key)=>{
                     if(item.id.toString() === props.seriesId){

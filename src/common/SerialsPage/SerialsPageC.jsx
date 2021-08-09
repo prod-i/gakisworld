@@ -6,6 +6,22 @@ import { withRouter } from 'react-router-dom';
 import { setFavorites, setTracked, removeFavorites, removeTracked } from '../../redux/Profile/ProfileR';
 
 class SerialsPageC extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            width: window.screen.width,
+            height: window.screen.height,
+        };
+        window.addEventListener("resize", this.resize.bind(this));
+        this.resize.bind(this)
+    }
+    componentDidMount(){
+        window.scrollTo(0, 0);
+    }
+    resize() {
+        this.setState({width: window.innerWidth, height: window.innerHeight});
+    }
+
     render() {
         return <SerialsPage {...this.props} 
         serialsId       ={this.props.match.params.serialsId} 
@@ -16,6 +32,7 @@ class SerialsPageC extends React.Component {
         removeTracked   ={this.props.removeTracked         }
         favorites       ={this.props.favorites             }
         tracked         ={this.props.tracked               }
+        width           ={this.state.width                 }
         />
     }
 };
