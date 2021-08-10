@@ -576,7 +576,7 @@
         width: 100%;
         min-height: 400px;
         max-height: 700px;
-        margin-bottom: 2%;
+        margin-bottom: 6%;
     }
     .news_card_line:nth-child(3n) {
         margin-right: 0;

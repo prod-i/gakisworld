@@ -31,6 +31,15 @@ const NewsSlider = (props) => {
             return 30
         }
     }
+    const ModalWidth = () => {
+        if(props.width <= 480) {
+            return `100%`
+        } else if(props.width <= 600){
+            return `80%`
+        } else {
+            return '70%'
+        }
+    }
     return (
         <div className={props.news.newsSlider.newsSliderVis ? "news_slider" : "news_slider vis"}>
             <div className="news_slider_cards_wraper">
@@ -60,7 +69,7 @@ const NewsSlider = (props) => {
                 </Swiper>
 
                 <Modal
-                    width='60%'
+                    width={ModalWidth()}
                     title={false}
                     footer={false}
                     visible={props.postId}
