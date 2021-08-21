@@ -9,7 +9,7 @@ const Profile = (props) => {
     return (
         <div className='profile tW bB'>
             
-            <NavigationProfile userId={props.userId} options={props.options}/>
+            <NavigationProfile userId={props.userId} options={props.options} width={props.width}/>
 
             <div className="profile_body">
 

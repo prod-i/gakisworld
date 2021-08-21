@@ -60,19 +60,18 @@ const Header = (props) => {
     </Menu>
   );
   const menuBurger = (
-    <Menu className='bTr'>
-      <Menu.Item key={0}>
-        <NavLink exact to={"/profile/" + profileId} className="menu_item tR fCG" activeClassName='t'>Профиль</NavLink>
-      </Menu.Item>
-      <Menu.Item key={1}>
-        <NavLink exact to={"/profile/" + profileId + "/edit"} className="menu_item t fCG" activeClassName='t'>Настройки</NavLink>
-      </Menu.Item>
-      <Menu.Item key={2}>
-        <div className="menu_item tW fCG theme__selector_checked">
-          <label className="theme_label_checked"><div className="theme_checked_text t">Тема</div><input className='t fCG' checked={CheckTheme()} type="checkbox" onChange={ChangeTheme} /></label>
-        </div>
-      </Menu.Item>
-    </Menu>
+    <div className={"menu_burger_list bTr"}>
+      <NavLink exact to={"/profile/" + profileId} className="menu_burger_list_item tR fCG" activeClassName='t'>Профиль</NavLink>
+      <NavLink exact to="/" className='menu_burger_list_item t' activeClassName='menu_active tRP'>Главная</NavLink>
+      <NavLink to="/catalog" className='menu_burger_list_item t' activeClassName='menu_active tRP'>Каталог</NavLink>
+      <NavLink to="/news" className='menu_burger_list_item t' activeClassName='menu_active tRP'>Новости </NavLink>
+      <NavLink to="/calendar" className='menu_burger_list_item t' activeClassName='menu_active tRP'>Календарь</NavLink>
+      <NavLink to="/subscribe" className='menu_burger_list_item t' activeClassName='menu_active tRP'>Подписка </NavLink>
+      <NavLink exact to="/login" className="menu_burger_list_item tR fCG" activeClassName='tR'>Выход</NavLink>
+      <div className="menu_burger_list_item t fCG">
+        <label className="menu_burger_theme">{CheckTheme() ? <FrownOutlined /> : <SmileOutlined />}<input className='t fCG none' checked={CheckTheme()} type="checkbox" onChange={ChangeTheme} /></label>
+      </div>
+    </div>
   );
 
 
@@ -108,19 +107,10 @@ const Header = (props) => {
               </NavLink>
             </Dropdown>
 
-            <div className="menu_burger" onClick={()=>setBurgerVis(!burgerVis)}><MenuOutlined />
-              <div className={burgerVis ? "menu_burger_list bTr" : 'none'}>
-                <NavLink exact to={"/profile/" + profileId} className="menu_burger_list_item tR fCG" activeClassName='t'>Профиль</NavLink>
-                <NavLink exact to="/" className='menu_burger_list_item t' activeClassName='menu_active tRP'>Главная</NavLink>
-                <NavLink to="/catalog" className='menu_burger_list_item t' activeClassName='menu_active tRP'>Каталог</NavLink>
-                <NavLink to="/news" className='menu_burger_list_item t' activeClassName='menu_active tRP'>Новости </NavLink>
-                <NavLink to="/calendar" className='menu_burger_list_item t' activeClassName='menu_active tRP'>Календарь</NavLink>
-                <NavLink to="/subscribe" className='menu_burger_list_item t' activeClassName='menu_active tRP'>Подписка </NavLink>
-                <NavLink exact to="/login" className="menu_burger_list_item tR fCG" activeClassName='tR'>Выход</NavLink>
-                <div className="menu_burger_list_item t fCG">
-                    <label className="menu_burger_theme">{CheckTheme() ? <FrownOutlined /> : <SmileOutlined />}<input className='t fCG none' checked={CheckTheme()} type="checkbox" onChange={ChangeTheme}/></label>
-                </div>
-              </div>
+            <div className="menu_burger">
+              <Dropdown overlay={menuBurger} placement="bottomRight">
+                <MenuOutlined className="menu_burger t" />
+              </Dropdown>
             </div>
 
           </div>

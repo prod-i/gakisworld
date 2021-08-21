@@ -5,6 +5,20 @@ import { withRouter, Redirect } from 'react-router-dom';
 import Profile from './Profile';
 
 class NewsC extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            width: window.screen.width,
+            height: window.screen.height,
+        };
+        window.addEventListener("resize", this.resize.bind(this));
+        this.resize.bind(this)
+    }
+
+    resize() {
+        this.setState({width: window.innerWidth, height: window.innerHeight});
+    }
+
     refrashProfile() {
         let userId = this.props.match.params.userId;
 
@@ -48,7 +62,7 @@ class NewsC extends React.Component {
             return <Redirect to={`/profile/${userId}/continue-view`}/>
         }
 
-        return <Profile userId={userId} options={options} isOwner={isOwner} profile={this.props.profile}/>
+        return <Profile userId={userId} options={options} isOwner={isOwner} profile={this.props.profile} width={this.state.width}/>
     }
 };
 

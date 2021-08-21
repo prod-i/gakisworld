@@ -81,3 +81,13 @@
 .profile_content_unplug_btn:hover{
     opacity: .5;
 }
+.profile_nav_button{
+    top: 10px;
+}
+.profile_nav_button_menu{
+    position: absolute;
+    width: 200px;
+    z-index: 100;
+}
+
+@media (max-width: 768px) {}
