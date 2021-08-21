@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/style/calendar/calendar.css"],"names":[],"mappings":"AAAA,UACI,UAAW,CACX,iBAAkB,CAClB,eAAgB,CAChB,wBAAyB,CACzB,iBACJ","file":"20.eedc5bb7.chunk.css","sourcesContent":[".calendar{\r\n    width: 100%;\r\n    text-align: center;\r\n    font-size: 100px;\r\n    text-transform: uppercase;\r\n    margin: 400px auto;\r\n}\r\n"]}
