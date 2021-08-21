@@ -1,6 +1,6 @@
 import React from 'react'
 import bcg from '../../../assets/img/serials/12b.jpg'
-import img from '../../../assets/img/serials/13l.jpg'
+import img from '../../../assets/img/serials/9b.jpg'
 
 const ProfileInfo = (props) => {
     const profile = props.profile.profile;

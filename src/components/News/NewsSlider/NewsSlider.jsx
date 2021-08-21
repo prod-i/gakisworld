@@ -37,7 +37,7 @@ const NewsSlider = (props) => {
         } else if(props.width <= 600){
             return `80%`
         } else {
-            return '70%'
+            return '60%'
         }
     }
     return (
