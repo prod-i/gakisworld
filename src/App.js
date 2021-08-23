@@ -33,7 +33,6 @@ class App extends React.Component {
       window.localStorage.getItem('theme') === 'light'
         ? this.switchLightTheme()
         : this.switchDarkTheme()
-
     }
   }
 

@@ -44,7 +44,7 @@ const CatalogList = (props) => {
 
                 <div className="catalog_filtres">
                     <div className="title_name">
-                        <span className="filters_catalog selector_s">
+                        <span className="filters_catalog selector_s vis">
                             <select>
                                 <option>По рейтингу</option>
                                 <option>По названию</option>

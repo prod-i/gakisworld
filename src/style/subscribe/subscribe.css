@@ -7,7 +7,6 @@
     display: flex;
     justify-content: space-between;
     width: 90%;
-    height: 750px;
     margin: 0 auto;
 }
 
@@ -27,14 +26,14 @@
     overflow: hidden;
     display: flex;
     align-items: center;
-    width: 23.5%;
+    width: 24.2%;
     height: 400px;
-    margin-right: 2%;
+    margin-right: 1%;
     z-index: 0;
 }
 
 .subscribe_item_block:nth-child(4n) {
-    margin: 0;
+    margin-right: 0;
 }
 
 .subscribe_item_img {
@@ -55,7 +54,7 @@
     height: 20%;
     z-index: 1;
     background-color: rgb(175, 70, 70, .5);
-    padding: 10px;
+    padding: 10px 3px;
     transition: .6s;
 }
 
@@ -68,7 +67,9 @@
     background-color: rgb(255, 112, 112, .6);
 
 }
-
+.subscribe_item_price_descr_item{
+    word-break: normal;
+}
 .subscribe_item_price_title {
     width: 100%;
     text-align: center;
@@ -99,18 +100,22 @@
     border-right: 1px solid #fff;
     /* align-items: center; */
     justify-content: center;
+    word-break: normal;
     font-size: 110px;
 }
 .subscribe_item_banner_right{
     font-size: 24px;
+    word-break: normal;
     padding: 15px 0 0 30px;
     text-transform: uppercase;
 }
 .subscribe_item_banner_right_title{
     margin-bottom: 25px;
+    word-break: normal;
 }
 .subscribe_item_banner_right_descr{
     font-size: 18px;
+    word-break: normal;
     margin: 20px 0;
 }
 
@@ -118,5 +123,169 @@
 .subscribe_form_wrap {
     width: 30%;
     margin: 0 auto;
+    height: inherit;
     /* border-radius: 15px; */
+}
+
+
+
+
+
+@media (max-width: 1500px) {
+    .subscribe_item_block {
+        width: 48%;
+        height: 400px;
+        margin-right: 2%;
+        margin-bottom: 2%;
+    }
+    
+    .subscribe_item_block:nth-child(4n) {
+        margin-right: 0;
+    }
+    .subscribe_type_slect {
+        width: 55%;
+    }
+    .subscribe_form_wrap {
+        width: 44%;
+    }
+    .subscribe_item_banner{
+        width: 100%;
+        height: 200px;
+    }
+    .subscribe_item_banner_left{
+        width: 30%;
+        height: 100%;
+        font-size: 120px;
+    }
+    .subscribe_item_banner_right{
+        font-size: 21px;
+        padding: 15px 0 0 20px;
+    }
+    .subscribe_item_banner_right_title{
+        margin-bottom: 25px;
+    }
+    .subscribe_item_banner_right_descr{
+        font-size: 18px;
+        margin: 20px 0;
+    }
+}
+@media (max-width: 1280px) {
+    .subscribe_item_block {
+        width: 48%;
+        height: 400px;
+        margin-right: 2%;
+        margin-bottom: 2%;
+    }
+    
+    .subscribe_item_block:nth-child(4n) {
+        margin-right: 0;
+    }
+    .subscribe_type_slect {
+        width: 55%;
+    }
+    .subscribe_form_wrap {
+        width: 44%;
+    }
+    .subscribe_item_banner{
+        width: 100%;
+        height: 200px;
+    }
+    .subscribe_item_banner_left{
+        display: flex;
+        align-items: center;
+        width: 30%;
+        height: 100%;
+        font-size: 80px;
+    }
+    .subscribe_item_banner_right{
+        font-size: 18px;
+        padding: 5px 0 0 10px;
+    }
+    .subscribe_item_banner_right_title{
+        margin-bottom: 25px;
+    }
+    .subscribe_item_banner_right_descr{
+        font-size: 18px;
+        margin: 20px 0;
+    }
+}
+@media (max-width: 1024px) {
+    .subscribe_item_block {
+        width: 100%;
+        height: 400px;
+        margin-right: 0;
+        margin-bottom: 4%;
+    }
+    
+    .subscribe_item_block:nth-child(4n) {
+        margin-right: 0;
+    }
+    .subscribe_type_slect {
+        width: 35%;
+    }
+    .subscribe_form_wrap {
+        width: 62%;
+        max-height: 700px;
+    }
+    .subscribe_item_banner{
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .subscribe_wrap {
+        display: block;
+        width: 90%;
+    }
+    .subscribe_item_block {
+        width: 49%;
+        height: 400px;
+        margin-right: 2%;
+        margin-bottom: 4%;
+    }
+    
+    .subscribe_item_block:nth-child(2n) {
+        margin-right: 0;
+    }
+    .subscribe_type_slect {
+        width: 100%;
+    }
+    .subscribe_form_wrap {
+        width: 100%;
+        min-height: 700px;
+        max-height: 700px;
+    }
+    .subscribe_item_banner{
+        display: none;
+    }
+}
+@media (max-width: 480px) {
+    .subscribe {
+        margin: 100px auto 0 auto;
+        width: 100%;
+    }
+    .subscribe_wrap {
+        display: block;
+        width: 90%;
+    }
+    .subscribe_item_block {
+        width: 100%;
+        height: 400px;
+        margin-right: 0;
+        margin-bottom: 4%;
+    }
+    
+    .subscribe_item_block:nth-child(2n) {
+        margin-right: 0;
+    }
+    .subscribe_type_slect {
+        width: 100%;
+    }
+    .subscribe_form_wrap {
+        width: 100%;
+        min-height: 700px;
+        max-height: 700px;
+    }
+    .subscribe_item_banner{
+        display: none;
+    }
 }

@@ -87,6 +87,7 @@
     padding-right: 20px;
     font-size: 24px;
     align-items: center;
+    z-index: 10000;
 }
 .menu_burger_list{
     position: absolute;

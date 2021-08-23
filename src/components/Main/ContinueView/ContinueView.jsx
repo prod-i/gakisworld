@@ -17,7 +17,7 @@ const ContinueView = (props) => {
     }
 
     return (
-        <div className={props.continueViewVis ? "continue__view" : "continue__view vis"}>
+        <div className={props.continueViewVis ? "continue__view none" : "continue__view vis"}>
 
             <div className="block_title">
                 <NavLink exact to={'/profile/1'} className='title_name fCG t'>Продолжить просмотр</NavLink>

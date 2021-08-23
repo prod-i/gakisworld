@@ -108,8 +108,8 @@ const Header = (props) => {
             </Dropdown>
 
             <div className="menu_burger">
-              <Dropdown overlay={menuBurger} placement="bottomRight">
-                <MenuOutlined className="menu_burger t" />
+              <Dropdown overlay={menuBurger} placement="bottomRight" className='menu_burger'>
+                <MenuOutlined />
               </Dropdown>
             </div>
 

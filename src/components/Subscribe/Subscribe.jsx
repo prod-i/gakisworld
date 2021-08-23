@@ -12,7 +12,7 @@ const Subscribe = (props) => {
                 <SubscribeCards subList={props.subscribe.subList.list}/>
                 
                 <div className="subscribe_form_wrap bE">
-                   form 
+                   
                 </div>
 
             </div>
